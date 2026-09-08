@@ -149,9 +149,6 @@ Asimismo, Trakto permite consultar el historial de conductores, vehículos y via
 
 ### 1.2.1. Antecedentes y problemática
 
-### 1.2.1. Antecedentes y problemática
-
-[svg](https://github.com/1ACC0238-2620-4939/Report/tree/feature/dazai#121-antecedentes-y-problem%C3%A1tica)
 
 **Who (¿Quién?) - ¿A quiénes afecta el problema?**  
 Empresas de transporte de carga y operadores logísticos que necesitan gestionar sus viajes, vehículos, conductores, rutas e incidencias durante sus operaciones.
