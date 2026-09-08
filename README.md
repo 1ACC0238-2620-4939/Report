@@ -1633,7 +1633,7 @@ A continuación, se presenta una captura del **Impact Mapping de Trakto elaborad
 
 ![Impact Mapping - Trakto](assets/images/chapter2/impact-mapping.png)
 
-<div style="page-break-after: always;"></div
+<div style="page-break-after: always;"></div>
 
 
 ### 2.4.3. Product Backlog
@@ -1694,4 +1694,1318 @@ A continuación, se presenta una captura del **Product Backlog de Trakto elabora
 <div style="page-break-after: always;"></div>
 
 
-## 2.5.
+## 2.5. Strategic-Level Domain-Driven Design
+
+En esta sección se aplica **Domain-Driven Design (DDD)** a nivel estratégico para identificar los límites naturales del dominio de Trakto y definir sus Bounded Contexts. Para ello se utilizan **EventStorming** y **Bounded Context Canvas**.
+
+### 2.5.1. EventStorming
+
+Se realizó una sesión de **EventStorming en Miro** para modelar el dominio general de Trakto e identificar los principales eventos relacionados con las operaciones de transporte.
+
+Durante la sesión se organizaron cronológicamente eventos relacionados con viajes, vehículos, conductores, rutas, incidencias, usuarios e historial operativo.
+
+![EventStorming - Trakto](assets/images/chapter2/eventstorming-trakto.png)
+
+#### 2.5.1.1. Candidate Context Discovery
+
+A partir del EventStorm, se realizó el **Candidate Context Discovery en Miro** para identificar posibles Bounded Contexts. Se utilizó principalmente la técnica **look-for-pivotal-events**, agrupando eventos relacionados e identificando cambios importantes dentro del proceso de negocio.
+
+Durante el análisis se identificaron progresivamente los siguientes Candidate Bounded Contexts:
+
+- **IAM**
+- **Profile**
+- **Trip Management**
+- **Fleet Management**
+- **Incident Management**
+- **Operational History**
+
+A continuación, se muestran capturas de los cambios progresivos realizados durante el Candidate Context Discovery.
+
+![Candidate Context Discovery - Proceso 1](assets/images/chapter2/candidate-context-discovery-1.png)
+
+![Candidate Context Discovery - Proceso 2](assets/images/chapter2/candidate-context-discovery-2.png)
+
+![Candidate Context Discovery - Final](assets/images/chapter2/candidate-context-discovery-final.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.5.1.2. Domain Message Flows Modeling
+
+En esta sección se modela la colaboración entre los Bounded Contexts de Trakto mediante la técnica **Domain Storytelling**, con el objetivo de visualizar cómo interactúan entre sí para resolver los principales casos de negocio.
+
+Para ello se elaboraron diagramas en **Miro**, representando la participación de los contextos **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History** en diferentes escenarios del dominio.
+
+A continuación, se presentan los diagramas de Domain Storytelling elaborados.
+
+![Domain Storytelling - Flujo 1](assets/images/chapter2/domain-storytelling-1.png)
+
+![Domain Storytelling - Flujo 2](assets/images/chapter2/domain-storytelling-2.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.5.1.3. Bounded Context Canvases
+
+En esta sección se detallan los Candidate Bounded Contexts identificados previamente mediante la elaboración de **Bounded Context Canvases**.
+
+Los contextos se trabajan por orden de importancia y cada canvas sigue el proceso indicado en la rúbrica:
+
+- **Context Overview Definition**
+- **Business Rules Distillation & Ubiquitous Language Capture**
+- **Capability Analysis**
+- **Capability Layering**, cuando corresponda
+- **Dependencies Capture**
+- **Design Critique**
+
+Para Trakto se elaboran los siguientes Bounded Context Canvases:
+
+1. **Trip Management**
+2. **Fleet Management**
+3. **Incident Management**
+4. **Operational History**
+5. **IAM**
+6. **Profile**
+
+A continuación, se presentan las capturas de los Bounded Context Canvases elaborados en **Miro**.
+
+![Bounded Context Canvas - Trip Management](assets/images/chapter2/bounded-context-canvas-trip-management.png)
+
+![Bounded Context Canvas - Fleet Management](assets/images/chapter2/bounded-context-canvas-fleet-management.png)
+
+![Bounded Context Canvas - Incident Management](assets/images/chapter2/bounded-context-canvas-incident-management.png)
+
+![Bounded Context Canvas - Operational History](assets/images/chapter2/bounded-context-canvas-operational-history.png)
+
+![Bounded Context Canvas - IAM](assets/images/chapter2/bounded-context-canvas-iam.png)
+
+![Bounded Context Canvas - Profile](assets/images/chapter2/bounded-context-canvas-profile.png)
+
+<div style="page-break-after: always;"></div>
+
+### 2.5.2. Context Mapping
+
+En esta sección se analizan las relaciones estructurales entre los Bounded Contexts identificados para **Trakto**, evaluando sus dependencias y responsabilidades para obtener una adecuada separación del dominio.
+
+Durante el proceso se revisaron diferentes alternativas de organización de los contextos y sus capabilities, considerando patrones de relación de **Domain-Driven Design** como **Customer/Supplier, Conformist, Anticorruption Layer y Shared Kernel**.
+
+Como resultado del análisis se definió el Context Map final de Trakto, conformado por los contextos **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**.
+
+A continuación, se presentan las alternativas analizadas y el Context Map final elaborado en **Miro**.
+
+![Context Mapping - Alternativa 1](assets/images/chapter2/context-mapping-1.png)
+
+![Context Mapping - Alternativa 2](assets/images/chapter2/context-mapping-2.png)
+
+![Context Mapping - Final](assets/images/chapter2/context-mapping-final.png)
+
+<div style="page-break-after: always;"></div>
+
+### 2.5.3. Software Architecture
+
+En esta sección se presenta la arquitectura de software de **Trakto** aplicando el **C4 Model** y utilizando **Lucidchart** para la elaboración de los diagramas. Se representa la solución desde diferentes niveles, mostrando su contexto, los elementos principales de la arquitectura, las tecnologías utilizadas y su despliegue.
+
+#### 2.5.3.1. Software Architecture Context Level Diagrams
+
+El **Context Diagram** representa a **Trakto** como el sistema central y muestra los usuarios y sistemas externos con los que interactúa.
+
+Para Trakto se consideran como usuarios principales al **Supervisor de flota** y al **Coordinador de operaciones**, quienes interactúan con el sistema para gestionar y consultar las operaciones de transporte.
+
+A continuación, se presenta el Context Diagram elaborado en **Lucidchart**.
+
+![Software Architecture Context Diagram - Trakto](assets/images/chapter2/software-architecture-context.png)
+
+El diagrama permite visualizar los límites de Trakto y las principales interacciones entre el sistema, sus usuarios y los sistemas externos identificados.
+
+<div style="page-break-after: always;"></div>
+
+#### 2.5.3.2. Software Architecture Container Level Diagrams
+
+El **Container Diagram** representa los elementos de alto nivel que conforman la arquitectura de Trakto, sus principales responsabilidades, las tecnologías utilizadas y la comunicación entre ellos.
+
+La solución contempla una **aplicación móvil Android desarrollada con Kotlin**, encargada de proporcionar las funcionalidades de Trakto a los usuarios. Los demás containers y tecnologías se incorporarán en el diagrama de acuerdo con la arquitectura definida para la solución.
+
+A continuación, se presenta el Container Diagram elaborado en **Lucidchart**.
+
+![Software Architecture Container Diagram - Trakto](assets/images/chapter2/software-architecture-container.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.5.3.3. Software Architecture Deployment Diagrams
+
+El **Deployment Diagram** representa la distribución física de Trakto, mostrando los dispositivos, servidores, redes y demás entornos donde se despliegan los componentes de software, así como las relaciones entre los diferentes nodos.
+
+A continuación, se presenta el Deployment Diagram elaborado en **Lucidchart**.
+
+![Software Architecture Deployment Diagram - Trakto](assets/images/chapter2/software-architecture-deployment.png)
+
+El diagrama permite visualizar cómo los elementos de la solución se distribuyen sobre la infraestructura utilizada para ejecutar Trakto.
+
+<div style="page-break-after: always;"></div>
+
+## 2.6. Tactical-Level Domain-Driven Design
+
+En esta sección se presenta la propuesta de diseño táctico de **Trakto** aplicando Domain-Driven Design. Para cada Bounded Context se identifican las clases correspondientes a las capas **Domain, Interface, Application e Infrastructure**, considerando sus responsabilidades dentro de la solución.
+
+Los Bounded Contexts definidos son:
+
+1. **Trip Management**
+2. **Fleet Management**
+3. **Incident Management**
+4. **Operational History**
+5. **IAM**
+6. **Profile**
+
+<div style="page-break-after: always;"></div>
+
+### 2.6.1. Bounded Context: Trip Management
+
+El Bounded Context **Trip Management** gestiona el ciclo de vida de los viajes, incluyendo su programación, ruta, estado, paradas, descansos, inicio y finalización.
+
+#### 2.6.1.1. Domain Layer
+
+Esta capa representa el core y las reglas de negocio de **Trip Management**.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `Trip` | Aggregate Root | Representar y controlar un viaje. | `id`, `route`, `status`, `stops`, `rests`; `assignRoute()`, `start()`, `updateStatus()`, `registerStop()`, `registerRest()`, `complete()` |
+| `Route` | Entity | Representar la ruta asignada. | `id`, `origin`, `destination`; `updateRoute()` |
+| `Stop` | Entity | Representar una parada. | `id`, `reason`, `startedAt`, `endedAt`; `finish()` |
+| `Rest` | Entity | Representar un descanso. | `id`, `startedAt`, `endedAt`; `finish()` |
+| `TripId` | Value Object | Identificar un viaje. | `value` |
+| `TripStatus` | Enumeration | Representar el estado del viaje. | `SCHEDULED`, `PREPARED`, `IN_PROGRESS`, `COMPLETED`, `CANCELLED` |
+| `TripRepository` | Repository Interface | Definir las operaciones de persistencia de viajes. | `save()`, `findById()`, `findAll()` |
+
+Relaciones principales:
+
+```text
+Trip "1" ─── "1" Route
+Trip "1" ─── "0..*" Stop
+Trip "1" ─── "0..*" Rest
+Trip ─────── TripStatus
+Trip ─────── TripId
+TripRepository ───> Trip
+```
+
+#### 2.6.1.2. Interface Layer
+
+Esta capa contiene las clases de presentación utilizadas para interactuar con las funcionalidades de Trip Management.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `TripViewModel` | ViewModel | Gestionar las acciones relacionadas con viajes. | `uiState`; `loadTrips()`, `loadTrip()`, `scheduleTrip()`, `startTrip()`, `updateStatus()`, `registerStop()`, `registerRest()`, `completeTrip()` |
+| `TripUiState` | UI State | Representar el estado de la información presentada. | `trips`, `selectedTrip`, `isLoading`, `error` |
+
+#### 2.6.1.3. Application Layer
+
+Esta capa coordina los flujos y capabilities de Trip Management mediante Commands, Queries y Handlers.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `ScheduleTripCommand` | Command | Contener los datos para programar un viaje. |
+| `ScheduleTripCommandHandler` | Command Handler | Procesar la programación del viaje. |
+| `AssignRouteCommand` | Command | Solicitar la asignación de una ruta. |
+| `AssignRouteCommandHandler` | Command Handler | Procesar la asignación de una ruta. |
+| `StartTripCommand` | Command | Solicitar el inicio de un viaje. |
+| `StartTripCommandHandler` | Command Handler | Procesar el inicio del viaje. |
+| `UpdateTripStatusCommand` | Command | Solicitar un cambio de estado. |
+| `UpdateTripStatusCommandHandler` | Command Handler | Procesar el cambio de estado. |
+| `RegisterStopCommand` | Command | Solicitar el registro de una parada. |
+| `RegisterStopCommandHandler` | Command Handler | Procesar el registro de una parada. |
+| `RegisterRestCommand` | Command | Solicitar el registro de un descanso. |
+| `RegisterRestCommandHandler` | Command Handler | Procesar el registro de un descanso. |
+| `CompleteTripCommand` | Command | Solicitar la finalización del viaje. |
+| `CompleteTripCommandHandler` | Command Handler | Procesar la finalización del viaje. |
+| `GetTripsQuery` | Query | Solicitar los viajes registrados. |
+| `GetTripsQueryHandler` | Query Handler | Obtener los viajes registrados. |
+| `GetTripByIdQuery` | Query | Solicitar un viaje específico. |
+| `GetTripByIdQueryHandler` | Query Handler | Obtener el detalle de un viaje. |
+
+#### 2.6.1.4. Infrastructure Layer
+
+Esta capa implementa la persistencia de Trip Management mediante **Room y SQLite**.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `TripRoomEntity` | Room Entity | Representar un viaje persistido. |
+| `RouteRoomEntity` | Room Entity | Representar una ruta persistida. |
+| `StopRoomEntity` | Room Entity | Representar una parada persistida. |
+| `RestRoomEntity` | Room Entity | Representar un descanso persistido. |
+| `TripDao` | DAO | Realizar operaciones de persistencia y consulta. |
+| `TripRepositoryImpl` | Repository Implementation | Implementar `TripRepository` mediante Room. |
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El **Component Diagram del C4 Model** representa los componentes principales de Trip Management, sus responsabilidades, tecnologías e interacciones.
+
+```text
+Trip Presentation
+        ↓
+Trip Application
+        ↓
+Trip Domain
+        ↓
+Trip Infrastructure
+        ↓
+Room / SQLite
+```
+
+Tecnologías utilizadas: **Kotlin, Jetpack Compose, ViewModel, Room y SQLite**.
+
+![Trip Management - Component Diagram](assets/images/chapter2/trip-management-component-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de mayor detalle de implementación de **Trip Management**.
+
+##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El UML Class Diagram representa las clases, interfaces, enumeraciones, atributos, métodos, scopes, relaciones y multiplicidades del Domain Layer.
+
+```text
+Trip
+--------------------------------
+- id: TripId
+- route: Route
+- status: TripStatus
+- stops: List<Stop>
+- rests: List<Rest>
+--------------------------------
++ assignRoute(route: Route): Unit
++ start(): Unit
++ updateStatus(status: TripStatus): Unit
++ registerStop(stop: Stop): Unit
++ registerRest(rest: Rest): Unit
++ complete(): Unit
+
+Route
+--------------------------------
+- id: Long
+- origin: String
+- destination: String
+--------------------------------
++ updateRoute(origin: String, destination: String): Unit
+
+Stop
+--------------------------------
+- id: Long
+- reason: String
+- startedAt: LocalDateTime
+- endedAt: LocalDateTime?
+--------------------------------
++ finish(endTime: LocalDateTime): Unit
+
+Rest
+--------------------------------
+- id: Long
+- startedAt: LocalDateTime
+- endedAt: LocalDateTime?
+--------------------------------
++ finish(endTime: LocalDateTime): Unit
+
+TripId
+--------------------------------
+- value: Long
+
+<<enumeration>>
+TripStatus
+--------------------------------
+SCHEDULED
+PREPARED
+IN_PROGRESS
+COMPLETED
+CANCELLED
+
+<<interface>>
+TripRepository
+--------------------------------
++ save(trip: Trip): Unit
++ findById(id: TripId): Trip?
++ findAll(): List<Trip>
+```
+
+Relaciones:
+
+```text
+Trip "1" ─── "1" Route
+Trip "1" ─── "0..*" Stop
+Trip "1" ─── "0..*" Rest
+Trip ─────── TripStatus
+Trip ─────── TripId
+TripRepository ───> Trip
+```
+
+![Trip Management - Domain Layer Class Diagram](assets/images/chapter2/trip-management-domain-class-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+##### 2.6.1.6.2. Bounded Context Database Design Diagram
+
+El Database Diagram representa las tablas, columnas, constraints y relaciones utilizadas para la persistencia de **Trip Management** mediante Room y SQLite.
+
+| **Tabla** | **Columnas** | **Constraints** |
+|---|---|---|
+| `trips` | `id`, `route_id`, `status` | `id PK`, `route_id FK`, `status NOT NULL` |
+| `routes` | `id`, `origin`, `destination` | `id PK`, `origin NOT NULL`, `destination NOT NULL` |
+| `stops` | `id`, `trip_id`, `reason`, `started_at`, `ended_at` | `id PK`, `trip_id FK`, `reason NOT NULL`, `started_at NOT NULL` |
+| `rests` | `id`, `trip_id`, `started_at`, `ended_at` | `id PK`, `trip_id FK`, `started_at NOT NULL` |
+
+Relaciones:
+
+```text
+routes.id  "1" ─── "0..*" trips.route_id
+trips.id   "1" ─── "0..*" stops.trip_id
+trips.id   "1" ─── "0..*" rests.trip_id
+```
+
+![Trip Management - Database Diagram](assets/images/chapter2/trip-management-database-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+
+
+### 2.6.2. Bounded Context: Fleet Management
+
+El Bounded Context **Fleet Management** gestiona los vehículos y conductores utilizados en las operaciones de transporte, incluyendo su registro, actualización, disponibilidad y asignación.
+
+#### 2.6.2.1. Domain Layer
+
+Esta capa representa el core y las reglas de negocio de **Fleet Management**.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `Vehicle` | Aggregate Root | Representar y controlar un vehículo. | `id`, `plate`, `brand`, `model`, `availability`; `update()`, `changeAvailability()` |
+| `Driver` | Aggregate Root | Representar y controlar un conductor. | `id`, `name`, `licenseNumber`, `availability`; `update()`, `changeAvailability()` |
+| `VehicleId` | Value Object | Identificar un vehículo. | `value` |
+| `DriverId` | Value Object | Identificar un conductor. | `value` |
+| `VehicleAvailability` | Enumeration | Representar la disponibilidad del vehículo. | `AVAILABLE`, `ASSIGNED`, `UNAVAILABLE` |
+| `DriverAvailability` | Enumeration | Representar la disponibilidad del conductor. | `AVAILABLE`, `ASSIGNED`, `UNAVAILABLE` |
+| `VehicleRepository` | Repository Interface | Definir las operaciones de persistencia de vehículos. | `save()`, `findById()`, `findAll()`, `findAvailable()` |
+| `DriverRepository` | Repository Interface | Definir las operaciones de persistencia de conductores. | `save()`, `findById()`, `findAll()`, `findAvailable()` |
+
+Relaciones principales:
+
+```text
+Vehicle ───── VehicleId
+Vehicle ───── VehicleAvailability
+Driver ────── DriverId
+Driver ────── DriverAvailability
+VehicleRepository ───> Vehicle
+DriverRepository ─────> Driver
+```
+
+#### 2.6.2.2. Interface Layer
+
+Esta capa contiene las clases de presentación utilizadas para interactuar con las funcionalidades de Fleet Management.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `FleetViewModel` | ViewModel | Gestionar la información general de vehículos y conductores. | `uiState`; `loadVehicles()`, `loadDrivers()` |
+| `VehicleViewModel` | ViewModel | Gestionar las acciones relacionadas con vehículos. | `registerVehicle()`, `updateVehicle()`, `loadAvailableVehicles()` |
+| `DriverViewModel` | ViewModel | Gestionar las acciones relacionadas con conductores. | `registerDriver()`, `updateDriver()`, `loadAvailableDrivers()` |
+| `FleetUiState` | UI State | Representar los datos mostrados en la interfaz. | `vehicles`, `drivers`, `isLoading`, `error` |
+
+#### 2.6.2.3. Application Layer
+
+Esta capa coordina los flujos y capabilities relacionados con la gestión de vehículos y conductores.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `RegisterVehicleCommand` | Command | Contener los datos para registrar un vehículo. |
+| `RegisterVehicleCommandHandler` | Command Handler | Procesar el registro de un vehículo. |
+| `UpdateVehicleCommand` | Command | Solicitar la actualización de un vehículo. |
+| `UpdateVehicleCommandHandler` | Command Handler | Procesar la actualización de un vehículo. |
+| `RegisterDriverCommand` | Command | Contener los datos para registrar un conductor. |
+| `RegisterDriverCommandHandler` | Command Handler | Procesar el registro de un conductor. |
+| `UpdateDriverCommand` | Command | Solicitar la actualización de un conductor. |
+| `UpdateDriverCommandHandler` | Command Handler | Procesar la actualización de un conductor. |
+| `AssignVehicleCommand` | Command | Solicitar la asignación de un vehículo. |
+| `AssignVehicleCommandHandler` | Command Handler | Procesar la asignación de un vehículo. |
+| `AssignDriverCommand` | Command | Solicitar la asignación de un conductor. |
+| `AssignDriverCommandHandler` | Command Handler | Procesar la asignación de un conductor. |
+| `GetVehiclesQuery` | Query | Solicitar los vehículos registrados. |
+| `GetVehiclesQueryHandler` | Query Handler | Obtener los vehículos registrados. |
+| `GetDriversQuery` | Query | Solicitar los conductores registrados. |
+| `GetDriversQueryHandler` | Query Handler | Obtener los conductores registrados. |
+| `GetAvailableVehiclesQueryHandler` | Query Handler | Obtener los vehículos disponibles. |
+| `GetAvailableDriversQueryHandler` | Query Handler | Obtener los conductores disponibles. |
+
+#### 2.6.2.4. Infrastructure Layer
+
+Esta capa implementa la persistencia de Fleet Management mediante **Room y SQLite**.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `VehicleRoomEntity` | Room Entity | Representar un vehículo persistido. |
+| `DriverRoomEntity` | Room Entity | Representar un conductor persistido. |
+| `VehicleDao` | DAO | Realizar operaciones de persistencia de vehículos. |
+| `DriverDao` | DAO | Realizar operaciones de persistencia de conductores. |
+| `VehicleRepositoryImpl` | Repository Implementation | Implementar `VehicleRepository` mediante Room. |
+| `DriverRepositoryImpl` | Repository Implementation | Implementar `DriverRepository` mediante Room. |
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+El **Component Diagram del C4 Model** representa los componentes principales de Fleet Management, sus responsabilidades, tecnologías e interacciones.
+
+```text
+Fleet Presentation
+        ↓
+Fleet Application
+        ↓
+Fleet Domain
+        ↓
+Fleet Infrastructure
+        ↓
+Room / SQLite
+```
+
+Tecnologías utilizadas: **Kotlin, Jetpack Compose, ViewModel, Room y SQLite**.
+
+![Fleet Management - Component Diagram](assets/images/chapter2/fleet-management-component-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de mayor detalle de implementación de **Fleet Management**.
+
+##### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+El UML Class Diagram representa las clases, interfaces, enumeraciones, atributos, métodos, scopes y relaciones del Domain Layer.
+
+```text
+Vehicle
+--------------------------------
+- id: VehicleId
+- plate: String
+- brand: String
+- model: String
+- availability: VehicleAvailability
+--------------------------------
++ update(brand: String, model: String): Unit
++ changeAvailability(
+    availability: VehicleAvailability
+  ): Unit
+
+
+Driver
+--------------------------------
+- id: DriverId
+- name: String
+- licenseNumber: String
+- availability: DriverAvailability
+--------------------------------
++ update(name: String, licenseNumber: String): Unit
++ changeAvailability(
+    availability: DriverAvailability
+  ): Unit
+
+
+VehicleId
+--------------------------------
+- value: Long
+
+
+DriverId
+--------------------------------
+- value: Long
+
+
+<<enumeration>>
+VehicleAvailability
+--------------------------------
+AVAILABLE
+ASSIGNED
+UNAVAILABLE
+
+
+<<enumeration>>
+DriverAvailability
+--------------------------------
+AVAILABLE
+ASSIGNED
+UNAVAILABLE
+
+
+<<interface>>
+VehicleRepository
+--------------------------------
++ save(vehicle: Vehicle): Unit
++ findById(id: VehicleId): Vehicle?
++ findAll(): List<Vehicle>
++ findAvailable(): List<Vehicle>
+
+
+<<interface>>
+DriverRepository
+--------------------------------
++ save(driver: Driver): Unit
++ findById(id: DriverId): Driver?
++ findAll(): List<Driver>
++ findAvailable(): List<Driver>
+```
+
+Relaciones:
+
+```text
+Vehicle ───── VehicleId
+Vehicle ───── VehicleAvailability
+Driver ────── DriverId
+Driver ────── DriverAvailability
+
+VehicleRepository ───> Vehicle
+DriverRepository ─────> Driver
+```
+
+![Fleet Management - Domain Layer Class Diagram](assets/images/chapter2/fleet-management-domain-class-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+##### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+El Database Diagram representa las tablas, columnas, constraints y relaciones utilizadas para la persistencia de **Fleet Management** mediante Room y SQLite.
+
+| **Tabla** | **Columnas** | **Constraints** |
+|---|---|---|
+| `vehicles` | `id`, `plate`, `brand`, `model`, `availability` | `id PK`, `plate UNIQUE NOT NULL`, `availability NOT NULL` |
+| `drivers` | `id`, `name`, `license_number`, `availability` | `id PK`, `license_number UNIQUE NOT NULL`, `availability NOT NULL` |
+
+```text
+vehicles
+--------------------------------
+PK  id
+    plate UNIQUE NOT NULL
+    brand NOT NULL
+    model NOT NULL
+    availability NOT NULL
+
+
+drivers
+--------------------------------
+PK  id
+    name NOT NULL
+    license_number UNIQUE NOT NULL
+    availability NOT NULL
+```
+
+Las tablas `vehicles` y `drivers` son independientes dentro de Fleet Management. La asociación con los viajes se realiza desde **Trip Management** mediante los identificadores correspondientes.
+
+![Fleet Management - Database Diagram](assets/images/chapter2/fleet-management-database-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+### 2.6.3. Bounded Context: Incident Management
+
+El Bounded Context **Incident Management** gestiona las incidencias ocurridas durante los viajes, incluyendo retrasos, problemas, accidentes y su estado de atención.
+
+#### 2.6.3.1. Domain Layer
+
+Esta capa representa el core y las reglas de negocio de **Incident Management**.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `Incident` | Aggregate Root | Representar y gestionar una incidencia. | `id`, `tripId`, `type`, `status`, `description`, `occurredAt`; `updateStatus()`, `resolve()` |
+| `IncidentId` | Value Object | Identificar una incidencia. | `value` |
+| `IncidentType` | Enumeration | Clasificar el tipo de incidencia. | `DELAY`, `PROBLEM`, `ACCIDENT`, `OTHER` |
+| `IncidentStatus` | Enumeration | Representar el estado de la incidencia. | `PENDING`, `IN_PROGRESS`, `RESOLVED` |
+| `IncidentRepository` | Repository Interface | Definir las operaciones de persistencia de incidencias. | `save()`, `findById()`, `findByTripId()`, `findAll()` |
+
+Relaciones principales:
+
+```text
+Incident ───── IncidentId
+Incident ───── IncidentType
+Incident ───── IncidentStatus
+IncidentRepository ───> Incident
+```
+
+#### 2.6.3.2. Interface Layer
+
+Esta capa contiene las clases de presentación utilizadas para interactuar con las funcionalidades de Incident Management.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `IncidentViewModel` | ViewModel | Gestionar acciones relacionadas con incidencias. | `uiState`; `loadIncidents()`, `loadIncident()`, `registerIncident()`, `updateStatus()` |
+| `IncidentUiState` | UI State | Representar la información mostrada en la interfaz. | `incidents`, `selectedIncident`, `isLoading`, `error` |
+
+#### 2.6.3.3. Application Layer
+
+Esta capa coordina los flujos y capabilities relacionados con el registro y gestión de incidencias.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `RegisterIncidentCommand` | Command | Contener los datos para registrar una incidencia. |
+| `RegisterIncidentCommandHandler` | Command Handler | Procesar el registro de una incidencia. |
+| `RegisterDelayCommand` | Command | Solicitar el registro de un retraso. |
+| `RegisterDelayCommandHandler` | Command Handler | Procesar el registro de un retraso. |
+| `RegisterProblemCommand` | Command | Solicitar el registro de un problema. |
+| `RegisterProblemCommandHandler` | Command Handler | Procesar el registro de un problema. |
+| `RegisterAccidentCommand` | Command | Solicitar el registro de un accidente. |
+| `RegisterAccidentCommandHandler` | Command Handler | Procesar el registro de un accidente. |
+| `UpdateIncidentStatusCommand` | Command | Solicitar la actualización del estado. |
+| `UpdateIncidentStatusCommandHandler` | Command Handler | Procesar el cambio de estado de una incidencia. |
+| `GetIncidentsQuery` | Query | Solicitar las incidencias registradas. |
+| `GetIncidentsQueryHandler` | Query Handler | Obtener las incidencias registradas. |
+| `GetIncidentByIdQuery` | Query | Solicitar una incidencia específica. |
+| `GetIncidentByIdQueryHandler` | Query Handler | Obtener el detalle de una incidencia. |
+
+#### 2.6.3.4. Infrastructure Layer
+
+Esta capa implementa la persistencia de Incident Management mediante **Room y SQLite**.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `IncidentRoomEntity` | Room Entity | Representar una incidencia persistida. |
+| `IncidentDao` | DAO | Realizar operaciones de persistencia y consulta de incidencias. |
+| `IncidentRepositoryImpl` | Repository Implementation | Implementar `IncidentRepository` mediante Room. |
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El **Component Diagram del C4 Model** representa los componentes principales de Incident Management, sus responsabilidades, tecnologías e interacciones.
+
+```text
+Incident Presentation
+        ↓
+Incident Application
+        ↓
+Incident Domain
+        ↓
+Incident Infrastructure
+        ↓
+Room / SQLite
+```
+
+Tecnologías utilizadas: **Kotlin, Jetpack Compose, ViewModel, Room y SQLite**.
+
+![Incident Management - Component Diagram](assets/images/chapter2/incident-management-component-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de mayor detalle de implementación de **Incident Management**.
+
+##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+El UML Class Diagram representa las clases, interfaces, enumeraciones, atributos, métodos, scopes, relaciones y multiplicidades del Domain Layer.
+
+```text
+Incident
+--------------------------------
+- id: IncidentId
+- tripId: Long
+- type: IncidentType
+- status: IncidentStatus
+- description: String
+- occurredAt: LocalDateTime
+--------------------------------
++ updateStatus(status: IncidentStatus): Unit
++ resolve(): Unit
+
+
+IncidentId
+--------------------------------
+- value: Long
+
+
+<<enumeration>>
+IncidentType
+--------------------------------
+DELAY
+PROBLEM
+ACCIDENT
+OTHER
+
+
+<<enumeration>>
+IncidentStatus
+--------------------------------
+PENDING
+IN_PROGRESS
+RESOLVED
+
+
+<<interface>>
+IncidentRepository
+--------------------------------
++ save(incident: Incident): Unit
++ findById(id: IncidentId): Incident?
++ findByTripId(tripId: Long): List<Incident>
++ findAll(): List<Incident>
+```
+
+Relaciones:
+
+```text
+Incident ───── IncidentId
+Incident ───── IncidentType
+Incident ───── IncidentStatus
+IncidentRepository ───> Incident
+```
+
+![Incident Management - Domain Layer Class Diagram](assets/images/chapter2/incident-management-domain-class-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+##### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+El Database Diagram representa las tablas, columnas, constraints y relaciones utilizadas para la persistencia de **Incident Management** mediante Room y SQLite.
+
+| **Tabla** | **Columnas** | **Constraints** |
+|---|---|---|
+| `incidents` | `id`, `trip_id`, `type`, `status`, `description`, `occurred_at` | `id PK`, `trip_id NOT NULL`, `type NOT NULL`, `status NOT NULL`, `description NOT NULL`, `occurred_at NOT NULL` |
+
+```text
+incidents
+--------------------------------
+PK  id
+    trip_id NOT NULL
+    type NOT NULL
+    status NOT NULL
+    description NOT NULL
+    occurred_at NOT NULL
+```
+
+`trip_id` permite asociar la incidencia con el viaje correspondiente del Bounded Context **Trip Management**.
+
+![Incident Management - Database Diagram](assets/images/chapter2/incident-management-database-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+
+### 2.6.4. Bounded Context: Operational History
+
+El Bounded Context **Operational History** gestiona la consulta del historial de viajes, vehículos, conductores e incidencias, así como la revisión del desempeño de las operaciones realizadas.
+
+#### 2.6.4.1. Domain Layer
+
+Esta capa representa el core y las reglas de negocio de **Operational History**.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `OperationHistory` | Aggregate Root | Representar el historial general de una operación. | `id`, `tripId`, `completedAt`, `performance`; `reviewPerformance()` |
+| `TripHistory` | Entity | Representar información histórica de un viaje. | `tripId`, `status`, `startedAt`, `completedAt` |
+| `VehicleHistory` | Entity | Representar el historial operativo de un vehículo. | `vehicleId`, `tripId`, `recordedAt` |
+| `DriverHistory` | Entity | Representar el historial operativo de un conductor. | `driverId`, `tripId`, `recordedAt` |
+| `OperationPerformance` | Value Object | Representar información de desempeño de una operación. | `completedTrips`, `incidentCount`, `delayCount` |
+| `HistoryRepository` | Repository Interface | Definir las operaciones de consulta del historial. | `findTripHistory()`, `findVehicleHistory()`, `findDriverHistory()`, `findIncidentHistory()` |
+
+Relaciones principales:
+
+```text
+OperationHistory ───── TripHistory
+OperationHistory ───── VehicleHistory
+OperationHistory ───── DriverHistory
+OperationHistory ───── OperationPerformance
+HistoryRepository ───> OperationHistory
+```
+
+#### 2.6.4.2. Interface Layer
+
+Esta capa contiene las clases de presentación utilizadas para consultar el historial operativo.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `HistoryViewModel` | ViewModel | Gestionar las consultas del historial operativo. | `uiState`; `loadTripHistory()`, `loadVehicleHistory()`, `loadDriverHistory()`, `loadIncidentHistory()`, `reviewPerformance()` |
+| `HistoryUiState` | UI State | Representar los datos históricos mostrados en la interfaz. | `tripHistory`, `vehicleHistory`, `driverHistory`, `incidentHistory`, `performance`, `isLoading`, `error` |
+
+#### 2.6.4.3. Application Layer
+
+Esta capa coordina los flujos y capabilities relacionados con la consulta del historial y desempeño operativo.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `GetTripHistoryQuery` | Query | Solicitar el historial de viajes. |
+| `GetTripHistoryQueryHandler` | Query Handler | Obtener el historial de viajes. |
+| `GetVehicleHistoryQuery` | Query | Solicitar el historial de un vehículo. |
+| `GetVehicleHistoryQueryHandler` | Query Handler | Obtener el historial de un vehículo. |
+| `GetDriverHistoryQuery` | Query | Solicitar el historial de un conductor. |
+| `GetDriverHistoryQueryHandler` | Query Handler | Obtener el historial de un conductor. |
+| `GetIncidentHistoryQuery` | Query | Solicitar el historial de incidencias. |
+| `GetIncidentHistoryQueryHandler` | Query Handler | Obtener el historial de incidencias. |
+| `ReviewOperationPerformanceQuery` | Query | Solicitar la revisión del desempeño operativo. |
+| `ReviewOperationPerformanceQueryHandler` | Query Handler | Obtener la información de desempeño de una operación. |
+| `RecordCompletedTripEventHandler` | Event Handler | Registrar información histórica cuando un viaje finaliza. |
+
+#### 2.6.4.4. Infrastructure Layer
+
+Esta capa implementa el acceso a la información histórica mediante **Room y SQLite**.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `OperationHistoryRoomEntity` | Room Entity | Representar una operación histórica persistida. |
+| `TripHistoryRoomEntity` | Room Entity | Representar el historial de viajes persistido. |
+| `VehicleHistoryRoomEntity` | Room Entity | Representar el historial de vehículos persistido. |
+| `DriverHistoryRoomEntity` | Room Entity | Representar el historial de conductores persistido. |
+| `HistoryDao` | DAO | Realizar consultas y operaciones sobre el historial. |
+| `HistoryRepositoryImpl` | Repository Implementation | Implementar `HistoryRepository` mediante Room. |
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+El **Component Diagram del C4 Model** representa los componentes principales de Operational History, sus responsabilidades, tecnologías e interacciones.
+
+```text
+History Presentation
+        ↓
+History Application
+        ↓
+History Domain
+        ↓
+History Infrastructure
+        ↓
+Room / SQLite
+```
+
+Tecnologías utilizadas: **Kotlin, Jetpack Compose, ViewModel, Room y SQLite**.
+
+![Operational History - Component Diagram](assets/images/chapter2/operational-history-component-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de mayor detalle de implementación de **Operational History**.
+
+##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+El UML Class Diagram representa las clases, interfaces, atributos, métodos, scopes, relaciones y multiplicidades del Domain Layer.
+
+```text
+OperationHistory
+--------------------------------
+- id: Long
+- tripId: Long
+- completedAt: LocalDateTime
+- performance: OperationPerformance
+--------------------------------
++ reviewPerformance(): OperationPerformance
+
+
+TripHistory
+--------------------------------
+- tripId: Long
+- status: String
+- startedAt: LocalDateTime
+- completedAt: LocalDateTime
+
+
+VehicleHistory
+--------------------------------
+- vehicleId: Long
+- tripId: Long
+- recordedAt: LocalDateTime
+
+
+DriverHistory
+--------------------------------
+- driverId: Long
+- tripId: Long
+- recordedAt: LocalDateTime
+
+
+OperationPerformance
+--------------------------------
+- completedTrips: Int
+- incidentCount: Int
+- delayCount: Int
+
+
+<<interface>>
+HistoryRepository
+--------------------------------
++ findTripHistory(tripId: Long): TripHistory?
++ findVehicleHistory(vehicleId: Long): List<VehicleHistory>
++ findDriverHistory(driverId: Long): List<DriverHistory>
++ findIncidentHistory(tripId: Long): List<Long>
+```
+
+Relaciones:
+
+```text
+OperationHistory "1" ─── "1" TripHistory
+OperationHistory "1" ─── "0..*" VehicleHistory
+OperationHistory "1" ─── "0..*" DriverHistory
+OperationHistory "1" ─── "1" OperationPerformance
+HistoryRepository ───> OperationHistory
+```
+
+![Operational History - Domain Layer Class Diagram](assets/images/chapter2/operational-history-domain-class-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+##### 2.6.4.6.2. Bounded Context Database Design Diagram
+
+El Database Diagram representa las tablas, columnas, constraints y relaciones utilizadas para la persistencia de **Operational History** mediante Room y SQLite.
+
+| **Tabla** | **Columnas** | **Constraints** |
+|---|---|---|
+| `operation_history` | `id`, `trip_id`, `completed_at`, `completed_trips`, `incident_count`, `delay_count` | `id PK`, `trip_id NOT NULL` |
+| `trip_history` | `id`, `trip_id`, `status`, `started_at`, `completed_at` | `id PK`, `trip_id NOT NULL` |
+| `vehicle_history` | `id`, `vehicle_id`, `trip_id`, `recorded_at` | `id PK`, `vehicle_id NOT NULL`, `trip_id NOT NULL` |
+| `driver_history` | `id`, `driver_id`, `trip_id`, `recorded_at` | `id PK`, `driver_id NOT NULL`, `trip_id NOT NULL` |
+
+Relaciones:
+
+```text
+operation_history.trip_id ─── trip_history.trip_id
+trip_history.trip_id ─── vehicle_history.trip_id
+trip_history.trip_id ─── driver_history.trip_id
+```
+
+![Operational History - Database Diagram](assets/images/chapter2/operational-history-database-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+
+### 2.6.5. Bounded Context: IAM
+
+El Bounded Context **IAM (Identity and Access Management)** gestiona la identidad, autenticación y acceso de los usuarios de Trakto.
+
+#### 2.6.5.1. Domain Layer
+
+Esta capa representa las reglas de negocio relacionadas con usuarios, credenciales y roles.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `User` | Aggregate Root | Representar la identidad de un usuario. | `id`, `email`, `passwordHash`, `role`; `changePassword()`, `changeRole()` |
+| `UserId` | Value Object | Identificar un usuario. | `value` |
+| `Email` | Value Object | Representar y validar el correo del usuario. | `value`; `isValid()` |
+| `UserRole` | Enumeration | Representar el rol del usuario. | `FLEET_SUPERVISOR`, `OPERATIONS_COORDINATOR` |
+| `UserRepository` | Repository Interface | Definir operaciones de persistencia de usuarios. | `save()`, `findById()`, `findByEmail()`, `existsByEmail()` |
+| `AuthenticationService` | Domain Service Interface | Definir la validación de credenciales. | `authenticate()` |
+
+Relaciones principales:
+
+```text
+User ───── UserId
+User ───── Email
+User ───── UserRole
+UserRepository ───> User
+AuthenticationService ───> User
+```
+
+#### 2.6.5.2. Interface Layer
+
+Esta capa contiene las clases de presentación utilizadas para autenticación y gestión de sesión.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `AuthViewModel` | ViewModel | Gestionar registro, inicio y cierre de sesión. | `uiState`; `register()`, `login()`, `logout()`, `loadCurrentUser()` |
+| `AuthUiState` | UI State | Representar el estado de autenticación. | `currentUser`, `isAuthenticated`, `isLoading`, `error` |
+
+#### 2.6.5.3. Application Layer
+
+Esta capa coordina los flujos relacionados con registro, autenticación y sesión.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `RegisterUserCommand` | Command | Contener los datos para registrar un usuario. |
+| `RegisterUserCommandHandler` | Command Handler | Procesar el registro del usuario. |
+| `LoginCommand` | Command | Contener las credenciales de acceso. |
+| `LoginCommandHandler` | Command Handler | Procesar la autenticación del usuario. |
+| `LogoutCommand` | Command | Solicitar el cierre de sesión. |
+| `LogoutCommandHandler` | Command Handler | Procesar el cierre de sesión. |
+| `GetCurrentUserQuery` | Query | Solicitar el usuario autenticado. |
+| `GetCurrentUserQueryHandler` | Query Handler | Obtener el usuario autenticado. |
+
+#### 2.6.5.4. Infrastructure Layer
+
+Esta capa implementa la persistencia, autenticación y gestión de sesión mediante **Room y SQLite**.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `UserRoomEntity` | Room Entity | Representar un usuario persistido. |
+| `UserDao` | DAO | Realizar operaciones de persistencia de usuarios. |
+| `UserRepositoryImpl` | Repository Implementation | Implementar `UserRepository` mediante Room. |
+| `AuthenticationServiceImpl` | Service Implementation | Implementar la validación de credenciales. |
+| `PasswordHasher` | Infrastructure Service | Generar y verificar hashes de contraseñas. |
+| `SessionManager` | Infrastructure Service | Gestionar la sesión del usuario. |
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+El **Component Diagram del C4 Model** representa los componentes principales de IAM, sus responsabilidades, tecnologías e interacciones.
+
+```text
+IAM Presentation
+        ↓
+IAM Application
+        ↓
+IAM Domain
+        ↓
+IAM Infrastructure
+        ↓
+Room / SQLite
+```
+
+Tecnologías utilizadas: **Kotlin, Jetpack Compose, ViewModel, Room y SQLite**.
+
+![IAM - Component Diagram](assets/images/chapter2/iam-component-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de mayor detalle de implementación del Bounded Context **IAM**.
+
+##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+El UML Class Diagram representa las clases, interfaces, enumeraciones, atributos, métodos, scopes y relaciones del Domain Layer.
+
+```text
+User
+--------------------------------
+- id: UserId
+- email: Email
+- passwordHash: String
+- role: UserRole
+--------------------------------
++ changePassword(passwordHash: String): Unit
++ changeRole(role: UserRole): Unit
+
+
+UserId
+--------------------------------
+- value: Long
+
+
+Email
+--------------------------------
+- value: String
+--------------------------------
++ isValid(): Boolean
+
+
+<<enumeration>>
+UserRole
+--------------------------------
+FLEET_SUPERVISOR
+OPERATIONS_COORDINATOR
+
+
+<<interface>>
+UserRepository
+--------------------------------
++ save(user: User): Unit
++ findById(id: UserId): User?
++ findByEmail(email: Email): User?
++ existsByEmail(email: Email): Boolean
+
+
+<<interface>>
+AuthenticationService
+--------------------------------
++ authenticate(
+    email: Email,
+    password: String
+  ): Boolean
+```
+
+Relaciones:
+
+```text
+User ───── UserId
+User ───── Email
+User ───── UserRole
+UserRepository ───> User
+AuthenticationService ───> User
+```
+
+![IAM - Domain Layer Class Diagram](assets/images/chapter2/iam-domain-class-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+##### 2.6.5.6.2. Bounded Context Database Design Diagram
+
+El Database Diagram representa las tablas, columnas y constraints utilizadas para la persistencia de **IAM** mediante Room y SQLite.
+
+| **Tabla** | **Columnas** | **Constraints** |
+|---|---|---|
+| `users` | `id`, `email`, `password_hash`, `role`, `created_at` | `id PK`, `email UNIQUE NOT NULL`, `password_hash NOT NULL`, `role NOT NULL` |
+
+```text
+users
+--------------------------------
+PK  id
+    email UNIQUE NOT NULL
+    password_hash NOT NULL
+    role NOT NULL
+    created_at NOT NULL
+```
+
+![IAM - Database Diagram](assets/images/chapter2/iam-database-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+### 2.6.6. Bounded Context: Profile
+
+El Bounded Context **Profile** gestiona la información personal asociada a los usuarios de Trakto.
+
+#### 2.6.6.1. Domain Layer
+
+Esta capa representa las reglas de negocio relacionadas con la información del perfil del usuario.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `Profile` | Aggregate Root | Representar y gestionar el perfil de un usuario. | `id`, `userId`, `firstName`, `lastName`, `phone`; `updatePersonalInformation()` |
+| `ProfileId` | Value Object | Identificar un perfil. | `value` |
+| `ProfileRepository` | Repository Interface | Definir las operaciones de persistencia de perfiles. | `save()`, `findById()`, `findByUserId()` |
+
+Relaciones principales:
+
+```text
+Profile ───── ProfileId
+ProfileRepository ───> Profile
+```
+
+#### 2.6.6.2. Interface Layer
+
+Esta capa contiene las clases de presentación utilizadas para consultar y actualizar el perfil.
+
+| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
+|---|---|---|---|
+| `ProfileViewModel` | ViewModel | Gestionar las acciones relacionadas con el perfil. | `uiState`; `loadProfile()`, `createProfile()`, `updateProfile()` |
+| `ProfileUiState` | UI State | Representar la información mostrada en la interfaz. | `profile`, `isLoading`, `error` |
+
+#### 2.6.6.3. Application Layer
+
+Esta capa coordina los flujos relacionados con la creación, consulta y actualización del perfil.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `CreateProfileCommand` | Command | Contener los datos para crear un perfil. |
+| `CreateProfileCommandHandler` | Command Handler | Procesar la creación del perfil. |
+| `UpdateProfileCommand` | Command | Solicitar la actualización del perfil. |
+| `UpdateProfileCommandHandler` | Command Handler | Procesar la actualización del perfil. |
+| `GetProfileQuery` | Query | Solicitar el perfil de un usuario. |
+| `GetProfileQueryHandler` | Query Handler | Obtener la información del perfil. |
+| `UserRegisteredEventHandler` | Event Handler | Crear el perfil inicial cuando se registra un usuario. |
+
+#### 2.6.6.4. Infrastructure Layer
+
+Esta capa implementa la persistencia de Profile mediante **Room y SQLite**.
+
+| **Clase** | **Tipo** | **Propósito** |
+|---|---|---|
+| `ProfileRoomEntity` | Room Entity | Representar un perfil persistido. |
+| `ProfileDao` | DAO | Realizar operaciones de persistencia y consulta. |
+| `ProfileRepositoryImpl` | Repository Implementation | Implementar `ProfileRepository` mediante Room. |
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+El **Component Diagram del C4 Model** representa los componentes principales de Profile, sus responsabilidades, tecnologías e interacciones.
+
+```text
+Profile Presentation
+        ↓
+Profile Application
+        ↓
+Profile Domain
+        ↓
+Profile Infrastructure
+        ↓
+Room / SQLite
+```
+
+Tecnologías utilizadas: **Kotlin, Jetpack Compose, ViewModel, Room y SQLite**.
+
+![Profile - Component Diagram](assets/images/chapter2/profile-component-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+#### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de mayor detalle de implementación del Bounded Context **Profile**.
+
+##### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
+
+El UML Class Diagram representa las clases, interfaces, atributos, métodos, scopes y relaciones del Domain Layer.
+
+```text
+Profile
+--------------------------------
+- id: ProfileId
+- userId: Long
+- firstName: String
+- lastName: String
+- phone: String
+--------------------------------
++ updatePersonalInformation(
+    firstName: String,
+    lastName: String,
+    phone: String
+  ): Unit
+
+
+ProfileId
+--------------------------------
+- value: Long
+
+
+<<interface>>
+ProfileRepository
+--------------------------------
++ save(profile: Profile): Unit
++ findById(id: ProfileId): Profile?
++ findByUserId(userId: Long): Profile?
+```
+
+Relaciones:
+
+```text
+Profile ───── ProfileId
+ProfileRepository ───> Profile
+```
+
+![Profile - Domain Layer Class Diagram](assets/images/chapter2/profile-domain-class-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+##### 2.6.6.6.2. Bounded Context Database Design Diagram
+
+El Database Diagram representa las tablas, columnas y constraints utilizadas para la persistencia de **Profile** mediante Room y SQLite.
+
+| **Tabla** | **Columnas** | **Constraints** |
+|---|---|---|
+| `profiles` | `id`, `user_id`, `first_name`, `last_name`, `phone` | `id PK`, `user_id UNIQUE NOT NULL`, `first_name NOT NULL`, `last_name NOT NULL` |
+
+```text
+profiles
+--------------------------------
+PK  id
+    user_id UNIQUE NOT NULL
+    first_name NOT NULL
+    last_name NOT NULL
+    phone
+```
+
+`user_id` permite asociar el perfil con el usuario correspondiente del Bounded Context **IAM**.
+
+![Profile - Database Diagram](assets/images/chapter2/profile-database-diagram.png)
+
+<div style="page-break-after: always;"></div>
+
+
