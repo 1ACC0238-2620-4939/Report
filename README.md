@@ -149,26 +149,30 @@ Asimismo, Trakto permite consultar el historial de conductores, vehículos y via
 
 ### 1.2.1. Antecedentes y problemática
 
+### 1.2.1. Antecedentes y problemática
+
+[svg](https://github.com/1ACC0238-2620-4939/Report/tree/feature/dazai#121-antecedentes-y-problem%C3%A1tica)
+
 **Who (¿Quién?) - ¿A quiénes afecta el problema?**  
-Empresas de transporte de carga y operadores logísticos que necesitan supervisar sus vehículos, conductores y rutas durante el traslado de mercancías.
+Empresas de transporte de carga y operadores logísticos que necesitan gestionar sus viajes, vehículos, conductores, rutas e incidencias durante sus operaciones.
 
 **What (¿Qué?) - ¿Cuál es el problema exactamente?**  
-La falta de una plataforma centralizada que permita monitorear en tiempo real la ubicación de los vehículos, conocer el estado de los recorridos, mantener comunicación con los conductores y registrar las incidencias ocurridas durante cada viaje. Esto dificulta que las empresas tengan una visión completa y actualizada de sus operaciones de transporte.
+La falta de una aplicación centralizada que permita gestionar los viajes, consultar el estado de los recorridos, administrar vehículos y conductores, registrar incidencias y mantener un historial de las operaciones realizadas.
 
 **Where (¿Dónde?) - ¿En qué contexto ocurre?**  
-En las operaciones de transporte terrestre de carga, principalmente durante el desplazamiento de camiones entre los puntos de origen y destino de las mercancías, con un enfoque inicial en empresas que operan dentro del mercado peruano.
+En las operaciones de transporte terrestre de carga, principalmente en empresas y operadores logísticos que gestionan vehículos, conductores y viajes, con un enfoque inicial en el mercado peruano.
 
 **When (¿Cuándo?) - ¿En qué momento se manifiesta el problema?**  
-Durante el desarrollo de los viajes y recorridos de transporte, especialmente cuando ocurren paradas no previstas, retrasos, congestión vehicular, problemas en la ruta, accidentes u otras incidencias que requieren una respuesta oportuna por parte de la empresa.
+Durante la planificación, ejecución y finalización de los viajes, especialmente cuando se requiere consultar su estado, registrar paradas, descansos, retrasos, problemas, accidentes u otras incidencias.
 
 **Why (¿Por qué?) - ¿Por qué ocurre el problema?**  
-El problema surge debido a la falta de integración entre el seguimiento de vehículos, la comunicación con los conductores y el registro de las operaciones. Cuando esta información se encuentra dispersa o no está disponible en tiempo real, las empresas tienen mayores dificultades para supervisar sus unidades y responder ante situaciones inesperadas.
+El problema surge cuando la información de viajes, vehículos, conductores e incidencias se encuentra dispersa o se gestiona mediante diferentes medios, dificultando el control organizado de las operaciones.
 
 **How (¿Cómo?) - ¿Cómo impacta en el usuario?**  
-La falta de visibilidad y comunicación dificulta conocer el estado real de los vehículos y conductores, identificar retrasos o incidencias y tomar decisiones oportunas. Además, limita la posibilidad de consultar posteriormente lo ocurrido durante cada recorrido y evaluar el desempeño de los recursos involucrados.
+Dificulta la gestión de los viajes, la consulta del estado de las operaciones, el registro de incidencias y el acceso al historial de vehículos, conductores y recorridos realizados.
 
 **How Much (¿Cuánto?) - ¿Qué tan grande es el problema?**  
-El transporte de carga requiere un seguimiento constante de vehículos, conductores y recorridos para garantizar el cumplimiento de las operaciones. La ausencia de herramientas que centralicen esta información puede generar menor capacidad de supervisión y respuesta ante incidencias. En este contexto, existe una oportunidad para soluciones como **TrackTruck**, que integren geolocalización, comunicación y registro histórico de las operaciones en una misma plataforma.
+Las empresas de transporte gestionan múltiples viajes, vehículos, conductores e incidencias, por lo que centralizar esta información facilita el control y consulta de sus operaciones. En este contexto, **Trakto** busca integrar la gestión de viajes, flota, incidencias e historial operativo en una aplicación móvil.
 
 <div style="page-break-after: always;"></div>
 
