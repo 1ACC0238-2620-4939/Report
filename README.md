@@ -289,7 +289,7 @@ Sabremos que esto es cierto cuando los usuarios puedan realizar las principales 
 
 #### 1.2.2.4. Lean UX Canvas
 
-El **Lean UX Canvas** de Trakto fue elaborado considerando la problemática, los supuestos, las hipótesis y los segmentos objetivo definidos durante el proceso Lean UX.
+El **Lean UX Canvas** de Trakto fue elaborado en **Miro**, considerando la problemática, los supuestos, las hipótesis y los segmentos objetivo definidos durante el proceso Lean UX.
 
 ![Lean UX Canvas](./assets/images/chapter1/lean_ux_canvas.png)
 
@@ -649,53 +649,43 @@ Por completar. Identificar las principales necesidades del entrevistado respecto
 
 <div style="page-break-after: always;"></div>
 
-## 2.2.3. Análisis de entrevistas
+### 2.2.3. Análisis de entrevistas
 
-A partir de las entrevistas realizadas se analizarán las principales características, necesidades, dificultades y expectativas de los participantes pertenecientes a cada segmento objetivo. El análisis considerará aspectos objetivos y subjetivos identificados de manera recurrente en las respuestas, los cuales servirán posteriormente como base para la construcción de los User Personas y demás artefactos de Needfinding.
+Se realizaron **seis entrevistas**, distribuidas en **tres participantes por cada segmento objetivo**. A partir de sus respuestas se analizarán las principales necesidades, dificultades y expectativas relacionadas con la gestión de operaciones de transporte.
 
 ### Segmento objetivo 1: Empresas de transporte de carga
 
-A partir de las tres entrevistas realizadas a representantes de empresas de transporte de carga, se analizará cómo gestionan actualmente la información relacionada con sus viajes, vehículos, conductores y rutas, así como las principales dificultades que enfrentan durante este proceso.
+A partir de las tres entrevistas realizadas, se analizarán las principales dificultades relacionadas con la gestión de viajes, vehículos, conductores, rutas e incidencias.
 
-**Resultados por completar después de las entrevistas:**
-
-| Aspecto analizado | Cantidad de entrevistados | Porcentaje |
+| **Aspecto analizado** | **Cantidad** | **Porcentaje** |
 |---|---:|---:|
-| Utilizan varias herramientas o medios para gestionar sus operaciones | Por completar | Por completar |
+| Utilizan varias herramientas para gestionar sus operaciones | Por completar | Por completar |
 | Presentan dificultades para consultar el estado de los viajes | Por completar | Por completar |
-| Consideran importante registrar retrasos e incidencias | Por completar | Por completar |
-| Necesitan consultar el historial de operaciones anteriores | Por completar | Por completar |
-| Consideran útil centralizar la información operativa | Por completar | Por completar |
-| Muestran interés en utilizar una aplicación móvil para estas tareas | Por completar | Por completar |
-
-A partir de los resultados obtenidos, se identificarán las principales necesidades compartidas por este segmento y se determinará si existe una necesidad recurrente de **centralizar la información, mejorar la trazabilidad de los viajes, facilitar el registro de incidencias y consultar el historial de las operaciones**.
-
-Asimismo, se analizará qué funcionalidades propuestas para Trakto generan mayor interés entre los participantes, como la gestión de viajes, consulta de vehículos y conductores, consulta de rutas y estados, registro de incidencias e historial operativo.
+| Consideran importante registrar incidencias | Por completar | Por completar |
+| Necesitan consultar operaciones anteriores | Por completar | Por completar |
+| Consideran útil centralizar la información | Por completar | Por completar |
+| Muestran interés en utilizar una aplicación móvil | Por completar | Por completar |
 
 **Conclusión del segmento:**  
 Por completar después de analizar las tres entrevistas.
 
 ### Segmento objetivo 2: Operadores y empresas de logística
 
-A partir de las tres entrevistas realizadas a representantes de operadores y empresas de logística, se analizará cómo organizan y consultan actualmente la información relacionada con las operaciones de transporte y qué dificultades enfrentan al gestionar múltiples viajes, vehículos, conductores y rutas.
+A partir de las tres entrevistas realizadas, se analizarán las dificultades relacionadas con la organización de múltiples operaciones, consulta de información, incidencias e historial de viajes.
 
-**Resultados por completar después de las entrevistas:**
-
-| Aspecto analizado | Cantidad de entrevistados | Porcentaje |
+| **Aspecto analizado** | **Cantidad** | **Porcentaje** |
 |---|---:|---:|
 | Gestionan múltiples operaciones de transporte | Por completar | Por completar |
 | Presentan dificultades para centralizar la información | Por completar | Por completar |
-| Consideran importante registrar eventos e incidencias | Por completar | Por completar |
-| Necesitan consultar información de operaciones anteriores | Por completar | Por completar |
-| Consideran importante mantener la trazabilidad de los viajes | Por completar | Por completar |
-| Muestran interés en utilizar una aplicación móvil para centralizar estas tareas | Por completar | Por completar |
-
-A partir de los resultados obtenidos, se identificarán las necesidades recurrentes del segmento relacionadas con la **organización de la información, trazabilidad de las operaciones, gestión de incidencias y consulta del historial de viajes**.
-
-También se analizará qué funcionalidades de Trakto son consideradas de mayor utilidad por los participantes y qué aspectos relacionados con facilidad de uso, acceso a la información y organización de las operaciones deben ser considerados durante el diseño de la aplicación.
+| Consideran importante registrar incidencias | Por completar | Por completar |
+| Necesitan consultar operaciones anteriores | Por completar | Por completar |
+| Consideran importante mantener la trazabilidad | Por completar | Por completar |
+| Muestran interés en utilizar una aplicación móvil | Por completar | Por completar |
 
 **Conclusión del segmento:**  
 Por completar después de analizar las tres entrevistas.
+
+> **Referencia para los porcentajes:** 1 de 3 = 33.3%, 2 de 3 = 66.7%, 3 de 3 = 100%.
 
 <div style="page-break-after: always;"></div>
 
@@ -758,7 +748,7 @@ La principal coincidencia entre ambos perfiles se encuentra en la necesidad de *
 
 ### 2.3.3. User Journey Mapping
 
-En esta sección se presentan los **User Journey Maps** correspondientes a cada uno de los User Personas identificados para los segmentos objetivo de Trakto. Estos diagramas permiten representar de manera secuencial las actividades que realizan actualmente los usuarios durante una operación de transporte, desde la preparación del viaje hasta su finalización.
+En esta sección se presentan los **User Journey Maps elaborados en UXPressia** correspondientes a cada uno de los User Personas identificados para los segmentos objetivo de Trakto. Estos diagramas permiten representar de manera secuencial las actividades que realizan actualmente los usuarios durante una operación de transporte, desde la preparación del viaje hasta su finalización.
 
 Para este análisis se elaboraron las versiones **As-Is** de los User Journey Maps, por lo que se representa la situación actual de los usuarios **sin considerar la existencia de Trakto como solución**. El objetivo es identificar las acciones realizadas durante el proceso, así como los pensamientos, emociones, dificultades y oportunidades que aparecen en cada etapa.
 
@@ -818,7 +808,7 @@ En ambos casos, el journey evidencia oportunidades relacionadas con la **central
 
 ### 2.3.4. Empathy Mapping
 
-En esta sección se presentan los **Empathy Maps** elaborados para cada uno de los User Personas identificados en los segmentos objetivo de Trakto. Estos mapas permiten comprender con mayor profundidad las necesidades, comportamientos, pensamientos, preocupaciones y expectativas de los usuarios dentro de su contexto actual de trabajo.
+En esta sección se presentan los **Empathy Maps elaborados en UXPressia** para cada uno de los User Personas identificados en los segmentos objetivo de Trakto. Estos mapas permiten comprender con mayor profundidad las necesidades, comportamientos, pensamientos, preocupaciones y expectativas de los usuarios dentro de su contexto actual de trabajo.
 
 Para su elaboración, se tomó como referencia la información obtenida durante las entrevistas y el análisis realizado previamente. Cada Empathy Map se encuentra vinculado con su respectivo User Persona y organiza los principales hallazgos relacionados con lo que el usuario necesita hacer, dice, ve, hace, escucha, piensa y siente. Asimismo, se identifican sus principales **Pains** y **Gains**, permitiendo comprender las dificultades que enfrenta actualmente y los resultados que espera alcanzar.
 
@@ -862,7 +852,7 @@ Estos hallazgos complementan los resultados obtenidos mediante los User Personas
 
 ### 2.3.5. Big Picture EventStorming
 
-En esta sección se presenta el resultado del **Big Picture EventStorming** realizado con el objetivo de explorar y comprender el dominio de negocio de **Trakto** a alto nivel. Durante la sesión, el equipo identificó y organizó cronológicamente los principales **Domain Events**, actores y procesos relacionados con la gestión de las operaciones de transporte.
+En esta sección se presenta el resultado del **Big Picture EventStorming elaborado en Miro** con el objetivo de explorar y comprender el dominio de negocio de **Trakto** a alto nivel. Durante la sesión, el equipo identificó y organizó cronológicamente los principales **Domain Events**, actores y procesos relacionados con la gestión de las operaciones de transporte.
 
 A partir del análisis colaborativo se identificaron seis **Bounded Contexts** principales: **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**. Cada contexto agrupa eventos y conceptos relacionados con una responsabilidad específica del dominio, permitiendo establecer una primera separación siguiendo los principios de **Domain-Driven Design**.
 
@@ -870,7 +860,7 @@ El contexto **IAM (Identity and Access Management)** gestiona los eventos relaci
 
 Durante la sesión también se identificaron **Hot Spots** relacionados con los cambios de estado de los viajes, la disponibilidad de vehículos y conductores, los tipos de incidencias y las condiciones bajo las cuales una operación puede continuar o finalizar. Estos puntos representan aspectos del dominio que requieren un análisis posterior con mayor nivel de detalle.
 
-A continuación, se presenta el diagrama elaborado durante la sesión de Big Picture EventStorming.
+A continuación, se presenta una captura del **Big Picture EventStorming de Trakto elaborado en Miro** durante la sesión.
 
 ![Big Picture EventStorming - Trakto](assets/images/chapter2/big-picture-eventstorming.png)
 
@@ -1544,111 +1534,164 @@ Las siguientes historias representan requisitos técnicos necesarios para soport
 
 ### Spike Stories
 
-Las Spike Stories permiten realizar actividades de investigación, análisis o pruebas de viabilidad antes de implementar funcionalidades que presentan incertidumbre técnica. Estas historias no generan directamente una funcionalidad final para el usuario, sino conocimiento y evidencia que permiten tomar decisiones técnicas fundamentadas.
+Las Spike Stories permiten investigar aspectos técnicos antes de implementar una funcionalidad, reduciendo incertidumbre y facilitando la toma de decisiones del equipo.
 
 #### SP01 – Investigar persistencia local para Trakto
 
-**Contexto**
+**Spike Story:**  
+Como equipo de desarrollo, deseamos investigar alternativas de persistencia local para Android con Kotlin para determinar la opción más adecuada para almacenar y consultar información de Trakto.
 
-Trakto es una aplicación móvil Android desarrollada con **Kotlin** que requiere gestionar y consultar información relacionada con viajes, vehículos, conductores, incidencias e historial operativo. Debido a que determinada información puede requerir almacenamiento local en el dispositivo, el equipo necesita evaluar alternativas de persistencia adecuadas para la aplicación.
+**Acceptance Criteria:**
 
-**Spike Story**
+- **Given** que Trakto requiere almacenamiento local  
+  **When** el equipo investiga las alternativas disponibles  
+  **Then** documenta sus principales ventajas y limitaciones.
 
-Como equipo de desarrollo, deseamos investigar y prototipar alternativas de persistencia local para Android con Kotlin para determinar una solución adecuada para almacenar, consultar y actualizar información de Trakto.
+- **Given** que se ha seleccionado una alternativa  
+  **When** el desarrollador realiza una prueba de concepto  
+  **Then** la solución permite almacenar, consultar y actualizar información básica.
 
-**Objetivo de investigación**
+- **Given** que la prueba ha sido evaluada  
+  **When** finaliza la investigación  
+  **Then** el equipo documenta la alternativa recomendada y su justificación.
 
-Evaluar alternativas de persistencia local compatibles con Android y Kotlin considerando almacenamiento estructurado, facilidad de consulta, rendimiento, mantenimiento e integración con la arquitectura definida para Trakto.
+**Definition of Done:**
 
-**Acceptance Criteria**
-
-1. **Investigar alternativas de persistencia**
-
-   **Given** que el equipo necesita almacenar información localmente  
-   **When** el desarrollador investiga las alternativas disponibles para Android  
-   **Then** documenta las opciones evaluadas, sus características, ventajas y limitaciones.
-
-2. **Evaluar los requisitos de almacenamiento**
-
-   **Given** que Trakto necesita gestionar información relacionada con viajes e historial operativo  
-   **When** el equipo compara las alternativas identificadas  
-   **Then** documenta qué alternativa responde mejor a los requisitos de la aplicación.
-
-3. **Implementar una prueba de concepto**
-
-   **Given** que se ha identificado una alternativa potencialmente adecuada  
-   **When** el desarrollador construye una prueba de concepto  
-   **Then** la prueba permite almacenar, consultar y actualizar información básica de una operación.
-
-4. **Evaluar el funcionamiento**
-
-   **Given** que la prueba de concepto está implementada  
-   **When** el equipo evalúa su comportamiento  
-   **Then** documenta las ventajas, limitaciones y riesgos técnicos identificados.
-
-5. **Seleccionar una alternativa**
-
-   **Given** que las alternativas y la prueba de concepto han sido evaluadas  
-   **When** el equipo finaliza la investigación  
-   **Then** documenta la alternativa recomendada y la justificación de la decisión.
-
-**Definition of Done**
-
-- Las alternativas de persistencia han sido investigadas y comparadas.
-- Se ha desarrollado una prueba de concepto funcional.
-- La prueba permite almacenar, consultar y actualizar información básica.
-- Los resultados se encuentran documentados.
-- Se ha seleccionado y justificado una alternativa para Trakto.
-- Los hallazgos permiten refinar las historias relacionadas con persistencia de información.
+- Alternativas investigadas y comparadas.
+- Prueba de concepto realizada.
+- Resultados y recomendación documentados.
 
 ---
 
 #### SP02 – Investigar estrategia de autenticación segura
 
-**Contexto**
+**Spike Story:**  
+Como equipo de desarrollo, deseamos investigar alternativas de autenticación para determinar una estrategia segura y adecuada para Trakto.
 
-Trakto requiere identificar a los usuarios y controlar el acceso a las funcionalidades de la aplicación. Antes de implementar completamente el contexto de **Identity and Access Management**, el equipo necesita analizar alternativas para gestionar la autenticación y mantener las credenciales de los usuarios de manera segura.
+**Acceptance Criteria:**
 
-**Spike Story**
+- **Given** que Trakto requiere autenticación de usuarios  
+  **When** el equipo investiga las alternativas disponibles  
+  **Then** documenta sus ventajas, limitaciones y consideraciones de seguridad.
 
-Como equipo de desarrollo, deseamos investigar alternativas de autenticación y gestión segura de sesiones para determinar el enfoque más adecuado para Trakto.
+- **Given** que se identifica una alternativa adecuada  
+  **When** el desarrollador realiza una prueba de concepto  
+  **Then** se valida un flujo básico de autenticación.
 
-**Objetivo de investigación**
+- **Given** que las alternativas han sido evaluadas  
+  **When** finaliza la investigación  
+  **Then** el equipo documenta la opción recomendada y su justificación.
 
-Evaluar las alternativas disponibles para autenticación en una aplicación Android desarrollada con Kotlin, considerando seguridad, mantenimiento, almacenamiento de credenciales y control de acceso.
+**Definition of Done:**
 
-**Acceptance Criteria**
-
-1. **Investigar alternativas**
-
-   **Given** que Trakto requiere autenticación de usuarios  
-   **When** el desarrollador investiga alternativas disponibles  
-   **Then** documenta las principales opciones, ventajas y limitaciones.
-
-2. **Analizar seguridad**
-
-   **Given** que las credenciales y sesiones requieren protección  
-   **When** el equipo evalúa los riesgos de cada alternativa  
-   **Then** documenta las principales consideraciones de seguridad.
-
-3. **Realizar prueba de concepto**
-
-   **Given** que se identifica una alternativa adecuada  
-   **When** el desarrollador implementa una prueba básica de autenticación  
-   **Then** la prueba permite validar un flujo de autenticación de manera controlada.
-
-4. **Documentar recomendación**
-
-   **Given** que las alternativas fueron evaluadas  
-   **When** finaliza la investigación  
-   **Then** el equipo documenta la alternativa recomendada y su justificación.
-
-**Definition of Done**
-
-- Las alternativas de autenticación han sido analizadas.
-- Los riesgos de seguridad han sido documentados.
-- Existe una prueba de concepto.
-- Se encuentra documentada una recomendación técnica.
-- Los resultados pueden utilizarse para refinar las historias de IAM.
+- Alternativas de autenticación evaluadas.
+- Prueba de concepto realizada.
+- Riesgos y recomendación técnica documentados.
 
 <div style="page-break-after: always;"></div>
+
+
+
+### 2.4.2. Impact Mapping
+
+El **Impact Mapping de Trakto fue elaborado en Miro** y permite relacionar los objetivos de negocio con los usuarios, los cambios de comportamiento esperados y las funcionalidades necesarias para alcanzarlos. Para su elaboración se consideran los User Personas previamente definidos: **Carlos Mendoza**, supervisor de flota, y **Andrea Salazar**, coordinadora de operaciones.
+
+Se establecieron los siguientes Business Goals siguiendo los criterios SMART:
+
+- **BG01:** Alcanzar al menos **100 usuarios registrados** en Trakto durante los primeros **6 meses** posteriores al lanzamiento.
+- **BG02:** Lograr que al menos el **70% de los usuarios activos** utilice las funcionalidades de gestión y consulta de viajes durante los primeros **6 meses**.
+- **BG03:** Lograr que al menos el **60% de las operaciones gestionadas en Trakto** mantenga un registro de sus principales eventos e incidencias durante los primeros **8 meses**.
+
+#### Business Goal 1
+
+**Goal:** Alcanzar al menos 100 usuarios registrados en Trakto durante los primeros 6 meses posteriores al lanzamiento.
+
+| **Actor / Persona** | **Impact** | **Deliverables** | **User Stories** |
+|---|---|---|---|
+| Carlos Mendoza – Supervisor de flota | Adopta Trakto como herramienta para gestionar sus operaciones de transporte. | Registro y autenticación de usuarios. | **US01:** Como usuario, deseo registrar una cuenta para acceder a las funcionalidades de Trakto.<br>**US02:** Como usuario registrado, deseo autenticarme con mis credenciales para acceder de manera segura a Trakto. |
+| Andrea Salazar – Coordinadora de operaciones | Utiliza Trakto para centralizar la consulta de información relacionada con sus operaciones. | Gestión de cuenta y perfil de usuario. | **US03:** Como usuario, deseo consultar la información de mi perfil para conocer los datos asociados a mi cuenta.<br>**US04:** Como usuario, deseo actualizar la información de mi perfil para mantener mis datos vigentes. |
+
+#### Business Goal 2
+
+**Goal:** Lograr que al menos el 70% de los usuarios activos utilice las funcionalidades de gestión y consulta de viajes durante los primeros 6 meses.
+
+| **Actor / Persona** | **Impact** | **Deliverables** | **User Stories** |
+|---|---|---|---|
+| Carlos Mendoza – Supervisor de flota | Consulta frecuentemente los viajes y verifica los recursos asignados a cada operación. | Gestión y consulta de viajes, vehículos y conductores. | **US05:** Como supervisor de flota, deseo consultar los viajes registrados para conocer las operaciones bajo mi responsabilidad.<br>**US06:** Como supervisor de flota, deseo consultar el detalle de un viaje para conocer su información asociada.<br>**US09:** Como supervisor de flota, deseo consultar la información del conductor asignado para conocer al responsable de una operación.<br>**US10:** Como supervisor de flota, deseo consultar la información del vehículo asignado para conocer la unidad utilizada. |
+| Andrea Salazar – Coordinadora de operaciones | Organiza y consulta los viajes y rutas necesarios para coordinar las operaciones de transporte. | Programación de viajes y gestión de rutas. | **US17:** Como coordinador de operaciones, deseo programar un viaje para registrar una nueva operación de transporte.<br>**US18:** Como coordinador de operaciones, deseo asignar una ruta a un viaje para establecer el recorrido que debe realizarse.<br>**US08:** Como coordinador de operaciones, deseo consultar la ruta asignada a un viaje para conocer el recorrido establecido. |
+
+#### Business Goal 3
+
+**Goal:** Lograr que al menos el 60% de las operaciones gestionadas en Trakto mantenga un registro de sus principales eventos e incidencias durante los primeros 8 meses.
+
+| **Actor / Persona** | **Impact** | **Deliverables** | **User Stories** |
+|---|---|---|---|
+| Carlos Mendoza – Supervisor de flota | Registra los eventos e incidencias relevantes ocurridos durante los viajes. | Registro de paradas, descansos, retrasos, problemas e incidencias. | **US20:** Como supervisor de flota, deseo registrar una parada ocurrida durante un viaje para mantener la trazabilidad de la operación.<br>**US21:** Como supervisor de flota, deseo registrar un descanso realizado durante un viaje para mantener constancia de las pausas.<br>**US11:** Como supervisor de flota, deseo registrar una incidencia asociada a un viaje para mantener constancia de los problemas ocurridos.<br>**US31:** Como supervisor de flota, deseo registrar un retraso ocurrido durante un viaje para mantener constancia de las demoras. |
+| Andrea Salazar – Coordinadora de operaciones | Revisa los eventos históricos de las operaciones para mejorar su seguimiento y evaluación. | Consulta de incidencias e historial operativo. | **US12:** Como coordinador de operaciones, deseo consultar los eventos e incidencias de un viaje para conocer las situaciones ocurridas durante la operación.<br>**US13:** Como coordinador de operaciones, deseo consultar el historial de viajes para revisar operaciones realizadas anteriormente.<br>**US36:** Como coordinador de operaciones, deseo consultar las incidencias registradas en operaciones anteriores para analizar los problemas ocurridos. |
+
+A continuación, se presenta una captura del **Impact Mapping de Trakto elaborado en Miro** a partir de los Business Goals, User Personas, Impacts, Deliverables y User Stories identificados.
+
+![Impact Mapping - Trakto](assets/images/chapter2/impact-mapping.png)
+
+<div style="page-break-after: always;"></div
+
+
+### 2.4.3. Product Backlog
+
+El **Product Backlog** de Trakto reúne las User Stories identificadas y las organiza según su valor para el negocio. Cada historia cuenta con una estimación mediante **Story Points**, utilizando los valores **1, 2, 3, 5 y 8**, y se distribuye entre los Sprints planificados para el desarrollo del producto.
+
+El orden del Product Backlog prioriza inicialmente las funcionalidades relacionadas con la gestión de viajes, flota e incidencias, debido a que representan las principales capacidades del dominio de Trakto.
+
+| **Orden** | **User Story Id** | **Título** | **Story Points** | **Sprint** |
+|---:|---|---|---:|---:|
+| 1 | US17 | Programar viaje | 5 | 1 |
+| 2 | US05 | Consultar viajes | 3 | 1 |
+| 3 | US06 | Consultar detalle de viaje | 3 | 1 |
+| 4 | US18 | Asignar ruta a un viaje | 3 | 1 |
+| 5 | US23 | Registrar vehículo | 3 | 1 |
+| 6 | US25 | Registrar conductor | 3 | 1 |
+| 7 | US27 | Asignar vehículo a un viaje | 5 | 1 |
+| 8 | US28 | Asignar conductor a un viaje | 5 | 1 |
+| 9 | US07 | Consultar estado del viaje | 2 | 1 |
+| 10 | US19 | Actualizar estado del viaje | 3 | 1 |
+| 11 | US01 | Registrar cuenta | 3 | 1 |
+| 12 | US02 | Iniciar sesión | 3 | 1 |
+| 13 | US08 | Consultar ruta asignada | 2 | 2 |
+| 14 | US09 | Consultar información del conductor | 2 | 2 |
+| 15 | US10 | Consultar información del vehículo | 2 | 2 |
+| 16 | US29 | Consultar disponibilidad de vehículos | 3 | 2 |
+| 17 | US30 | Consultar disponibilidad de conductores | 3 | 2 |
+| 18 | US11 | Registrar incidencia | 5 | 2 |
+| 19 | US31 | Registrar retraso | 3 | 2 |
+| 20 | US32 | Registrar problema | 3 | 2 |
+| 21 | US33 | Registrar accidente | 3 | 2 |
+| 22 | US34 | Actualizar estado de incidencia | 3 | 2 |
+| 23 | US35 | Consultar detalle de incidencia | 2 | 2 |
+| 24 | US12 | Consultar eventos e incidencias del viaje | 3 | 2 |
+| 25 | US20 | Registrar parada | 3 | 2 |
+| 26 | US21 | Registrar descanso | 3 | 2 |
+| 27 | US22 | Finalizar viaje | 3 | 2 |
+| 28 | US13 | Consultar historial de viajes | 5 | 3 |
+| 29 | US16 | Filtrar historial de viajes | 3 | 3 |
+| 30 | US14 | Consultar historial del conductor | 3 | 3 |
+| 31 | US15 | Consultar historial del vehículo | 3 | 3 |
+| 32 | US36 | Consultar historial de incidencias | 3 | 3 |
+| 33 | US37 | Revisar desempeño de una operación | 5 | 3 |
+| 34 | US38 | Consultar viajes por conductor | 3 | 3 |
+| 35 | US39 | Consultar viajes por vehículo | 3 | 3 |
+| 36 | US24 | Actualizar información del vehículo | 2 | 3 |
+| 37 | US26 | Actualizar información del conductor | 2 | 3 |
+| 38 | US03 | Consultar perfil | 2 | 3 |
+| 39 | US04 | Actualizar perfil | 2 | 3 |
+
+A continuación, se presenta una captura del **Product Backlog de Trakto elaborado en Trello**.
+
+![Product Backlog - Trakto](assets/images/chapter2/product-backlog.png)
+
+**Enlace público del Product Backlog en Trello:**  
+[Agregar URL pública de Trello]
+
+<div style="page-break-after: always;"></div>
+
+
+## 2.5.
