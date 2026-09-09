@@ -36,7 +36,7 @@
   </tr>
   <tr>
     <td>UXXXXXXXXXX</td>
-    <td>Miembro 2</td>
+    <td>Aguilar Aguayo Jeferson Renzo</td>
   </tr>
   <tr>
     <td>U202019498</td>
@@ -345,142 +345,1000 @@ Para comprender el entorno competitivo de **Trakto**, se analizaron soluciones r
 
 Para el análisis competitivo se han considerado competidores directos e indirectos que ofrecen funcionalidades relacionadas con la gestión de vehículos, conductores, rutas, viajes, incidencias e historial de operaciones.
 
-### Fleet Complete
-
-**Tipo de competidor: Directo**
-
-Fleet Complete es una plataforma orientada a la gestión de flotas que permite a las empresas administrar vehículos y conductores, además de disponer de información relacionada con sus operaciones. Sus soluciones incluyen herramientas orientadas al control de flotas, conductores, mantenimiento y análisis del desempeño operativo.
-
-Representa un competidor para Trakto debido a sus capacidades para gestionar vehículos y conductores dentro de las operaciones empresariales. Sin embargo, Trakto busca concentrar su propuesta en una aplicación móvil orientada a centralizar de manera sencilla la información de viajes, rutas, vehículos, conductores, estados, incidencias e historial operativo.
-
-### Samsara
-
-**Tipo de competidor: Directo**
-
-Samsara ofrece soluciones orientadas a la gestión de flotas y operaciones físicas. Su plataforma permite administrar información relacionada con vehículos, conductores, seguridad, mantenimiento y desempeño de las operaciones, proporcionando a las organizaciones herramientas para mejorar el control de sus recursos.
-
-Se considera un competidor directo debido a que comparte funcionalidades relacionadas con la administración de vehículos, conductores y operaciones de transporte. Trakto busca diferenciarse mediante una propuesta móvil enfocada específicamente en facilitar la gestión de viajes, rutas, incidencias e historial de operaciones para empresas de transporte de carga y operadores logísticos.
-
-### Tookan
-
-**Tipo de competidor: Indirecto**
-
-Tookan es una plataforma orientada principalmente a la gestión de entregas y operaciones de campo. Permite administrar conductores o agentes, asignar tareas, organizar rutas y gestionar diferentes actividades relacionadas con las operaciones de distribución.
-
-Se considera un competidor indirecto debido a que comparte funcionalidades relacionadas con la gestión de conductores, rutas y operaciones, aunque su enfoque está principalmente orientado a entregas y servicios de última milla. En contraste, Trakto se enfoca en la gestión y trazabilidad de operaciones de transporte de carga, incluyendo viajes, vehículos, conductores, rutas, eventos e historial operativo.
-
 <div style="page-break-after: always;"></div>
 
 
-### 2.1.1. Análisis competitivo
+#### 2.1.1. Análisis competitivo
 
-| | **Trakto** | **Fleet Complete** | **Samsara** | **Tookan** |
-|---|---|---|---|---|
-| **Perfil** | | | | |
-| Overview | Aplicación móvil orientada a la gestión de operaciones de transporte de carga que permite centralizar información sobre viajes, vehículos, conductores y rutas, consultar el estado de las operaciones, registrar incidencias y revisar el historial de viajes y recursos utilizados. | Plataforma orientada a la gestión de flotas que ofrece herramientas para administrar vehículos, conductores, mantenimiento y diferentes aspectos relacionados con el desempeño de las operaciones. | Plataforma tecnológica orientada a la gestión de flotas y operaciones físicas que ofrece herramientas relacionadas con vehículos, conductores, seguridad, mantenimiento y análisis operativo. | Plataforma orientada a la gestión de entregas y operaciones de campo que permite administrar conductores, asignar tareas, organizar rutas y gestionar operaciones de distribución. |
-| Ventaja competitiva | Centralización de viajes, vehículos, conductores, rutas, incidencias e historial operativo mediante una aplicación móvil enfocada en empresas de transporte de carga y operadores logísticos. | Amplia variedad de herramientas para administrar flotas, vehículos y conductores dentro de las operaciones empresariales. | Ecosistema amplio de herramientas para la gestión de flotas, seguridad, conductores, mantenimiento y análisis de operaciones. | Facilidad para administrar entregas, asignar tareas y coordinar conductores mediante una plataforma orientada a operaciones de distribución. |
-| **Perfil de Marketing** | | | | |
-| Mercado objetivo | Empresas de transporte de carga y operadores logísticos que necesitan gestionar viajes, vehículos, conductores, rutas e incidencias. | Empresas que administran flotas de vehículos y requieren herramientas para gestionar sus unidades y conductores. | Empresas que administran flotas y operaciones físicas y requieren herramientas para mejorar la gestión, seguridad y eficiencia de sus recursos. | Empresas de delivery, logística, comercio electrónico y organizaciones que gestionan entregas u operaciones de campo. |
-| Estrategias de marketing | Marketing digital B2B, contacto directo con empresas de transporte y logística, presencia en redes profesionales y alianzas estratégicas con organizaciones relacionadas con el sector. | Posicionamiento basado en eficiencia operativa, gestión de flotas y optimización de vehículos y conductores. | Posicionamiento empresarial basado en seguridad, eficiencia, digitalización y administración integral de operaciones físicas. | Posicionamiento basado en facilidad de uso, automatización de operaciones, optimización de entregas y flexibilidad para diferentes tipos de empresas. |
-| **Perfil de Producto** | | | | |
-| Productos & Servicios | Gestión y consulta de viajes, vehículos, conductores y rutas; consulta del estado de las operaciones; registro de paradas, descansos, retrasos e incidencias; historial de viajes; e historial de vehículos y conductores. | Gestión de flotas, vehículos y conductores, mantenimiento y herramientas relacionadas con el análisis del desempeño operativo. | Gestión de flotas, conductores, seguridad, mantenimiento, análisis operativo y herramientas para administrar diferentes aspectos de las operaciones físicas. | Planificación de rutas, asignación de tareas, gestión de conductores, administración de entregas y reportes relacionados con las operaciones. |
-| Precios & Costos | Modelo de suscripción empresarial. Precios por definir según el alcance y las funcionalidades ofrecidas. | Precios variables según la solución, cantidad de vehículos y servicios contratados. | Precios empresariales variables según los productos, servicios y características contratadas por la organización. | Planes de suscripción según las funcionalidades y necesidades de las operaciones gestionadas. |
-| Canales de distribución | Aplicación móvil desarrollada con Kotlin para dispositivos Android. | Web y móvil. | Web y móvil. | Web y móvil. |
-| **Análisis SWOT** | | | | |
-| Fortalezas | Aplicación móvil enfocada en transporte de carga; centralización de viajes, vehículos, conductores, rutas e incidencias; historial de operaciones; propuesta enfocada en facilitar las tareas frecuentes de supervisores y coordinadores logísticos. | Amplia variedad de herramientas para la gestión de flotas, vehículos y conductores y experiencia en soluciones empresariales. | Plataforma consolidada con un amplio conjunto de herramientas para la administración de flotas y operaciones físicas. | Facilidad de uso, flexibilidad para diferentes operaciones y herramientas especializadas en planificación, asignación y gestión de entregas. |
-| Debilidades | Producto nuevo sin una base de clientes consolidada; menor cantidad de funcionalidades avanzadas frente a plataformas internacionales; dependencia del correcto registro y actualización de la información operativa. | La cantidad de funcionalidades disponibles puede incrementar la complejidad de adopción para empresas que requieren una solución más sencilla. | Su amplio conjunto de soluciones puede resultar más complejo de adoptar para pequeñas empresas que únicamente necesitan funcionalidades específicas de gestión de transporte. | Su enfoque principal en entregas y operaciones de última milla puede limitar su adaptación a determinadas operaciones de transporte de carga. |
-| Oportunidades | Digitalización de las empresas de transporte de carga; necesidad de centralizar información operativa; crecimiento del uso de dispositivos móviles en procesos empresariales; posibilidad de atender empresas peruanas que buscan una solución sencilla para organizar viajes, vehículos, conductores e incidencias. | Crecimiento de la digitalización de flotas y mayor demanda de herramientas para la gestión de vehículos y conductores. | Mayor digitalización de las operaciones empresariales y crecimiento de la demanda de herramientas para administrar flotas y recursos físicos. | Crecimiento del comercio electrónico, delivery y operaciones de última milla que requieren herramientas digitales de coordinación y gestión. |
-| Amenazas | Competencia de plataformas internacionales consolidadas; aparición de nuevas aplicaciones de gestión de transporte; resistencia de algunas empresas a cambiar sus procesos actuales; posibilidad de que competidores incorporen funcionalidades similares. | Competencia de soluciones de gestión de flotas más económicas y aparición de nuevas tecnologías para la administración vehicular. | Competencia de otras plataformas empresariales de gestión de flotas y evolución constante de las tecnologías utilizadas en el sector. | Competencia de plataformas más especializadas y completas para gestión de flotas y transporte de carga. |
+### Competitive Analysis Landscape
 
-<div style="page-break-after: always;"></div>
+<div align="center">
 
+<table>
+
+<tr>
+<th colspan="6" style="text-align: center">
+Competitive Analysis Landscape
+</th>
+</tr>
+
+<tr>
+<th colspan="2">
+¿Por qué llevar a cabo este análisis?
+</th>
+
+<td colspan="4">
+Tiene como objetivo identificar y comprender las características, fortalezas y debilidades de las soluciones existentes en el mercado de transporte y logística, con la finalidad de detectar oportunidades de diferenciación y definir una propuesta de valor clara para Trakto Route.
+</td>
+</tr>
+
+
+<tr>
+
+<th colspan="2"></th>
+
+<th style="text-align: center;">
+<img src="./assets/images/chapter2/competitors/Trakto_Route.png" alt="Trakto Route" width="150">
+</th>
+
+<th style="text-align: center;">
+<img src="./assets/images/chapter2/competitors/Samsara.png" alt="Samsara" width="150">
+</th>
+
+<th style="text-align: center;">
+<img src="./assets/images/chapter2/competitors/SimpliRoute.png" alt="SimpliRoute" width="150">
+</th>
+
+<th style="text-align: center;">
+<img src="./assets/images/chapter2/competitors/DispatchTrack.png" alt="DispatchTrack" width="150">
+</th>
+
+</tr>
+
+
+<tr>
+
+<td rowspan="2" style="vertical-align: middle; font-weight: bold;">
+Perfil
+</td>
+
+<td>
+Overview
+</td>
+
+
+<td>
+
+<i>
+Trakto Route es una solución móvil orientada a mejorar la trazabilidad de viajes de transporte de carga mediante aplicaciones diferenciadas por rol y un backend propio. Permite registrar viajes, avances e incidencias, centralizando información operativa para conductores, supervisores y coordinadores logísticos.
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+Samsara es una plataforma integral de gestión de flotas que combina telemática, seguridad, mantenimiento y monitoreo operativo mediante software, sensores y dispositivos conectados.
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+SimpliRoute es una plataforma SaaS enfocada en la planificación de rutas, monitoreo de operaciones y optimización logística para empresas de distribución y transporte.
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+DispatchTrack es una plataforma especializada en gestión de última milla que permite planificar, monitorear entregas y mejorar la comunicación entre operadores y conductores.
+</i>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+Ventaja competitiva<br>
+¿Qué valor ofrece a los clientes?
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Registro digital de viajes desde campo.
+</li>
+
+<li>
+Seguimiento del estado del viaje mediante información centralizada.
+</li>
+
+<li>
+Adaptación inicial a escenarios con conectividad variable.
+</li>
+
+<li>
+Separación de funcionalidades según rol del usuario.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Visibilidad integral de flotas.
+</li>
+
+<li>
+Analítica avanzada mediante telemática.
+</li>
+
+<li>
+Herramientas de seguridad y mantenimiento preventivo.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Optimización automática de rutas.
+</li>
+
+<li>
+Seguimiento en tiempo real.
+</li>
+
+<li>
+Reducción de costos operativos.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Control especializado de entregas.
+</li>
+
+<li>
+Mejora de experiencia del cliente final.
+</li>
+
+<li>
+Seguimiento de operaciones de última milla.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td rowspan="2" style="vertical-align: middle; font-weight: bold;">
+Perfil de Marketing
+</td>
+
+
+<td>
+Mercado objetivo
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Empresas peruanas de transporte de carga.
+</li>
+
+<li>
+Operadores logísticos.
+</li>
+
+<li>
+Empresas pequeñas y medianas que requieren mejorar la supervisión de viajes.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Empresas con flotas medianas y grandes.
+</li>
+
+<li>
+Organizaciones que requieren control integral de vehículos.
+</li>
+
+<li>
+Empresas con necesidades avanzadas de monitoreo.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Empresas de logística y distribución.
+</li>
+
+<li>
+Retail y operadores con múltiples rutas.
+</li>
+
+<li>
+Empresas que buscan eficiencia operacional.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Empresas enfocadas en distribución.
+</li>
+
+<li>
+Comercio electrónico.
+</li>
+
+<li>
+Operaciones de última milla.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+Estrategias de Marketing
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Pilotos B2B con empresas de transporte.
+</li>
+
+<li>
+Demostraciones funcionales.
+</li>
+
+<li>
+Validación mediante usuarios reales.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Venta consultiva empresarial.
+</li>
+
+<li>
+Demostraciones online.
+</li>
+
+<li>
+Enfoque en seguridad y eficiencia.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Demostraciones comerciales.
+</li>
+
+<li>
+Contenido educativo.
+</li>
+
+<li>
+Posicionamiento basado en optimización logística.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Venta empresarial directa.
+</li>
+
+<li>
+Demostraciones personalizadas.
+</li>
+
+<li>
+Enfoque en resultados operativos.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td rowspan="3" style="vertical-align: middle; font-weight: bold;">
+Perfil de producto
+</td>
+
+
+<td>
+Productos & Servicios
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Aplicación Android para conductores.
+</li>
+
+<li>
+Aplicación multiplataforma para supervisores.
+</li>
+
+<li>
+Registro de viajes, avances e incidencias.
+</li>
+
+<li>
+Línea de tiempo del recorrido.
+</li>
+
+<li>
+API RESTful propia para centralización de información.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Gestión de flotas.
+</li>
+
+<li>
+Telemática vehicular.
+</li>
+
+<li>
+Seguridad y mantenimiento.
+</li>
+
+<li>
+Analítica operacional.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Planificación de rutas.
+</li>
+
+<li>
+Monitoreo operativo.
+</li>
+
+<li>
+Notificaciones e integraciones.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Planificación de entregas.
+</li>
+
+<li>
+Seguimiento de última milla.
+</li>
+
+<li>
+Aplicación para conductores.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Precios & Costos
+</td>
+
+<td>
+Modelo de suscripción pendiente de validación según tamaño de empresa y necesidades operativas.
+</td>
+
+
+<td>
+Modelo basado en cotización según cantidad de vehículos y funcionalidades contratadas.
+</td>
+
+
+<td>
+Planes según módulos y alcance operativo requerido.
+</td>
+
+
+<td>
+Cotización empresarial según requerimientos del cliente.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Canales de distribución<br>(Web y/o Móvil)
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Aplicaciones móviles Android/iOS.
+</li>
+
+<li>
+Plataforma web administrativa.
+</li>
+
+<li>
+Canales digitales B2B.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Plataforma web.
+</li>
+
+<li>
+Aplicaciones móviles.
+</li>
+
+<li>
+Hardware conectado.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Plataforma web.
+</li>
+
+<li>
+Aplicaciones móviles.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+
+<td>
+
+<i>
+
+<ul>
+
+<li>
+Plataforma web.
+</li>
+
+<li>
+Aplicación móvil.
+</li>
+
+</ul>
+
+</i>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td rowspan="4" style="vertical-align: middle; font-weight: bold;">
+Análisis SWOT
+</td>
+
+
+<td>
+Fortalezas
+</td>
+
+<td>
+<ul>
+<li>Enfoque específico en trazabilidad de viajes.</li>
+<li>Separación por roles.</li>
+<li>Adaptación inicial al contexto peruano.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Plataforma madura.</li>
+<li>Amplio ecosistema tecnológico.</li>
+<li>Hardware y analítica avanzada.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Especialización en optimización logística.</li>
+<li>Experiencia regional.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Experiencia en última milla.</li>
+<li>Solución especializada en entregas.</li>
+</ul>
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Debilidades
+</td>
+
+
+<td>
+<ul>
+<li>Sin adopción validada.</li>
+<li>Sin resultados medidos.</li>
+<li>Sin infraestructura telemática propia.</li>
+</ul>
+</td>
+
+
+<td>
+<ul>
+<li>Mayor costo de implementación.</li>
+<li>Puede ser complejo para necesidades pequeñas.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Puede superar necesidades básicas.</li>
+<li>Menor enfoque en trazabilidad personalizada.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Mayor orientación hacia entrega final.</li>
+<li>Menor ajuste para seguimiento general del viaje.</li>
+</ul>
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Oportunidades
+</td>
+
+<td>
+<ul>
+<li>Digitalización del transporte peruano.</li>
+<li>Validación en escenarios de conectividad variable.</li>
+<li>Integraciones futuras.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Crecimiento de IoT y analítica.</li>
+<li>Mayor adopción empresarial.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Automatización logística.</li>
+<li>Crecimiento del comercio digital.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Expansión de última milla.</li>
+<li>Crecimiento del comercio electrónico.</li>
+</ul>
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Amenazas
+</td>
+
+<td>
+<ul>
+<li>Competidores consolidados.</li>
+<li>Resistencia al cambio tecnológico.</li>
+<li>Baja disposición de pago inicial.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Competidores regionales.</li>
+<li>Costos elevados.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Plataformas globales con mayor inversión.</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>Soluciones integrales con mayor presencia.</li>
+</ul>
+</td>
+
+</tr>
+
+</table>
+
+</div>
 
 
 # 2.1.2. Estrategias y tácticas frente a competidores
 
-En esta sección se presentan las principales estrategias y tácticas que **Trakto** aplicará para competir dentro del mercado de soluciones de gestión de flotas y operaciones de transporte de carga. Estas acciones buscan fortalecer la propuesta de valor de la aplicación, diferenciarla de otras alternativas y responder a las necesidades de empresas de transporte y operadores logísticos.
+En esta sección se presentan las principales estrategias y tácticas que **Trakto Route** plantea desarrollar para competir dentro del mercado de soluciones de gestión de flotas y operaciones de transporte de carga. Estas acciones buscan fortalecer la propuesta de valor del producto, generar diferenciación frente a las alternativas existentes y responder a las necesidades identificadas en empresas de transporte y operadores logísticos.
+
+Las estrategias consideran el posicionamiento de Trakto Route frente a soluciones consolidadas como Samsara, SimpliRoute y DispatchTrack, priorizando la trazabilidad operativa, facilidad de adopción, accesibilidad móvil y adaptación al contexto de empresas que requieren mejorar la organización y seguimiento de sus operaciones.
+
 
 ## Estrategias
 
+
 **Diferenciación del producto:**  
-Trakto buscará diferenciarse mediante una aplicación móvil que centralice, en un solo entorno, funcionalidades orientadas a la gestión de viajes, vehículos, conductores, rutas, estados, incidencias e historial de operaciones. La propuesta estará enfocada en facilitar el acceso a la información operativa sin depender de múltiples herramientas o registros separados.
+
+Trakto Route buscará diferenciarse frente a plataformas integrales de gestión de flotas mediante una solución enfocada específicamente en la trazabilidad operativa de viajes y transporte de carga. La propuesta estará orientada a centralizar progresivamente información relacionada con viajes, vehículos, conductores, rutas, incidencias e historial operativo, reduciendo la dependencia de registros dispersos y herramientas independientes.
+
 
 **Enfoque en la trazabilidad de las operaciones:**  
-Se priorizará el registro y almacenamiento de información relacionada con viajes, conductores, vehículos, rutas, paradas, descansos, retrasos e incidencias. Esto permitirá que las empresas puedan consultar posteriormente lo ocurrido durante cada operación y mantener un historial organizado de sus actividades de transporte.
+
+Trakto Route priorizará la recopilación y organización de información asociada a las operaciones de transporte, incluyendo datos de viajes, rutas, paradas, descansos, retrasos e incidencias. Esto permitirá que las empresas puedan disponer de un historial organizado de sus operaciones y mejorar la visibilidad sobre el desarrollo de cada viaje.
+
 
 **Experiencia de usuario accesible:**  
-Trakto buscará ofrecer una interfaz móvil clara, intuitiva y fácil de utilizar, de manera que supervisores, gestores de flota y coordinadores logísticos puedan consultar rápidamente la información relevante de sus operaciones sin requerir conocimientos técnicos avanzados.
 
-**Adaptación a las necesidades de las empresas:**  
-La aplicación evolucionará considerando las necesidades identificadas en empresas de transporte de carga y operadores logísticos, priorizando aquellas funcionalidades que aporten mayor valor a la organización, gestión y trazabilidad de sus operaciones.
+Trakto Route buscará ofrecer una experiencia de uso sencilla e intuitiva mediante interfaces diferenciadas según el rol del usuario, permitiendo que conductores, supervisores y gestores de operaciones puedan acceder a la información necesaria sin requerir conocimientos técnicos especializados.
 
-**Enfoque en la movilidad:**  
-Trakto priorizará el acceso a la información desde dispositivos móviles, permitiendo que los responsables de las operaciones puedan consultar viajes, conductores, vehículos, rutas e incidencias desde una aplicación Android desarrollada específicamente para este propósito.
+
+**Adaptación al contexto operativo de las empresas:**  
+
+Trakto Route se desarrollará considerando las necesidades específicas de empresas de transporte de carga y operadores logísticos, especialmente aquellas relacionadas con procesos manuales, dificultades de seguimiento operativo, conectividad limitada y necesidad de una transición progresiva hacia herramientas digitales.
+
+
+**Enfoque en movilidad y acceso operativo:**  
+
+Trakto Route priorizará el acceso mediante dispositivos móviles, permitiendo que los responsables de la operación puedan consultar información relacionada con viajes, vehículos, conductores, rutas e incidencias desde aplicaciones diseñadas para escenarios operativos de campo.
+
 
 ## Tácticas
 
+
 **Implementación de retroalimentación de usuarios:**  
-Se recopilarán y analizarán comentarios de supervisores, gestores de flota, coordinadores y operadores logísticos para identificar problemas de uso, nuevas necesidades y oportunidades de mejora. Esta información permitirá priorizar funcionalidades que generen mayor valor para los usuarios de Trakto.
+
+Se recopilarán y analizarán comentarios de supervisores, gestores de flota, coordinadores logísticos y operadores de transporte con la finalidad de identificar problemas actuales, necesidades emergentes y oportunidades de mejora. Esta información permitirá priorizar funcionalidades que generen mayor valor para los usuarios.
+
 
 **Monitoreo de la competencia:**  
-Se realizará un seguimiento periódico de plataformas como Fleet Complete, Samsara y Tookan para identificar nuevas funcionalidades, cambios en sus propuestas de valor y tendencias relacionadas con la gestión de flotas y operaciones de transporte.
+
+Se realizará un seguimiento periódico de soluciones existentes en el mercado como Samsara, SimpliRoute, DispatchTrack y otras plataformas relacionadas con gestión de flotas y logística. Este análisis permitirá identificar nuevas funcionalidades, tendencias tecnológicas y oportunidades de diferenciación para Trakto Route.
+
 
 **Marketing digital B2B:**  
-Se desarrollarán acciones de marketing digital dirigidas específicamente a empresas de transporte de carga y operadores logísticos, utilizando contenido relacionado con gestión de viajes, trazabilidad de operaciones, organización de flotas, incidencias e historial operativo para dar a conocer la propuesta de valor de Trakto.
+
+Se desarrollarán acciones de comunicación dirigidas a empresas de transporte de carga y operadores logísticos mediante contenido relacionado con trazabilidad de viajes, organización de operaciones, gestión de incidencias y digitalización logística. El objetivo será posicionar a Trakto Route como una alternativa orientada a mejorar la visibilidad y control operativo.
+
 
 **Contacto y demostraciones con empresas:**  
-Se buscará establecer contacto directo con empresas del sector transporte y logística para presentar el funcionamiento de Trakto mediante demostraciones de la aplicación. Esto permitirá mostrar de manera práctica cómo la solución puede facilitar la consulta y organización de viajes, vehículos, conductores, rutas e incidencias.
+
+Se establecerá contacto con empresas del sector transporte y logística para presentar la propuesta de valor de Trakto Route mediante demostraciones funcionales. Estas actividades permitirán obtener validación temprana, identificar necesidades reales y evaluar la aceptación de la solución.
+
 
 **Validación mediante pruebas con usuarios:**  
-Se realizarán pruebas con representantes de los segmentos objetivo para evaluar la facilidad de uso de la aplicación, la comprensión de sus funcionalidades y la utilidad de la información presentada. Los resultados obtenidos servirán para identificar oportunidades de mejora antes de incorporar nuevas funcionalidades.
 
-**Mejora continua de la aplicación:**  
-Se realizarán iteraciones constantes sobre Trakto a partir de los resultados obtenidos durante las pruebas con usuarios, entrevistas y análisis del mercado, con el objetivo de mantener una solución competitiva y alineada con las necesidades del sector de transporte y logística.
+Se realizarán pruebas con representantes de los segmentos objetivo para evaluar la facilidad de uso, comprensión de funcionalidades y utilidad de la información proporcionada por Trakto Route. Los resultados permitirán validar hipótesis del producto y definir mejoras antes de ampliar su alcance funcional.
+
+
+**Mejora continua de la solución:**  
+
+Trakto Route seguirá un proceso de mejora continua basado en resultados obtenidos mediante entrevistas, pruebas con usuarios, análisis competitivo y retroalimentación del mercado. Esto permitirá mantener una evolución alineada con las necesidades reales del sector transporte y logística.
+
 
 <div style="page-break-after: always;"></div>
 
 
 # 2.2. Entrevistas
 
+
 ## 2.2.1. Diseño de entrevistas
 
-Las entrevistas tienen como objetivo conocer las necesidades, dificultades y procesos actuales de los segmentos objetivo de **Trakto** en relación con la gestión de viajes, vehículos, conductores, rutas e incidencias dentro de las operaciones de transporte. Asimismo, buscan identificar las herramientas que utilizan actualmente, la manera en que registran y consultan la información de sus operaciones y las dificultades que enfrentan para mantener la trazabilidad de los viajes.
 
-La información obtenida permitirá validar las principales suposiciones planteadas durante el proceso Lean UX y determinar qué funcionalidades de Trakto generan mayor valor para los usuarios.
+Las entrevistas tienen como objetivo comprender las necesidades, dificultades y procesos actuales de los segmentos objetivo de **Trakto Route** respecto a la gestión de viajes, vehículos, conductores, rutas e incidencias dentro de las operaciones de transporte.
 
-### Segmento objetivo 1: Empresas de transporte de carga
+Asimismo, buscan identificar las herramientas utilizadas actualmente, los métodos empleados para registrar y consultar información operativa, las principales limitaciones existentes y los factores considerados importantes al momento de adoptar una solución tecnológica.
+
+La información obtenida permitirá validar las hipótesis planteadas durante el proceso Lean UX, identificar oportunidades de mejora y determinar las funcionalidades que generan mayor valor para los usuarios.
+
+
+## Segmento objetivo 1: Empresas de transporte de carga
+
 
 1. ¿Cuánto tiempo lleva su empresa realizando operaciones de transporte de carga?
-2. ¿Cuántos vehículos y conductores aproximadamente gestionan actualmente?
-3. ¿Cómo organizan y consultan actualmente la información de los viajes que realiza su empresa?
-4. ¿Qué herramientas o tecnologías utilizan para gestionar la información de sus vehículos, conductores, rutas y viajes?
-5. ¿Cuáles son los principales problemas que enfrentan al gestionar sus operaciones de transporte?
-6. ¿Cómo registran actualmente paradas, descansos, retrasos, problemas, accidentes u otras incidencias que ocurren durante un viaje?
-7. ¿Cómo consultan el estado de un viaje cuando necesitan conocer cómo se está desarrollando una operación?
-8. ¿Qué procedimiento siguen cuando ocurre una incidencia o problema durante una operación de transporte?
-9. ¿Mantienen algún registro o historial de los viajes, rutas e incidencias ocurridas? ¿Cómo gestionan actualmente esta información?
-10. ¿Qué información consideran más importante consultar sobre un viaje para gestionar adecuadamente una operación?
-11. ¿Qué dificultades encuentran al administrar información relacionada con vehículos, conductores, rutas y viajes?
-12. ¿Qué tan útil sería para su empresa contar con una aplicación móvil que centralice la información de viajes, vehículos, conductores, rutas e incidencias?
-13. ¿Qué funcionalidades consideraría indispensables en una aplicación móvil para la gestión de operaciones de transporte de carga?
-14. ¿Qué factores tomaría en cuenta su empresa antes de adoptar una aplicación como Trakto?
 
-### Segmento objetivo 2: Operadores y empresas de logística
+2. ¿Cuántos vehículos y conductores gestionan actualmente?
+
+3. ¿Cómo organizan y consultan actualmente la información relacionada con los viajes realizados?
+
+4. ¿Qué herramientas o sistemas utilizan actualmente para gestionar información de vehículos, conductores, rutas y operaciones?
+
+5. ¿Cuáles son los principales problemas o dificultades que enfrentan al gestionar sus operaciones de transporte?
+
+6. ¿Cómo registran actualmente paradas, descansos, retrasos, problemas, accidentes u otras incidencias ocurridas durante un viaje?
+
+7. ¿Cómo consultan el estado de un viaje cuando necesitan conocer el avance de una operación en curso?
+
+8. ¿Qué procedimiento siguen actualmente cuando ocurre una incidencia durante una operación de transporte?
+
+9. ¿Mantienen algún registro histórico de viajes, rutas e incidencias? ¿Cómo gestionan actualmente esta información?
+
+10. ¿Qué información considera más importante consultar para conocer el estado y desempeño de una operación de transporte?
+
+11. ¿Qué dificultades encuentra al administrar información relacionada con vehículos, conductores, rutas y viajes?
+
+12. ¿Qué tan útil sería para su empresa contar con una aplicación móvil que permita organizar y consultar información operativa desde un solo lugar?
+
+
+## Segmento objetivo 2: Operadores y empresas de logística
+
 
 1. ¿Qué tipo de operaciones logísticas y de transporte gestiona actualmente su empresa?
-2. ¿Con qué frecuencia necesitan consultar o gestionar información sobre vehículos, conductores, rutas o viajes?
-3. ¿Cómo organizan actualmente la información relacionada con sus operaciones de transporte?
-4. ¿Qué herramientas o sistemas utilizan para gestionar la información de viajes, vehículos, conductores y rutas?
-5. ¿Cuáles son las principales dificultades que encuentran al gestionar múltiples operaciones de transporte?
-6. ¿Cómo registran actualmente paradas, descansos, retrasos, problemas, accidentes u otras incidencias que puedan afectar un viaje?
-7. ¿Cómo consultan el estado de una operación cuando necesitan conocer lo ocurrido durante un viaje?
+
+2. ¿Con qué frecuencia necesitan consultar información relacionada con vehículos, conductores, rutas o viajes?
+
+3. ¿Cómo organizan actualmente la información de sus operaciones de transporte?
+
+4. ¿Qué herramientas o sistemas utilizan para gestionar información operativa?
+
+5. ¿Cuáles son las principales dificultades que encuentran al administrar múltiples operaciones de transporte?
+
+6. ¿Cómo registran actualmente retrasos, paradas, descansos, problemas o incidencias durante una operación?
+
+7. ¿Cómo consultan actualmente el estado de una operación cuando necesitan conocer lo ocurrido durante un viaje?
+
 8. ¿Qué información necesitan conocer para determinar si una operación de transporte se está desarrollando correctamente?
-9. ¿Cómo registran y consultan actualmente la información de rutas, viajes e incidencias de operaciones anteriores?
-10. ¿Qué dificultades tienen para mantener la trazabilidad de una operación desde su inicio hasta su finalización?
-11. ¿Qué tan importante es para sus operaciones disponer de información organizada sobre viajes, vehículos, conductores, rutas e incidencias?
+
+9. ¿Cómo almacenan y consultan información histórica de rutas, viajes e incidencias anteriores?
+
+10. ¿Qué dificultades presentan actualmente para mantener la trazabilidad completa de una operación desde su inicio hasta su finalización?
+
+11. ¿Qué importancia tiene para su empresa contar con información organizada sobre viajes, vehículos, conductores, rutas e incidencias?
+
 12. ¿Qué tan útil sería contar con una aplicación móvil que permita centralizar y consultar esta información?
-13. ¿Qué funcionalidades esperaría encontrar en una aplicación como Trakto?
-14. ¿Qué aspectos relacionados con facilidad de uso, acceso a la información y organización de las operaciones consideraría importantes para utilizar este tipo de aplicación?
+
 
 <div style="page-break-after: always;"></div>
 
