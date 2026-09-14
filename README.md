@@ -486,209 +486,166 @@ La información obtenida permitirá validar las principales suposiciones plantea
 
 ### 2.2.2. Registro de entrevistas
 
-En esta sección se presenta el registro de las entrevistas realizadas a los usuarios pertenecientes a los segmentos objetivo de **Trakto**. Para cada entrevista se registrarán los datos del entrevistado, la evidencia visual, el enlace al video, el timing correspondiente y un resumen de las principales respuestas obtenidas.
-
----
 
 ## Segmento objetivo 1: Empresas de transporte de carga
 
 ### Entrevista 1
 
-**Responsable de la entrevista:** Miembro X
-
 | Campo | Detalle |
 |---|---|
-| Nombres y apellidos | Por completar |
-| Edad | Por completar |
-| Distrito | Por completar |
+| Nombres y apellidos | Gianfranco Quispe |
 | Segmento objetivo | Empresas de transporte de carga |
-| Cargo / función | Por completar |
-| Empresa | Por completar |
-| Fecha de entrevista | Por completar |
+| Cargo / actividad | Empresario del sector de transporte y logística |
 | Duración | Por completar |
-| Timing en el video | Por completar |
-| URL del video | [Ver video](URL_POR_COMPLETAR) |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQDkzObcE5ATSpmZvlKaZk58ARkz3Yp5qF9_nS_ZYSTAGaQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QOjMzT) |
 
 <p align="center">
   <img src="assets/images/chapter2/entrevista-segmento1-1.png" width="700">
 </p>
 
 **Resumen:**  
-Por completar. Describir las principales respuestas proporcionadas por el entrevistado, considerando cómo gestiona actualmente sus viajes, vehículos, conductores y rutas, qué herramientas utiliza, cuáles son sus principales dificultades, cómo registra las incidencias y qué funcionalidades considera importantes para una aplicación móvil como Trakto.
+Gianfranco Quispe es un empresario con cinco años de experiencia en el sector logístico y de transporte. Durante la entrevista destacó la importancia de utilizar tecnología para mejorar la eficiencia y seguridad de las operaciones, especialmente en zonas rurales del Perú. Actualmente emplea herramientas GPS y medios de comunicación en tiempo real para supervisar y coordinar los viajes. También recopila información de sus clientes mediante encuestas y sistemas de calificación. Frente a incrementos de demanda, aumenta temporalmente la disponibilidad de vehículos y reorganiza sus operaciones. Sus respuestas evidencian la necesidad de contar con una aplicación como **Trakto**, que permita centralizar la gestión de vehículos, conductores, rutas y viajes.
 
 ---
 
 ### Entrevista 2
 
-**Responsable de la entrevista:** Miembro X
-
 | Campo | Detalle |
 |---|---|
-| Nombres y apellidos | Por completar |
-| Edad | Por completar |
-| Distrito | Por completar |
+| Nombres y apellidos | Diego Cisneros |
 | Segmento objetivo | Empresas de transporte de carga |
-| Cargo / función | Por completar |
-| Empresa | Por completar |
-| Fecha de entrevista | Por completar |
+| Cargo / actividad | Personal relacionado con la gestión de transporte |
 | Duración | Por completar |
-| Timing en el video | Por completar |
-| URL del video | [Ver video](URL_POR_COMPLETAR) |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQA-12ReLDzQR49ealZCQkCfATl5EcCRvhjS1SzkyXFY-xU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ujrc4n) |
 
 <p align="center">
   <img src="assets/images/chapter2/entrevista-segmento1-2.png" width="700">
 </p>
 
 **Resumen:**  
-Por completar. Describir las necesidades y dificultades identificadas en relación con la gestión de viajes, vehículos, conductores, rutas, estados e incidencias, así como las herramientas utilizadas actualmente por el entrevistado.
+Diego Cisneros considera que una aplicación móvil permitiría automatizar y optimizar diferentes procesos relacionados con el transporte, brindando mayor control sobre las operaciones. Señala que uno de los principales problemas son los retrasos ocasionados por el mal estado de algunas carreteras. Actualmente utiliza Excel para registrar información sobre los camiones, controlar su estado y programar mantenimientos según el tiempo de uso. Esto demuestra la necesidad de una solución como **Trakto**, donde la información de vehículos, viajes, rutas y estados pueda mantenerse centralizada y disponible de manera más rápida.
 
 ---
 
 ### Entrevista 3
 
-**Responsable de la entrevista:** Miembro X
-
 | Campo | Detalle |
 |---|---|
-| Nombres y apellidos | Por completar |
-| Edad | Por completar |
-| Distrito | Por completar |
+| Nombres y apellidos | Valeria Cardenas |
 | Segmento objetivo | Empresas de transporte de carga |
-| Cargo / función | Por completar |
-| Empresa | Por completar |
-| Fecha de entrevista | Por completar |
+| Cargo / actividad | Administradora en empresa de transporte de carga |
 | Duración | Por completar |
-| Timing en el video | Por completar |
-| URL del video | [Ver video](URL_POR_COMPLETAR) |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQBtRonP6CraSJUSB36JKYOyActf48po9v-Z1ghUJw-bAgE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6Xlw1F) |
 
 <p align="center">
   <img src="assets/images/chapter2/entrevista-segmento1-3.png" width="700">
 </p>
 
 **Resumen:**  
-Por completar. Identificar los principales problemas del entrevistado relacionados con la organización de la información operativa, consulta del estado de los viajes, registro de incidencias e historial de las operaciones.
+Valeria Cardenas cuenta con dos años de experiencia como administradora en el sector de transporte de carga. Menciona que las condiciones geográficas y de infraestructura del país representan dificultades importantes para las operaciones. Actualmente utiliza herramientas como Excel y rastreo satelital para gestionar los envíos y consultar su avance. También considera importantes la seguridad, puntualidad y adecuada gestión de los vehículos y conductores. La entrevista evidencia la necesidad de centralizar la información operativa y mantener un historial de vehículos, viajes y recorridos mediante una solución móvil como **Trakto**.
 
 ---
 
-## Segmento objetivo 2: Operadores y empresas de logística
+## Segmento objetivo 2: Clientes que requieren servicios de transporte de carga
 
 ### Entrevista 4
 
-**Responsable de la entrevista:** Miembro X
-
 | Campo | Detalle |
 |---|---|
-| Nombres y apellidos | Por completar |
-| Edad | Por completar |
-| Distrito | Por completar |
-| Segmento objetivo | Operadores y empresas de logística |
-| Cargo / función | Por completar |
-| Empresa | Por completar |
-| Fecha de entrevista | Por completar |
+| Nombres y apellidos | Rodrigo Guerra |
+| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
+| Cargo / actividad | Emprendedor |
 | Duración | Por completar |
-| Timing en el video | Por completar |
-| URL del video | [Ver video](URL_POR_COMPLETAR) |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAV3DQLGB33SpVkVyUbv9pQAUsYOLoLLNGkZGiAaly_qig?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wJlceN) |
 
 <p align="center">
   <img src="assets/images/chapter2/entrevista-segmento2-1.png" width="700">
 </p>
 
 **Resumen:**  
-Por completar. Describir las principales respuestas proporcionadas por el entrevistado, considerando cómo gestiona actualmente sus operaciones de transporte, qué información necesita consultar, cómo registra retrasos o incidencias y qué funcionalidades esperaría encontrar en Trakto.
+Rodrigo Guerra es un emprendedor que depende de servicios de transporte de mercancías para desarrollar sus actividades comerciales. Durante la entrevista destacó problemas relacionados con la falta de visibilidad de los envíos y el control de los costos. Considera importante poder consultar el estado de un traslado y conocer su avance de forma sencilla. Mostró interés en utilizar una aplicación móvil que mejore la transparencia de las operaciones y destacó que la interfaz debería ser intuitiva y contar con un diseño moderno.
 
 ---
 
 ### Entrevista 5
 
-**Responsable de la entrevista:** Miembro X
-
 | Campo | Detalle |
 |---|---|
 | Nombres y apellidos | Por completar |
-| Edad | Por completar |
-| Distrito | Por completar |
-| Segmento objetivo | Operadores y empresas de logística |
-| Cargo / función | Por completar |
-| Empresa | Por completar |
-| Fecha de entrevista | Por completar |
+| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
+| Cargo / actividad | Personal de empresa de mobiliario |
 | Duración | Por completar |
-| Timing en el video | Por completar |
-| URL del video | [Ver video](URL_POR_COMPLETAR) |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQCYIb0z_NwBTLbajN-6r4f9AWyuPx7pVcLQDYFiSKfXhjQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ah7IkZ) |
 
 <p align="center">
   <img src="assets/images/chapter2/entrevista-segmento2-2.png" width="700">
 </p>
 
 **Resumen:**  
-Por completar. Describir las dificultades identificadas al gestionar diferentes viajes, vehículos, conductores y rutas, así como la forma en que el entrevistado mantiene actualmente la trazabilidad de sus operaciones.
+El entrevistado trabaja en una empresa dedicada al sector mobiliario y considera fundamental el servicio de transporte para realizar las entregas de sus productos. Entre los principales problemas identifica los retrasos, los posibles daños a la mercancía y la falta de comunicación con los transportistas. Considera útil disponer de una aplicación que permita conocer el estado de los envíos y mejorar la transparencia durante el traslado. También menciona como importante conocer la ubicación y el progreso de la entrega. Sus respuestas muestran interés por una solución que facilite el seguimiento y reduzca la incertidumbre durante las operaciones de transporte.
 
 ---
 
 ### Entrevista 6
 
-**Responsable de la entrevista:** Miembro X
-
 | Campo | Detalle |
 |---|---|
-| Nombres y apellidos | Por completar |
-| Edad | Por completar |
-| Distrito | Por completar |
-| Segmento objetivo | Operadores y empresas de logística |
-| Cargo / función | Por completar |
-| Empresa | Por completar |
-| Fecha de entrevista | Por completar |
+| Nombres y apellidos | Jael Pinta |
+| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
+| Cargo / actividad | Comerciante mayorista de prendas |
 | Duración | Por completar |
-| Timing en el video | Por completar |
-| URL del video | [Ver video](URL_POR_COMPLETAR) |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAz-85vOfF1R46gy8UA0z54AfCV6TF7BxvrpjY63Y2yBAs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=CS9mfl) |
 
 <p align="center">
   <img src="assets/images/chapter2/entrevista-segmento2-3.png" width="700">
 </p>
 
 **Resumen:**  
-Por completar. Identificar las principales necesidades del entrevistado respecto a la centralización de información, gestión de viajes, consulta de rutas, registro de incidencias e historial de operaciones.
+Jael Pinta se dedica a la venta mayorista de prendas hacia diferentes zonas del interior del país y utiliza servicios de transporte para realizar sus envíos. Su principal preocupación es la seguridad de la mercancía, debido a que en algunas ocasiones los productos no llegan completos o en las mismas condiciones en las que fueron enviados. También menciona que la comunicación mediante canales tradicionales puede resultar lenta y generar pérdida de tiempo al consultar el estado de los envíos. Considera importante contar con mayor información sobre el traslado y mejorar la organización y trazabilidad de las operaciones.
 
 <div style="page-break-after: always;"></div>
+
 
 ### 2.2.3. Análisis de entrevistas
 
-Se realizaron **seis entrevistas**, distribuidas en **tres participantes por cada segmento objetivo**. A partir de sus respuestas se analizarán las principales necesidades, dificultades y expectativas relacionadas con la gestión de operaciones de transporte.
+Se realizaron **seis entrevistas**, distribuidas en **tres participantes por cada segmento objetivo**. A partir de las respuestas obtenidas se identificaron las principales necesidades, dificultades y expectativas relacionadas con la gestión y seguimiento del transporte de carga.
 
-### Segmento objetivo 1: Empresas de transporte de carga
+## Segmento objetivo 1: Empresas de transporte de carga
 
-A partir de las tres entrevistas realizadas, se analizarán las principales dificultades relacionadas con la gestión de viajes, vehículos, conductores, rutas e incidencias.
-
-| **Aspecto analizado** | **Cantidad** | **Porcentaje** |
-|---|---:|---:|
-| Utilizan varias herramientas para gestionar sus operaciones | Por completar | Por completar |
-| Presentan dificultades para consultar el estado de los viajes | Por completar | Por completar |
-| Consideran importante registrar incidencias | Por completar | Por completar |
-| Necesitan consultar operaciones anteriores | Por completar | Por completar |
-| Consideran útil centralizar la información | Por completar | Por completar |
-| Muestran interés en utilizar una aplicación móvil | Por completar | Por completar |
-
-**Conclusión del segmento:**  
-Por completar después de analizar las tres entrevistas.
-
-### Segmento objetivo 2: Operadores y empresas de logística
-
-A partir de las tres entrevistas realizadas, se analizarán las dificultades relacionadas con la organización de múltiples operaciones, consulta de información, incidencias e historial de viajes.
+Las entrevistas realizadas a representantes vinculados con empresas de transporte permitieron identificar el uso de herramientas tecnológicas para gestionar las operaciones, así como dificultades relacionadas con el control de vehículos, seguimiento de viajes y condiciones de las rutas.
 
 | **Aspecto analizado** | **Cantidad** | **Porcentaje** |
 |---|---:|---:|
-| Gestionan múltiples operaciones de transporte | Por completar | Por completar |
-| Presentan dificultades para centralizar la información | Por completar | Por completar |
-| Consideran importante registrar incidencias | Por completar | Por completar |
-| Necesitan consultar operaciones anteriores | Por completar | Por completar |
-| Consideran importante mantener la trazabilidad | Por completar | Por completar |
-| Muestran interés en utilizar una aplicación móvil | Por completar | Por completar |
+| Utilizan herramientas digitales para gestionar sus operaciones | 3 de 3 | 100% |
+| Utilizan GPS o sistemas de rastreo para supervisar operaciones | 2 de 3 | 66.7% |
+| Utilizan Excel para registrar o gestionar información | 2 de 3 | 66.7% |
+| Identifican dificultades relacionadas con carreteras o infraestructura | 2 de 3 | 66.7% |
+| Consideran importante mejorar el control de las operaciones de transporte | 3 de 3 | 100% |
+| Presentan necesidades que pueden ser centralizadas mediante una aplicación móvil | 3 de 3 | 100% |
 
 **Conclusión del segmento:**  
-Por completar después de analizar las tres entrevistas.
-
-> **Referencia para los porcentajes:** 1 de 3 = 33.3%, 2 de 3 = 66.7%, 3 de 3 = 100%.
+Los resultados muestran que las empresas de transporte ya utilizan diferentes herramientas tecnológicas para gestionar sus operaciones; sin embargo, la información se encuentra distribuida entre GPS, sistemas de rastreo, herramientas de comunicación y archivos de Excel. Asimismo, se identificaron dificultades relacionadas con el estado de las carreteras, el seguimiento de los viajes y el control de los vehículos. Por ello, existe una oportunidad para **Trakto** de centralizar información relacionada con vehículos, conductores, rutas y viajes dentro de una sola aplicación móvil.
 
 <div style="page-break-after: always;"></div>
+
+## Segmento objetivo 2: Clientes que requieren servicios de transporte de carga
+
+Las entrevistas realizadas a clientes que utilizan servicios de transporte permitieron identificar principalmente problemas relacionados con la falta de visibilidad de los envíos, retrasos, comunicación con los transportistas y seguridad de la mercancía.
+
+| **Aspecto analizado** | **Cantidad** | **Porcentaje** |
+|---|---:|---:|
+| Presentan dificultades para conocer el estado o avance de sus envíos | 3 de 3 | 100% |
+| Consideran importante mejorar el seguimiento de los envíos | 3 de 3 | 100% |
+| Han presentado problemas relacionados con retrasos o demoras | 2 de 3 | 66.7% |
+| Identifican problemas de comunicación con las empresas de transporte | 2 de 3 | 66.7% |
+| Presentan preocupación por daños, pérdidas o seguridad de la mercancía | 2 de 3 | 66.7% |
+| Muestran interés en contar con una solución tecnológica para mejorar el seguimiento | 3 de 3 | 100% |
+
+**Conclusión del segmento:**  
+Los clientes entrevistados presentan una necesidad clara de contar con mayor información sobre el estado de sus envíos. Los principales problemas identificados son la falta de visibilidad durante el traslado, los retrasos, la comunicación con los transportistas y la seguridad de la mercancía. En consecuencia, **Trakto** puede contribuir a mejorar la experiencia del cliente proporcionando mayor visibilidad sobre los viajes y facilitando el seguimiento de las operaciones de transporte.
+
+<div style="page-break-after: always;"></div>
+
 
 ## 2.3. Needfinding
 
@@ -1595,7 +1552,7 @@ Como equipo de desarrollo, deseamos investigar alternativas de autenticación pa
 
 ### 2.4.2. Impact Mapping
 
-El **Impact Mapping de Trakto fue elaborado en Miro** y permite relacionar los objetivos de negocio con los usuarios, los cambios de comportamiento esperados y las funcionalidades necesarias para alcanzarlos. Para su elaboración se consideran los User Personas previamente definidos: **Carlos Mendoza**, supervisor de flota, y **Andrea Salazar**, coordinadora de operaciones.
+El **Impact Mapping de Trakto fue elaborado en UXPRESSIA** y permite relacionar los objetivos de negocio con los usuarios, los cambios de comportamiento esperados y las funcionalidades necesarias para alcanzarlos. Para su elaboración se consideran los User Personas previamente definidos: **Carlos Mendoza**, supervisor de flota, y **Andrea Salazar**, coordinadora de operaciones.
 
 Se establecieron los siguientes Business Goals siguiendo los criterios SMART:
 
@@ -1630,7 +1587,7 @@ Se establecieron los siguientes Business Goals siguiendo los criterios SMART:
 | Carlos Mendoza – Supervisor de flota | Registra los eventos e incidencias relevantes ocurridos durante los viajes. | Registro de paradas, descansos, retrasos, problemas e incidencias. | **US20:** Como supervisor de flota, deseo registrar una parada ocurrida durante un viaje para mantener la trazabilidad de la operación.<br>**US21:** Como supervisor de flota, deseo registrar un descanso realizado durante un viaje para mantener constancia de las pausas.<br>**US11:** Como supervisor de flota, deseo registrar una incidencia asociada a un viaje para mantener constancia de los problemas ocurridos.<br>**US31:** Como supervisor de flota, deseo registrar un retraso ocurrido durante un viaje para mantener constancia de las demoras. |
 | Andrea Salazar – Coordinadora de operaciones | Revisa los eventos históricos de las operaciones para mejorar su seguimiento y evaluación. | Consulta de incidencias e historial operativo. | **US12:** Como coordinador de operaciones, deseo consultar los eventos e incidencias de un viaje para conocer las situaciones ocurridas durante la operación.<br>**US13:** Como coordinador de operaciones, deseo consultar el historial de viajes para revisar operaciones realizadas anteriormente.<br>**US36:** Como coordinador de operaciones, deseo consultar las incidencias registradas en operaciones anteriores para analizar los problemas ocurridos. |
 
-A continuación, se presenta una captura del **Impact Mapping de Trakto elaborado en Miro** a partir de los Business Goals, User Personas, Impacts, Deliverables y User Stories identificados.
+A continuación, se presenta una captura del **Impact Mapping de Trakto elaborado en UXPRESSIA** a partir de los Business Goals, User Personas, Impacts, Deliverables y User Stories identificados.
 
 ![Impact Mapping - Trakto](assets/images/chapter2/impact-mapping.png)
 
@@ -1690,7 +1647,8 @@ A continuación, se presenta una captura del **Product Backlog de Trakto elabora
 ![Product Backlog - Trakto](assets/images/chapter2/product-backlog.png)
 
 **Enlace público del Product Backlog en Trello:**  
-[Agregar URL pública de Trello]
+
+https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello
 
 <div style="page-break-after: always;"></div>
 
@@ -1720,13 +1678,9 @@ Durante el análisis se identificaron progresivamente los siguientes Candidate B
 - **Incident Management**
 - **Operational History**
 
-A continuación, se muestran capturas de los cambios progresivos realizados durante el Candidate Context Discovery.
 
-![Candidate Context Discovery - Proceso 1](assets/images/chapter2/candidate-context-discovery-1.png)
+![Candidate Context Discovery - Proceso 1](assets/images/chapter2/candidate-context-discovery.png)
 
-![Candidate Context Discovery - Proceso 2](assets/images/chapter2/candidate-context-discovery-2.png)
-
-![Candidate Context Discovery - Final](assets/images/chapter2/candidate-context-discovery-final.png)
 
 <div style="page-break-after: always;"></div>
 
