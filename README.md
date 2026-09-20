@@ -2660,9 +2660,11 @@ Durante el análisis se identificaron progresivamente los siguientes Candidate B
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
-En esta sección se modela la colaboración entre los Bounded Contexts de Trakto Route mediante la técnica **Domain Storytelling**, con el objetivo de visualizar cómo interactúan entre sí para resolver los principales casos de negocio.
+En esta sección se modela la colaboración entre los Bounded Contexts de Trakto Route mediante la técnica Domain Storytelling, con el objetivo de visualizar cómo interactúan entre sí para resolver los principales casos de negocio.
 
-Para ello se elaboraron diagramas en **Miro**, representando la participación de los contextos **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History** en diferentes escenarios del dominio.
+Para ello, se elaboraron diagramas utilizando Structurizr, representando la participación y comunicación entre los Bounded Contexts IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History en los principales escenarios del dominio.
+
+Estos diagramas permiten identificar los actores involucrados, las interacciones entre los diferentes contextos y el flujo de información necesario para ejecutar las operaciones de Trakto Route, facilitando la comprensión de las dependencias y responsabilidades existentes entre los Bounded Contexts.
 
 A continuación, se presentan los diagramas de Domain Storytelling elaborados.
 
@@ -2674,9 +2676,9 @@ A continuación, se presentan los diagramas de Domain Storytelling elaborados.
 
 #### 2.5.1.3. Bounded Context Canvases
 
-En esta sección se detallan los Candidate Bounded Contexts identificados previamente mediante la elaboración de **Bounded Context Canvases**.
+En esta sección se detallan los **Candidate Bounded Contexts** identificados previamente mediante la elaboración de **Bounded Context Canvases**, con el propósito de precisar las responsabilidades, capacidades, reglas de negocio, dependencias y términos relevantes asociados a cada contexto del dominio de **Trakto Route**.
 
-Los contextos se trabajan por orden de importancia y cada canvas sigue el proceso indicado en la rúbrica:
+Los contextos se trabajan por orden de importancia y cada canvas considera el proceso indicado en la rúbrica:
 
 - **Context Overview Definition**
 - **Business Rules Distillation & Ubiquitous Language Capture**
@@ -2685,7 +2687,7 @@ Los contextos se trabajan por orden de importancia y cada canvas sigue el proces
 - **Dependencies Capture**
 - **Design Critique**
 
-Para Trakto Route se elaboran los siguientes Bounded Context Canvases:
+Para **Trakto Route** se elaboran los siguientes Bounded Context Canvases:
 
 1. **Trip Management**
 2. **Fleet Management**
@@ -2694,7 +2696,11 @@ Para Trakto Route se elaboran los siguientes Bounded Context Canvases:
 5. **IAM**
 6. **Profile**
 
-A continuación, se presentan las capturas de los Bounded Context Canvases elaborados en **Miro**.
+Los Bounded Context Canvases fueron representados utilizando **Structurizr**, organizando visualmente la información correspondiente a las responsabilidades de cada contexto, sus principales capacidades de negocio, reglas, términos del **Ubiquitous Language** y dependencias con otros Bounded Contexts.
+
+Estas representaciones permiten analizar los límites de responsabilidad definidos para cada contexto y verificar que las capacidades identificadas durante el **EventStorming** se encuentren correctamente distribuidas dentro del modelo estratégico de **Trakto Route**.
+
+A continuación, se presentan las representaciones de los Bounded Context Canvases elaboradas.
 
 ![Bounded Context Canvas - Trip Management](assets/images/chapter2/bounded-context-canvas-trip-management.png)
 
@@ -2712,17 +2718,24 @@ A continuación, se presentan las capturas de los Bounded Context Canvases elabo
 
 ### 2.5.2. Context Mapping
 
-En esta sección se analizan las relaciones estructurales entre los Bounded Contexts identificados para **Trakto Route**, evaluando sus dependencias y responsabilidades para obtener una adecuada separación del dominio.
+En esta sección se analizan las relaciones entre los **Bounded Contexts** de **Trakto Route**, evaluando sus responsabilidades y dependencias para mantener una adecuada separación del dominio.
 
-Durante el proceso se revisaron diferentes alternativas de organización de los contextos y sus capabilities, considerando patrones de relación de **Domain-Driven Design** como **Customer/Supplier, Conformist, Anticorruption Layer y Shared Kernel**.
+Durante el proceso se consideraron alternativas de organización y patrones de relación de **Domain-Driven Design**, principalmente **Customer/Supplier** y **Conformist**.
 
-Como resultado del análisis se definió el Context Map final de **Trakto Route**, conformado por los contextos **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**.
-
-A continuación, se presentan las alternativas analizadas y el Context Map final elaborado en **Miro**.
+Se evaluó una alternativa donde **IAM y Profile** se integraban en un mismo contexto. Finalmente, se decidió mantenerlos separados debido a que cumplen responsabilidades diferentes.
 
 ![Context Mapping - Alternativa 1](assets/images/chapter2/context-mapping-1.png)
 
-![Context Mapping - Alternativa 2](assets/images/chapter2/context-mapping-2.png)
+Como resultado, se definió el Context Map final con los Bounded Contexts **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**.
+
+Las principales relaciones son:
+
+- **IAM → Profile:** Customer/Supplier.
+- **Fleet Management → Trip Management:** Customer/Supplier.
+- **Trip Management → Incident Management:** Customer/Supplier.
+- **Trip Management, Fleet Management e Incident Management → Operational History:** Conformist.
+
+El Context Map final fue elaborado utilizando **Structurizr**.
 
 ![Context Mapping - Final](assets/images/chapter2/context-mapping-final.png)
 
