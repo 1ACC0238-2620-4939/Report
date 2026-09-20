@@ -1496,7 +1496,7 @@ Rodrigo Guerra es un emprendedor que depende de servicios de transporte de merca
 
 | Campo | Detalle |
 |---|---|
-| Nombres y apellidos | Por completar |
+| Nombres y apellidos | Alejandro Medina |
 | Segmento objetivo | Clientes que requieren servicios de transporte de carga |
 | Cargo / actividad | Personal de empresa de mobiliario |
 | Duración | 3:35 |
@@ -1507,8 +1507,7 @@ Rodrigo Guerra es un emprendedor que depende de servicios de transporte de merca
 </p>
 
 **Resumen:**  
-El entrevistado trabaja en una empresa dedicada al sector mobiliario y considera fundamental el servicio de transporte para realizar las entregas de sus productos. Entre los principales problemas identifica los retrasos, los posibles daños a la mercancía y la falta de comunicación con los transportistas. Considera útil disponer de una aplicación que permita conocer el estado de los envíos y mejorar la transparencia durante el traslado. También menciona como importante conocer la ubicación y el progreso de la entrega. Sus respuestas muestran interés por una solución que facilite el seguimiento y reduzca la incertidumbre durante las operaciones de transporte.
-
+Alejandro Medina trabaja en una empresa dedicada al sector mobiliario y considera fundamental el servicio de transporte para realizar las entregas de sus productos. Entre los principales problemas identifica los retrasos, los posibles daños a la mercancía y la falta de comunicación con los transportistas. Considera útil disponer de una aplicación que permita conocer el estado de los envíos y mejorar la transparencia durante el traslado. También menciona como importante conocer la ubicación y el progreso de la entrega. Sus respuestas muestran interés por una solución que facilite el seguimiento y reduzca la incertidumbre durante las operaciones de transporte.
 ---
 
 ### Entrevista 6
@@ -1528,24 +1527,6 @@ El entrevistado trabaja en una empresa dedicada al sector mobiliario y considera
 **Resumen:**  
 Jael Pinta se dedica a la venta mayorista de prendas hacia diferentes zonas del interior del país y utiliza servicios de transporte para realizar sus envíos. Su principal preocupación es la seguridad de la mercancía, debido a que en algunas ocasiones los productos no llegan completos o en las mismas condiciones en las que fueron enviados. También menciona que la comunicación mediante canales tradicionales puede resultar lenta y generar pérdida de tiempo al consultar el estado de los envíos. Considera importante contar con mayor información sobre el traslado y mejorar la organización y trazabilidad de las operaciones.
 
----
-
-### Entrevista 7
-
-| Campo | Detalle |
-|---|---|
-| Nombres y apellidos | Alonso Shovl |
-| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
-| Cargo / actividad | Comerciante de equipo de ferretería |
-| Duración | 8:22 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213553_upc_edu_pe/IQBnolRqUlm5SoIE66MFLH98AU3jHadHbl2VdK9mHX7oo6A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OfYgGa) |
-
-<p align="center">
-  <img src="assets/images/chapter2/entrevista-segmento2-4.png" width="700">
-</p>
-
-**Resumen:**  
-Alonso Shovl describe dificultades al comunicarse con los conductores de los camiones y al mantener organizada la información sobre el estado de los vehículos y de la carga.
 
 <div style="page-break-after: always;"></div>
 
@@ -3950,4 +3931,34 @@ PK  id
 <div style="page-break-after: always;"></div>
 
 
+
+# Anexos
+
+## Anexo A. Herramientas utilizadas
+
+| Herramienta | Uso en el proyecto |
+|---|---|
+| **UXPressia** | Elaboración de User Personas, User Journey Maps y Empathy Maps. |
+| **Miro** | Elaboración de Lean UX Canvas, EventStorming y Candidate Context Discovery. |
+| **Structurizr** | Elaboración de diagramas del C4 Model, Context Mapping y Component Diagrams. |
+| **PlantUML** | Elaboración de UML Class Diagrams y Database Design Diagrams. |
+| **GitHub** | Control de versiones, almacenamiento del informe, código fuente e imágenes del proyecto. |
+| **Android Studio** | Desarrollo de la aplicación móvil Android en Kotlin. |
+| **Spring Boot** | Desarrollo del backend y API REST en Java. |
+| **MySQL** | Persistencia central de los datos del sistema. |
+
+<div style="page-break-after: always;"></div>
+
+## Anexo B. Enlaces de entrevistas
+
+| Entrevistado | Segmento | Enlace |
+|---|---|---|
+| Gianfranco Quispe | Empresa de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQDkzObcE5ATSpmZvlKaZk58ARkz3Yp5qF9_nS_ZYSTAGaQ) |
+| Diego Cisneros | Empresa de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQA-12ReLDzQR49ealZCQkCfATl5EcCRvhjS1SzkyXFY-xU) |
+| Valeria Cardenas | Empresa de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQBtRonP6CraSJUSB36JKYOyActf48po9v-Z1ghUJw-bAgE) |
+| Rodrigo Guerra | Cliente de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAV3DQLGB33SpVkVyUbv9pQAUsYOLoLLNGkZGiAaly_qig) |
+| Alejandro Medina | Cliente de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQCYIb0z_NwBTLbajN-6r4f9AWyuPx7pVcLQDYFiSKfXhjQ) |
+| Jael Pinta | Cliente de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAz-85vOfF1R46gy8UA0z54AfCV6TF7BxvrpjY63Y2yBAs) |
+
+<div style="page-break-after: always;"></div>
 
