@@ -9,7 +9,7 @@
 
 <h3 align="center">1ACC0238</h3>
 
-<h3 align="center">Aplicaciones para Dispositivos Móviles</h3>Q
+<h3 align="center">Aplicaciones para Dispositivos Móviles</h3>
 <h3 align="center">NRC</h3>
 <h3 align="center">4939</h3>
 
@@ -63,7 +63,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 |---|---|---|---|
-| AV1 | [Fecha] | [Nombre del equipo] | Creación del informe. Inclusión de la presentación de la startup y del producto, Lean UX, análisis de competidores, entrevistas, Needfinding y Requirements Specification hasta Product Backlog. |
+| AV1 | 20/09/2026 | Fecha | Creación del informe. Inclusión de la presentación de la startup y del producto, Lean UX, análisis de competidores, entrevistas, Needfinding y Requirements Specification hasta Product Backlog. |
 
 <div style="page-break-after: always;"></div>
 
@@ -107,10 +107,10 @@
         - [2.3.5. Big Picture EventStorming](#235-big-picture-eventstorming)
         - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
     - [2.4. Requirements Specification](#24-requirements-specification)
-        - [2.4.1. To-Be Scenario Mapping](#241-to-be-scenario-mapping)
-        - [2.4.2. User Stories](#242-user-stories)
-        - [2.4.3. Impact Mapping](#243-impact-mapping)
-        - [2.4.4. Product Backlog](#244-product-backlog)
+        - [To-Be Scenario Mapping](#to-be-scenario-mapping)
+        - [2.4.1. User Stories](#241-user-stories)
+        - [2.4.2. Impact Mapping](#242-impact-mapping)
+        - [2.4.3. Product Backlog](#243-product-backlog)
     - [2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)
         - [2.5.1. EventStorming](#251-eventstorming)
             - [2.5.1.1. Candidate Context Discovery](#2511-candidate-context-discovery)
@@ -120,15 +120,62 @@
         - [2.5.3. Software Architecture](#253-software-architecture)
             - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
             - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
-            - [2.5.3.3. Software Architecture Components Diagrams](#2533-software-architecture-components-diagrams)
-            - [2.5.3.4. Software Architecture Deployment Diagram](#2534-software-architecture-deployment-diagram)
+            - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
     - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
         - [2.6.1. Bounded Context: Trip Management](#261-bounded-context-trip-management)
+            - [2.6.1.1. Domain Layer](#2611-domain-layer)
+            - [2.6.1.2. Interface Layer](#2612-interface-layer)
+            - [2.6.1.3. Application Layer](#2613-application-layer)
+            - [2.6.1.4. Infrastructure Layer](#2614-infrastructure-layer)
+            - [2.6.1.5. Bounded Context Software Architecture Component Level Diagrams](#2615-bounded-context-software-architecture-component-level-diagrams)
+            - [2.6.1.6. Bounded Context Software Architecture Code Level Diagrams](#2616-bounded-context-software-architecture-code-level-diagrams)
+                - [2.6.1.6.1. Bounded Context Domain Layer Class Diagrams](#26161-bounded-context-domain-layer-class-diagrams)
+                - [2.6.1.6.2. Bounded Context Database Design Diagram](#26162-bounded-context-database-design-diagram)
         - [2.6.2. Bounded Context: Fleet Management](#262-bounded-context-fleet-management)
+            - [2.6.2.1. Domain Layer](#2621-domain-layer)
+            - [2.6.2.2. Interface Layer](#2622-interface-layer)
+            - [2.6.2.3. Application Layer](#2623-application-layer)
+            - [2.6.2.4. Infrastructure Layer](#2624-infrastructure-layer)
+            - [2.6.2.5. Bounded Context Software Architecture Component Level Diagrams](#2625-bounded-context-software-architecture-component-level-diagrams)
+            - [2.6.2.6. Bounded Context Software Architecture Code Level Diagrams](#2626-bounded-context-software-architecture-code-level-diagrams)
+                - [2.6.2.6.1. Bounded Context Domain Layer Class Diagrams](#26261-bounded-context-domain-layer-class-diagrams)
+                - [2.6.2.6.2. Bounded Context Database Design Diagram](#26262-bounded-context-database-design-diagram)
         - [2.6.3. Bounded Context: Incident Management](#263-bounded-context-incident-management)
+            - [2.6.3.1. Domain Layer](#2631-domain-layer)
+            - [2.6.3.2. Interface Layer](#2632-interface-layer)
+            - [2.6.3.3. Application Layer](#2633-application-layer)
+            - [2.6.3.4. Infrastructure Layer](#2634-infrastructure-layer)
+            - [2.6.3.5. Bounded Context Software Architecture Component Level Diagrams](#2635-bounded-context-software-architecture-component-level-diagrams)
+            - [2.6.3.6. Bounded Context Software Architecture Code Level Diagrams](#2636-bounded-context-software-architecture-code-level-diagrams)
+                - [2.6.3.6.1. Bounded Context Domain Layer Class Diagrams](#26361-bounded-context-domain-layer-class-diagrams)
+                - [2.6.3.6.2. Bounded Context Database Design Diagram](#26362-bounded-context-database-design-diagram)
         - [2.6.4. Bounded Context: Operational History](#264-bounded-context-operational-history)
+            - [2.6.4.1. Domain Layer](#2641-domain-layer)
+            - [2.6.4.2. Interface Layer](#2642-interface-layer)
+            - [2.6.4.3. Application Layer](#2643-application-layer)
+            - [2.6.4.4. Infrastructure Layer](#2644-infrastructure-layer)
+            - [2.6.4.5. Bounded Context Software Architecture Component Level Diagrams](#2645-bounded-context-software-architecture-component-level-diagrams)
+            - [2.6.4.6. Bounded Context Software Architecture Code Level Diagrams](#2646-bounded-context-software-architecture-code-level-diagrams)
+                - [2.6.4.6.1. Bounded Context Domain Layer Class Diagrams](#26461-bounded-context-domain-layer-class-diagrams)
+                - [2.6.4.6.2. Bounded Context Database Design Diagram](#26462-bounded-context-database-design-diagram)
         - [2.6.5. Bounded Context: IAM](#265-bounded-context-iam)
+            - [2.6.5.1. Domain Layer](#2651-domain-layer)
+            - [2.6.5.2. Interface Layer](#2652-interface-layer)
+            - [2.6.5.3. Application Layer](#2653-application-layer)
+            - [2.6.5.4. Infrastructure Layer](#2654-infrastructure-layer)
+            - [2.6.5.5. Bounded Context Software Architecture Component Level Diagrams](#2655-bounded-context-software-architecture-component-level-diagrams)
+            - [2.6.5.6. Bounded Context Software Architecture Code Level Diagrams](#2656-bounded-context-software-architecture-code-level-diagrams)
+                - [2.6.5.6.1. Bounded Context Domain Layer Class Diagrams](#26561-bounded-context-domain-layer-class-diagrams)
+                - [2.6.5.6.2. Bounded Context Database Design Diagram](#26562-bounded-context-database-design-diagram)
         - [2.6.6. Bounded Context: Profile](#266-bounded-context-profile)
+            - [2.6.6.1. Domain Layer](#2661-domain-layer)
+            - [2.6.6.2. Interface Layer](#2662-interface-layer)
+            - [2.6.6.3. Application Layer](#2663-application-layer)
+            - [2.6.6.4. Infrastructure Layer](#2664-infrastructure-layer)
+            - [2.6.6.5. Bounded Context Software Architecture Component Level Diagrams](#2665-bounded-context-software-architecture-component-level-diagrams)
+            - [2.6.6.6. Bounded Context Software Architecture Code Level Diagrams](#2666-bounded-context-software-architecture-code-level-diagrams)
+                - [2.6.6.6.1. Bounded Context Domain Layer Class Diagrams](#26661-bounded-context-domain-layer-class-diagrams)
+                - [2.6.6.6.2. Bounded Context Database Design Diagram](#26662-bounded-context-database-design-diagram)
 
 <div style="page-break-after: always;"></div>
 
@@ -182,22 +229,22 @@ Trakto Route permite gestionar y consultar viajes, rutas, vehículos, conductore
 
 
 **Who (¿Quién?) - ¿A quiénes afecta el problema?**  
-Empresas de transporte de carga y empresas y comerciantes que contratan servicios de transporte de carga que necesitan gestionar sus viajes, vehículos, conductores, rutas e incidencias durante sus operaciones.
+Afecta, por un lado, a las **empresas de transporte de carga**, cuyos responsables necesitan gestionar viajes, vehículos, conductores, rutas e incidencias; y, por otro, a los **clientes que contratan servicios de transporte de carga**, quienes necesitan conocer el estado, progreso y eventos relevantes de sus envíos.
 
 **What (¿Qué?) - ¿Cuál es el problema exactamente?**  
-La falta de una aplicación centralizada que permita gestionar los viajes, consultar el estado de los recorridos, administrar vehículos y conductores, registrar incidencias y mantener un historial de las operaciones realizadas.
+La información relacionada con las operaciones de transporte suele encontrarse distribuida entre diferentes medios. Esto dificulta que las empresas transportistas gestionen de manera centralizada los viajes y sus recursos, y que sus clientes consulten oportunamente el estado y progreso de los envíos contratados.
 
 **Where (¿Dónde?) - ¿En qué contexto ocurre?**  
-En las operaciones de transporte terrestre de carga, principalmente en empresas y empresas y comerciantes que contratan servicios de transporte de carga que gestionan vehículos, conductores y viajes, con un enfoque inicial en el mercado peruano.
+En las operaciones de transporte terrestre de carga, principalmente durante la coordinación entre **empresas transportistas** que administran vehículos, conductores y viajes, y **empresas o comerciantes clientes** que contratan el traslado de mercancías. El enfoque inicial se encuentra en el mercado peruano.
 
 **When (¿Cuándo?) - ¿En qué momento se manifiesta el problema?**  
-Durante la planificación, ejecución y finalización de los viajes, especialmente cuando se requiere consultar su estado, registrar paradas, descansos, retrasos, problemas, accidentes u otras incidencias.
+Durante la planificación, ejecución y finalización de los viajes. Para la empresa transportista se manifiesta al asignar recursos, actualizar estados o registrar eventos e incidencias; para el cliente, al intentar conocer el avance del envío o informarse sobre retrasos y problemas durante el traslado.
 
 **Why (¿Por qué?) - ¿Por qué ocurre el problema?**  
 El problema surge cuando la información de viajes, vehículos, conductores e incidencias se encuentra dispersa o se gestiona mediante diferentes medios, dificultando el control organizado de las operaciones.
 
 **How (¿Cómo?) - ¿Cómo impacta en el usuario?**  
-Dificulta la gestión de los viajes, la consulta del estado de las operaciones, el registro de incidencias y el acceso al historial de vehículos, conductores y recorridos realizados.
+En las empresas transportistas genera mayor esfuerzo para organizar y consultar la información operativa y mantener la trazabilidad de los viajes. En los clientes genera incertidumbre y dependencia de llamadas o mensajes cuando necesitan conocer el estado de sus envíos o entender una incidencia.
 
 **How Much (¿Cuánto?) - ¿Qué tan grande es el problema?**  
 Las empresas de transporte gestionan múltiples viajes, vehículos, conductores e incidencias, por lo que la fragmentación de la información aumenta el esfuerzo necesario para supervisar cada operación. En este contexto, **Trakto Route** busca integrar la gestión de viajes, flota, incidencias e historial operativo y brindar al cliente visibilidad de los envíos asociados a su organización.
@@ -258,7 +305,7 @@ Las assumptions se expresan como creencias que deberán validarse mediante entre
 ##### User Assumptions
 
 1. Creemos que los supervisores y responsables de empresas transportistas necesitan gestionar viajes, vehículos, conductores, rutas e incidencias.
-2. Creemos que empresas y comerciantes que contratan transporte necesitan conocer el estado, progreso y eventos relevantes de sus envíos.
+2. Creemos que clientes que requieren servicios de transporte de carga necesitan conocer el estado, progreso y eventos relevantes de sus envíos.
 3. Creemos que ambos segmentos utilizarán principalmente dispositivos móviles para consultas frecuentes durante una operación.
 
 ##### User Outcome and Benefit Assumptions
@@ -279,39 +326,45 @@ Las assumptions se expresan como creencias que deberán validarse mediante entre
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-Cada hipótesis deriva de una Feature Assumption y utiliza la estructura indicada por Lean UX.
+Cada hipótesis deriva de una Feature Assumption y utiliza la estructura indicada por Lean UX. En cada caso, los componentes del template se presentan en inglés y el contenido específico de la hipótesis se expresa a continuación.
 
-**Hypothesis Statement 1 – Gestión centralizada**  
-We believe we will achieve **mayor adopción de la gestión digital de operaciones**  
-If **supervisores de empresas de transporte de carga**  
-Attain **la capacidad de organizar y consultar una operación desde un único sistema**  
-With **la gestión centralizada de viajes, rutas, vehículos y conductores**.
+##### Hypothesis Statement 1 – Gestión centralizada
 
-**Hypothesis Statement 2 – Eventos e incidencias**  
-We believe we will achieve **mayor trazabilidad de los viajes gestionados**  
-If **supervisores de transporte**  
-Attain **la capacidad de registrar lo ocurrido durante la operación**  
-With **el registro de paradas, descansos, retrasos, problemas e incidencias**.
+**We believe we will achieve** mayor adopción de la gestión digital de operaciones  
+**If** supervisores de empresas de transporte de carga  
+**Attain** la capacidad de organizar y consultar una operación desde un único sistema  
+**With** la gestión centralizada de viajes, rutas, vehículos y conductores.
 
-**Hypothesis Statement 3 – Seguimiento del cliente**  
-We believe we will achieve **mayor uso recurrente de Trakto Route por parte de clientes**  
-If **empresas y comerciantes que contratan transporte de carga**  
-Attain **mayor visibilidad y menor incertidumbre sobre sus envíos**  
-With **la consulta del estado, progreso y eventos relevantes del viaje asociado a su envío**.
+##### Hypothesis Statement 2 – Eventos e incidencias
 
-**Hypothesis Statement 4 – Historial operativo**  
-We believe we will achieve **mayor consulta de información histórica para revisión de operaciones**  
-If **supervisores y responsables logísticos**  
-Attain **la capacidad de revisar viajes y eventos anteriores de forma organizada**  
-With **el historial operativo centralizado**.
+**We believe we will achieve** mayor trazabilidad de los viajes gestionados  
+**If** supervisores de transporte  
+**Attain** la capacidad de registrar lo ocurrido durante la operación  
+**With** el registro de paradas, descansos, retrasos, problemas e incidencias.
 
-**Hypothesis Statement 5 – Acceso por roles**  
-We believe we will achieve **uso seguro y adecuado de las funcionalidades por cada tipo de usuario**  
-If **supervisores y clientes registrados**  
-Attain **acceso únicamente a la información y acciones que corresponden a su rol**  
-With **autenticación y autorización basada en roles**.
+##### Hypothesis Statement 3 – Seguimiento del cliente
+
+**We believe we will achieve** mayor uso recurrente de Trakto Route por parte de clientes  
+**If** clientes que requieren servicios de transporte de carga  
+**Attain** mayor visibilidad y menor incertidumbre sobre sus envíos  
+**With** la consulta del estado, progreso y eventos relevantes del viaje asociado a su envío.
+
+##### Hypothesis Statement 4 – Historial operativo
+
+**We believe we will achieve** mayor consulta de información histórica para revisión de operaciones  
+**If** supervisores de transporte y clientes autorizados  
+**Attain** la capacidad de revisar viajes y eventos anteriores de forma organizada  
+**With** el historial operativo centralizado.
+
+##### Hypothesis Statement 5 – Acceso por roles
+
+**We believe we will achieve** uso seguro y adecuado de las funcionalidades por cada tipo de usuario  
+**If** supervisores y clientes registrados  
+**Attain** acceso únicamente a la información y acciones que corresponden a su rol  
+**With** autenticación y autorización basada en roles.
 
 <div style="page-break-after: always;"></div>
+
 
 #### 1.2.2.4. Lean UX Canvas
 
@@ -341,13 +394,13 @@ Este segmento está conformado por empresas dedicadas al transporte terrestre de
 | Necesidad principal | Gestionar y mantener la trazabilidad de las operaciones de transporte |
 | Funcionalidades de mayor valor | Gestión de viajes, consulta de rutas y estados, registro de incidencias e historial de vehículos, conductores y operaciones |
 
-### Segmento 2: Empresas y comerciantes que contratan servicios de transporte de carga
+### Segmento 2: Clientes que requieren servicios de transporte de carga
 
 Este segmento está conformado por organizaciones y comerciantes que dependen de terceros para trasladar mercancías y que necesitan conocer el progreso de los envíos contratados. A diferencia del primer segmento, estos usuarios no administran la flota ni asignan conductores; su necesidad principal es disponer de información confiable sobre el estado del traslado, los retrasos o incidencias relevantes y la culminación del servicio.
 
 **Trakto Route** atiende este segmento mediante funcionalidades de consulta asociadas a los envíos autorizados para cada cliente. De esta forma, el usuario puede revisar el estado del viaje relacionado con su carga, conocer eventos relevantes y reducir la dependencia de llamadas o mensajes para solicitar actualizaciones.
 
-**Segmento Objetivo: Empresas y comerciantes que contratan servicios de transporte de carga**
+**Segmento Objetivo: Clientes que requieren servicios de transporte de carga**
 
 | Característica | Descripción |
 |---|---|
@@ -363,7 +416,7 @@ Este segmento está conformado por organizaciones y comerciantes que dependen de
 
 # Capítulo II: Requirements Development and Software Solution Design
 
-# 2.1. Competidores
+## 2.1. Competidores
 
 Para comprender el entorno competitivo de **Trakto Route**, se analizaron soluciones relacionadas con la gestión de flotas, administración de operaciones logísticas y gestión del transporte de carga. Este análisis permite identificar las principales funcionalidades ofrecidas actualmente en el mercado, así como sus fortalezas y diferencias frente a nuestra propuesta.
 
@@ -372,7 +425,7 @@ Para el análisis competitivo se han considerado competidores directos e indirec
 <div style="page-break-after: always;"></div>
 
 
-#### 2.1.1. Análisis competitivo
+### 2.1.1. Análisis competitivo
 
 ### Competitive Analysis Landscape
 
@@ -608,7 +661,7 @@ Empresas peruanas de transporte de carga.
 </li>
 
 <li>
-Empresas y comerciantes que contratan servicios de transporte de carga.
+Clientes que requieren servicios de transporte de carga.
 </li>
 
 <li>
@@ -1224,9 +1277,9 @@ Amenazas
 </div>
 
 
-# 2.1.2. Estrategias y tácticas frente a competidores
+### 2.1.2. Estrategias y tácticas frente a competidores
 
-En esta sección se presentan las principales estrategias y tácticas que **Trakto Route** plantea desarrollar para competir dentro del mercado de soluciones de gestión de flotas y operaciones de transporte de carga. Estas acciones buscan fortalecer la propuesta de valor del producto, generar diferenciación frente a las alternativas existentes y responder a las necesidades identificadas en empresas de transporte y empresas y comerciantes que contratan servicios de transporte de carga.
+En esta sección se presentan las principales estrategias y tácticas que **Trakto Route** plantea desarrollar para competir dentro del mercado de soluciones de gestión de flotas y operaciones de transporte de carga. Estas acciones buscan fortalecer la propuesta de valor del producto, generar diferenciación frente a las alternativas existentes y responder a las necesidades identificadas en empresas de transporte y clientes que requieren servicios de transporte de carga.
 
 Las estrategias consideran el posicionamiento de Trakto Route frente a soluciones consolidadas como Samsara, SimpliRoute y DispatchTrack, priorizando la trazabilidad operativa, facilidad de adopción, accesibilidad móvil y adaptación al contexto de empresas que requieren mejorar la organización y seguimiento de sus operaciones.
 
@@ -1295,10 +1348,10 @@ Trakto Route seguirá un proceso de mejora continua basado en resultados obtenid
 <div style="page-break-after: always;"></div>
 
 
-# 2.2. Entrevistas
+## 2.2. Entrevistas
 
 
-## 2.2.1. Diseño de entrevistas
+### 2.2.1. Diseño de entrevistas
 
 
 Las entrevistas tienen como objetivo comprender las necesidades, dificultades y procesos actuales de los segmentos objetivo de **Trakto Route** respecto a la gestión de viajes, vehículos, conductores, rutas e incidencias dentro de las operaciones de transporte.
@@ -1336,7 +1389,7 @@ La información obtenida permitirá validar las hipótesis planteadas durante el
 12. ¿Qué tan útil sería para su empresa contar con una aplicación móvil que permita organizar y consultar información operativa desde un solo lugar?
 
 
-## Segmento objetivo 2: Empresas y comerciantes que contratan servicios de transporte de carga
+## Segmento objetivo 2: Clientes que requieren servicios de transporte de carga
 
 1. ¿Qué tipo de productos o mercancías envía habitualmente y con qué frecuencia contrata servicios de transporte de carga?
 2. ¿Qué información necesita conocer desde que entrega la mercancía hasta que llega a su destino?
@@ -1355,6 +1408,9 @@ La información obtenida permitirá validar las hipótesis planteadas durante el
 
 ### 2.2.2. Registro de entrevistas
 
+En esta sección se presenta el registro de las entrevistas realizadas a los usuarios pertenecientes a los segmentos objetivo de **Trakto Route**. Para cada entrevista se registran los datos del entrevistado, la evidencia visual, el enlace al video, la duración correspondiente y un resumen de las principales respuestas obtenidas.
+
+---
 
 ## Segmento objetivo 1: Empresas de transporte de carga
 
@@ -1365,7 +1421,7 @@ La información obtenida permitirá validar las hipótesis planteadas durante el
 | Nombres y apellidos | Gianfranco Quispe |
 | Segmento objetivo | Empresas de transporte de carga |
 | Cargo / actividad | Empresario del sector de transporte y logística |
-| Duración | Por completar |
+| Duración | 4:34 |
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQDkzObcE5ATSpmZvlKaZk58ARkz3Yp5qF9_nS_ZYSTAGaQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QOjMzT) |
 
 <p align="center">
@@ -1384,7 +1440,7 @@ Gianfranco Quispe es un empresario con cinco años de experiencia en el sector l
 | Nombres y apellidos | Diego Cisneros |
 | Segmento objetivo | Empresas de transporte de carga |
 | Cargo / actividad | Personal relacionado con la gestión de transporte |
-| Duración | Por completar |
+| Duración | 6:25 |
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQA-12ReLDzQR49ealZCQkCfATl5EcCRvhjS1SzkyXFY-xU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ujrc4n) |
 
 <p align="center">
@@ -1403,7 +1459,7 @@ Diego Cisneros considera que una aplicación móvil permitiría automatizar y op
 | Nombres y apellidos | Valeria Cardenas |
 | Segmento objetivo | Empresas de transporte de carga |
 | Cargo / actividad | Administradora en empresa de transporte de carga |
-| Duración | Por completar |
+| Duración | 4:08 |
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQBtRonP6CraSJUSB36JKYOyActf48po9v-Z1ghUJw-bAgE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6Xlw1F) |
 
 <p align="center">
@@ -1415,16 +1471,16 @@ Valeria Cardenas cuenta con dos años de experiencia como administradora en el s
 
 ---
 
-## Segmento objetivo 2: Empresas y comerciantes que contratan servicios de transporte de carga
+## Segmento objetivo 2: Clientes que requieren servicios de transporte de carga
 
 ### Entrevista 4
 
 | Campo | Detalle |
 |---|---|
 | Nombres y apellidos | Rodrigo Guerra |
-| Segmento objetivo | Empresas y comerciantes que contratan servicios de transporte de carga |
+| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
 | Cargo / actividad | Emprendedor |
-| Duración | Por completar |
+| Duración | 5:49 |
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAV3DQLGB33SpVkVyUbv9pQAUsYOLoLLNGkZGiAaly_qig?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wJlceN) |
 
 <p align="center">
@@ -1441,10 +1497,10 @@ Rodrigo Guerra es un emprendedor que depende de servicios de transporte de merca
 | Campo | Detalle |
 |---|---|
 | Nombres y apellidos | Por completar |
-| Segmento objetivo | Empresas y comerciantes que contratan servicios de transporte de carga |
+| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
 | Cargo / actividad | Personal de empresa de mobiliario |
-| Duración | Por completar |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQCYIb0z_NwBTLbajN-6r4f9AWyuPx7pVcLQDYFiSKfXhjQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ah7IkZ) |
+| Duración | 3:35 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQCYIb0z_NwBTLbajN-6r4f9AWyuPx7pVcLQDYFiSKfXhjQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ah7IkZ) |
 
 <p align="center">
   <img src="assets/images/chapter2/entrevista-segmento2-2.png" width="700">
@@ -1460,9 +1516,9 @@ El entrevistado trabaja en una empresa dedicada al sector mobiliario y considera
 | Campo | Detalle |
 |---|---|
 | Nombres y apellidos | Jael Pinta |
-| Segmento objetivo | Empresas y comerciantes que contratan servicios de transporte de carga |
+| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
 | Cargo / actividad | Comerciante mayorista de prendas |
-| Duración | Por completar |
+| Duración | 4:12 |
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAz-85vOfF1R46gy8UA0z54AfCV6TF7BxvrpjY63Y2yBAs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=CS9mfl) |
 
 <p align="center">
@@ -1472,46 +1528,57 @@ El entrevistado trabaja en una empresa dedicada al sector mobiliario y considera
 **Resumen:**  
 Jael Pinta se dedica a la venta mayorista de prendas hacia diferentes zonas del interior del país y utiliza servicios de transporte para realizar sus envíos. Su principal preocupación es la seguridad de la mercancía, debido a que en algunas ocasiones los productos no llegan completos o en las mismas condiciones en las que fueron enviados. También menciona que la comunicación mediante canales tradicionales puede resultar lenta y generar pérdida de tiempo al consultar el estado de los envíos. Considera importante contar con mayor información sobre el traslado y mejorar la organización y trazabilidad de las operaciones.
 
+---
+
+### Entrevista 7
+
+| Campo | Detalle |
+|---|---|
+| Nombres y apellidos | Alonso Shovl |
+| Segmento objetivo | Clientes que requieren servicios de transporte de carga |
+| Cargo / actividad | Comerciante de equipo de ferretería |
+| Duración | 8:22 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213553_upc_edu_pe/IQBnolRqUlm5SoIE66MFLH98AU3jHadHbl2VdK9mHX7oo6A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OfYgGa) |
+
+<p align="center">
+  <img src="assets/images/chapter2/entrevista-segmento2-4.png" width="700">
+</p>
+
+**Resumen:**  
+Alonso Shovl describe dificultades al comunicarse con los conductores de los camiones y al mantener organizada la información sobre el estado de los vehículos y de la carga.
+
 <div style="page-break-after: always;"></div>
 
 
 ### 2.2.3. Análisis de entrevistas
 
-Se realizaron **seis entrevistas**, distribuidas en **tres participantes por cada segmento objetivo**. A partir de las respuestas obtenidas se identificaron las principales necesidades, dificultades y expectativas relacionadas con la gestión y seguimiento del transporte de carga.
+A partir de las **siete entrevistas realizadas**, distribuidas en **tres participantes del segmento de empresas de transporte de carga** y **cuatro participantes del segmento de clientes que requieren servicios de transporte de carga**, se analizaron las principales características, necesidades, dificultades y expectativas identificadas. El análisis considera aspectos objetivos y subjetivos recurrentes en las respuestas y sirve como base para la construcción de los User Personas y demás artefactos de Needfinding.
 
-## Segmento objetivo 1: Empresas de transporte de carga
+### Segmento objetivo 1: Empresas de transporte de carga
 
-Las entrevistas realizadas a representantes vinculados con empresas de transporte permitieron identificar el uso de herramientas tecnológicas para gestionar las operaciones, así como dificultades relacionadas con el control de vehículos, seguimiento de viajes y condiciones de las rutas.
+A partir de las tres entrevistas realizadas a representantes de empresas de transporte de carga, se identificó que el **100 % de los entrevistados considera importante conocer la ubicación de sus vehículos durante el desarrollo de los viajes**. Asimismo, el **66.7 % indicó tener dificultades para obtener de manera inmediata información sobre el estado de un recorrido cuando ocurre un retraso, parada no prevista u otra incidencia**.
 
-| **Aspecto analizado** | **Cantidad** | **Porcentaje** |
-|---|---:|---:|
-| Utilizan herramientas digitales para gestionar sus operaciones | 3 de 3 | 100% |
-| Utilizan GPS o sistemas de rastreo para supervisar operaciones | 2 de 3 | 66.7% |
-| Utilizan Excel para registrar o gestionar información | 2 de 3 | 66.7% |
-| Identifican dificultades relacionadas con carreteras o infraestructura | 2 de 3 | 66.7% |
-| Consideran importante mejorar el control de las operaciones de transporte | 3 de 3 | 100% |
-| Presentan necesidades que pueden ser centralizadas mediante una aplicación móvil | 3 de 3 | 100% |
+Respecto a la comunicación, el **100 % señaló que mantiene contacto con los conductores durante las operaciones**, principalmente cuando necesita conocer el estado del viaje o resolver algún inconveniente. Sin embargo, el **66.7 % manifestó interés en contar con una solución que facilite la comunicación y permita relacionarla con la información del recorrido**.
 
-**Conclusión del segmento:**  
-Los resultados muestran que las empresas de transporte ya utilizan diferentes herramientas tecnológicas para gestionar sus operaciones; sin embargo, la información se encuentra distribuida entre GPS, sistemas de rastreo, herramientas de comunicación y archivos de Excel. Asimismo, se identificaron dificultades relacionadas con el estado de las carreteras, el seguimiento de los viajes y el control de los vehículos. Por ello, existe una oportunidad para **Trakto Route** de centralizar información relacionada con vehículos, conductores, rutas y viajes dentro de una sola aplicación móvil.
+En cuanto a la trazabilidad, el **66.7 % indicó que actualmente la información relacionada con vehículos, conductores, rutas e incidencias se encuentra distribuida entre diferentes medios o herramientas**, dificultando la consulta posterior de lo ocurrido durante una operación.
+
+Finalmente, el **100 % de los entrevistados mostró interés en disponer de una plataforma que centralice la información de sus operaciones de transporte**, destacando como funcionalidades de mayor valor la geolocalización, la visualización de rutas y recorridos, el registro de incidencias, la comunicación con los conductores y el historial de viajes.
+
+Estos resultados permiten identificar como características comunes del segmento la necesidad de **visibilidad operativa, control, comunicación rápida y trazabilidad de los recorridos**. Por ello, **Trakto Route** puede responder a estas necesidades mediante la centralización de información relacionada con cada operación de transporte.
 
 <div style="page-break-after: always;"></div>
 
-## Segmento objetivo 2: Empresas y comerciantes que contratan servicios de transporte de carga
+### Segmento objetivo 2: Clientes que requieren servicios de transporte de carga
 
-Las entrevistas realizadas a clientes que utilizan servicios de transporte permitieron identificar principalmente problemas relacionados con la falta de visibilidad de los envíos, retrasos, comunicación con los transportistas y seguridad de la mercancía.
+A partir de las cuatro entrevistas realizadas a clientes que requieren servicios de transporte de carga, se identificó que el **100 % presenta la necesidad de conocer o mantener organizado el estado y progreso de la mercancía durante el traslado**. La falta de visibilidad y la dificultad para obtener información de manera oportuna aparecen de forma recurrente en las experiencias descritas.
 
-| **Aspecto analizado** | **Cantidad** | **Porcentaje** |
-|---|---:|---:|
-| Presentan dificultades para conocer el estado o avance de sus envíos | 3 de 3 | 100% |
-| Consideran importante mejorar el seguimiento de los envíos | 3 de 3 | 100% |
-| Han presentado problemas relacionados con retrasos o demoras | 2 de 3 | 66.7% |
-| Identifican problemas de comunicación con las empresas de transporte | 2 de 3 | 66.7% |
-| Presentan preocupación por daños, pérdidas o seguridad de la mercancía | 2 de 3 | 66.7% |
-| Muestran interés en contar con una solución tecnológica para mejorar el seguimiento | 3 de 3 | 100% |
+Respecto a la comunicación, el **75 % de los entrevistados manifestó dificultades o ineficiencias al comunicarse con transportistas o conductores para conocer el estado de la carga**. Esto evidencia una dependencia de canales tradicionales que puede generar demoras y pérdida de tiempo al solicitar actualizaciones.
 
-**Conclusión del segmento:**  
-Los clientes entrevistados presentan una necesidad clara de contar con mayor información sobre el estado de sus envíos. Los principales problemas identificados son la falta de visibilidad durante el traslado, los retrasos, la comunicación con los transportistas y la seguridad de la mercancía. En consecuencia, **Trakto Route** puede contribuir a mejorar la experiencia del cliente proporcionando mayor visibilidad sobre los viajes y facilitando el seguimiento de las operaciones de transporte.
+En relación con la seguridad de la mercancía, el **50 % manifestó preocupación por daños, pérdidas o por recibir productos en condiciones diferentes a las esperadas**. Asimismo, el **25 % mencionó explícitamente los retrasos como un problema relevante durante las operaciones de transporte**.
+
+El **50 % expresó de manera explícita interés en utilizar una aplicación móvil o solución tecnológica que facilite el seguimiento del envío**, mientras que el resto de los participantes manifestó la necesidad de disponer de mayor información, organización y trazabilidad durante el traslado.
+
+A partir de estos resultados, se identifica que este segmento se caracteriza principalmente por buscar **mayor visibilidad del envío, comunicación más eficiente, seguridad de la mercancía y trazabilidad del traslado**. Estas características respaldan el enfoque de **Trakto Route** como una aplicación móvil que permite consultar el estado, progreso e incidencias relevantes asociadas a los envíos.
 
 <div style="page-break-after: always;"></div>
 
@@ -1524,19 +1591,19 @@ Las siguientes fichas de **User Persona** fueron elaboradas en **UXPressia** a p
 
 Para el primer segmento, correspondiente a **empresas de transporte de carga**, se identificó un perfil relacionado con la gestión y supervisión de las operaciones de transporte, cuyo principal objetivo es mantener organizada la información de los viajes, vehículos, conductores y rutas. Este usuario necesita consultar el estado de los viajes, registrar incidencias y acceder al historial de las operaciones para mantener una adecuada trazabilidad de las actividades realizadas.
 
-Para el segundo segmento, correspondiente a **empresas y comerciantes que contratan servicios de transporte de carga**, se identificó un perfil responsable de hacer seguimiento a mercancías enviadas mediante empresas transportistas. Este usuario valora especialmente conocer el estado y progreso del envío, recibir información oportuna sobre retrasos o incidencias y reducir la dependencia de llamadas o mensajes para solicitar actualizaciones.
+Para el segundo segmento, correspondiente a **clientes que requieren servicios de transporte de carga**, se identificó un perfil responsable de hacer seguimiento a mercancías enviadas mediante empresas transportistas. Este usuario valora especialmente conocer el estado y progreso del envío, recibir información oportuna sobre retrasos o incidencias y reducir la dependencia de llamadas o mensajes para solicitar actualizaciones.
 
 **1. Primer segmento: Empresas de transporte de carga**
 
 ![User Persona - Empresas de transporte de carga](assets/images/chapter2/user-persona1.png)
 
-**2. Segundo segmento: Empresas y comerciantes que contratan servicios de transporte de carga**
+**2. Segundo segmento: Clientes que requieren servicios de transporte de carga**
 
-![User Persona - Empresas y comerciantes que contratan servicios de transporte de carga](assets/images/chapter2/user-persona2.png)
+![User Persona - Clientes que requieren servicios de transporte de carga](assets/images/chapter2/user-persona2.png)
 
 <div style="page-break-after: always;"></div>
 
-## 2.3.2. User Task Matrix
+### 2.3.2. User Task Matrix
 
 El **User Task Matrix** compara las principales tareas que realizan actualmente los representantes de ambos segmentos, independientemente de la existencia de Trakto Route. **Carlos Mendoza** representa a una empresa de transporte de carga y **Andrea Salazar** representa a una empresa cliente que contrata servicios de transporte.
 
@@ -1574,7 +1641,7 @@ En esta sección se presentan los **User Journey Maps elaborados en UXPressia** 
 
 Para este análisis se elaboraron las versiones **As-Is** de los User Journey Maps, por lo que se representa la situación actual de los usuarios **sin considerar la existencia de Trakto Route como solución**. El objetivo es identificar las acciones realizadas durante el proceso, así como los pensamientos, emociones, dificultades y oportunidades que aparecen en cada etapa.
 
-Cada User Journey Map se encuentra vinculado con el User Persona correspondiente. **Carlos Mendoza** representa al segmento de empresas de transporte de carga, mientras que **Andrea Salazar** representa al segmento de empresas y comerciantes que contratan servicios de transporte de carga.
+Cada User Journey Map se encuentra vinculado con el User Persona correspondiente. **Carlos Mendoza** representa al segmento de empresas de transporte de carga, mientras que **Andrea Salazar** representa al segmento de clientes que requieren servicios de transporte de carga.
 
 #### 1. As-Is User Journey Map – Carlos Mendoza
 
@@ -1602,7 +1669,7 @@ A lo largo de estas etapas se identifican dificultades relacionadas con la **inf
 
 #### 2. As-Is User Journey Map – Andrea Salazar
 
-El segundo User Journey Map corresponde a **Andrea Salazar**, responsable logística de una empresa cliente y representante del segmento de **empresas y comerciantes que contratan servicios de transporte de carga**.
+El segundo User Journey Map corresponde a **Andrea Salazar**, responsable logística de una empresa cliente y representante del segmento de **clientes que requieren servicios de transporte de carga**.
 
 El journey representa el proceso actual que realiza Andrea para hacer seguimiento a los envíos que su organización contrata con empresas transportistas. El recorrido comienza cuando coordina el despacho y obtiene los datos básicos del servicio, continúa con la consulta del avance del traslado, contempla la comunicación con el transportista ante retrasos o incidencias y finaliza cuando confirma la llegada de la mercancía.
 
@@ -1650,7 +1717,7 @@ Como principales **Gains**, Carlos busca disponer de información organizada y a
 
 ![Empathy Map - Carlos Mendoza](assets/images/chapter2/empathy-map1.png)
 
-#### 2. Empathy Map del segundo segmento: Empresas y comerciantes que contratan servicios de transporte de carga
+#### 2. Empathy Map del segundo segmento: Clientes que requieren servicios de transporte de carga
 
 El segundo Empathy Map corresponde a **Andrea Salazar**, responsable logística de una empresa cliente. Su responsabilidad no es administrar la flota del transportista, sino asegurar que las mercancías contratadas lleguen al destino esperado y disponer de información suficiente para responder ante retrasos o problemas.
 
@@ -1725,19 +1792,32 @@ Los términos se presentan en inglés junto con su equivalente en español y cor
 
 En esta sección se especifican los principales requisitos de **Trakto Route** a partir de la información obtenida durante el proceso de investigación, análisis de usuarios y Needfinding. Los requisitos identificados permiten definir las funcionalidades necesarias para atender las necesidades de los segmentos objetivo y establecer una base para la planificación y desarrollo del producto digital.
 
-La especificación de requisitos comprende las secciones de **To-Be Scenario Mapping, User Stories, Impact Map y Product Backlog**, permitiendo relacionar las necesidades de los usuarios con las funcionalidades, prioridades y objetivos del producto.
+La especificación de requisitos inicia con el **To-Be Scenario Mapping** como artefacto de transición hacia el escenario futuro y continúa con las secciones numeradas de **User Stories, Impact Mapping y Product Backlog**, permitiendo relacionar las necesidades de los usuarios con las funcionalidades, prioridades y objetivos del producto.
 
-### 2.4.1. To-Be Scenario Mapping
+### To-Be Scenario Mapping
 
-El **To-Be Scenario Mapping** representa cómo cambiará la experiencia de los segmentos objetivo con la incorporación de Trakto Route. Para la empresa transportista, el escenario futuro concentra la programación del viaje, la asignación de recursos, la actualización del estado y el registro de incidencias en un sistema centralizado. Para el cliente, el escenario futuro permite consultar el estado y progreso del envío autorizado sin depender de llamadas o mensajes para cada actualización.
+El **To-Be Scenario Mapping** representa la experiencia esperada de los segmentos objetivo cuando utilizan **Trakto Route**. A diferencia de los User Journey Maps As-Is, este artefacto muestra cómo la solución propuesta transforma las actividades actuales, reduciendo la dispersión de información, la dependencia de llamadas o mensajes y la incertidumbre durante el seguimiento de los viajes.
 
-El escenario To-Be debe mantener trazabilidad con los User Personas y con los pains detectados durante las entrevistas. La captura elaborada por el equipo debe reflejar al menos los momentos de preparación, inicio, seguimiento, gestión de incidencias y finalización del viaje para el supervisor, y los momentos de consulta, seguimiento, recepción de alertas relevantes y confirmación de finalización para el cliente.
+**Segmento: Empresas de transporte de carga**<br>
 
-![To-Be Scenario Mapping - Trakto Route](assets/images/chapter2/to-be-scenario-mapping.png)
+| **Phases** | **Programación y asignación del viaje** | **Inicio del viaje** | **Seguimiento y gestión de incidencias** | **Finalización y revisión** |
+| :- | :- | :- | :- | :- |
+| **Doing** | - Ingresa a **Trakto Route** y programa el viaje.<br>- Registra o selecciona la ruta, el vehículo y el conductor que participarán en la operación.<br>- Verifica que los recursos asignados se encuentren disponibles. | - Consulta la información del viaje programado.<br>- Confirma el inicio de la operación y actualiza su estado.<br>- Verifica que el vehículo y conductor asignados correspondan al viaje. | - Consulta el estado y progreso del viaje desde la aplicación.<br>- Registra paradas, descansos, retrasos, problemas o accidentes cuando ocurren.<br>- Revisa las incidencias registradas y coordina las acciones necesarias para continuar la operación. | - Registra la finalización del viaje.<br>- Revisa los eventos ocurridos durante el recorrido.<br>- Consulta el historial del viaje, vehículo y conductor para mantener la trazabilidad de la operación. |
+| **Thinking** | - “Puedo organizar el viaje y sus recursos desde un solo lugar.”<br>- “Necesito asegurarme de que el vehículo y el conductor estén disponibles antes de iniciar.” | - “Ahora puedo verificar rápidamente que la operación comenzó según lo planificado.”<br>- “La información del viaje está centralizada y disponible cuando la necesito.” | - “Puedo conocer lo que está ocurriendo durante el viaje sin reunir información de diferentes medios.”<br>- “Si ocurre un problema, necesito registrarlo y consultarlo de inmediato para tomar una decisión.” | - “Quiero revisar lo ocurrido durante el recorrido y conservar un historial confiable.”<br>- “Esta información me ayudará a evaluar futuras operaciones.” |
+| **Feeling** | - Tranquilo al contar con la información de planificación organizada.<br>- Confiado al verificar los recursos antes del viaje. | - Seguro al confirmar el inicio y disponer de los datos de la operación.<br>- Satisfecho por acceder rápidamente a la información necesaria. | - En control al visualizar el progreso y los eventos del viaje.<br>- Más preparado para responder ante retrasos o incidencias. | - Satisfecho al cerrar la operación con la información registrada.<br>- Confiado al disponer de trazabilidad e historial para consultas posteriores. |
+
+**Segmento: Clientes que requieren servicios de transporte de carga**<br>
+
+| **Phases** | **Consulta del envío** | **Seguimiento del progreso** | **Consulta de incidencias** | **Confirmación de finalización** |
+| :- | :- | :- | :- | :- |
+| **Doing** | - Ingresa a **Trakto Route** con su cuenta.<br>- Consulta el envío asociado a su organización.<br>- Revisa la información general disponible del traslado. | - Consulta el estado y progreso del viaje relacionado con su mercancía.<br>- Revisa los eventos relevantes registrados durante el recorrido sin depender de llamadas o mensajes constantes. | - Consulta si se registró algún retraso, problema, accidente u otra incidencia que afecte el traslado.<br>- Utiliza la información disponible para decidir si necesita comunicarse con la empresa transportista. | - Verifica que el viaje haya finalizado.<br>- Confirma el estado final del traslado.<br>- Consulta posteriormente la información histórica del envío cuando la necesita. |
+| **Thinking** | - “Quiero encontrar rápidamente la información de mi envío sin tener que solicitarla por otros medios.”<br>- “Necesito saber que estoy consultando el traslado correcto.” | - “Puedo revisar el avance del envío cuando lo necesite.”<br>- “Ya no tengo que llamar constantemente para saber cómo va el traslado.” | - “Si ocurre algo con mi mercancía, quiero enterarme y entender qué sucedió.”<br>- “Tener información del problema reduce la incertidumbre mientras espero una solución.” | - “Quiero confirmar que el traslado terminó y conservar la información por si necesito revisarla después.”<br>- “El historial me permite tener mayor claridad sobre el servicio recibido.” |
+| **Feeling** | - Tranquilo al encontrar la información del envío en un solo lugar.<br>- Confiado al disponer de acceso autorizado a sus traslados. | - Informado y con menor incertidumbre durante el recorrido.<br>- Satisfecho por reducir la dependencia de canales de comunicación externos. | - Más seguro al conocer oportunamente los eventos relevantes.<br>- Preocupado si existe una incidencia, pero con mayor claridad sobre lo ocurrido. | - Satisfecho al confirmar la finalización del traslado.<br>- Confiado al disponer de un registro consultable de la operación. |
 
 <div style="page-break-after: always;"></div>
 
-### 2.4.2. User Stories
+### 2.4.1. User Stories
+
 
 En esta sección se presentan las **User Stories** identificadas para **Trakto Route**. Estas historias describen las funcionalidades requeridas desde la perspectiva de los usuarios y se encuentran agrupadas mediante **Epics** relacionadas con las principales responsabilidades del dominio.
 
@@ -2334,7 +2414,7 @@ Adicionalmente, se incluyen **Technical Stories** para funcionalidades que no re
 
 ### Technical Stories
 
-Las siguientes historias representan requisitos técnicos necesarios para soportar las funcionalidades de Trakto que no implican una interacción directa con los usuarios finales. De acuerdo con la rúbrica, estas historias utilizan **Developer** como rol y sus criterios de aceptación consideran escenarios de solicitud y respuesta.
+Las siguientes historias representan requisitos técnicos necesarios para soportar las funcionalidades de **Trakto Route** que no implican una interacción directa con los usuarios finales. De acuerdo con la rúbrica, estas historias utilizan **Developer** como rol y sus criterios de aceptación consideran escenarios de solicitud y respuesta.
 
 #### TS01 – Proporcionar servicios para la gestión de viajes
 
@@ -2452,7 +2532,7 @@ Como equipo de desarrollo, deseamos investigar alternativas de autenticación pa
 
 
 
-### 2.4.3. Impact Mapping
+### 2.4.2. Impact Mapping
 
 El **Impact Mapping de Trakto Route** relaciona objetivos de negocio con los dos User Personas: **Carlos Mendoza**, supervisor de flota de una empresa transportista, y **Andrea Salazar**, responsable logística de una empresa cliente.
 
@@ -2486,7 +2566,7 @@ Se plantean los siguientes Business Goals SMART como hipótesis de negocio a val
 
 <div style="page-break-after: always;"></div>
 
-### 2.4.4. Product Backlog
+### 2.4.3. Product Backlog
 
 El **Product Backlog** de Trakto Route reúne las User Stories identificadas y las organiza según su valor para el negocio. Cada historia cuenta con una estimación mediante **Story Points**, utilizando los valores **1, 2, 3, 5 y 8**, y se distribuye entre los Sprints planificados para el desarrollo del producto.
 
@@ -2549,11 +2629,11 @@ https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
-En esta sección se aplica **Domain-Driven Design (DDD)** a nivel estratégico para identificar los límites naturales del dominio de Trakto y definir sus Bounded Contexts. Para ello se utilizan **EventStorming** y **Bounded Context Canvas**.
+En esta sección se aplica **Domain-Driven Design (DDD)** a nivel estratégico para identificar los límites naturales del dominio de **Trakto Route** y definir sus Bounded Contexts. Para ello se utilizan **EventStorming** y **Bounded Context Canvas**.
 
 ### 2.5.1. EventStorming
 
-Se realizó una sesión de **EventStorming en Miro** para modelar el dominio general de Trakto e identificar los principales eventos relacionados con las operaciones de transporte.
+Se realizó una sesión de **EventStorming en Miro** para modelar el dominio general de **Trakto Route** e identificar los principales eventos relacionados con las operaciones de transporte.
 
 Durante la sesión se organizaron cronológicamente eventos relacionados con viajes, vehículos, conductores, rutas, incidencias, usuarios e historial operativo.
 
@@ -2636,7 +2716,7 @@ En esta sección se analizan las relaciones estructurales entre los Bounded Cont
 
 Durante el proceso se revisaron diferentes alternativas de organización de los contextos y sus capabilities, considerando patrones de relación de **Domain-Driven Design** como **Customer/Supplier, Conformist, Anticorruption Layer y Shared Kernel**.
 
-Como resultado del análisis se definió el Context Map final de Trakto, conformado por los contextos **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**.
+Como resultado del análisis se definió el Context Map final de **Trakto Route**, conformado por los contextos **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**.
 
 A continuación, se presentan las alternativas analizadas y el Context Map final elaborado en **Miro**.
 
@@ -2674,15 +2754,7 @@ La aplicación móvil **no accede directamente a MySQL**. Toda lectura o modific
 
 ![Software Architecture Container Diagram - Trakto Route](assets/images/chapter2/software-architecture-container.png)
 
-#### 2.5.3.3. Software Architecture Components Diagrams
-
-El Components Diagram descompone el container **Trakto Route REST API** según los Bounded Contexts definidos: **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**. Cada módulo contiene componentes de Interface, Application, Domain e Infrastructure y se comunica con otros contextos mediante contratos explícitos de aplicación o eventos de dominio, evitando dependencias directas entre modelos internos.
-
-A nivel móvil, la aplicación se organiza por features y utiliza una arquitectura de presentación basada en **Jetpack Compose + ViewModel**, mientras que el backend mantiene el modelo de dominio y las reglas de negocio autoritativas.
-
-![Software Architecture Components Diagram - Trakto Route](assets/images/chapter2/software-architecture-components.png)
-
-#### 2.5.3.4. Software Architecture Deployment Diagram
+#### 2.5.3.3. Software Architecture Deployment Diagrams
 
 El Deployment Diagram representa la distribución física de la solución:
 
@@ -3863,4 +3935,6 @@ PK  id
 ![Profile - Database Diagram](assets/images/chapter2/profile-database-diagram.png)
 
 <div style="page-break-after: always;"></div>
+
+
 
