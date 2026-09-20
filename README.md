@@ -1,4 +1,5 @@
 
+
 <p align="center">
   <img src="./assets/images/shared/logo_upc.png" alt="Logo UPC" width="200"/>
 </p>
@@ -8,7 +9,7 @@
 
 <h3 align="center">1ACC0238</h3>
 
-<h3 align="center">Aplicaciones para Dispositivos Móviles</h3>
+<h3 align="center">Aplicaciones para Dispositivos Móviles</h3>Q
 <h3 align="center">NRC</h3>
 <h3 align="center">4939</h3>
 
@@ -1351,8 +1352,6 @@ La información obtenida permitirá validar las hipótesis planteadas durante el
 12. ¿Qué tan útil sería una aplicación móvil que le permita consultar el estado, progreso e incidencias relevantes de sus envíos desde un solo lugar?
 
 <div style="page-break-after: always;"></div>
-
-### 2.2.2. Registro de entrevistas
 
 ### 2.2.2. Registro de entrevistas
 
@@ -3864,5 +3863,4 @@ PK  id
 ![Profile - Database Diagram](assets/images/chapter2/profile-database-diagram.png)
 
 <div style="page-break-after: always;"></div>
-
 
