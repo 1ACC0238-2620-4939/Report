@@ -32,8 +32,8 @@
     <th>Apellidos y Nombres</th>
   </tr>
   <tr>
-    <td>UXXXXXXXXXX</td>
-    <td>Miembro 1</td>
+    <td>u202019409</td>
+    <td>Cesar Alejandro Linares Bernable</td>
   </tr>
   <tr>
     <td>U20251B991</td>
@@ -44,12 +44,12 @@
     <td>Fernandez Garfias, Alexander Piero</td>
   </tr>
   <tr>
-    <td>UXXXXXXXXXX</td>
-    <td>Miembro 4</td>
+    <td>U20201a293</td>
+    <td>CHirito Torres , Jose Raul</td>
   </tr>
   <tr>
-    <td>UXXXXXXXXXX</td>
-    <td>Miembro 5</td>
+    <td>U20241E406</td>
+    <td>Loa Rojas, Jean Franck</td>
   </tr>
 </table>
 
@@ -65,7 +65,6 @@
 |---|---|---|---|
 | AV1 | 20/09/2026 | Fecha | Creación del informe. Inclusión de la presentación de la startup y del producto, Lean UX, análisis de competidores, entrevistas, Needfinding y Requirements Specification hasta Product Backlog. |
 
-<div style="page-break-after: always;"></div>
 
 <h2 align="center">Project Report Collaboration Insights</h2>
 
@@ -179,9 +178,24 @@
 
 <div style="page-break-after: always;"></div>
 
-# Student Outcome
+### ABET – EAC - Student Outcome 7
 
-[Completar con el Student Outcome indicado por el docente. Debe incluir las acciones específicas realizadas por cada integrante y las conclusiones grupales correspondientes al avance.]
+**Aprendizaje Continuo y Autónomo**
+
+**Criterio:** La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas.
+
+En el siguiente cuadro se describen las acciones realizadas y los enunciados de conclusiones por parte del equipo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 7.
+
+
+| **Avance** | **Integrante** | **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** | **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** |
+|---|---|---|---|
+| **AV1** | **Cesar Alejandro Linares Bernable** | Investigó y aplicó conceptos de Lean UX para contribuir en la definición de la problemática, los supuestos y las hipótesis de la solución propuesta, apoyando la estructuración inicial del producto. | Reconoció la importancia de actualizar continuamente sus conocimientos sobre metodologías UX para comprender mejor las necesidades de los usuarios y orientar adecuadamente el desarrollo del producto. |
+|  | **Aguilar Aguayo Jeferson Renzo** | Aplicó técnicas de análisis de competidores y entrevistas para recopilar información relevante sobre el mercado, los usuarios y sus principales necesidades, contribuyendo al análisis inicial de la solución. | Identificó la necesidad de fortalecer continuamente sus conocimientos en investigación, análisis de usuarios y herramientas de desarrollo para sustentar mejores decisiones durante la construcción de soluciones de software. |
+|  | **Fernandez Garfias, Alexander Piero** | Profundizó y aplicó conocimientos de Lean UX, Needfinding, Domain-Driven Design y arquitectura de software, participando en la elaboración de User Personas, User Task Matrix, Empathy Maps, requisitos, Bounded Contexts y diagramas de arquitectura C4. Asimismo, fortaleció sus conocimientos en modelado de dominio, diseño de bases de datos y estructuración de una solución móvil basada en Kotlin, Java, Spring Boot y MySQL. | Reconoció que el aprendizaje continuo en arquitectura de software, DDD, desarrollo backend, aplicaciones móviles y técnicas de UX resulta necesario para diseñar soluciones mantenibles y adaptables. Además, identificó la importancia de investigar nuevas herramientas, patrones y tecnologías durante el desarrollo para resolver adecuadamente los problemas técnicos encontrados en el proyecto. |
+|  | **Chirito Torres, Jose Raul** | Aplicó conocimientos relacionados con la especificación de requisitos mediante la elaboración y organización de User Stories y la revisión de funcionalidades orientadas a las necesidades identificadas en los usuarios. | Reconoció la importancia de actualizar sus conocimientos sobre gestión y especificación de requisitos, así como buenas prácticas de desarrollo, para mantener una adecuada relación entre las necesidades del usuario y las funcionalidades del producto. |
+|  | **Loa Rojas, Jean Franck** | Fortaleció sus conocimientos sobre planificación de productos mediante la elaboración del Impact Map y la organización y priorización del Product Backlog, contribuyendo a definir las funcionalidades necesarias para la solución. | Identificó la necesidad del aprendizaje permanente en técnicas de planificación, gestión de productos y desarrollo de software para responder adecuadamente a nuevos requerimientos y cambios que puedan presentarse durante el proyecto. |
+|  | **Conclusiones** | **El equipo actualizó y aplicó conocimientos relacionados con Lean UX, investigación de usuarios, análisis de requisitos, planificación del producto, Domain-Driven Design y arquitectura de software, integrándolos en el desarrollo del proyecto Trakto Route.** | **El equipo reconoció la importancia del aprendizaje continuo y autónomo para fortalecer sus competencias profesionales y adaptar el desarrollo de soluciones de software a las necesidades de los usuarios, los cambios tecnológicos y la evolución del proyecto.** |
+
 
 <div style="page-break-after: always;"></div>
 
@@ -189,13 +203,16 @@
 
 De acuerdo con la rúbrica, cada integrante debe formular al menos dos objetivos SMART orientados a su desarrollo profesional posterior a la carrera. Los siguientes enunciados constituyen una propuesta inicial y deben ser validados personalmente por cada integrante antes de la entrega final.
 
+
 | Integrante | Objetivo SMART 1 | Objetivo SMART 2 |
 |---|---|---|
-| Aguilar Aguayo Jeferson Renzo | Durante los 12 meses posteriores a la culminación de la carrera, completar al menos una certificación o programa especializado relacionado con desarrollo de software y aplicar lo aprendido en un proyecto verificable de portafolio. | Durante los 18 meses posteriores a la graduación, participar en al menos un proyecto profesional de desarrollo de software en el que contribuya de manera documentada al frontend, backend o base de datos y registre los principales aprendizajes obtenidos. |
-| Fernandez Garfias, Alexander Piero | Durante los 12 meses posteriores a la culminación de la carrera, fortalecer su especialización en desarrollo backend completando al menos una certificación o ruta avanzada en Java/Spring y publicando un proyecto de portafolio con documentación técnica. | Durante los 18 meses posteriores a la graduación, participar en un proyecto profesional o colaborativo donde aplique prácticas de arquitectura de software, pruebas y diseño de APIs, documentando al menos dos mejoras técnicas implementadas. |
-| Miembro 1 | **Pendiente de validación por el integrante.** Formular dos objetivos específicos, medibles, alcanzables, relevantes y delimitados en el tiempo. | **Pendiente de validación por el integrante.** |
-| Miembro 4 | **Pendiente de validación por el integrante.** Formular dos objetivos específicos, medibles, alcanzables, relevantes y delimitados en el tiempo. | **Pendiente de validación por el integrante.** |
-| Miembro 5 | **Pendiente de validación por el integrante.** Formular dos objetivos específicos, medibles, alcanzables, relevantes y delimitados en el tiempo. | **Pendiente de validación por el integrante.** |
+| **Cesar Alejandro Linares Bernable** | Durante los 12 meses posteriores a la culminación de la carrera, completar al menos una certificación o programa especializado relacionado con desarrollo de software y aplicar los conocimientos adquiridos en un proyecto verificable de portafolio. | Durante los 18 meses posteriores a la graduación, participar en al menos un proyecto profesional o colaborativo de desarrollo de software, contribuyendo en la implementación de funcionalidades y documentando los principales aprendizajes obtenidos. |
+| **Aguilar Aguayo Jeferson Renzo** | Durante los 12 meses posteriores a la culminación de la carrera, fortalecer sus conocimientos en desarrollo frontend y bases de datos mediante al menos una certificación o curso especializado en JavaScript, desarrollo web o MySQL, aplicando lo aprendido en un proyecto personal publicado en GitHub. | Durante los 18 meses posteriores a la graduación, participar en al menos un proyecto profesional o colaborativo de software donde contribuya en el desarrollo de interfaces, integración con servicios o gestión de datos, documentando los principales aprendizajes y mejoras realizadas. |
+| **Fernandez Garfias, Alexander Piero** | Durante los 12 meses posteriores a la culminación de la carrera, fortalecer su especialización en desarrollo backend completando al menos una certificación avanzada en Java y Spring Boot, y desarrollar un proyecto de portafolio aplicando Domain-Driven Design, arquitectura limpia, APIs RESTful, seguridad y persistencia de datos, acompañado de documentación técnica y pruebas automatizadas. | Durante los 18 meses posteriores a la graduación, participar en al menos un proyecto profesional de software donde contribuya en decisiones de arquitectura, diseño de APIs, modelado de dominio y buenas prácticas de desarrollo, documentando al menos tres mejoras técnicas implementadas y sus resultados. |
+| **Chirito Torres, Jose Raul** | Durante los 12 meses posteriores a la culminación de la carrera, completar al menos un curso o certificación relacionada con desarrollo de aplicaciones móviles o desarrollo de software y aplicar los conocimientos adquiridos en un proyecto personal publicado en GitHub. | Durante los 18 meses posteriores a la graduación, participar en al menos un proyecto profesional o colaborativo donde implemente funcionalidades de software y fortalezca sus conocimientos en trabajo en equipo, control de versiones y buenas prácticas de programación. |
+| **Loa Rojas, Jean Franck** | Durante los 12 meses posteriores a la culminación de la carrera, completar al menos una capacitación especializada en desarrollo de software, bases de datos o tecnologías relacionadas y demostrar lo aprendido mediante un proyecto funcional de portafolio. | Durante los 18 meses posteriores a la graduación, participar en al menos un proyecto de desarrollo de software donde contribuya en la implementación, pruebas o mantenimiento de funcionalidades y documente los conocimientos técnicos adquiridos durante el proceso. |
+
+
 
 <div style="page-break-after: always;"></div>
 
@@ -211,16 +228,19 @@ Su producto principal es **Trakto Route**, una aplicación móvil Android desarr
 
 Trakto Route permite gestionar y consultar viajes, rutas, vehículos, conductores y eventos operativos; registrar paradas, descansos, retrasos, problemas e incidencias; y revisar el historial de las operaciones. Para los clientes que contratan el transporte, la solución busca proporcionar visibilidad del estado y progreso de sus envíos sin exponer funciones internas de administración de flota.
 
+<div style="page-break-after: always;"></div>
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
 | Foto | Información |
 |---|---|
-| <img src="assets/images/shared/miembro1.png" width="400"/> | **Nombre:** Miembro 1<br><br>**Código:** UXXXXXXXXXX<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** [Conocimientos técnicos, habilidades y aporte al equipo.] |
-| <img src="assets/images/shared/miembro2.png" width="400"/> | **Nombre:** Aguilar Aguayo Jeferson Renzo<br><br>**Código:** U20251B991<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Estudiante del quinto ciclo de Ing. de Software. mis conocimientos sobre lenguajes de programación se centran en JS, CSS, HTML y MySQL. Mis fortalezas como parte de un equipo son el trabajo colaborativo, responsabilidad con las entregas de las partes del trabajo y creatividad en ideas de mejoras sobre el proyecto. |
-| <img src="assets/images/shared/miembro3.png" width="400"/> | **Nombre:** Alexander Piero Fernandez Garfias<br><br>**Código:** U202019498<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software. Me interesa el desarrollo de aplicaciones móviles y la construcción de soluciones de software aplicando buenas prácticas de programación y diseño. |
-| <img src="assets/images/shared/miembro4.png" width="400"/> | **Nombre:** Miembro 4<br><br>**Código:** UXXXXXXXXXX<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** [Conocimientos técnicos, habilidades y aporte al equipo.] |
-| <img src="assets/images/shared/miembro5.png" width="400"/> | **Nombre:** Miembro 5<br><br>**Código:** UXXXXXXXXXX<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** [Conocimientos técnicos, habilidades y aporte al equipo.] |
+| <img src="assets/images/shared/miembro1.png" width="400"/> | **Nombre:** Cesar Alejandro Linares Bernable<br><br>**Código:** u202019409<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en tecnologías como Java, C++, C# y .NET. Me interesa continuar fortaleciendo mis habilidades en el desarrollo de soluciones de software y aportar al equipo mediante la responsabilidad, el aprendizaje constante y el trabajo colaborativo. |
+| <img src="assets/images/shared/miembro2.png" width="400"/> | **Nombre:** Aguilar Aguayo Jeferson Renzo<br><br>**Código:** U20251B991<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en JavaScript, HTML, CSS y MySQL. Me interesa el desarrollo de aplicaciones y la creación de soluciones orientadas a las necesidades de los usuarios. Entre mis fortalezas se encuentran el trabajo colaborativo, la responsabilidad en las entregas y la propuesta de ideas para mejorar el proyecto. |
+| <img src="assets/images/shared/miembro3.png" width="400"/> | **Nombre:** Alexander Piero Fernandez Garfias<br><br>**Código:** U202019498<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, JavaScript, TypeScript, Angular, Vue, Vite, Kotlin, Flutter, C#, C++ y desarrollo Android. Me interesa seguir fortaleciendo mis conocimientos en desarrollo de software y participar en la construcción de aplicaciones aplicando buenas prácticas de programación y organización del código. |
+| <img src="assets/images/shared/miembro4.png" width="400"/> | **Nombre:** Jose Raul Chirito Torres<br><br>**Código:** U20201A293<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C++, desarrollo web y tecnologías como Angular y Vue. Me interesa ampliar mis habilidades en el desarrollo de aplicaciones y contribuir al equipo mediante la implementación de funcionalidades, la resolución de problemas y el trabajo coordinado. |
+| <img src="assets/images/shared/miembro5.png" width="400"/> | **Nombre:** Loa Rojas, Jean Franck<br><br>**Código:** U20241E406<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C#, C++, .NET y fundamentos de desarrollo web. Me interesa mejorar continuamente mis capacidades técnicas y participar en proyectos que me permitan aplicar lo aprendido, contribuir al desarrollo de funcionalidades y fortalecer mi experiencia trabajando en equipo. |
+
+
 <div style="page-break-after: always;"></div>
 
 ## 1.2. Solution Profile
@@ -1276,6 +1296,7 @@ Amenazas
 
 </div>
 
+<div style="page-break-after: always;"></div>
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
