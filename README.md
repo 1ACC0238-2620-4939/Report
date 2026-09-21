@@ -32,16 +32,16 @@
     <th>Apellidos y Nombres</th>
   </tr>
   <tr>
-    <td>UXXXXXXXXXX</td>
-    <td>Miembro 1</td>
-  </tr>
-  <tr>
     <td>U20251B991</td>
     <td>Aguilar Aguayo Jeferson Renzo</td>
   </tr>
   <tr>
     <td>U202019498</td>
     <td>Fernandez Garfias, Alexander Piero</td>
+  </tr>
+  <tr>
+    <td>U20241E406</td>
+    <td>Loa Rojas, Jean Franck</td>
   </tr>
   <tr>
     <td>UXXXXXXXXXX</td>
@@ -64,10 +64,13 @@
 | Versión | Fecha | Autor | Descripción de modificación |
 |---|---|---|---|
 | AV1 | 20/09/2026 | Fecha | Creación del informe. Inclusión de la presentación de la startup y del producto, Lean UX, análisis de competidores, entrevistas, Needfinding y Requirements Specification hasta Product Backlog. |
+| AV1.1 | 21/09/2026 | Jean Franck Loa Rojas | Incorporación del integrante, fotografía, objetivos SMART y estructura del Student Outcome 7 conforme al enunciado. |
 
 <div style="page-break-after: always;"></div>
 
 <h2 align="center">Project Report Collaboration Insights</h2>
+
+**Repositorio del informe:** [1ACC0238-2620-4939/Report](https://github.com/1ACC0238-2620-4939/Report)
 
 ![Project Report Collaboration Insights AV1](./assets/images/shared/report_av1.png)
 
@@ -181,7 +184,24 @@
 
 # Student Outcome
 
-[Completar con el Student Outcome indicado por el docente. Debe incluir las acciones específicas realizadas por cada integrante y las conclusiones grupales correspondientes al avance.]
+Cada participante del equipo debe sustentar evidencia de cómo las actividades realizadas en el trabajo final han ayudado a desarrollar las dimensiones del student outcome. Por ello, en esta sección debe haber una subsección por cada alumno donde éste describa por escrito la relación entre el outcome, sus dimensiones y el trabajo que ha realizado. Esto se complementa con lo reflejado en los testimonios expuestos que forman parte del video About The Team.
+
+### Jean Franck Loa Rojas
+
+Durante AV1, Jean Franck Loa Rojas relacionó el criterio del Student Outcome 7 con la revisión del enunciado, la adecuación del informe en Markdown y la aplicación de GitFlow para mantener su aporte aislado y trazable. La evidencia se encuentra en esta sección, su perfil actualizado, el registro de versiones y el historial de la rama.
+
+El curso contribuye al cumplimiento del Student Outcome ABET:
+
+## ABET - EAC - Student Outcome 7
+
+**Criterio:** La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas.
+
+En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 7.
+
+| Criterio específico | Acciones realizadas | Conclusiones |
+|---|---|---|
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y, en especial, para su proyecto en soluciones de software. | **Jean Franck Loa Rojas**<br><br>**AV1:** Revisó el enunciado del trabajo final y aplicó sus requisitos al informe. Incorporó la definición y estructura del Student Outcome 7, completó su perfil académico y organizó el aporte en una rama feature basada en `develop`. | En AV1, la revisión del enunciado y su aplicación en cambios trazables del informe permitió convertir requisitos académicos en artefactos concretos del proyecto. |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Jean Franck Loa Rojas**<br><br>**AV1:** Aplicó GitFlow, Markdown y conventional commits para documentar su contribución y dejarla preparada para revisión mediante Pull Request. | La experiencia evidencia que el aprendizaje permanente requiere documentar lo aprendido, aplicarlo en el producto y conservar evidencia verificable mediante control de versiones. |
 
 <div style="page-break-after: always;"></div>
 
@@ -193,7 +213,7 @@ De acuerdo con la rúbrica, cada integrante debe formular al menos dos objetivos
 |---|---|---|
 | Aguilar Aguayo Jeferson Renzo | Durante los 12 meses posteriores a la culminación de la carrera, completar al menos una certificación o programa especializado relacionado con desarrollo de software y aplicar lo aprendido en un proyecto verificable de portafolio. | Durante los 18 meses posteriores a la graduación, participar en al menos un proyecto profesional de desarrollo de software en el que contribuya de manera documentada al frontend, backend o base de datos y registre los principales aprendizajes obtenidos. |
 | Fernandez Garfias, Alexander Piero | Durante los 12 meses posteriores a la culminación de la carrera, fortalecer su especialización en desarrollo backend completando al menos una certificación o ruta avanzada en Java/Spring y publicando un proyecto de portafolio con documentación técnica. | Durante los 18 meses posteriores a la graduación, participar en un proyecto profesional o colaborativo donde aplique prácticas de arquitectura de software, pruebas y diseño de APIs, documentando al menos dos mejoras técnicas implementadas. |
-| Miembro 1 | **Pendiente de validación por el integrante.** Formular dos objetivos específicos, medibles, alcanzables, relevantes y delimitados en el tiempo. | **Pendiente de validación por el integrante.** |
+| Jean Franck Loa Rojas | **Pendiente de validación por el integrante.** Formular un objetivo específico, medible, alcanzable, relevante y delimitado en el tiempo. | **Pendiente de validación por el integrante.** Formular un segundo objetivo SMART de desarrollo profesional posterior a la carrera. |
 | Miembro 4 | **Pendiente de validación por el integrante.** Formular dos objetivos específicos, medibles, alcanzables, relevantes y delimitados en el tiempo. | **Pendiente de validación por el integrante.** |
 | Miembro 5 | **Pendiente de validación por el integrante.** Formular dos objetivos específicos, medibles, alcanzables, relevantes y delimitados en el tiempo. | **Pendiente de validación por el integrante.** |
 
@@ -216,7 +236,7 @@ Trakto Route permite gestionar y consultar viajes, rutas, vehículos, conductore
 
 | Foto | Información |
 |---|---|
-| <img src="assets/images/shared/miembro1.png" width="400"/> | **Nombre:** Miembro 1<br><br>**Código:** UXXXXXXXXXX<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** [Conocimientos técnicos, habilidades y aporte al equipo.] |
+| <img src="assets/images/shared/jean-loa.jpg" width="400" alt="Jean Franck Loa Rojas"/> | **Nombre:** Jean Franck Loa Rojas<br><br>**Código:** U20241E406<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de séptimo ciclo de Ingeniería de Software. Mi fortaleza es trabajar el producto completo: desde el modelado con Domain-Driven Design y la definición de bounded contexts hasta la construcción de servicios backend con Java y Spring Boot, aplicaciones web con Angular y soluciones móviles con Flutter. También organizo repositorios con GitFlow, documento decisiones técnicas y valido que cada componente se integre correctamente. En el equipo aporto criterio arquitectónico, capacidad para convertir requisitos complejos en implementaciones concretas y disciplina para respaldar cada avance con evidencia. |
 | <img src="assets/images/shared/miembro2.png" width="400"/> | **Nombre:** Aguilar Aguayo Jeferson Renzo<br><br>**Código:** U20251B991<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Estudiante del quinto ciclo de Ing. de Software. mis conocimientos sobre lenguajes de programación se centran en JS, CSS, HTML y MySQL. Mis fortalezas como parte de un equipo son el trabajo colaborativo, responsabilidad con las entregas de las partes del trabajo y creatividad en ideas de mejoras sobre el proyecto. |
 | <img src="assets/images/shared/miembro3.png" width="400"/> | **Nombre:** Alexander Piero Fernandez Garfias<br><br>**Código:** U202019498<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software. Me interesa el desarrollo de aplicaciones móviles y la construcción de soluciones de software aplicando buenas prácticas de programación y diseño. |
 | <img src="assets/images/shared/miembro4.png" width="400"/> | **Nombre:** Miembro 4<br><br>**Código:** UXXXXXXXXXX<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** [Conocimientos técnicos, habilidades y aporte al equipo.] |
