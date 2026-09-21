@@ -64,9 +64,12 @@
 | Versión | Fecha | Autor | Descripción de modificación |
 |---|---|---|---|
 | AV1 | 20/09/2026 | Fecha | Creación del informe. Inclusión de la presentación de la startup y del producto, Lean UX, análisis de competidores, entrevistas, Needfinding y Requirements Specification hasta Product Backlog. |
+| AV1.1 | 21/09/2026 | Jean Franck Loa Rojas | Incorporación del integrante, fotografía y estructura del Student Outcome 7 conforme al enunciado. |
 
 
 <h2 align="center">Project Report Collaboration Insights</h2>
+
+**Repositorio del informe:** [1ACC0238-2620-4939/Report](https://github.com/1ACC0238-2620-4939/Report)
 
 ![Project Report Collaboration Insights AV1](./assets/images/shared/report_av1.png)
 
@@ -178,8 +181,9 @@
 
 <div style="page-break-after: always;"></div>
 
-### ABET – EAC - Student Outcome 7
+# Student Outcome
 
+## ABET - EAC - Student Outcome 7
 **Aprendizaje Continuo y Autónomo**
 
 **Criterio:** La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas.
@@ -238,7 +242,7 @@ Trakto Route permite gestionar y consultar viajes, rutas, vehículos, conductore
 | <img src="assets/images/shared/miembro2.png" width="400"/> | **Nombre:** Aguilar Aguayo Jeferson Renzo<br><br>**Código:** U20251B991<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en JavaScript, HTML, CSS y MySQL. Me interesa el desarrollo de aplicaciones y la creación de soluciones orientadas a las necesidades de los usuarios. Entre mis fortalezas se encuentran el trabajo colaborativo, la responsabilidad en las entregas y la propuesta de ideas para mejorar el proyecto. |
 | <img src="assets/images/shared/miembro3.png" width="400"/> | **Nombre:** Alexander Piero Fernandez Garfias<br><br>**Código:** U202019498<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, JavaScript, TypeScript, Angular, Vue, Vite, Kotlin, Flutter, C#, C++ y desarrollo Android. Me interesa seguir fortaleciendo mis conocimientos en desarrollo de software y participar en la construcción de aplicaciones aplicando buenas prácticas de programación y organización del código. |
 | <img src="assets/images/shared/miembro4.png" width="400"/> | **Nombre:** Jose Raul Chirito Torres<br><br>**Código:** U20201A293<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C++, desarrollo web y tecnologías como Angular y Vue. Me interesa ampliar mis habilidades en el desarrollo de aplicaciones y contribuir al equipo mediante la implementación de funcionalidades, la resolución de problemas y el trabajo coordinado. |
-| <img src="assets/images/shared/miembro5.png" width="400"/> | **Nombre:** Loa Rojas, Jean Franck<br><br>**Código:** U20241E406<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C#, C++, .NET y fundamentos de desarrollo web. Me interesa mejorar continuamente mis capacidades técnicas y participar en proyectos que me permitan aplicar lo aprendido, contribuir al desarrollo de funcionalidades y fortalecer mi experiencia trabajando en equipo. |
+| <img src="assets/images/shared/jean-loa.jpg" width="400"/> | **Nombre:** Loa Rojas, Jean Franck<br><br>**Código:** U20241E406<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C#, C++, .NET y fundamentos de desarrollo web. Me interesa mejorar continuamente mis capacidades técnicas y participar en proyectos que me permitan aplicar lo aprendido, contribuir al desarrollo de funcionalidades y fortalecer mi experiencia trabajando en equipo. |
 
 
 <div style="page-break-after: always;"></div>
