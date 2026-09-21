@@ -32,8 +32,8 @@
     <th>Apellidos y Nombres</th>
   </tr>
   <tr>
-    <td>Cesar Alejandro Linares Bernable</td>
     <td>u202019409</td>
+    <td>Cesar Alejandro Linares Bernable</td>
   </tr>
   <tr>
     <td>U20251B991</td>
