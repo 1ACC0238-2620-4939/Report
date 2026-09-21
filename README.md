@@ -232,7 +232,6 @@ Trakto Route permite gestionar y consultar viajes, rutas, vehículos, conductore
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-```md
 | Foto | Información |
 |---|---|
 | <img src="assets/images/shared/miembro1.png" width="400"/> | **Nombre:** Cesar Alejandro Linares Bernable<br><br>**Código:** u202019409<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en tecnologías como Java, C++, C# y .NET. Me interesa continuar fortaleciendo mis habilidades en el desarrollo de soluciones de software y aportar al equipo mediante la responsabilidad, el aprendizaje constante y el trabajo colaborativo. |
