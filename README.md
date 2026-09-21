@@ -44,8 +44,8 @@
     <td>Fernandez Garfias, Alexander Piero</td>
   </tr>
   <tr>
-    <td>UXXXXXXXXXX</td>
-    <td>Miembro 4</td>
+    <td>U20201a293</td>
+    <td>CHirito Torres , Jose Raul</td>
   </tr>
   <tr>
     <td>UXXXXXXXXXX</td>
