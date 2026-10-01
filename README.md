@@ -4685,6 +4685,976 @@ El video deberá demostrar y explicar los principales flujos de interacción del
 
 <div style="page-break-after: always;"></div>
 
+# Capítulo IV: Product Implementation & Validation
+
+## 4. Product Implementation & Validation
+
+En este capítulo se documenta el proceso mediante el cual **Trakto Route** evoluciona desde los requisitos, modelos de dominio y decisiones de UX/UI definidos en los capítulos anteriores hacia una solución de software implementada, comprobada, desplegada y posteriormente validada con representantes de los segmentos objetivo.
+
+La solución está conformada por tres productos digitales principales: el **Landing Page**, encargado de comunicar la propuesta de valor de Trakto Route; la **aplicación móvil Android**, desarrollada en Kotlin y orientada a la interacción de supervisores de flota y clientes; y los **RESTful Web Services**, desarrollados con Java y Spring Boot para centralizar las reglas de negocio, autenticación y operaciones correspondientes a los Bounded Contexts definidos mediante Domain-Driven Design.
+
+La persistencia central se realiza mediante **MySQL**. La aplicación Android no accede directamente a la base de datos, sino que consume los servicios ofrecidos por la REST API utilizando comunicación basada en HTTP/HTTPS y JSON. Esta separación conserva las responsabilidades establecidas previamente en los diagramas de arquitectura de software.
+
+El proceso de implementación se organiza mediante Sprints. Para la presente entrega se documenta el **Sprint 1**, cuyo alcance se encuentra definido a partir de las User Stories priorizadas en el Product Backlog. Las siguientes subsecciones presentan las decisiones de Software Configuration Management, el Sprint Planning, el Sprint Backlog y las evidencias que deberán demostrar implementación, pruebas, ejecución, documentación de servicios, despliegue y colaboración del equipo.
+
+Las evidencias de implementación mantienen como principio de trazabilidad la relación:
+
+**User Story → Sprint → Work-item → Commit → Test → Execution Evidence → Deployment → Validation.**
+
+<div style="page-break-after: always;"></div>
+
+### 4.1. Software Configuration Management
+
+El Software Configuration Management de **Trakto Route** establece las herramientas, convenciones y prácticas utilizadas por el equipo para mantener consistencia durante el desarrollo de los productos digitales. Este conjunto de decisiones comprende la configuración del entorno de desarrollo, el control de versiones mediante Git y GitHub, las convenciones de código y el esquema de deployment.
+
+Debido a que Trakto Route está compuesto por productos con responsabilidades diferentes, la configuración considera separadamente el Landing Page, la aplicación Android y los RESTful Web Services. No obstante, todos los productos comparten criterios relacionados con nomenclatura en inglés, gestión de versiones, trazabilidad de cambios y organización del código fuente.
+
+#### 4.1.1. Software Development Environment Configuration
+
+Las herramientas seleccionadas responden a las diferentes actividades realizadas durante el ciclo de vida del proyecto: Requirements Management, UX/UI Design, Architecture Design, Software Development, Source Code Management y Product Management.
+
+**Tabla 4.1**  
+*Software Development Environment Configuration de Trakto Route*
+
+| Category | Product | Version | Purpose | Reference |
+|---|---|---|---|---|
+| Product Management | Trello | SaaS | Organización y priorización del Product Backlog de Trakto Route. | https://trello.com/ |
+| UX Research | UXPressia | SaaS | Elaboración de User Personas, User Journey Maps y Empathy Maps. | https://uxpressia.com/ |
+| Collaborative Modeling | Miro | SaaS | Elaboración del Lean UX Canvas, Big Picture EventStorming y Candidate Context Discovery. | https://miro.com/ |
+| UX/UI Design | Figma | SaaS | Elaboración de Wireframes, Mock-ups y prototipos del Landing Page y aplicación móvil. | https://www.figma.com/ |
+| Software Architecture | Structurizr | SaaS / DSL | Elaboración de Context, Container, Deployment y Component Diagrams bajo C4 Model. | https://structurizr.com/ |
+| UML / Diagram-as-Code | PlantUML | [Versión pendiente de verificar] | Elaboración de Class Diagrams y Database Design Diagrams. | https://plantuml.com/ |
+| Mobile Development | Android Studio | [Versión pendiente de verificar en repositorio Android] | Desarrollo, compilación, ejecución y pruebas de la aplicación Android en Kotlin. | https://developer.android.com/studio |
+| Mobile Programming | Kotlin | [Versión pendiente de verificar] | Lenguaje utilizado para desarrollar la aplicación Android. | https://kotlinlang.org/ |
+| Backend Development | Spring Boot | [Versión pendiente de verificar en `pom.xml` o configuración del backend] | Implementación de RESTful Web Services y casos de uso del dominio. | https://spring.io/projects/spring-boot |
+| Backend Programming | Java | [Versión pendiente de verificar] | Lenguaje utilizado para implementar el backend. | https://www.java.com/ |
+| Database Management | MySQL | [Versión pendiente de verificar] | Persistencia central de usuarios, viajes, vehículos, conductores, incidencias e historial operativo. | https://www.mysql.com/ |
+| Source Code Management | Git | [Versión pendiente de verificar] | Control distribuido de versiones. | https://git-scm.com/ |
+| Repository Hosting | GitHub | SaaS | Alojamiento de repositorios y colaboración mediante branches y commits. | https://github.com/ |
+| API Documentation | OpenAPI / Swagger | [Versión pendiente de verificar en backend] | Documentación y comprobación de los endpoints REST implementados. | https://swagger.io/ |
+
+El Product Backlog ya se encuentra administrado mediante Trello y contiene las User Stories organizadas por prioridad, Story Points y Sprint. El enlace público documentado actualmente es:
+
+**Product Backlog:**  
+https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello
+
+Las versiones exactas correspondientes a Android Studio, Kotlin, Java, Spring Boot, MySQL y las herramientas de build deberán obtenerse directamente de los repositorios de implementación para mantener consistencia con la configuración realmente utilizada por el equipo.
+
+<div style="page-break-after: always;"></div>
+
+#### 4.1.2. Source Code Management
+
+El equipo utiliza **Git** como sistema distribuido de control de versiones y **GitHub** como plataforma para almacenar los repositorios, aislar el desarrollo de funcionalidades mediante branches y mantener trazabilidad entre las modificaciones realizadas y las funcionalidades del producto.
+
+Los productos de Trakto Route requieren repositorios independientes para evitar mezclar responsabilidades correspondientes al Landing Page, los RESTful Web Services y la aplicación Android.
+
+**Tabla 4.2**  
+*Repositorios de los productos de Trakto Route*
+
+| Product | Repository | Purpose |
+|---|---|---|
+| Landing Page | [URL pendiente: repositorio del Landing Page] | Código HTML, CSS, JavaScript y assets correspondientes al sitio público de Trakto Route. |
+| RESTful Web Services | [URL pendiente: repositorio del backend] | Backend Java/Spring Boot, REST API, persistencia y pruebas automatizadas. |
+| Android Mobile Application | [URL pendiente: repositorio de la aplicación Android] | Código Kotlin correspondiente a la experiencia móvil de Trakto Route. |
+
+Como recurso complementario, el informe del proyecto se encuentra bajo control de versiones en el siguiente repositorio:
+
+`https://github.com/1ACC0238-2620-4939/Report`
+
+El repositorio del informe no sustituye a los repositorios de los productos de software, pero permite mantener trazabilidad de la evolución de la documentación del proyecto.
+
+**GitFlow Workflow**
+
+Para la administración de branches se adopta **GitFlow**, manteniendo separación entre código estable, integración y desarrollo de funcionalidades.
+
+| Branch | Convention | Purpose |
+|---|---|---|
+| Main | `main` | Contener versiones estables del producto. |
+| Development | `develop` | Integrar funcionalidades que formarán parte de la siguiente versión. |
+| Feature | `feature/<short-description>` | Aislar la implementación de una funcionalidad específica. |
+| Release | `release/<version>` | Preparar una versión para su liberación. |
+| Hotfix | `hotfix/<short-description>` | Resolver errores críticos identificados sobre una versión estable. |
+
+Una funcionalidad nueva debe desarrollarse en un feature branch generado a partir de `develop`. Una vez revisada y comprobada, deberá integrarse nuevamente a `develop`. Las versiones preparadas para publicación se gestionarán mediante release branches, mientras que los hotfix branches se reservarán para correcciones críticas sobre una versión estable.
+
+[Imagen pendiente: SCM-01 – diagrama GitFlow utilizado por los repositorios de Trakto Route]
+
+**Figura 4.1**  
+*GitFlow utilizado por Trakto Route.*
+
+La figura deberá evidenciar la relación entre `main`, `develop`, `feature`, `release` y `hotfix`, así como el flujo esperado de integración de cambios.
+
+**Conventional Commits**
+
+Los mensajes de commit deben seguir la estructura propuesta por Conventional Commits:
+
+```text
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+**Tabla 4.3**  
+*Tipos de commits adoptados*
+
+| Type | Purpose | Example |
+|---|---|---|
+| `feat` | Incorporar una nueva funcionalidad. | `feat(trips): add trip scheduling` |
+| `fix` | Corregir un comportamiento defectuoso. | `fix(auth): handle invalid credentials` |
+| `docs` | Actualizar documentación. | `docs(api): update trip endpoints documentation` |
+| `style` | Modificar formato sin alterar comportamiento. | `style(mobile): format trip screen` |
+| `refactor` | Reestructurar código sin modificar su comportamiento externo. | `refactor(fleet): simplify vehicle mapper` |
+| `test` | Incorporar o modificar pruebas. | `test(trips): add trip service tests` |
+| `build` | Modificar configuración de build o dependencias. | `build(android): update project dependencies` |
+| `ci` | Modificar integración continua. | `ci(backend): configure build workflow` |
+| `chore` | Realizar tareas de mantenimiento. | `chore: update repository configuration` |
+
+Los ejemplos anteriores representan la **convención adoptada** y no constituyen evidencia de commits ya existentes.
+
+**Semantic Versioning**
+
+Para identificar releases se adopta Semantic Versioning bajo la estructura:
+
+```text
+MAJOR.MINOR.PATCH
+```
+
+- **MAJOR:** cambios incompatibles con una versión anterior.
+- **MINOR:** incorporación de funcionalidades compatibles.
+- **PATCH:** correcciones compatibles con versiones anteriores.
+
+Por ejemplo, `1.0.0` representa conceptualmente una primera versión estable. No obstante, las versiones reales de Trakto Route deberán obtenerse de los tags o releases de los repositorios.
+
+[Dato pendiente: tags/releases existentes en los repositorios de Trakto Route]
+
+<div style="page-break-after: always;"></div>
+
+#### 4.1.3. Source Code Style Guide & Conventions
+
+Las convenciones de programación tienen como propósito mantener una base de código legible y consistente entre los integrantes. La nomenclatura de clases, funciones, variables, endpoints y demás elementos del proyecto se realizará en inglés.
+
+**Tabla 4.4**  
+*Source Code Style Guide & Conventions*
+
+| Technology | Convention / Style Guide | Application in Trakto Route |
+|---|---|---|
+| Kotlin | Kotlin Coding Conventions | Aplicación Android. |
+| Java | Google Java Style Guide y convenciones de Spring Boot | RESTful Web Services. |
+| HTML5 | Convenciones de estructura semántica HTML | Landing Page. |
+| CSS3 | Convenciones de nomenclatura y organización de estilos | Landing Page. |
+| JavaScript | Nomenclatura consistente en inglés y `camelCase` | Interacciones del Landing Page. |
+| Gherkin | Given-When-Then | Acceptance Tests únicamente cuando existan archivos `.feature`. |
+
+**Kotlin**
+
+Las clases y objetos utilizan `PascalCase`.
+
+```kotlin
+class TripRepository
+class TripDetailsViewModel
+data class TripUiState(...)
+```
+
+Las funciones y variables utilizan `camelCase`.
+
+```kotlin
+fun loadTrips()
+fun scheduleTrip()
+val selectedTrip
+var isLoading
+```
+
+Las constantes utilizan `UPPER_SNAKE_CASE` cuando corresponda.
+
+```kotlin
+const val BASE_URL = "..."
+```
+
+Los packages se mantienen en minúsculas y organizados según las responsabilidades del proyecto.
+
+```text
+com.trakto.route
+com.trakto.route.trip
+com.trakto.route.fleet
+```
+
+**Java**
+
+Las clases, interfaces y enumeraciones utilizan `PascalCase`.
+
+```java
+TripController
+ScheduleTripCommand
+TripRepository
+TripStatus
+```
+
+Los métodos y variables utilizan `camelCase`.
+
+```java
+scheduleTrip()
+findById()
+updateStatus()
+```
+
+Las constantes utilizan `UPPER_SNAKE_CASE`.
+
+```java
+private static final String DEFAULT_STATUS = "SCHEDULED";
+```
+
+Los packages se expresan en minúsculas y deben reflejar de forma coherente los Bounded Contexts y capas definidas en el diseño táctico.
+
+**HTML**
+
+El Landing Page utiliza elementos semánticos cuando corresponda:
+
+```html
+<header>
+<nav>
+<main>
+<section>
+<footer>
+```
+
+Los tags y atributos se mantienen en minúsculas y la indentación debe permanecer consistente.
+
+**CSS**
+
+Los estilos deberán utilizar nombres descriptivos relacionados con la función del componente y evitar duplicaciones innecesarias.
+
+```css
+.hero-section {}
+.trip-feature-card {}
+.primary-button {}
+```
+
+**JavaScript**
+
+Las funciones y variables utilizan nomenclatura en inglés y `camelCase`.
+
+```javascript
+const navigationMenu = document.querySelector(...);
+
+function openNavigationMenu() {
+    ...
+}
+```
+
+**Gherkin**
+
+En caso de implementar Acceptance Tests bajo BDD, los criterios deben conservar la estructura:
+
+```gherkin
+Feature: Trip management
+
+  Scenario: Schedule a valid trip
+    Given ...
+    When ...
+    Then ...
+```
+
+Los archivos `.feature` deberán relacionarse con las Acceptance Criteria de las User Stories correspondientes y no crear comportamientos que no formen parte del Product Backlog.
+
+<div style="page-break-after: always;"></div>
+
+#### 4.1.4. Software Deployment Configuration
+
+La configuración de deployment mantiene la separación arquitectónica definida en el Capítulo II. La aplicación móvil funciona como cliente, los RESTful Web Services centralizan las reglas de negocio y MySQL mantiene la fuente persistente de información.
+
+**Tabla 4.5**  
+*Software Deployment Configuration*
+
+| Product / Component | Source Repository | Build | Deployment Target | Public URL / Distribution |
+|---|---|---|---|---|
+| Landing Page | [URL pendiente: repositorio Landing Page] | HTML5, CSS3 y JavaScript | [Dato pendiente: servicio de hosting público] | [URL pendiente: Landing Page desplegado] |
+| RESTful Web Services | [URL pendiente: repositorio backend] | Java / Spring Boot | [Dato pendiente: cloud runtime utilizado] | [URL pendiente: REST API desplegada] |
+| MySQL Database | No aplica como repositorio independiente | MySQL | [Dato pendiente: servidor o servicio de base de datos] | Acceso restringido desde backend |
+| Android Application | [URL pendiente: repositorio Android] | Kotlin / Android | Ejecución en dispositivo Android; distribución posterior mediante Firebase App Distribution o servicio equivalente | [URL/enlace de distribución pendiente] |
+
+Para el **Landing Page**, el deployment debe generar un sitio público accesible mediante navegador web.
+
+Para el **backend**, el proceso debe generar una instancia ejecutable de Spring Boot accesible mediante HTTPS. Las variables sensibles, como credenciales de base de datos, no deben incluirse directamente en el código fuente.
+
+La base de datos MySQL debe permanecer accesible únicamente por el backend y no por la aplicación Android.
+
+Para la aplicación móvil, la demostración del Sprint puede ejecutarse en un dispositivo físico o entorno Android configurado. La distribución formal deberá documentarse cuando se utilice Firebase App Distribution o un servicio equivalente.
+
+El Deployment Diagram previamente definido para Trakto Route representa esta separación.
+
+**Figura 4.2**  
+*Software Architecture Deployment Diagram de Trakto Route.*
+
+![Software Architecture Deployment Diagram - Trakto Route](assets/images/chapter2/software-architecture-deployment.png)
+
+El diagrama muestra al dispositivo Android como cliente de la solución, un entorno de ejecución encargado de alojar la REST API desarrollada con Spring Boot y un servidor MySQL utilizado como persistencia central. La comunicación entre la aplicación y el backend se realiza mediante HTTPS/JSON, mientras que el acceso a MySQL se concentra en la capa de infraestructura del backend.
+
+<div style="page-break-after: always;"></div>
+
+### 4.2. Landing Page & Mobile Application Implementation
+
+Esta sección documenta el avance de implementación de Trakto Route organizado por Sprint. Para la entrega TB1 se considera el **Sprint 1**, el cual concentra las primeras funcionalidades core relacionadas con autenticación, programación y consulta de viajes, registro de recursos de flota y asignación de conductor y vehículo.
+
+El alcance se obtiene directamente del Product Backlog establecido en el Capítulo II. De esta manera, las evidencias presentadas en Sprint Review deberán mantener correspondencia con las User Stories comprometidas y con los Work-items definidos por el equipo durante el Sprint Planning.
+
+#### 4.2.1. Sprint 1
+
+El Sprint 1 se centra en construir una primera base funcional del proceso de transporte. El Sprint comprende la posibilidad de registrar e iniciar sesión en el sistema y las capacidades fundamentales para que un supervisor pueda programar un viaje, consultar sus datos, asignar una ruta, registrar vehículos y conductores, asignar ambos recursos a una operación y mantener actualizado su estado.
+
+De acuerdo con el Product Backlog, el Sprint 1 está conformado por **12 User Stories**, que representan en conjunto **41 Story Points**.
+
+**Tabla 4.6**  
+*User Stories correspondientes al Sprint 1*
+
+| Order | User Story | Title | Story Points |
+|---:|---|---|---:|
+| 1 | US17 | Programar viaje | 5 |
+| 2 | US05 | Consultar viajes | 3 |
+| 3 | US06 | Consultar detalle de viaje | 3 |
+| 4 | US18 | Asignar ruta a un viaje | 3 |
+| 5 | US23 | Registrar vehículo | 3 |
+| 6 | US25 | Registrar conductor | 3 |
+| 7 | US27 | Asignar vehículo a un viaje | 5 |
+| 8 | US28 | Asignar conductor a un viaje | 5 |
+| 9 | US07 | Consultar estado del viaje | 2 |
+| 10 | US19 | Actualizar estado del viaje | 3 |
+| 11 | US01 | Registrar cuenta | 3 |
+| 12 | US02 | Iniciar sesión | 3 |
+|  |  | **Total** | **41** |
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.1. Sprint Planning 1
+
+El Sprint Planning 1 establece el alcance inicial de implementación y organiza el trabajo necesario para alcanzar un incremento funcional de Trakto Route. Debido a que corresponde al primer Sprint, no existe un Sprint Review ni Sprint Retrospective anterior que deban utilizarse como entrada.
+
+**Tabla 4.7**  
+*Sprint Planning 1*
+
+| Sprint # | Sprint 1 |
+|---|---|
+| **Sprint Planning Background** | |
+| Date | [Dato pendiente: fecha real del Sprint Planning 1] |
+| Time | [Dato pendiente: hora real de inicio] |
+| Location | [Dato pendiente: ubicación física o virtual] |
+| Prepared By | [Dato pendiente: integrante responsable de preparar el Sprint Planning] |
+| Attendees (to planning meeting) | Cesar Alejandro Linares Bernable / Aguilar Aguayo Jeferson Renzo / Fernandez Garfias, Alexander Piero / Chirito Torres, Jose Raul / Loa Rojas, Jean Franck |
+| Sprint 0 Review Summary | No aplica. Sprint 1 corresponde a la primera iteración de implementación del producto. |
+| Sprint 0 Retrospective Summary | No aplica. No existe una iteración anterior que deba ser evaluada. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Our focus is on enabling the fleet supervisor to create and prepare transport operations through an initial end-to-end trip management flow. We believe it delivers centralized operational control to transport companies by allowing authenticated users to schedule trips, assign routes, vehicles and drivers, and consult or update trip information. This will be confirmed when a supervisor can authenticate, create a trip, associate its required resources and consult its current state through the implemented solution. |
+| Sprint 1 Velocity | [Dato pendiente: Velocity acordada por el equipo para Sprint 1] |
+| Sum of Story Points | **41 Story Points** |
+
+El Sprint Goal no se limita al cumplimiento individual de User Stories. Su propósito es proporcionar un incremento coherente que permita comprobar el flujo base de gestión de una operación de transporte.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.2. Aspect Leaders and Collaborators
+
+Para establecer responsabilidades durante el Sprint se utiliza una **Leadership-and-Collaboration Matrix (LACX)**. Los aspectos deben relacionarse con el trabajo definido posteriormente en el Sprint Backlog.
+
+Para Sprint 1, los principales aspectos funcionales son **Landing Page**, **Authentication**, **Trip Management**, **Fleet Management**, **Backend & API** y **Testing & Integration**.
+
+**Tabla 4.8**  
+*Leadership-and-Collaboration Matrix del Sprint 1*
+
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page | Authentication | Trip Management | Fleet Management | Backend & API | Testing & Integration |
+|---|---|---|---|---|---|---|---|
+| Linares Bernable, Cesar Alejandro | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Aguilar Aguayo, Jeferson Renzo | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Fernandez Garfias, Alexander Piero | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Chirito Torres, Jose Raul | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Loa Rojas, Jean Franck | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+
+**Leyenda:** `L = Leader`, `C = Collaborator`.
+
+[Contenido pendiente: reemplazar las celdas L/C con la distribución real acordada por el equipo antes de la entrega]
+
+La asignación final debe mantener coherencia con los Work-items, responsables y commits que posteriormente se documenten en las evidencias del Sprint.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.3. Sprint Backlog 1
+
+El Sprint Backlog convierte el alcance establecido en Sprint Planning en actividades concretas. Las User Stories fueron seleccionadas desde el Product Backlog atendiendo al Sprint previamente definido.
+
+[Imagen pendiente: SB-01 – screenshot del Board utilizado para gestionar Sprint 1]
+
+**Figura 4.3**  
+*Board de gestión correspondiente al Sprint 1.*
+
+[URL pendiente: enlace público al Board específico del Sprint 1]
+
+**Tabla 4.9**  
+*Sprint Backlog 1*
+
+| User Story Id | User Story Title | Work-Item / Task Id | Work-Item / Task Title | Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---:|---|---|
+| US17 | Programar viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US05 | Consultar viajes | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US06 | Consultar detalle de viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US18 | Asignar ruta a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US23 | Registrar vehículo | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US25 | Registrar conductor | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US27 | Asignar vehículo a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US28 | Asignar conductor a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US07 | Consultar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US19 | Actualizar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US01 | Registrar cuenta | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US02 | Iniciar sesión | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+
+Los estados utilizados deberán corresponder a `To-do`, `In-Process`, `To-Review` o `Done`. Cada Work-item debe contar con estimación en horas y un responsable claramente identificado.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.4. Development Evidence for Sprint Review
+
+Esta sección evidencia los avances de implementación relacionados con el alcance definido para Sprint 1. La evidencia deberá demostrar la participación en los productos que forman parte de Trakto Route y mantener relación directa con las User Stories y Work-items del Sprint Backlog.
+
+**Landing Page**
+
+[Imagen pendiente: DEV-01 – captura del avance de implementación del Landing Page durante Sprint 1]
+
+**Figura 4.4**  
+*Avance de implementación del Landing Page durante Sprint 1.*
+
+La evidencia deberá mostrar las secciones implementadas del Landing Page y su correspondencia con los Wireframes y Mock-ups definidos en el Capítulo III.
+
+**Android Mobile Application**
+
+[Imagen pendiente: DEV-02 – captura del avance de implementación de la aplicación Android durante Sprint 1]
+
+**Figura 4.5**  
+*Avance de implementación de la aplicación Android durante Sprint 1.*
+
+La captura deberá evidenciar las principales pantallas implementadas para autenticación y gestión inicial de viajes.
+
+**RESTful Web Services**
+
+[Imagen pendiente: DEV-03 – evidencia de implementación de RESTful Web Services durante Sprint 1]
+
+**Figura 4.6**  
+*Avance de implementación de RESTful Web Services durante Sprint 1.*
+
+La evidencia deberá mostrar la implementación correspondiente a IAM, Trip Management y Fleet Management incluida en el alcance de Sprint 1.
+
+**Tabla 4.10**  
+*Commits relacionados con Development durante Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| [Repositorio Landing Page] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+
+[Contenido pendiente: sustituir las filas anteriores por todos los commits reales relacionados con la implementación del Sprint 1]
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.5. Testing Suite Evidence for Sprint Review
+
+La estrategia de Testing debe comprobar que las funcionalidades incluidas en Sprint 1 satisfacen los comportamientos especificados en sus User Stories y Acceptance Criteria.
+
+Para los RESTful Web Services, las evidencias deben distinguir **Unit Tests**, **Integration Tests** y, cuando corresponda, **Acceptance Tests** automatizados. Las pruebas de Android pueden complementar estas evidencias mediante Local Unit Tests, Instrumented Tests o UI Tests cuando estén implementados.
+
+**Tabla 4.11**  
+*Testing Suite correspondiente al Sprint 1*
+
+| Test ID | Product | Test Type | Related User Story | Tested Component / Behavior | Result |
+|---|---|---|---|---|---|
+| [TEST-ID] | Backend | Unit Test | US17 | Programación de un viaje con datos válidos | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Unit Test | US05 | Obtención de viajes registrados | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Unit Test | US06 | Obtención del detalle de un viaje | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US01 | Registro de una cuenta y persistencia del usuario | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US02 | Autenticación utilizando credenciales registradas | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US23 | Registro y persistencia de vehículo | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US25 | Registro y persistencia de conductor | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US27 | Asociación de vehículo con viaje | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US28 | Asociación de conductor con viaje | [Resultado real pendiente] |
+| [TEST-ID] | Android | [Tipo de prueba real] | [US relacionada] | [Comportamiento realmente probado] | [Resultado real pendiente] |
+
+La tabla anterior identifica los comportamientos que requieren evidencia para el Sprint; los identificadores y resultados deberán sustituirse por los obtenidos de la suite real de pruebas.
+
+Cuando se implementen Acceptance Tests en Gherkin, deberá incorporarse el `.feature` realmente utilizado y explicar su relación con la User Story correspondiente.
+
+```gherkin
+[Contenido pendiente: incorporar aquí únicamente un escenario Gherkin real existente en el repositorio de Testing]
+```
+
+[Imagen pendiente: TEST-01 – ejecución de Unit Tests de los RESTful Web Services durante Sprint 1]
+
+**Figura 4.7**  
+*Ejecución de Unit Tests correspondiente al Sprint 1.*
+
+[Imagen pendiente: TEST-02 – ejecución de Integration Tests correspondiente al Sprint 1]
+
+**Figura 4.8**  
+*Ejecución de Integration Tests correspondiente al Sprint 1.*
+
+[Imagen pendiente: TEST-03 – ejecución de pruebas Android correspondiente al Sprint 1]
+
+**Figura 4.9**  
+*Ejecución de pruebas de la aplicación Android correspondiente al Sprint 1.*
+
+**Tabla 4.12**  
+*Commits relacionados con Testing durante Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit `test:` real] | [Body real] | [Fecha real] |
+| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+
+[Contenido pendiente: sustituir con commits reales correspondientes a las pruebas implementadas]
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.6. Execution Evidence for Sprint Review
+
+La Execution Evidence permite demostrar que las funcionalidades desarrolladas durante Sprint 1 pueden ejecutarse e interactuar entre sí de acuerdo con el alcance definido.
+
+**Landing Page**
+
+[Imagen pendiente: EXE-01 – Landing Page de Trakto Route ejecutándose durante Sprint 1]
+
+**Figura 4.10**  
+*Landing Page de Trakto Route en ejecución.*
+
+La captura deberá mostrar la versión realmente implementada y permitir contrastarla con la propuesta visual documentada previamente.
+
+**Android Mobile Application**
+
+[Imagen pendiente: EXE-02 – aplicación Android Trakto Route ejecutándose durante Sprint 1]
+
+**Figura 4.11**  
+*Aplicación móvil Trakto Route en ejecución.*
+
+La evidencia deberá presentar las principales pantallas core alcanzadas durante Sprint 1, principalmente aquellas relacionadas con autenticación y gestión inicial de viajes.
+
+**Flujo integrado**
+
+[Imagen pendiente: EXE-03 – evidencia de interacción de la aplicación Android con los RESTful Web Services]
+
+**Figura 4.12**  
+*Interacción entre la aplicación Android y los RESTful Web Services.*
+
+La evidencia deberá demostrar que la aplicación consume información procedente de la API y que los datos persistentes no dependen únicamente del dispositivo móvil.
+
+[Video pendiente: EXE-04 – video de ejecución y navegación de las funcionalidades implementadas durante Sprint 1]
+
+**URL del video:** [URL pendiente]
+
+El video deberá mostrar de manera continua los principales flujos implementados durante el Sprint y explicar su correspondencia con las User Stories comprometidas.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.7. Services Documentation Evidence for Sprint Review
+
+La documentación de servicios presenta los endpoints REST implementados durante Sprint 1 y su relación con las User Stories.
+
+Debido a que las rutas exactas deben corresponder con los Controllers del repositorio backend, estas deberán obtenerse directamente del código y de la especificación OpenAPI antes de completar la entrega.
+
+**Tabla 4.13**  
+*RESTful Services incluidos en el alcance del Sprint 1*
+
+| Endpoint | HTTP Method | Purpose | Related User Story | Parameters / Request | Response | Documentation URL |
+|---|---|---|---|---|---|---|
+| [Ruta real pendiente] | [Método real] | Registrar una cuenta | US01 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Iniciar sesión | US02 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Consultar viajes | US05 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Consultar detalle de viaje | US06 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Consultar estado del viaje | US07 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Programar viaje | US17 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Asignar ruta | US18 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Actualizar estado | US19 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Registrar vehículo | US23 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Registrar conductor | US25 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Asignar vehículo | US27 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Asignar conductor | US28 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+
+Para cada endpoint documentado deberán especificarse los parámetros, request body cuando corresponda, posibles códigos HTTP y un ejemplo del response.
+
+[Imagen pendiente: API-01 – Swagger/OpenAPI mostrando los endpoints implementados en Sprint 1]
+
+**Figura 4.13**  
+*Documentación OpenAPI de los RESTful Web Services.*
+
+[Imagen pendiente: API-02 – request y response correspondiente a un endpoint representativo del Sprint 1]
+
+**Figura 4.14**  
+*Ejemplo de interacción con un RESTful endpoint de Trakto Route.*
+
+**REST API Repository:**  
+[URL pendiente: repositorio de los RESTful Web Services]
+
+**OpenAPI / Swagger:**  
+[URL pendiente: URL pública o local utilizada durante Sprint 1]
+
+Si los RESTful Web Services todavía no se encuentran desplegados públicamente durante esta etapa, puede utilizarse la URL local realmente configurada en el proyecto. Esta URL no deberá presentarse como un deployment público.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.8. Software Deployment Evidence for Sprint Review
+
+Esta sección documenta únicamente las actividades de deployment realizadas durante Sprint 1. Debe diferenciarse de la configuración general presentada en 4.1.4, ya que aquí se incorporan evidencias concretas del trabajo ejecutado durante la iteración.
+
+Para TB1, el Landing Page debe encontrarse disponible públicamente. Las evidencias deberán mostrar el proceso utilizado para generar y publicar la versión correspondiente al Sprint.
+
+**Landing Page**
+
+[Imagen pendiente: DEP-S1-01 – configuración utilizada para desplegar el Landing Page durante Sprint 1]
+
+**Figura 4.15**  
+*Configuración de deployment del Landing Page.*
+
+[Imagen pendiente: DEP-S1-02 – Landing Page públicamente desplegado]
+
+**Figura 4.16**  
+*Landing Page desplegado durante Sprint 1.*
+
+**URL:**  
+[URL pendiente: Landing Page público]
+
+**RESTful Web Services**
+
+[Imagen pendiente: DEP-S1-03 – configuración del entorno de ejecución del backend durante Sprint 1]
+
+**Figura 4.17**  
+*Configuración del backend correspondiente al Sprint 1.*
+
+[Dato pendiente: especificar si durante Sprint 1 el backend se ejecuta localmente o se encuentra desplegado en un proveedor cloud]
+
+**Android Application**
+
+[Imagen pendiente: DEP-S1-04 – build o instalación de Trakto Route en Android durante Sprint 1]
+
+**Figura 4.18**  
+*Build de la aplicación Android correspondiente al Sprint 1.*
+
+La aplicación deberá presentarse instalada y ejecutándose en el entorno utilizado por el equipo. La distribución mediante Firebase App Distribution o servicio equivalente deberá incorporarse cuando corresponda a la etapa de publicación establecida en el proyecto.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.9. Team Collaboration Insights during Sprint
+
+La colaboración durante Sprint 1 debe analizarse utilizando evidencias obtenidas de los repositorios y de la herramienta de gestión del Sprint. El análisis no debe limitarse a contabilizar commits, sino relacionar las contribuciones con los aspectos y responsabilidades definidos previamente en la Leadership-and-Collaboration Matrix.
+
+[Imagen pendiente: TC-01 – GitHub Contributors correspondiente a los repositorios utilizados durante Sprint 1]
+
+**Figura 4.19**  
+*Contribuciones del equipo durante Sprint 1.*
+
+[Imagen pendiente: TC-02 – GitHub Commit Activity correspondiente a Sprint 1]
+
+**Figura 4.20**  
+*Actividad de commits registrada durante Sprint 1.*
+
+[Imagen pendiente: TC-03 – actividad del Board utilizado durante Sprint 1]
+
+**Figura 4.21**  
+*Actividad colaborativa registrada en el Sprint Board.*
+
+Una vez incorporadas las evidencias, el equipo deberá analizar la distribución real del trabajo señalando qué productos o features concentraron mayor participación, cómo se relacionaron los líderes y colaboradores y si la contribución observada coincide con las responsabilidades definidas inicialmente.
+
+[Contenido pendiente: análisis de GitHub Insights y actividad real del equipo durante Sprint 1]
+
+<div style="page-break-after: always;"></div>
+
+### 4.3. Validation Interviews
+
+Las Validation Interviews tienen como finalidad evaluar la experiencia propuesta mediante la interacción de usuarios representativos de los segmentos objetivo con el Landing Page y la aplicación móvil de Trakto Route.
+
+A diferencia de las entrevistas realizadas durante Needfinding, estas sesiones no buscan descubrir inicialmente las necesidades del dominio, sino observar si la solución diseñada permite a los usuarios completar sus principales tareas de forma comprensible y consistente.
+
+La validación considera los dos segmentos definidos en el proyecto:
+
+1. **Empresas de transporte de carga**, representadas mediante el User Persona Carlos Mendoza.
+2. **Clientes que requieren servicios de transporte de carga**, representados mediante el User Persona Andrea Salazar.
+
+Las sesiones deberán evaluar tanto la comprensión del Landing Page como la ejecución de User Flows relevantes dentro de la aplicación móvil.
+
+#### 4.3.1. Diseño de Entrevistas
+
+Las sesiones de validación seguirán una estructura consistente para ambos segmentos. En primer lugar, se presentará brevemente el propósito de la sesión sin explicar anticipadamente cómo completar las tareas. Posteriormente, el participante interactuará con el Landing Page y con las funcionalidades asignadas de la aplicación.
+
+Durante la interacción, el entrevistador deberá observar las acciones realizadas, dudas, retrocesos, errores y comentarios espontáneos del participante. Una vez finalizadas las tareas, se realizarán preguntas orientadas a conocer la claridad, facilidad de navegación y percepción de la solución.
+
+**Tabla 4.14**  
+*Actividades previstas para las Validation Interviews*
+
+| Segment | Product | User Flow / Task | Validation Objective |
+|---|---|---|---|
+| Empresa de transporte de carga | Landing Page | Identificar qué problema resuelve Trakto Route y sus principales funcionalidades | Evaluar claridad de la propuesta de valor y encontrabilidad de información |
+| Empresa de transporte de carga | Mobile App | Iniciar sesión | Comprobar claridad del proceso de autenticación |
+| Empresa de transporte de carga | Mobile App | Programar un viaje | Evaluar comprensión del flujo y campos necesarios |
+| Empresa de transporte de carga | Mobile App | Asignar ruta, vehículo y conductor | Evaluar claridad del proceso de preparación de la operación |
+| Empresa de transporte de carga | Mobile App | Consultar y actualizar el estado de un viaje | Evaluar facilidad para supervisar una operación |
+| Cliente de transporte de carga | Landing Page | Identificar beneficios dirigidos al cliente | Evaluar si el Landing Page comunica adecuadamente el valor para este segmento |
+| Cliente de transporte de carga | Mobile App | Iniciar sesión | Evaluar facilidad de acceso |
+| Cliente de transporte de carga | Mobile App | Consultar un envío | Evaluar encontrabilidad de una operación autorizada |
+| Cliente de transporte de carga | Mobile App | Consultar progreso y ruta | Evaluar comprensión de la información operativa |
+| Cliente de transporte de carga | Mobile App | Consultar eventos relevantes | Evaluar claridad de eventos e incidencias visibles |
+
+**Preguntas introductorias**
+
+1. ¿Con qué frecuencia utiliza aplicaciones o plataformas digitales relacionadas con transporte, logística o seguimiento de operaciones?
+2. ¿Qué información espera encontrar rápidamente en una solución como Trakto Route?
+3. Cuando necesita conocer el estado de una operación de transporte, ¿qué información considera más importante?
+
+**Preguntas relacionadas con el Landing Page**
+
+1. ¿Cuál considera que es el principal propósito de Trakto Route después de revisar esta página?
+2. ¿Pudo identificar con facilidad las principales funcionalidades de la solución?
+3. ¿La información dirigida a su tipo de usuario resulta clara?
+4. ¿Hubo alguna sección cuyo contenido le resultara difícil de comprender o localizar?
+5. ¿Qué información adicional esperaría encontrar antes de utilizar la solución?
+
+**Preguntas posteriores a las tareas de la aplicación**
+
+1. ¿Qué tan claro resultó el recorrido para completar la tarea?
+2. ¿En algún momento no supo qué acción realizar a continuación?
+3. ¿Las etiquetas utilizadas representaron adecuadamente las acciones disponibles?
+4. ¿La información mostrada fue suficiente para tomar una decisión?
+5. ¿Hubo algún elemento que le generara confusión?
+6. ¿Qué modificaría para completar la tarea con menor esfuerzo?
+7. ¿Considera que los mensajes de confirmación o error fueron suficientemente claros?
+8. ¿Utilizaría este flujo en una operación real? ¿Por qué?
+
+Las respuestas deberán analizarse conjuntamente con la observación del comportamiento durante la ejecución de las tareas.
+
+<div style="page-break-after: always;"></div>
+
+#### 4.3.2. Registro de Entrevistas
+
+El proceso de validación requiere realizar entre **3 y 5 entrevistas por cada segmento objetivo**. Cada sesión debe registrarse en video y documentar los datos del participante, timing y duración.
+
+##### Segmento 1: Empresas de transporte de carga
+
+###### Entrevista de validación 1
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Empresa de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-01 – screenshot de la entrevista de validación 1]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar únicamente con las apreciaciones reales obtenidas durante la entrevista]
+
+---
+
+###### Entrevista de validación 2
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Empresa de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-02 – screenshot de la entrevista de validación 2]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+---
+
+###### Entrevista de validación 3
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Empresa de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-03 – screenshot de la entrevista de validación 3]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+##### Segmento 2: Clientes que requieren servicios de transporte de carga
+
+###### Entrevista de validación 4
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Cliente de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-04 – screenshot de la entrevista de validación 4]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+---
+
+###### Entrevista de validación 5
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Cliente de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-05 – screenshot de la entrevista de validación 5]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+---
+
+###### Entrevista de validación 6
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Cliente de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-06 – screenshot de la entrevista de validación 6]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+<div style="page-break-after: always;"></div>
+
+#### 4.3.3. Evaluaciones según heurísticas
+
+Las sesiones de validación deberán complementarse mediante la evaluación de la experiencia siguiendo el formato establecido en el **Anexo E: UX Heuristics & Principles Evaluation** del enunciado del proyecto.
+
+El análisis considera tres dimensiones:
+
+- **Usability.**
+- **Inclusive Design.**
+- **Information Architecture.**
+
+Los hallazgos deben derivarse de problemas observados durante la interacción con el Landing Page y la aplicación. No deben registrarse problemas hipotéticos como si hubieran sido identificados por participantes reales.
+
+**Escala de severidad**
+
+**Tabla 4.15**  
+*Escala de severidad para la evaluación heurística*
+
+| Nivel | Descripción |
+|---:|---|
+| **1** | **Problema superficial:** puede ser superado fácilmente por el usuario y ocurre con poca frecuencia. No requiere una corrección inmediata salvo disponibilidad de tiempo. |
+| **2** | **Problema menor:** puede ocurrir con mayor frecuencia o requerir mayor esfuerzo por parte del usuario. Debe considerarse una prioridad baja para la siguiente release. |
+| **3** | **Problema mayor:** ocurre frecuentemente o impide a algunos usuarios resolver adecuadamente una tarea. Su corrección requiere prioridad alta. |
+| **4** | **Problema muy grave:** tiene un impacto considerable e impide que el usuario continúe utilizando correctamente la experiencia. Debe corregirse antes del lanzamiento. |
+
+**Tabla resumen**
+
+**Tabla 4.16**  
+*Resumen de problemas identificados durante las Validation Interviews*
+
+| # | Problema | Escala de severidad | Heurística / Principio violada(o) |
+|---:|---|---:|---|
+| 1 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 2 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 3 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 4 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 5 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+
+Los nombres de las heurísticas y principios deberán corresponder exactamente a los establecidos en el formato oficial del Anexo E, evitando crear denominaciones propias.
+
+**Descripción de problemas**
+
+##### Problema #1: [Nombre del problema identificado]
+
+**Severidad:** [1-4]
+
+**Heurística / Principio violada(o):**  
+[Denominación correspondiente al Anexo E]
+
+**Problema**
+
+[Contenido pendiente: describir el comportamiento observado, la tarea que intentaba realizar el participante y la consecuencia del problema]
+
+[Imagen pendiente: HEU-01 – captura que evidencia el Problema #1]
+
+**Recomendación**
+
+[Contenido pendiente: propuesta concreta para resolver el problema sin alterar innecesariamente el flujo]
+
+---
+
+##### Problema #2: [Nombre del problema identificado]
+
+**Severidad:** [1-4]
+
+**Heurística / Principio violada(o):**  
+[Denominación correspondiente al Anexo E]
+
+**Problema**
+
+[Contenido pendiente: descripción basada en evidencia real]
+
+[Imagen pendiente: HEU-02 – captura que evidencia el Problema #2]
+
+**Recomendación**
+
+[Contenido pendiente: recomendación de mejora]
+
+---
+
+##### Problema #3: [Nombre del problema identificado]
+
+**Severidad:** [1-4]
+
+**Heurística / Principio violada(o):**  
+[Denominación correspondiente al Anexo E]
+
+**Problema**
+
+[Contenido pendiente: descripción basada en evidencia real]
+
+[Imagen pendiente: HEU-03 – captura que evidencia el Problema #3]
+
+**Recomendación**
+
+[Contenido pendiente: recomendación de mejora]
+
+Una vez finalizadas las sesiones, los hallazgos deberán contrastarse entre ambos segmentos para identificar problemas recurrentes y diferencias relacionadas con sus respectivos User Goals. Las mejoras priorizadas deberán considerar primero los problemas de severidad 4 y 3, y posteriormente aquellos de severidad 2 y 1.
 
 
 # Anexos
