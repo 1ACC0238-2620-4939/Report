@@ -3957,6 +3957,1708 @@ PK  id
 
 <div style="page-break-after: always;"></div>
 
+# Capítulo III: Solution UI/UX Design
+
+## 3.1. Product design
+
+El diseño de **Trakto Route** se plantea como la continuidad de las decisiones obtenidas durante el proceso de investigación, Needfinding y especificación de requisitos desarrollado en los capítulos anteriores. La solución debe responder a las necesidades de los dos segmentos identificados: las empresas de transporte de carga, representadas por **Carlos Mendoza**, supervisor de flota, y los clientes que contratan servicios de transporte, representados por **Andrea Salazar**, responsable logística.
+
+A partir de las entrevistas, User Personas, User Task Matrix, User Journey Maps, Empathy Maps, User Stories y Product Backlog, se identificó que ambos perfiles necesitan interactuar con la misma operación de transporte, pero desde responsabilidades diferentes. Carlos Mendoza requiere administrar viajes, vehículos, conductores, rutas, estados e incidencias, mientras que Andrea Salazar necesita consultar información autorizada sobre sus envíos, conocer su progreso, identificar eventos relevantes y acceder al historial de operaciones sin depender continuamente de llamadas o mensajes a la empresa transportista.
+
+Por esta razón, el Product Design de Trakto Route establece una experiencia diferenciada según el rol del usuario. La aplicación móvil concentra las funcionalidades operativas y de consulta definidas en las User Stories, mientras que el Landing Page cumple una función informativa y de presentación de la propuesta de valor del producto. Esta separación permite que la arquitectura visual y funcional se mantenga alineada con el alcance establecido previamente.
+
+Trakto Route no incorpora dentro de su alcance inicial dispositivos físicos o infraestructura telemática propia. Su propuesta se concentra en el producto digital conformado por la aplicación móvil Android, el Landing Page y los servicios que permiten gestionar y consultar la información de las operaciones de transporte.
+
+El diseño prioriza la claridad, trazabilidad y reducción de carga cognitiva. Las funcionalidades asociadas a viajes, flota, incidencias, historial y perfil se organizan de acuerdo con las tareas que cada tipo de usuario necesita realizar y con los Bounded Contexts definidos previamente. De esta manera, las decisiones de UI/UX mantienen trazabilidad con la arquitectura funcional de la solución y evitan presentar al cliente funciones internas de administración que corresponden exclusivamente al supervisor de flota.
+
+<div style="page-break-after: always;"></div>
+
+### 3.1.1. Style Guidelines
+
+Las Style Guidelines de **Trakto Route** establecen los criterios visuales y de comunicación que deberán mantenerse de manera consistente entre el Landing Page y la aplicación móvil. Su propósito es proporcionar al equipo una referencia común para el uso del branding, tipografía, colores, espaciado, iconografía y componentes de interfaz, reduciendo variaciones innecesarias durante el diseño e implementación.
+
+La propuesta utiliza como referencia los principios de **Material Design 3**, adaptándolos a la identidad y necesidades específicas de Trakto Route. El uso de un sistema común de estilos facilita que las diferentes pantallas mantengan una jerarquía visual reconocible y que acciones equivalentes se representen de forma similar a lo largo de la experiencia.
+
+Estas reglas también consideran la accesibilidad. La interfaz no dependerá exclusivamente del color para representar estados; las acciones importantes deberán acompañarse de etiquetas o iconografía comprensible; y los elementos interactivos de la aplicación móvil utilizarán áreas táctiles suficientemente amplias para favorecer una interacción confiable.
+
+#### 3.1.1.1. General Style Guidelines
+
+Las General Style Guidelines definen las decisiones visuales aplicables transversalmente a los productos digitales de Trakto Route. La propuesta busca proyectar una identidad tecnológica, confiable y orientada al control de operaciones, evitando una apariencia excesivamente informal que pueda disminuir la percepción de precisión necesaria en un producto relacionado con transporte y logística.
+
+**Branding**
+
+La identidad de Trakto Route debe transmitir principalmente **control, movimiento, trazabilidad y confianza**. Estos conceptos se relacionan directamente con la propuesta de valor del producto: centralizar información asociada a operaciones de transporte y permitir que cada usuario pueda identificar oportunamente el estado de un viaje.
+
+El branding debe mantener una composición visual limpia, con predominio de superficies claras, elementos de contraste y componentes fácilmente reconocibles. Los elementos gráficos asociados a rutas, ubicación, vehículos, progreso y estados operativos pueden utilizarse como referencias visuales, siempre que mantengan un lenguaje gráfico homogéneo.
+
+En caso de utilizar el nombre completo del producto, debe conservarse la denominación **Trakto Route**, evitando variaciones innecesarias que puedan generar inconsistencias entre el Landing Page, la aplicación móvil y la documentación del proyecto.
+
+[Imagen pendiente: SG-01 – Branding de Trakto Route mostrando logotipo oficial, variantes permitidas y ejemplos de uso – elaborado en Figma]
+
+La figura SG-01 deberá consolidar la identidad visual utilizada en los productos digitales, incluyendo el logotipo seleccionado por el equipo, sus principales variantes y las condiciones básicas de uso sobre superficies claras y oscuras.
+
+**Tone of Voice**
+
+El tono de comunicación se define utilizando las cuatro dimensiones propuestas para productos digitales: serio/divertido, formal/casual, respetuoso/irreverente y entusiasta/sereno. Debido al contexto operativo de Trakto Route, se adopta un tono predominantemente serio, profesional, respetuoso y sereno.
+
+| Dimensión | Posición seleccionada | Justificación |
+|---|---|---|
+| Divertido ↔ Serio | Predominantemente serio | Trakto Route comunica información relacionada con viajes, retrasos, incidencias, vehículos y conductores. La precisión debe prevalecer sobre el humor. |
+| Formal ↔ Casual | Formal con lenguaje directo | El producto está orientado a un contexto empresarial y logístico. Sin embargo, los textos deben evitar tecnicismos innecesarios y mantenerse comprensibles. |
+| Respetuoso ↔ Irreverente | Altamente respetuoso | Los mensajes pueden involucrar problemas operativos, accidentes o retrasos, por lo que deben expresarse de forma objetiva y profesional. |
+| Entusiasta ↔ Sereno | Predominantemente sereno | La interfaz debe transmitir control y estabilidad, especialmente cuando se comunican cambios de estado o incidencias. |
+
+Este tono se aplicará en títulos, mensajes informativos, estados vacíos, confirmaciones y mensajes de error. Por ejemplo, ante una consulta sin resultados se utilizará un mensaje como **“No se encontraron viajes con los criterios seleccionados”**, evitando expresiones ambiguas o excesivamente informales.
+
+**Typography**
+
+Se propone **Roboto** como familia tipográfica principal debido a su legibilidad en interfaces digitales, compatibilidad con Android y adecuación con Material Design. El uso de una única familia tipográfica facilita mantener consistencia entre la experiencia móvil y la versión web.
+
+La jerarquía propuesta toma como referencia la escala de Material Design 3 y se adapta al nivel de información necesario en Trakto Route.
+
+| Token | Tamaño orientativo | Weight | Uso principal |
+|---|---:|---|---|
+| Display | 36 sp / px | Regular | Mensajes principales o encabezados promocionales del Landing Page |
+| H1 | 32 sp / px | Medium | Títulos principales de páginas o pantallas |
+| H2 | 24 sp / px | Medium | Secciones principales |
+| H3 | 20 sp / px | Medium | Subsecciones y encabezados de cards |
+| Body Large | 16 sp / px | Regular | Contenido principal y datos operativos |
+| Body Medium | 14 sp / px | Regular | Información complementaria |
+| Label | 14 sp / px | Medium | Buttons, filtros y controles |
+| Caption | 12 sp / px | Regular | Metadatos, fechas y textos auxiliares |
+
+Los tamaños deben respetar las posibilidades de escalamiento del sistema operativo y no deben utilizarse como dimensiones rígidas cuando puedan afectar la accesibilidad.
+
+**Color System**
+
+Como propuesta de diseño para el Capítulo III, se establece un sistema cromático orientado a transmitir confianza, estabilidad y claridad. El azul se utiliza como color principal por su asociación visual con control y confiabilidad, mientras que un tono teal se utiliza como apoyo para elementos secundarios. Los colores de estado se diferencian claramente para representar resultados exitosos, advertencias, errores e información.
+
+| Token | HEX | Uso |
+|---|---|---|
+| Primary | `#155EEF` | Acciones principales, elementos activos y énfasis |
+| Primary Container | `#E8EEFF` | Fondos destacados y elementos seleccionados |
+| Secondary | `#0E7490` | Acciones secundarias y elementos complementarios |
+| Background | `#F7F9FC` | Fondo general de las experiencias |
+| Surface | `#FFFFFF` | Cards, dialogs y superficies elevadas |
+| Text Primary | `#172033` | Títulos y contenido principal |
+| Text Secondary | `#5B6472` | Información secundaria y supporting text |
+| Success | `#2E7D32` | Operaciones completadas o estados correctos |
+| Warning | `#A15C00` | Retrasos, alertas preventivas o atención requerida |
+| Error | `#B3261E` | Errores, accidentes o acciones fallidas |
+| Info | `#00639A` | Información contextual y mensajes informativos |
+
+Los estados no deberán diferenciarse únicamente mediante color. Cuando se represente una incidencia, un retraso o un viaje finalizado, se utilizará también texto, iconografía o indicadores que permitan identificar el significado sin depender de la percepción cromática.
+
+[Imagen pendiente: SG-02 – Color System de Trakto Route mostrando tokens, códigos HEX y ejemplos de aplicación – elaborado en Figma]
+
+La figura SG-02 deberá representar visualmente la relación entre los colores principales, secundarios y semánticos, incluyendo ejemplos de su aplicación sobre buttons, cards, chips de estado y mensajes.
+
+**Spacing**
+
+Se adopta una escala de espaciado basada en múltiplos de **4**, facilitando la consistencia entre componentes.
+
+| Token | Valor | Aplicación |
+|---|---:|---|
+| XS | 4 dp / px | Separación mínima entre icono y label |
+| S | 8 dp / px | Elementos estrechamente relacionados |
+| M | 16 dp / px | Padding estándar en cards y formularios |
+| L | 24 dp / px | Separación entre grupos de contenido |
+| XL | 32 dp / px | Separación entre bloques principales |
+| XXL | 48 dp / px | Separación de secciones principales del Landing Page |
+
+El sistema permite generar agrupaciones visuales predecibles. Los elementos relacionados se sitúan más próximos entre sí, mientras que las secciones con diferentes propósitos utilizan una separación mayor.
+
+**Iconography**
+
+La iconografía utilizará un mismo lenguaje visual, preferentemente basado en **Material Symbols** o un set equivalente coherente. Los iconos se utilizarán como apoyo visual y no como sustituto de información crítica.
+
+Entre los conceptos que requieren representación gráfica se encuentran:
+
+- Viajes.
+- Rutas.
+- Vehículos.
+- Conductores.
+- Incidencias.
+- Historial.
+- Perfil.
+- Estados de operación.
+- Paradas y descansos.
+
+Los iconos relacionados con acciones críticas, como finalizar un viaje o registrar una incidencia, deberán acompañarse de labels comprensibles para minimizar errores de interpretación.
+
+**UI Components**
+
+El sistema visual utilizará componentes reutilizables que permitan conservar consistencia entre pantallas.
+
+| Componente | Aplicación en Trakto Route |
+|---|---|
+| Buttons | Confirmar acciones primarias como programar, guardar o actualizar |
+| Outlined Buttons | Acciones secundarias o cancelaciones |
+| Text Fields | Registro, autenticación y edición de información |
+| Cards | Resumen de viajes, vehículos, conductores e incidencias |
+| Chips | Representación de estados y filtros |
+| Lists | Viajes, eventos, historial, vehículos y conductores |
+| Dialogs | Confirmación de acciones de impacto |
+| Snackbar | Feedback breve de acciones completadas o fallidas |
+| Progress Indicators | Procesamiento y carga de información |
+| Search / Filter Controls | Filtrado del historial cuando corresponda a US16 |
+| Empty States | Ausencia de viajes, incidencias o resultados |
+| Navigation Components | Navegación principal según el rol |
+
+[Imagen pendiente: SG-03 – General Style Guidelines y principales UI Components de Trakto Route – elaborado en Figma]
+
+La figura SG-03 deberá presentar los componentes principales en sus estados normal, pressed, disabled, error y selected cuando corresponda, estableciendo una referencia visual reutilizable para el equipo.
+
+**Web Style Guidelines**
+
+Para el Landing Page se utilizará una estructura responsive que permita reorganizar el contenido según el ancho disponible. En Desktop se priorizará una composición amplia, con navegación visible en el header y contenido distribuido mediante secciones claramente diferenciadas. En Mobile Web, los componentes se reorganizarán de manera vertical, manteniendo la prioridad de la propuesta de valor y de las llamadas a la acción.
+
+Los buttons y enlaces deberán presentar estados de hover y focus visibles. Los encabezados mantendrán una jerarquía consistente y el contenido se dividirá en bloques que faciliten la exploración rápida.
+
+**Mobile Style Guidelines**
+
+La aplicación Android utilizará los patrones visuales de Material Design adaptados a la identidad de Trakto Route. Los componentes interactivos deberán contemplar objetivos táctiles de al menos **48 dp × 48 dp**, evitando controles difíciles de seleccionar.
+
+Las acciones frecuentes se mantendrán fácilmente accesibles y las acciones críticas requerirán confirmación cuando exista riesgo de modificar información relevante. Los elementos deberán respetar los system insets del dispositivo para evitar superposición con barras del sistema.
+
+<div style="page-break-after: always;"></div>
+
+### 3.1.2. Information Architecture
+
+La Information Architecture de Trakto Route define la organización y agrupación del contenido que será presentado en el Landing Page y en la aplicación móvil. La estructura se fundamenta en las necesidades identificadas para Carlos Mendoza y Andrea Salazar, así como en las User Stories y los Bounded Contexts definidos en el capítulo anterior.
+
+La organización de la aplicación respeta la diferencia existente entre ambos perfiles. El supervisor de flota necesita acceder a información operativa asociada a viajes, flota, incidencias e historial, mientras que el cliente de transporte requiere principalmente consultar la información correspondiente a sus propios envíos.
+
+Esto significa que ambos usuarios no deben visualizar necesariamente la misma estructura. El sistema debe presentar información y acciones de acuerdo con el rol autenticado, reduciendo opciones que no aportan a las tareas del usuario y evitando exponer capacidades administrativas a quienes no corresponden.
+
+La Information Architecture determina **qué contenido se agrupa y cómo se relaciona**, mientras que el Navigation System establece **cómo se desplazará el usuario entre dichos grupos**. Esta distinción permite estructurar la información antes de seleccionar los componentes concretos de navegación.
+
+#### 3.1.2.1. Organization Systems
+
+Trakto Route utiliza una combinación de organización jerárquica, secuencial, temática, cronológica y por audiencia. La selección depende del tipo de información y de la tarea realizada.
+
+| Producto | Contenido | Sistema de organización | Esquema | Justificación |
+|---|---|---|---|---|
+| Landing Page | Propuesta de valor y presentación del producto | Jerárquico | Por tópico | Prioriza primero el problema y valor de Trakto Route y luego amplía sus principales capacidades |
+| Landing Page | Explicación del funcionamiento | Secuencial | Por tópico | Permite presentar de forma progresiva cómo el producto apoya una operación de transporte |
+| Mobile App | Funcionalidades del supervisor | Jerárquico | Por audiencia/rol | Presenta viajes, flota, incidencias e historial únicamente al perfil que administra operaciones |
+| Mobile App | Funcionalidades del cliente | Jerárquico | Por audiencia/rol | Prioriza envíos, progreso, eventos e historial sin exponer gestión interna de flota |
+| Viajes | Operaciones registradas | Jerárquico | Por tópico y estado | Agrupa la información principal del viaje y sus recursos relacionados |
+| Eventos de viaje | Paradas, descansos e incidencias | Secuencial | Cronológico | Permite comprender la evolución de la operación según el momento en que ocurrieron los eventos |
+| Operational History | Operaciones anteriores | Jerárquico | Cronológico | Facilita la revisión de operaciones finalizadas y su trazabilidad |
+| Fleet Management | Vehículos y conductores | Jerárquico | Por tópico | Separa los dos principales tipos de recursos administrados por el supervisor |
+
+El Landing Page se propone con una estructura basada en los siguientes bloques conceptuales: presentación principal, problemática, propuesta de valor, funcionalidades, funcionamiento, segmentos objetivo, llamada a la acción y contacto. Estos bloques no representan funcionalidades adicionales del sistema, sino contenido informativo destinado a comunicar el modelo de negocio.
+
+La aplicación, en cambio, organiza la información alrededor de las responsabilidades definidas previamente en los Epics y Bounded Contexts: **Identity and Access Management, Profile Management, Trip Management, Fleet Management, Incident Management y Operational History**.
+
+[Imagen pendiente: IA-01 – Information Architecture del Landing Page de Trakto Route]
+
+La figura IA-01 deberá representar la jerarquía de contenido del Landing Page y las relaciones entre sus principales secciones, evidenciando el recorrido desde la propuesta de valor hasta la llamada a la acción.
+
+[Imagen pendiente: IA-02 – Information Architecture de la aplicación móvil diferenciada para Carlos Mendoza y Andrea Salazar]
+
+La figura IA-02 deberá mostrar qué grupos de información se encuentran disponibles para cada User Persona, evidenciando que las capacidades administrativas de flota y operación permanecen separadas de las capacidades de consulta del cliente.
+
+#### 3.1.2.2. Labelling Systems
+
+El Labelling System utiliza denominaciones breves y relacionadas con el lenguaje empleado por los usuarios durante las actividades del dominio. Se evita presentar términos internos de arquitectura como *Bounded Context*, *IAM*, *Aggregate* o *Repository*, debido a que dichos conceptos pertenecen a la implementación y no al modelo mental del usuario.
+
+**Landing Page**
+
+| Contexto | Etiqueta | Información representada | Usuario |
+|---|---|---|---|
+| Navegación principal | Inicio | Presentación general del producto | Visitante |
+| Sección de valor | Beneficios | Principales mejoras que aporta Trakto Route | Visitante |
+| Capacidades | Funcionalidades | Resumen de capacidades del producto | Visitante |
+| Explicación | Cómo funciona | Descripción resumida del flujo de uso | Visitante |
+| Público objetivo | Para transportistas | Valor para empresas que gestionan operaciones | Empresa transportista |
+| Público objetivo | Para clientes | Valor para organizaciones que contratan transporte | Cliente |
+| Comunicación | Contacto | Canal de contacto relacionado con el producto | Visitante |
+
+**Mobile Application**
+
+| Contexto | Etiqueta | Información representada | Usuario |
+|---|---|---|---|
+| Resumen | Inicio | Estado general y accesos relevantes | Ambos |
+| Trip Management | Viajes | Operaciones de transporte | Supervisor |
+| Trip Management | Mis envíos | Viajes autorizados asociados al cliente | Cliente |
+| Fleet Management | Flota | Vehículos y conductores | Supervisor |
+| Incident Management | Incidencias | Eventos que afectan las operaciones | Supervisor |
+| Incident Management | Eventos | Eventos relevantes visibles para el cliente | Cliente |
+| Operational History | Historial | Operaciones anteriores | Ambos, según permisos |
+| Profile | Perfil | Información de la cuenta | Ambos |
+
+Las labels de acciones también utilizarán verbos directos y específicos. Por ejemplo: **Programar viaje**, **Asignar vehículo**, **Asignar conductor**, **Registrar incidencia**, **Actualizar estado** y **Finalizar viaje**. Esto permite comunicar con claridad el resultado esperado de cada interacción.
+
+#### 3.1.2.3. SEO Tags and Meta Tags
+
+La estrategia de SEO del Landing Page tiene como finalidad describir claramente el producto y facilitar que los motores de búsqueda interpreten su contenido. El enunciado académico requiere como mínimo `Title`, `Description`, `Keywords` y `Author`; adicionalmente, se contemplan metadata de social sharing y configuración básica de indexación.
+
+| Elemento | Valor propuesto | Propósito |
+|---|---|---|
+| Title | Trakto Route \| Gestión y trazabilidad del transporte de carga | Identificar claramente el producto y su propósito |
+| Description | Trakto Route centraliza la gestión de viajes de carga y permite consultar su progreso, recursos, incidencias e historial operativo. | Resumir el contenido del Landing Page |
+| Keywords | transporte de carga, gestión de viajes, logística, trazabilidad, gestión de flota, seguimiento de envíos, transporte terrestre, Trakto Route | Cumplimiento de la estructura académica y definición de términos objetivo |
+| Author | Trakto | Identificar al equipo responsable del producto |
+| Robots | index, follow | Permitir indexación cuando el Landing Page sea publicado |
+| Viewport | width=device-width, initial-scale=1.0 | Facilitar comportamiento responsive |
+| Canonical | URL pública del Landing Page | Identificar la URL principal una vez desplegado |
+| Open Graph Title | Trakto Route – Gestión y trazabilidad del transporte de carga | Presentación al compartir el contenido |
+| Open Graph Description | Centraliza viajes, flota e incidencias y consulta el progreso de tus operaciones de transporte. | Resumen para social sharing |
+
+Aunque `Keywords` se mantiene en esta sección debido a que forma parte de lo solicitado en el enunciado académico, no se considera un mecanismo de posicionamiento en Google. Las decisiones SEO se concentran principalmente en contenido útil, títulos descriptivos, estructura comprensible y metadata consistente.
+
+El fragmento propuesto para el Landing Page es el siguiente:
+
+```html
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Trakto Route | Gestión y trazabilidad del transporte de carga
+    </title>
+
+    <meta
+        name="description"
+        content="Trakto Route centraliza la gestión de viajes de carga y permite consultar su progreso, recursos, incidencias e historial operativo."
+    >
+
+    <meta
+        name="keywords"
+        content="transporte de carga, gestión de viajes, logística, trazabilidad, gestión de flota, seguimiento de envíos, transporte terrestre, Trakto Route"
+    >
+
+    <meta name="author" content="Trakto">
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="[URL pública pendiente del Landing Page]"
+    >
+
+    <meta
+        property="og:title"
+        content="Trakto Route – Gestión y trazabilidad del transporte de carga"
+    >
+
+    <meta
+        property="og:description"
+        content="Centraliza viajes, flota e incidencias y consulta el progreso de tus operaciones de transporte."
+    >
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:url"
+        content="[URL pública pendiente del Landing Page]"
+    >
+
+    <meta
+        property="og:image"
+        content="[URL pública pendiente de la imagen Open Graph]"
+    >
+</head>
+```
+
+**ASO – App Store Optimization**
+
+Debido a que el producto móvil se desarrolla para Android, se distingue entre los elementos solicitados académicamente y los campos utilizados en una futura ficha de Google Play.
+
+| Elemento ASO solicitado | Valor propuesto |
+|---|---|
+| App Title | Trakto Route |
+| App Keywords | transporte de carga, viajes, logística, flota, incidencias, historial, trazabilidad |
+| App Subtitle | Control y trazabilidad de operaciones de transporte |
+| App Description | Aplicación móvil para gestionar operaciones de transporte de carga y consultar viajes, recursos, incidencias, progreso e historial según el rol del usuario. |
+
+Para Google Play, los campos correspondientes se plantean de la siguiente manera:
+
+| Campo de Google Play | Valor propuesto |
+|---|---|
+| App name | Trakto Route |
+| Short description | Gestiona viajes de carga y consulta su progreso, incidencias e historial. |
+| Full description | Trakto Route centraliza información relacionada con operaciones de transporte terrestre de carga. Los supervisores pueden gestionar viajes, recursos e incidencias, mientras que los clientes autorizados pueden consultar el progreso, eventos relevantes e historial de sus envíos. |
+
+En este informe, **App Keywords** representa el conjunto de términos objetivo de la estrategia ASO y no un campo independiente de Google Play Console.
+
+#### 3.1.2.4. Searching Systems
+
+Trakto Route no plantea una búsqueda global que permita consultar indiscriminadamente información de todos los Bounded Contexts. Esta decisión mantiene el alcance alineado con las User Stories existentes y reduce la posibilidad de presentar información que no corresponde al usuario autenticado.
+
+El mecanismo de recuperación más claramente especificado en los requisitos es el **filtrado del historial de viajes**, definido en la User Story **US16 – Filtrar historial de viajes**. Las demás operaciones se resuelven principalmente mediante consultas de listas estructuradas y selección de elementos específicos.
+
+| Módulo | Búsqueda / consulta | Filtros | Ordenamiento | Presentación de resultados |
+|---|---|---|---|---|
+| Viajes | Consulta de viajes registrados | No se incorporan filtros adicionales sin requisito previo | Según criterio definido por la implementación | Cards o list items con estado e información resumida |
+| Historial de viajes | Consulta de operaciones anteriores | Criterios definidos para US16 | Cronológico como representación principal | Lista de viajes coincidentes |
+| Conductores | Consulta de información y disponibilidad | Según disponibilidad cuando aplica US30 | No se incorpora criterio adicional no definido | Lista de conductores |
+| Vehículos | Consulta de información y disponibilidad | Según disponibilidad cuando aplica US29 | No se incorpora criterio adicional no definido | Lista de vehículos |
+| Incidencias | Consulta asociada a una operación | Por asociación con el viaje | Cronológico | Timeline o lista de eventos |
+| Historial de incidencias | Consulta de registros anteriores | Según operaciones autorizadas | Cronológico | Lista de incidencias |
+
+Cuando un filtro no produce coincidencias, el sistema presentará un estado vacío mediante un mensaje directo como **“No se encontraron resultados con los criterios seleccionados”** y proporcionará una acción para limpiar los criterios aplicados.
+
+En el caso de los clientes, cualquier consulta debe permanecer limitada a viajes y eventos asociados a su organización, respetando las restricciones contempladas en las User Stories US40 y US41.
+
+#### 3.1.2.5. Navigation Systems
+
+El Navigation System define la manera en que los usuarios recorrerán los grupos de información establecidos previamente.
+
+**Landing Page**
+
+El Landing Page utilizará navegación global mediante un header y enlaces internos hacia las principales secciones. En Desktop, los principales enlaces permanecerán visibles en el encabezado. En Mobile Web, la navegación se adaptará a un componente compacto que permita acceder a las mismas secciones sin ocupar un espacio excesivo.
+
+Los CTAs se utilizarán para dirigir la atención hacia las acciones principales relacionadas con conocer el producto o acceder al ecosistema de Trakto Route.
+
+**Mobile Application**
+
+La navegación móvil se define de acuerdo con las responsabilidades de cada rol. Se propone utilizar una **Navigation Bar** para los destinos principales de mayor frecuencia, complementada con **Top App Bars** y navegación contextual para acciones internas.
+
+| Producto / Usuario | Tipo de navegación | Destinos principales | Justificación |
+|---|---|---|---|
+| Landing Page Desktop | Header navigation + anchors | Inicio, Beneficios, Funcionalidades, Cómo funciona, Contacto | Facilita recorrer rápidamente una página de contenido continuo |
+| Landing Page Mobile | Menú responsive + anchors | Mismos destinos del Desktop | Conserva el contenido reduciendo espacio ocupado |
+| Carlos Mendoza | Navigation Bar + Top App Bar | Inicio, Viajes, Flota, Incidencias, Historial | Corresponde a sus principales tareas operativas |
+| Andrea Salazar | Navigation Bar + Top App Bar | Inicio, Mis envíos, Historial, Perfil | Prioriza consulta de envíos y elimina administración de flota |
+
+Las acciones específicas como programar un viaje, registrar una incidencia, asignar un recurso o consultar un detalle se encuentran dentro de los destinos principales y no requieren ocupar permanentemente un elemento de navegación global.
+
+[Imagen pendiente: NAV-01 – Navigation System del Landing Page de Trakto Route]
+
+La figura NAV-01 deberá representar la navegación entre las principales secciones del Landing Page y su comportamiento responsive.
+
+[Imagen pendiente: NAV-02 – Navigation System de la aplicación móvil para Carlos Mendoza – elaborado en Figma]
+
+La figura NAV-02 deberá evidenciar el acceso del supervisor a viajes, flota, incidencias e historial, manteniendo las acciones específicas dentro de cada módulo.
+
+[Imagen pendiente: NAV-03 – Navigation System de la aplicación móvil para Andrea Salazar – elaborado en Figma]
+
+La figura NAV-03 deberá evidenciar una estructura simplificada orientada a consulta de envíos, eventos e historial, sin mostrar capacidades internas de Fleet Management.
+
+<div style="page-break-after: always;"></div>
+
+### 3.1.3. Landing Page UI Design
+
+El Landing Page de Trakto Route transforma las decisiones establecidas en las Style Guidelines y la Information Architecture en una experiencia orientada a presentar el producto, comunicar su propuesta de valor y diferenciar los beneficios proporcionados a empresas transportistas y clientes.
+
+La interfaz utiliza una jerarquía visual progresiva. La primera sección comunica el nombre del producto y su valor principal; posteriormente se explica el problema que busca resolver, las principales capacidades de la solución, su funcionamiento y los beneficios específicos para cada segmento.
+
+La composición debe conservar la identidad cromática y tipográfica establecida previamente y adaptarse tanto a Desktop Web Browser como a Mobile Web Browser.
+
+La estructura propuesta comprende:
+
+1. Header con identidad de Trakto Route y navegación.
+2. Hero con propuesta de valor principal y CTA.
+3. Problem statement resumido.
+4. Principales beneficios.
+5. Funcionalidades relevantes.
+6. Explicación de cómo funciona la solución.
+7. Diferenciación entre empresas transportistas y clientes.
+8. Call to Action.
+9. Contacto y footer.
+
+Estas secciones corresponden a contenido informativo y no implican la incorporación de nuevas funcionalidades operativas al Product Backlog.
+
+#### 3.1.3.1. Landing Page Wireframe
+
+Los Wireframes del Landing Page se elaborarán en **Figma** y representarán inicialmente la estructura, jerarquía y ubicación de los elementos sin depender todavía de los detalles gráficos finales.
+
+**Desktop Web Browser**
+
+[Imagen pendiente: LP-WF-01 – Wireframe Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+
+El wireframe Desktop organiza el contenido utilizando el mayor espacio horizontal disponible. El Hero prioriza la propuesta de valor y un CTA principal, mientras que las secciones posteriores separan claramente beneficios, funcionalidades y segmentos. La navegación se mantiene visible en el header para permitir saltos directos hacia las principales áreas de contenido.
+
+Las funcionalidades pueden representarse mediante cards agrupadas, facilitando una lectura rápida y permitiendo diferenciar capacidades relacionadas con viajes, flota, incidencias, trazabilidad e historial.
+
+**Mobile Web Browser**
+
+[Imagen pendiente: LP-WF-02 – Wireframe Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+
+En Mobile Web, los bloques se reorganizan verticalmente para mantener una secuencia clara de lectura. Los elementos presentados en múltiples columnas en Desktop pasan a una distribución de una columna o grupos reducidos. El menú principal se transforma en navegación compacta y los CTAs utilizan un ancho suficiente para facilitar la interacción táctil.
+
+La versión móvil conserva la misma información esencial que Desktop y modifica únicamente la distribución necesaria para responder al espacio disponible.
+
+#### 3.1.3.2. Landing Page Mock-up
+
+Los Mock-ups representan la versión visual de alta fidelidad del Landing Page. A diferencia de los Wireframes, incorporan los colores, tipografía, iconografía, imágenes y componentes definidos en las General Style Guidelines.
+
+**Desktop Web Browser**
+
+[Imagen pendiente: LP-MK-01 – Mock-up Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+
+El Mock-up Desktop deberá aplicar la paleta visual propuesta, mantener una jerarquía clara entre encabezados y supporting text, y utilizar recursos visuales relacionados con transporte y trazabilidad sin saturar la interfaz.
+
+La propuesta de valor debe ser visible desde la primera sección y los CTAs deben distinguirse claramente del contenido secundario mediante el color Primary.
+
+**Mobile Web Browser**
+
+[Imagen pendiente: LP-MK-02 – Mock-up Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+
+El Mock-up Mobile debe conservar la identidad visual de la versión Desktop y adaptar tamaños, espacios y agrupaciones sin reducir la legibilidad. Los componentes interactivos deberán considerar una interacción táctil cómoda y mantener suficiente separación entre acciones.
+
+<div style="page-break-after: always;"></div>
+
+### 3.1.4. Mobile Applications UX/UI Design
+
+La propuesta UX/UI de la aplicación móvil de Trakto Route se construye alrededor de los User Goals asociados a **Carlos Mendoza** y **Andrea Salazar**. Ambos usuarios acceden a una misma solución, pero la interfaz adapta sus opciones de acuerdo con el rol y las responsabilidades identificadas durante el Needfinding.
+
+Para Carlos Mendoza, la experiencia prioriza la gestión y supervisión operativa: programar viajes, asignar recursos, revisar estados, administrar información de vehículos y conductores, registrar eventos e incidencias y consultar información histórica.
+
+Para Andrea Salazar, la experiencia reduce la cantidad de opciones y prioriza visibilidad: consultar sus envíos autorizados, conocer la ruta y progreso, revisar eventos relevantes e incidencias y consultar operaciones anteriores.
+
+La aplicación utilizará principios de Material Design para mantener patrones de interacción conocidos en Android, complementados por el sistema visual definido para Trakto Route. La navegación, estados y feedback se diseñarán para minimizar errores y mantener visible la situación actual de cada operación.
+
+#### 3.1.4.1. Mobile Applications Wireframes
+
+Los Mobile Applications Wireframes representan la estructura inicial de las pantallas antes de aplicar el diseño visual de alta fidelidad. Se elaborarán en **Figma** y se agrupan por capacidades funcionales para evitar generar una pantalla independiente por cada User Story cuando varias historias pueden resolverse mediante una misma vista.
+
+| Grupo funcional | Pantallas necesarias | User Persona | User Stories relacionadas |
+|---|---|---|---|
+| Authentication & Profile | Registro, inicio de sesión, perfil y edición de perfil | Carlos / Andrea | US01, US02, US03, US04 |
+| Home | Dashboard según rol | Carlos / Andrea | Acceso contextual a funcionalidades relacionadas |
+| Trip Management – Supervisor | Lista de viajes, detalle, programación, ruta, estado, paradas, descansos y finalización | Carlos Mendoza | US05, US06, US07, US17, US18, US19, US20, US21, US22 |
+| Fleet Management | Vehículos, conductores, disponibilidad, registro, actualización y asignación | Carlos Mendoza | US09, US10, US23, US24, US25, US26, US27, US28, US29, US30 |
+| Incident Management – Supervisor | Registro, clasificación, detalle y actualización de incidencias | Carlos Mendoza | US11, US31, US32, US33, US34 |
+| Operational History – Supervisor | Historial por operación, conductor y vehículo | Carlos Mendoza | US14, US15, US37, US38, US39 |
+| Shipment Tracking – Cliente | Mis envíos, detalle, ruta, progreso y eventos | Andrea Salazar | US08, US12, US35, US40, US41 |
+| Operational History – Cliente | Historial, filtros e incidencias anteriores | Andrea Salazar | US13, US16, US36 |
+
+[Imagen pendiente: MW-01 – Wireframes de Authentication & Profile para Carlos Mendoza y Andrea Salazar – elaborado en Figma]
+
+MW-01 deberá representar registro, inicio de sesión, consulta y edición de perfil, manteniendo los formularios simples y mostrando mensajes de validación próximos al campo correspondiente.
+
+[Imagen pendiente: MW-02 – Wireframes de Home y Trip Management para Carlos Mendoza – elaborado en Figma]
+
+MW-02 deberá mostrar el Dashboard del supervisor, la lista de viajes y el acceso al detalle de una operación. Desde este grupo deberá poder visualizarse información resumida del viaje y acceder a acciones relacionadas con su ciclo de vida.
+
+[Imagen pendiente: MW-03 – Wireframes de programación y asignación de recursos para Carlos Mendoza – elaborado en Figma]
+
+MW-03 deberá representar el proceso de programación de un viaje y la posterior asignación de ruta, conductor y vehículo, incluyendo la consulta previa de disponibilidad establecida por US29 y US30.
+
+[Imagen pendiente: MW-04 – Wireframes de Fleet Management para Carlos Mendoza – elaborado en Figma]
+
+MW-04 deberá incluir listados, detalle, registro y actualización de vehículos y conductores, diferenciando claramente ambos tipos de recurso.
+
+[Imagen pendiente: MW-05 – Wireframes de Incident Management para Carlos Mendoza – elaborado en Figma]
+
+MW-05 deberá representar el registro de incidencias y sus variaciones para retrasos, problemas y accidentes, además del detalle y actualización de estado.
+
+[Imagen pendiente: MW-06 – Wireframes de Operational History para Carlos Mendoza – elaborado en Figma]
+
+MW-06 deberá permitir revisar operaciones finalizadas, desempeño e historial relacionado con vehículos y conductores.
+
+[Imagen pendiente: MW-07 – Wireframes de seguimiento de envíos para Andrea Salazar – elaborado en Figma]
+
+MW-07 deberá concentrarse en la consulta de envíos autorizados, progreso, ruta y eventos relevantes sin exponer acciones administrativas.
+
+[Imagen pendiente: MW-08 – Wireframes de historial y filtrado para Andrea Salazar – elaborado en Figma]
+
+MW-08 deberá representar la consulta del historial y el mecanismo de filtrado correspondiente a US16, contemplando estados con resultados y sin resultados.
+
+#### 3.1.4.2. Mobile Applications Wireflow Diagrams
+
+Los Wireflow Diagrams relacionan los Wireframes anteriores con las rutas de interacción necesarias para que los User Personas alcancen sus principales User Goals. Estos diagramas se elaborarán en **LucidChart u Overflow** y utilizarán pantallas de baja o media fidelidad.
+
+| ID | User Persona | User Goal | User Stories relacionadas | Wireflow requerido |
+|---|---|---|---|---|
+| WF-01 | Carlos Mendoza | Programar y preparar un viaje | US17, US18, US27, US28, US29, US30 | Programación y asignación de recursos |
+| WF-02 | Carlos Mendoza | Supervisar el ciclo de vida de un viaje | US05, US06, US07, US19, US20, US21, US22 | Consulta, actualización y cierre |
+| WF-03 | Carlos Mendoza | Registrar y gestionar una incidencia | US11, US31, US32, US33, US34 | Registro y actualización de eventos |
+| WF-04 | Carlos Mendoza | Gestionar vehículos y conductores | US09, US10, US23, US24, US25, US26 | Gestión de flota |
+| WF-05 | Andrea Salazar | Consultar el progreso de un envío | US08, US40 | Consulta de ruta y progreso |
+| WF-06 | Andrea Salazar | Consultar eventos relevantes de un envío | US12, US35, US41 | Consulta de eventos e incidencias |
+| WF-07 | Andrea Salazar | Consultar operaciones anteriores | US13, US16, US36 | Historial y filtrado |
+
+**WF-01 – Programar y preparar un viaje**
+
+**User Persona:** Carlos Mendoza.
+
+**User Goal:** registrar una nueva operación y asignar los recursos necesarios antes de su ejecución.
+
+[Imagen pendiente: WF-01 – Wireflow del User Goal “Programar y preparar un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+
+El flujo inicia desde la sección Viajes. El supervisor selecciona la acción para programar una operación, registra la información requerida, asigna una ruta y posteriormente consulta la disponibilidad de vehículos y conductores para seleccionar los recursos correspondientes. El flujo finaliza cuando el viaje cuenta con la información necesaria para continuar su ciclo de operación.
+
+**WF-02 – Supervisar el ciclo de vida de un viaje**
+
+**User Persona:** Carlos Mendoza.
+
+[Imagen pendiente: WF-02 – Wireflow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+
+El flujo inicia con la consulta de viajes y continúa con el detalle de la operación. Desde esta vista se consulta el estado actual y se registran las actualizaciones permitidas, incluyendo paradas y descansos. Cuando la operación concluye, el supervisor ejecuta la acción de finalización.
+
+**WF-03 – Registrar y gestionar una incidencia**
+
+**User Persona:** Carlos Mendoza.
+
+[Imagen pendiente: WF-03 – Wireflow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+
+El supervisor ingresa desde un viaje o desde Incident Management, selecciona el tipo de evento correspondiente, registra la información necesaria y confirma el registro. Posteriormente puede consultar el detalle y actualizar el estado de la incidencia.
+
+**WF-04 – Gestionar vehículos y conductores**
+
+**User Persona:** Carlos Mendoza.
+
+[Imagen pendiente: WF-04 – Wireflow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+
+El flujo permite acceder a la sección Flota y seleccionar el tipo de recurso. Desde allí el supervisor puede consultar información existente, registrar nuevos recursos y mantener actualizados los datos correspondientes.
+
+**WF-05 – Consultar el progreso de un envío**
+
+**User Persona:** Andrea Salazar.
+
+[Imagen pendiente: WF-05 – Wireflow del User Goal “Consultar el progreso de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow]
+
+El flujo inicia en Mis envíos. Andrea selecciona una operación autorizada y accede a su detalle, donde consulta el estado actual, la ruta asociada y la información de progreso disponible.
+
+**WF-06 – Consultar eventos relevantes de un envío**
+
+**User Persona:** Andrea Salazar.
+
+[Imagen pendiente: WF-06 – Wireflow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow]
+
+El flujo permite acceder a los eventos visibles asociados al envío, consultar si existe una incidencia y revisar su información autorizada. Cuando no existen eventos relevantes, la aplicación comunica el estado actual sin generar alertas inexistentes.
+
+**WF-07 – Consultar operaciones anteriores**
+
+**User Persona:** Andrea Salazar.
+
+[Imagen pendiente: WF-07 – Wireflow del User Goal “Consultar operaciones anteriores” para Andrea Salazar – elaborado en LucidChart/Overflow]
+
+El flujo inicia en Historial y presenta las operaciones autorizadas. El usuario puede aplicar los criterios contemplados por US16 y visualizar los resultados coincidentes o un estado vacío cuando ningún registro cumple las condiciones seleccionadas.
+
+#### 3.1.4.3. Mobile Applications Mock-ups
+
+Los Mock-ups transforman los Wireframes en representaciones de alta fidelidad aplicando el Design System de Trakto Route. Se elaborarán en **Figma** y conservarán la misma estructura funcional definida previamente.
+
+| ID | Grupo | Pantallas | Objetivo visual |
+|---|---|---|---|
+| MM-01 | Authentication & Profile | Registro, inicio de sesión y perfil | Presentar formularios claros, estados de error y branding consistente |
+| MM-02 | Trip Management | Home, viajes y detalle | Facilitar la lectura del estado de cada operación |
+| MM-03 | Trip Preparation | Programación y asignación | Guiar paso a paso la preparación del viaje |
+| MM-04 | Fleet Management | Vehículos y conductores | Diferenciar recursos manteniendo componentes consistentes |
+| MM-05 | Incident Management | Registro y detalle de incidencias | Comunicar severidad y estado sin depender exclusivamente del color |
+| MM-06 | Operational History | Historial y desempeño | Priorizar trazabilidad y lectura cronológica |
+| MM-07 | Client Shipment Tracking | Mis envíos, progreso y eventos | Proporcionar visibilidad sin exponer controles administrativos |
+| MM-08 | Client History | Historial y filtros | Facilitar la localización de operaciones anteriores |
+
+[Imagen pendiente: MM-01 – Mock-ups de Authentication & Profile – elaborado en Figma]
+
+[Imagen pendiente: MM-02 – Mock-ups de Home y Trip Management para Carlos Mendoza – elaborado en Figma]
+
+[Imagen pendiente: MM-03 – Mock-ups de programación y asignación de recursos – elaborado en Figma]
+
+[Imagen pendiente: MM-04 – Mock-ups de Fleet Management – elaborado en Figma]
+
+[Imagen pendiente: MM-05 – Mock-ups de Incident Management – elaborado en Figma]
+
+[Imagen pendiente: MM-06 – Mock-ups de Operational History para Carlos Mendoza – elaborado en Figma]
+
+[Imagen pendiente: MM-07 – Mock-ups de seguimiento de envíos para Andrea Salazar – elaborado en Figma]
+
+[Imagen pendiente: MM-08 – Mock-ups de historial y filtrado para Andrea Salazar – elaborado en Figma]
+
+Los Mock-ups deberán conservar correspondencia directa con los Wireframes MW-01 a MW-08. Las diferencias entre ambos tipos de artefacto se limitarán a la incorporación de estilo visual, recursos gráficos, contenido representativo y estados de interacción, sin modificar arbitrariamente la arquitectura previamente definida.
+
+#### 3.1.4.4. Mobile Applications User Flow Diagrams
+
+Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. A diferencia de estos últimos, los User Flows emplearán los Mock-ups de alta fidelidad y representarán tanto el recorrido esperado o **happy path** como las decisiones y principales rutas alternativas o **unhappy paths**.
+
+| ID | User Persona | User Goal | Happy Path | Alternative / Unhappy Paths |
+|---|---|---|---|---|
+| UF-01 | Carlos Mendoza | Programar y preparar un viaje | Crear viaje → asignar ruta → seleccionar vehículo → seleccionar conductor → confirmar | Datos inválidos, vehículo no disponible, conductor no disponible |
+| UF-02 | Carlos Mendoza | Supervisar el ciclo de vida del viaje | Seleccionar viaje → consultar detalle → actualizar estado → registrar eventos → finalizar | Viaje inexistente, actualización inválida |
+| UF-03 | Carlos Mendoza | Gestionar incidencia | Seleccionar viaje → registrar incidencia → consultar detalle → actualizar estado | Datos incompletos, viaje inexistente |
+| UF-04 | Carlos Mendoza | Gestionar flota | Flota → seleccionar recurso → consultar/registrar/actualizar → confirmar | Datos inválidos, recurso inexistente |
+| UF-05 | Andrea Salazar | Consultar progreso | Mis envíos → seleccionar envío → consultar estado/ruta/progreso | Envío inexistente o no autorizado |
+| UF-06 | Andrea Salazar | Consultar eventos | Seleccionar envío → eventos → consultar incidencia | Sin eventos relevantes, acceso no autorizado |
+| UF-07 | Andrea Salazar | Consultar historial | Historial → aplicar criterios → revisar resultados → seleccionar operación | Sin coincidencias |
+
+**UF-01 – Programar y preparar un viaje**
+
+**Happy Path:** Carlos accede a Viajes, inicia la programación, registra los datos requeridos, selecciona una ruta, consulta los recursos disponibles, asigna un vehículo y conductor y confirma la operación.
+
+**Alternative / Unhappy Paths:** el sistema conserva la información válida y comunica claramente si existen datos incompletos o si el vehículo o conductor seleccionado no se encuentra disponible.
+
+[Imagen pendiente: UF-01 – User Flow del User Goal “Programar y preparar un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+
+**UF-02 – Supervisar el ciclo de vida de un viaje**
+
+**Happy Path:** Carlos consulta un viaje existente, revisa su estado y detalle, registra las actualizaciones correspondientes y finalmente marca la operación como finalizada.
+
+**Alternative / Unhappy Paths:** si el recurso consultado no está disponible o una actualización no cumple las reglas establecidas, el sistema comunica la situación sin modificar información válida previamente registrada.
+
+[Imagen pendiente: UF-02 – User Flow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+
+**UF-03 – Registrar y gestionar una incidencia**
+
+**Happy Path:** Carlos selecciona la operación, registra la incidencia correspondiente, verifica su detalle y posteriormente actualiza su estado cuando cambia la situación.
+
+**Alternative / Unhappy Paths:** se contemplan datos incompletos, información inválida o inexistencia del viaje asociado.
+
+[Imagen pendiente: UF-03 – User Flow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+
+**UF-04 – Gestionar vehículos y conductores**
+
+**Happy Path:** Carlos accede a Flota, selecciona vehículos o conductores y posteriormente consulta, registra o actualiza el recurso correspondiente.
+
+**Alternative / Unhappy Paths:** si los datos no cumplen las reglas establecidas, se mantiene la información anterior y se comunica el error antes de confirmar el cambio.
+
+[Imagen pendiente: UF-04 – User Flow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+
+**UF-05 – Consultar el progreso de un envío**
+
+**Happy Path:** Andrea accede a Mis envíos, selecciona una operación asociada a su organización y consulta su estado, ruta y progreso.
+
+**Alternative / Unhappy Paths:** si intenta consultar un envío no autorizado, el sistema deniega el acceso sin revelar información de la operación.
+
+[Imagen pendiente: UF-05 – User Flow del User Goal “Consultar el progreso de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+
+**UF-06 – Consultar eventos relevantes de un envío**
+
+**Happy Path:** Andrea selecciona su envío, accede a los eventos registrados y consulta el detalle de una incidencia relevante.
+
+**Alternative / Unhappy Paths:** cuando no existen eventos relevantes, la interfaz muestra el estado actual sin presentar información inexistente; si el evento no pertenece a una operación autorizada, se deniega el acceso.
+
+[Imagen pendiente: UF-06 – User Flow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+
+**UF-07 – Consultar operaciones anteriores**
+
+**Happy Path:** Andrea accede al historial, utiliza el mecanismo de filtrado disponible y selecciona una operación coincidente para revisar su información.
+
+**Alternative / Unhappy Paths:** si no existen operaciones que cumplan los criterios, la interfaz muestra un estado vacío y permite limpiar o modificar los filtros.
+
+[Imagen pendiente: UF-07 – User Flow del User Goal “Consultar operaciones anteriores” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+
+La trazabilidad entre los artefactos se conserva mediante la siguiente relación:
+
+| User Goal | Wireframes | Wireflow | Mock-ups | User Flow |
+|---|---|---|---|---|
+| Programar y preparar viaje | MW-02, MW-03 | WF-01 | MM-02, MM-03 | UF-01 |
+| Supervisar viaje | MW-02 | WF-02 | MM-02 | UF-02 |
+| Gestionar incidencia | MW-05 | WF-03 | MM-05 | UF-03 |
+| Gestionar flota | MW-04 | WF-04 | MM-04 | UF-04 |
+| Consultar progreso de envío | MW-07 | WF-05 | MM-07 | UF-05 |
+| Consultar eventos relevantes | MW-07 | WF-06 | MM-07 | UF-06 |
+| Consultar historial | MW-08 | WF-07 | MM-08 | UF-07 |
+
+#### 3.1.4.5. Mobile Applications Prototyping
+
+El prototipo interactivo de **Trakto Route** se elaborará en **Figma** a partir de los Mock-ups y User Flows definidos en las secciones anteriores. Su propósito es representar de manera navegable las principales interacciones de la aplicación Android antes de su implementación definitiva.
+
+El prototipo deberá cubrir principalmente los User Goals asociados al core del producto. Para el supervisor de flota, esto comprende la programación y preparación de viajes, la consulta y actualización de operaciones, la gestión de flota y el registro de incidencias. Para el cliente de transporte, deberá permitir consultar el progreso de un envío, revisar eventos relevantes y acceder al historial autorizado.
+
+Las decisiones de interacción consideradas incluyen:
+
+- Feedback inmediato después de acciones de registro o actualización.
+- Indicadores de carga cuando sea necesario recuperar información.
+- Confirmación antes de acciones de impacto, como finalizar una operación.
+- Mensajes de error próximos al elemento que requiere corrección.
+- Estados vacíos para listas sin información.
+- Estados diferenciados para viajes e incidencias.
+- Navegación coherente con el rol autenticado.
+- Preservación de la jerarquía definida en la Information Architecture.
+- Objetivos táctiles adecuados para la interacción móvil.
+- Uso de labels e iconografía comprensibles.
+- Transiciones discretas que apoyen la comprensión del cambio de estado.
+
+El prototipo no debe incorporar funcionalidades que no se encuentren respaldadas por las User Stories o por las decisiones de diseño establecidas en este capítulo.
+
+[Imagen pendiente: MP-01 – Vista general del prototipo interactivo Android de Trakto Route – elaborado en Figma]
+
+La figura MP-01 deberá mostrar la conexión general entre los principales grupos de pantallas y permitir identificar las rutas de navegación correspondientes a Carlos Mendoza y Andrea Salazar.
+
+[Enlace pendiente: MP-01 – Prototipo interactivo Android de Trakto Route en Figma]
+
+El enlace deberá dirigir al prototipo navegable utilizado para demostrar los flujos principales definidos en UF-01 a UF-07.
+
+[Imagen pendiente: MP-02 – Screenshot representativo del video de demostración del prototipo móvil]
+
+La captura MP-02 deberá mostrar un momento representativo del recorrido por uno de los User Goals core de Trakto Route.
+
+[Video pendiente: MP-02 – Video de demostración de navegación del prototipo móvil de Trakto Route]
+
+El video deberá demostrar y explicar los principales flujos de interacción del prototipo, manteniendo correspondencia con los Wireflows, Mock-ups y User Flow Diagrams documentados previamente.
+
+<div style="page-break-after: always;"></div>
+
+# Capítulo IV: Product Implementation & Validation
+
+## 4. Product Implementation & Validation
+
+En este capítulo se documenta el proceso mediante el cual **Trakto Route** evoluciona desde los requisitos, modelos de dominio y decisiones de UX/UI definidos en los capítulos anteriores hacia una solución de software implementada, comprobada, desplegada y posteriormente validada con representantes de los segmentos objetivo.
+
+La solución está conformada por tres productos digitales principales: el **Landing Page**, encargado de comunicar la propuesta de valor de Trakto Route; la **aplicación móvil Android**, desarrollada en Kotlin y orientada a la interacción de supervisores de flota y clientes; y los **RESTful Web Services**, desarrollados con Java y Spring Boot para centralizar las reglas de negocio, autenticación y operaciones correspondientes a los Bounded Contexts definidos mediante Domain-Driven Design.
+
+La persistencia central se realiza mediante **MySQL**. La aplicación Android no accede directamente a la base de datos, sino que consume los servicios ofrecidos por la REST API utilizando comunicación basada en HTTP/HTTPS y JSON. Esta separación conserva las responsabilidades establecidas previamente en los diagramas de arquitectura de software.
+
+El proceso de implementación se organiza mediante Sprints. Para la presente entrega se documenta el **Sprint 1**, cuyo alcance se encuentra definido a partir de las User Stories priorizadas en el Product Backlog. Las siguientes subsecciones presentan las decisiones de Software Configuration Management, el Sprint Planning, el Sprint Backlog y las evidencias que deberán demostrar implementación, pruebas, ejecución, documentación de servicios, despliegue y colaboración del equipo.
+
+Las evidencias de implementación mantienen como principio de trazabilidad la relación:
+
+**User Story → Sprint → Work-item → Commit → Test → Execution Evidence → Deployment → Validation.**
+
+<div style="page-break-after: always;"></div>
+
+### 4.1. Software Configuration Management
+
+El Software Configuration Management de **Trakto Route** establece las herramientas, convenciones y prácticas utilizadas por el equipo para mantener consistencia durante el desarrollo de los productos digitales. Este conjunto de decisiones comprende la configuración del entorno de desarrollo, el control de versiones mediante Git y GitHub, las convenciones de código y el esquema de deployment.
+
+Debido a que Trakto Route está compuesto por productos con responsabilidades diferentes, la configuración considera separadamente el Landing Page, la aplicación Android y los RESTful Web Services. No obstante, todos los productos comparten criterios relacionados con nomenclatura en inglés, gestión de versiones, trazabilidad de cambios y organización del código fuente.
+
+#### 4.1.1. Software Development Environment Configuration
+
+Las herramientas seleccionadas responden a las diferentes actividades realizadas durante el ciclo de vida del proyecto: Requirements Management, UX/UI Design, Architecture Design, Software Development, Source Code Management y Product Management.
+
+**Tabla 4.1**  
+*Software Development Environment Configuration de Trakto Route*
+
+| Category | Product | Version | Purpose | Reference |
+|---|---|---|---|---|
+| Product Management | Trello | SaaS | Organización y priorización del Product Backlog de Trakto Route. | https://trello.com/ |
+| UX Research | UXPressia | SaaS | Elaboración de User Personas, User Journey Maps y Empathy Maps. | https://uxpressia.com/ |
+| Collaborative Modeling | Miro | SaaS | Elaboración del Lean UX Canvas, Big Picture EventStorming y Candidate Context Discovery. | https://miro.com/ |
+| UX/UI Design | Figma | SaaS | Elaboración de Wireframes, Mock-ups y prototipos del Landing Page y aplicación móvil. | https://www.figma.com/ |
+| Software Architecture | Structurizr | SaaS / DSL | Elaboración de Context, Container, Deployment y Component Diagrams bajo C4 Model. | https://structurizr.com/ |
+| UML / Diagram-as-Code | PlantUML | [Versión pendiente de verificar] | Elaboración de Class Diagrams y Database Design Diagrams. | https://plantuml.com/ |
+| Mobile Development | Android Studio | [Versión pendiente de verificar en repositorio Android] | Desarrollo, compilación, ejecución y pruebas de la aplicación Android en Kotlin. | https://developer.android.com/studio |
+| Mobile Programming | Kotlin | [Versión pendiente de verificar] | Lenguaje utilizado para desarrollar la aplicación Android. | https://kotlinlang.org/ |
+| Backend Development | Spring Boot | [Versión pendiente de verificar en `pom.xml` o configuración del backend] | Implementación de RESTful Web Services y casos de uso del dominio. | https://spring.io/projects/spring-boot |
+| Backend Programming | Java | [Versión pendiente de verificar] | Lenguaje utilizado para implementar el backend. | https://www.java.com/ |
+| Database Management | MySQL | [Versión pendiente de verificar] | Persistencia central de usuarios, viajes, vehículos, conductores, incidencias e historial operativo. | https://www.mysql.com/ |
+| Source Code Management | Git | [Versión pendiente de verificar] | Control distribuido de versiones. | https://git-scm.com/ |
+| Repository Hosting | GitHub | SaaS | Alojamiento de repositorios y colaboración mediante branches y commits. | https://github.com/ |
+| API Documentation | OpenAPI / Swagger | [Versión pendiente de verificar en backend] | Documentación y comprobación de los endpoints REST implementados. | https://swagger.io/ |
+
+El Product Backlog ya se encuentra administrado mediante Trello y contiene las User Stories organizadas por prioridad, Story Points y Sprint. El enlace público documentado actualmente es:
+
+**Product Backlog:**  
+https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello
+
+Las versiones exactas correspondientes a Android Studio, Kotlin, Java, Spring Boot, MySQL y las herramientas de build deberán obtenerse directamente de los repositorios de implementación para mantener consistencia con la configuración realmente utilizada por el equipo.
+
+<div style="page-break-after: always;"></div>
+
+#### 4.1.2. Source Code Management
+
+El equipo utiliza **Git** como sistema distribuido de control de versiones y **GitHub** como plataforma para almacenar los repositorios, aislar el desarrollo de funcionalidades mediante branches y mantener trazabilidad entre las modificaciones realizadas y las funcionalidades del producto.
+
+Los productos de Trakto Route requieren repositorios independientes para evitar mezclar responsabilidades correspondientes al Landing Page, los RESTful Web Services y la aplicación Android.
+
+**Tabla 4.2**  
+*Repositorios de los productos de Trakto Route*
+
+| Product | Repository | Purpose |
+|---|---|---|
+| Landing Page | [URL pendiente: repositorio del Landing Page] | Código HTML, CSS, JavaScript y assets correspondientes al sitio público de Trakto Route. |
+| RESTful Web Services | [URL pendiente: repositorio del backend] | Backend Java/Spring Boot, REST API, persistencia y pruebas automatizadas. |
+| Android Mobile Application | [URL pendiente: repositorio de la aplicación Android] | Código Kotlin correspondiente a la experiencia móvil de Trakto Route. |
+
+Como recurso complementario, el informe del proyecto se encuentra bajo control de versiones en el siguiente repositorio:
+
+`https://github.com/1ACC0238-2620-4939/Report`
+
+El repositorio del informe no sustituye a los repositorios de los productos de software, pero permite mantener trazabilidad de la evolución de la documentación del proyecto.
+
+**GitFlow Workflow**
+
+Para la administración de branches se adopta **GitFlow**, manteniendo separación entre código estable, integración y desarrollo de funcionalidades.
+
+| Branch | Convention | Purpose |
+|---|---|---|
+| Main | `main` | Contener versiones estables del producto. |
+| Development | `develop` | Integrar funcionalidades que formarán parte de la siguiente versión. |
+| Feature | `feature/<short-description>` | Aislar la implementación de una funcionalidad específica. |
+| Release | `release/<version>` | Preparar una versión para su liberación. |
+| Hotfix | `hotfix/<short-description>` | Resolver errores críticos identificados sobre una versión estable. |
+
+Una funcionalidad nueva debe desarrollarse en un feature branch generado a partir de `develop`. Una vez revisada y comprobada, deberá integrarse nuevamente a `develop`. Las versiones preparadas para publicación se gestionarán mediante release branches, mientras que los hotfix branches se reservarán para correcciones críticas sobre una versión estable.
+
+[Imagen pendiente: SCM-01 – diagrama GitFlow utilizado por los repositorios de Trakto Route]
+
+**Figura 4.1**  
+*GitFlow utilizado por Trakto Route.*
+
+La figura deberá evidenciar la relación entre `main`, `develop`, `feature`, `release` y `hotfix`, así como el flujo esperado de integración de cambios.
+
+**Conventional Commits**
+
+Los mensajes de commit deben seguir la estructura propuesta por Conventional Commits:
+
+```text
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+**Tabla 4.3**  
+*Tipos de commits adoptados*
+
+| Type | Purpose | Example |
+|---|---|---|
+| `feat` | Incorporar una nueva funcionalidad. | `feat(trips): add trip scheduling` |
+| `fix` | Corregir un comportamiento defectuoso. | `fix(auth): handle invalid credentials` |
+| `docs` | Actualizar documentación. | `docs(api): update trip endpoints documentation` |
+| `style` | Modificar formato sin alterar comportamiento. | `style(mobile): format trip screen` |
+| `refactor` | Reestructurar código sin modificar su comportamiento externo. | `refactor(fleet): simplify vehicle mapper` |
+| `test` | Incorporar o modificar pruebas. | `test(trips): add trip service tests` |
+| `build` | Modificar configuración de build o dependencias. | `build(android): update project dependencies` |
+| `ci` | Modificar integración continua. | `ci(backend): configure build workflow` |
+| `chore` | Realizar tareas de mantenimiento. | `chore: update repository configuration` |
+
+Los ejemplos anteriores representan la **convención adoptada** y no constituyen evidencia de commits ya existentes.
+
+**Semantic Versioning**
+
+Para identificar releases se adopta Semantic Versioning bajo la estructura:
+
+```text
+MAJOR.MINOR.PATCH
+```
+
+- **MAJOR:** cambios incompatibles con una versión anterior.
+- **MINOR:** incorporación de funcionalidades compatibles.
+- **PATCH:** correcciones compatibles con versiones anteriores.
+
+Por ejemplo, `1.0.0` representa conceptualmente una primera versión estable. No obstante, las versiones reales de Trakto Route deberán obtenerse de los tags o releases de los repositorios.
+
+[Dato pendiente: tags/releases existentes en los repositorios de Trakto Route]
+
+<div style="page-break-after: always;"></div>
+
+#### 4.1.3. Source Code Style Guide & Conventions
+
+Las convenciones de programación tienen como propósito mantener una base de código legible y consistente entre los integrantes. La nomenclatura de clases, funciones, variables, endpoints y demás elementos del proyecto se realizará en inglés.
+
+**Tabla 4.4**  
+*Source Code Style Guide & Conventions*
+
+| Technology | Convention / Style Guide | Application in Trakto Route |
+|---|---|---|
+| Kotlin | Kotlin Coding Conventions | Aplicación Android. |
+| Java | Google Java Style Guide y convenciones de Spring Boot | RESTful Web Services. |
+| HTML5 | Convenciones de estructura semántica HTML | Landing Page. |
+| CSS3 | Convenciones de nomenclatura y organización de estilos | Landing Page. |
+| JavaScript | Nomenclatura consistente en inglés y `camelCase` | Interacciones del Landing Page. |
+| Gherkin | Given-When-Then | Acceptance Tests únicamente cuando existan archivos `.feature`. |
+
+**Kotlin**
+
+Las clases y objetos utilizan `PascalCase`.
+
+```kotlin
+class TripRepository
+class TripDetailsViewModel
+data class TripUiState(...)
+```
+
+Las funciones y variables utilizan `camelCase`.
+
+```kotlin
+fun loadTrips()
+fun scheduleTrip()
+val selectedTrip
+var isLoading
+```
+
+Las constantes utilizan `UPPER_SNAKE_CASE` cuando corresponda.
+
+```kotlin
+const val BASE_URL = "..."
+```
+
+Los packages se mantienen en minúsculas y organizados según las responsabilidades del proyecto.
+
+```text
+com.trakto.route
+com.trakto.route.trip
+com.trakto.route.fleet
+```
+
+**Java**
+
+Las clases, interfaces y enumeraciones utilizan `PascalCase`.
+
+```java
+TripController
+ScheduleTripCommand
+TripRepository
+TripStatus
+```
+
+Los métodos y variables utilizan `camelCase`.
+
+```java
+scheduleTrip()
+findById()
+updateStatus()
+```
+
+Las constantes utilizan `UPPER_SNAKE_CASE`.
+
+```java
+private static final String DEFAULT_STATUS = "SCHEDULED";
+```
+
+Los packages se expresan en minúsculas y deben reflejar de forma coherente los Bounded Contexts y capas definidas en el diseño táctico.
+
+**HTML**
+
+El Landing Page utiliza elementos semánticos cuando corresponda:
+
+```html
+<header>
+<nav>
+<main>
+<section>
+<footer>
+```
+
+Los tags y atributos se mantienen en minúsculas y la indentación debe permanecer consistente.
+
+**CSS**
+
+Los estilos deberán utilizar nombres descriptivos relacionados con la función del componente y evitar duplicaciones innecesarias.
+
+```css
+.hero-section {}
+.trip-feature-card {}
+.primary-button {}
+```
+
+**JavaScript**
+
+Las funciones y variables utilizan nomenclatura en inglés y `camelCase`.
+
+```javascript
+const navigationMenu = document.querySelector(...);
+
+function openNavigationMenu() {
+    ...
+}
+```
+
+**Gherkin**
+
+En caso de implementar Acceptance Tests bajo BDD, los criterios deben conservar la estructura:
+
+```gherkin
+Feature: Trip management
+
+  Scenario: Schedule a valid trip
+    Given ...
+    When ...
+    Then ...
+```
+
+Los archivos `.feature` deberán relacionarse con las Acceptance Criteria de las User Stories correspondientes y no crear comportamientos que no formen parte del Product Backlog.
+
+<div style="page-break-after: always;"></div>
+
+#### 4.1.4. Software Deployment Configuration
+
+La configuración de deployment mantiene la separación arquitectónica definida en el Capítulo II. La aplicación móvil funciona como cliente, los RESTful Web Services centralizan las reglas de negocio y MySQL mantiene la fuente persistente de información.
+
+**Tabla 4.5**  
+*Software Deployment Configuration*
+
+| Product / Component | Source Repository | Build | Deployment Target | Public URL / Distribution |
+|---|---|---|---|---|
+| Landing Page | [URL pendiente: repositorio Landing Page] | HTML5, CSS3 y JavaScript | [Dato pendiente: servicio de hosting público] | [URL pendiente: Landing Page desplegado] |
+| RESTful Web Services | [URL pendiente: repositorio backend] | Java / Spring Boot | [Dato pendiente: cloud runtime utilizado] | [URL pendiente: REST API desplegada] |
+| MySQL Database | No aplica como repositorio independiente | MySQL | [Dato pendiente: servidor o servicio de base de datos] | Acceso restringido desde backend |
+| Android Application | [URL pendiente: repositorio Android] | Kotlin / Android | Ejecución en dispositivo Android; distribución posterior mediante Firebase App Distribution o servicio equivalente | [URL/enlace de distribución pendiente] |
+
+Para el **Landing Page**, el deployment debe generar un sitio público accesible mediante navegador web.
+
+Para el **backend**, el proceso debe generar una instancia ejecutable de Spring Boot accesible mediante HTTPS. Las variables sensibles, como credenciales de base de datos, no deben incluirse directamente en el código fuente.
+
+La base de datos MySQL debe permanecer accesible únicamente por el backend y no por la aplicación Android.
+
+Para la aplicación móvil, la demostración del Sprint puede ejecutarse en un dispositivo físico o entorno Android configurado. La distribución formal deberá documentarse cuando se utilice Firebase App Distribution o un servicio equivalente.
+
+El Deployment Diagram previamente definido para Trakto Route representa esta separación.
+
+**Figura 4.2**  
+*Software Architecture Deployment Diagram de Trakto Route.*
+
+![Software Architecture Deployment Diagram - Trakto Route](assets/images/chapter2/software-architecture-deployment.png)
+
+El diagrama muestra al dispositivo Android como cliente de la solución, un entorno de ejecución encargado de alojar la REST API desarrollada con Spring Boot y un servidor MySQL utilizado como persistencia central. La comunicación entre la aplicación y el backend se realiza mediante HTTPS/JSON, mientras que el acceso a MySQL se concentra en la capa de infraestructura del backend.
+
+<div style="page-break-after: always;"></div>
+
+### 4.2. Landing Page & Mobile Application Implementation
+
+Esta sección documenta el avance de implementación de Trakto Route organizado por Sprint. Para la entrega TB1 se considera el **Sprint 1**, el cual concentra las primeras funcionalidades core relacionadas con autenticación, programación y consulta de viajes, registro de recursos de flota y asignación de conductor y vehículo.
+
+El alcance se obtiene directamente del Product Backlog establecido en el Capítulo II. De esta manera, las evidencias presentadas en Sprint Review deberán mantener correspondencia con las User Stories comprometidas y con los Work-items definidos por el equipo durante el Sprint Planning.
+
+#### 4.2.1. Sprint 1
+
+El Sprint 1 se centra en construir una primera base funcional del proceso de transporte. El Sprint comprende la posibilidad de registrar e iniciar sesión en el sistema y las capacidades fundamentales para que un supervisor pueda programar un viaje, consultar sus datos, asignar una ruta, registrar vehículos y conductores, asignar ambos recursos a una operación y mantener actualizado su estado.
+
+De acuerdo con el Product Backlog, el Sprint 1 está conformado por **12 User Stories**, que representan en conjunto **41 Story Points**.
+
+**Tabla 4.6**  
+*User Stories correspondientes al Sprint 1*
+
+| Order | User Story | Title | Story Points |
+|---:|---|---|---:|
+| 1 | US17 | Programar viaje | 5 |
+| 2 | US05 | Consultar viajes | 3 |
+| 3 | US06 | Consultar detalle de viaje | 3 |
+| 4 | US18 | Asignar ruta a un viaje | 3 |
+| 5 | US23 | Registrar vehículo | 3 |
+| 6 | US25 | Registrar conductor | 3 |
+| 7 | US27 | Asignar vehículo a un viaje | 5 |
+| 8 | US28 | Asignar conductor a un viaje | 5 |
+| 9 | US07 | Consultar estado del viaje | 2 |
+| 10 | US19 | Actualizar estado del viaje | 3 |
+| 11 | US01 | Registrar cuenta | 3 |
+| 12 | US02 | Iniciar sesión | 3 |
+|  |  | **Total** | **41** |
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.1. Sprint Planning 1
+
+El Sprint Planning 1 establece el alcance inicial de implementación y organiza el trabajo necesario para alcanzar un incremento funcional de Trakto Route. Debido a que corresponde al primer Sprint, no existe un Sprint Review ni Sprint Retrospective anterior que deban utilizarse como entrada.
+
+**Tabla 4.7**  
+*Sprint Planning 1*
+
+| Sprint # | Sprint 1 |
+|---|---|
+| **Sprint Planning Background** | |
+| Date | [Dato pendiente: fecha real del Sprint Planning 1] |
+| Time | [Dato pendiente: hora real de inicio] |
+| Location | [Dato pendiente: ubicación física o virtual] |
+| Prepared By | [Dato pendiente: integrante responsable de preparar el Sprint Planning] |
+| Attendees (to planning meeting) | Cesar Alejandro Linares Bernable / Aguilar Aguayo Jeferson Renzo / Fernandez Garfias, Alexander Piero / Chirito Torres, Jose Raul / Loa Rojas, Jean Franck |
+| Sprint 0 Review Summary | No aplica. Sprint 1 corresponde a la primera iteración de implementación del producto. |
+| Sprint 0 Retrospective Summary | No aplica. No existe una iteración anterior que deba ser evaluada. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Our focus is on enabling the fleet supervisor to create and prepare transport operations through an initial end-to-end trip management flow. We believe it delivers centralized operational control to transport companies by allowing authenticated users to schedule trips, assign routes, vehicles and drivers, and consult or update trip information. This will be confirmed when a supervisor can authenticate, create a trip, associate its required resources and consult its current state through the implemented solution. |
+| Sprint 1 Velocity | [Dato pendiente: Velocity acordada por el equipo para Sprint 1] |
+| Sum of Story Points | **41 Story Points** |
+
+El Sprint Goal no se limita al cumplimiento individual de User Stories. Su propósito es proporcionar un incremento coherente que permita comprobar el flujo base de gestión de una operación de transporte.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.2. Aspect Leaders and Collaborators
+
+Para establecer responsabilidades durante el Sprint se utiliza una **Leadership-and-Collaboration Matrix (LACX)**. Los aspectos deben relacionarse con el trabajo definido posteriormente en el Sprint Backlog.
+
+Para Sprint 1, los principales aspectos funcionales son **Landing Page**, **Authentication**, **Trip Management**, **Fleet Management**, **Backend & API** y **Testing & Integration**.
+
+**Tabla 4.8**  
+*Leadership-and-Collaboration Matrix del Sprint 1*
+
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page | Authentication | Trip Management | Fleet Management | Backend & API | Testing & Integration |
+|---|---|---|---|---|---|---|---|
+| Linares Bernable, Cesar Alejandro | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Aguilar Aguayo, Jeferson Renzo | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Fernandez Garfias, Alexander Piero | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Chirito Torres, Jose Raul | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Loa Rojas, Jean Franck | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+
+**Leyenda:** `L = Leader`, `C = Collaborator`.
+
+[Contenido pendiente: reemplazar las celdas L/C con la distribución real acordada por el equipo antes de la entrega]
+
+La asignación final debe mantener coherencia con los Work-items, responsables y commits que posteriormente se documenten en las evidencias del Sprint.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.3. Sprint Backlog 1
+
+El Sprint Backlog convierte el alcance establecido en Sprint Planning en actividades concretas. Las User Stories fueron seleccionadas desde el Product Backlog atendiendo al Sprint previamente definido.
+
+[Imagen pendiente: SB-01 – screenshot del Board utilizado para gestionar Sprint 1]
+
+**Figura 4.3**  
+*Board de gestión correspondiente al Sprint 1.*
+
+[URL pendiente: enlace público al Board específico del Sprint 1]
+
+**Tabla 4.9**  
+*Sprint Backlog 1*
+
+| User Story Id | User Story Title | Work-Item / Task Id | Work-Item / Task Title | Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---:|---|---|
+| US17 | Programar viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US05 | Consultar viajes | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US06 | Consultar detalle de viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US18 | Asignar ruta a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US23 | Registrar vehículo | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US25 | Registrar conductor | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US27 | Asignar vehículo a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US28 | Asignar conductor a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US07 | Consultar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US19 | Actualizar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US01 | Registrar cuenta | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US02 | Iniciar sesión | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+
+Los estados utilizados deberán corresponder a `To-do`, `In-Process`, `To-Review` o `Done`. Cada Work-item debe contar con estimación en horas y un responsable claramente identificado.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.4. Development Evidence for Sprint Review
+
+Esta sección evidencia los avances de implementación relacionados con el alcance definido para Sprint 1. La evidencia deberá demostrar la participación en los productos que forman parte de Trakto Route y mantener relación directa con las User Stories y Work-items del Sprint Backlog.
+
+**Landing Page**
+
+[Imagen pendiente: DEV-01 – captura del avance de implementación del Landing Page durante Sprint 1]
+
+**Figura 4.4**  
+*Avance de implementación del Landing Page durante Sprint 1.*
+
+La evidencia deberá mostrar las secciones implementadas del Landing Page y su correspondencia con los Wireframes y Mock-ups definidos en el Capítulo III.
+
+**Android Mobile Application**
+
+[Imagen pendiente: DEV-02 – captura del avance de implementación de la aplicación Android durante Sprint 1]
+
+**Figura 4.5**  
+*Avance de implementación de la aplicación Android durante Sprint 1.*
+
+La captura deberá evidenciar las principales pantallas implementadas para autenticación y gestión inicial de viajes.
+
+**RESTful Web Services**
+
+[Imagen pendiente: DEV-03 – evidencia de implementación de RESTful Web Services durante Sprint 1]
+
+**Figura 4.6**  
+*Avance de implementación de RESTful Web Services durante Sprint 1.*
+
+La evidencia deberá mostrar la implementación correspondiente a IAM, Trip Management y Fleet Management incluida en el alcance de Sprint 1.
+
+**Tabla 4.10**  
+*Commits relacionados con Development durante Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| [Repositorio Landing Page] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+
+[Contenido pendiente: sustituir las filas anteriores por todos los commits reales relacionados con la implementación del Sprint 1]
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.5. Testing Suite Evidence for Sprint Review
+
+La estrategia de Testing debe comprobar que las funcionalidades incluidas en Sprint 1 satisfacen los comportamientos especificados en sus User Stories y Acceptance Criteria.
+
+Para los RESTful Web Services, las evidencias deben distinguir **Unit Tests**, **Integration Tests** y, cuando corresponda, **Acceptance Tests** automatizados. Las pruebas de Android pueden complementar estas evidencias mediante Local Unit Tests, Instrumented Tests o UI Tests cuando estén implementados.
+
+**Tabla 4.11**  
+*Testing Suite correspondiente al Sprint 1*
+
+| Test ID | Product | Test Type | Related User Story | Tested Component / Behavior | Result |
+|---|---|---|---|---|---|
+| [TEST-ID] | Backend | Unit Test | US17 | Programación de un viaje con datos válidos | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Unit Test | US05 | Obtención de viajes registrados | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Unit Test | US06 | Obtención del detalle de un viaje | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US01 | Registro de una cuenta y persistencia del usuario | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US02 | Autenticación utilizando credenciales registradas | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US23 | Registro y persistencia de vehículo | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US25 | Registro y persistencia de conductor | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US27 | Asociación de vehículo con viaje | [Resultado real pendiente] |
+| [TEST-ID] | Backend | Integration Test | US28 | Asociación de conductor con viaje | [Resultado real pendiente] |
+| [TEST-ID] | Android | [Tipo de prueba real] | [US relacionada] | [Comportamiento realmente probado] | [Resultado real pendiente] |
+
+La tabla anterior identifica los comportamientos que requieren evidencia para el Sprint; los identificadores y resultados deberán sustituirse por los obtenidos de la suite real de pruebas.
+
+Cuando se implementen Acceptance Tests en Gherkin, deberá incorporarse el `.feature` realmente utilizado y explicar su relación con la User Story correspondiente.
+
+```gherkin
+[Contenido pendiente: incorporar aquí únicamente un escenario Gherkin real existente en el repositorio de Testing]
+```
+
+[Imagen pendiente: TEST-01 – ejecución de Unit Tests de los RESTful Web Services durante Sprint 1]
+
+**Figura 4.7**  
+*Ejecución de Unit Tests correspondiente al Sprint 1.*
+
+[Imagen pendiente: TEST-02 – ejecución de Integration Tests correspondiente al Sprint 1]
+
+**Figura 4.8**  
+*Ejecución de Integration Tests correspondiente al Sprint 1.*
+
+[Imagen pendiente: TEST-03 – ejecución de pruebas Android correspondiente al Sprint 1]
+
+**Figura 4.9**  
+*Ejecución de pruebas de la aplicación Android correspondiente al Sprint 1.*
+
+**Tabla 4.12**  
+*Commits relacionados con Testing durante Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit `test:` real] | [Body real] | [Fecha real] |
+| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
+
+[Contenido pendiente: sustituir con commits reales correspondientes a las pruebas implementadas]
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.6. Execution Evidence for Sprint Review
+
+La Execution Evidence permite demostrar que las funcionalidades desarrolladas durante Sprint 1 pueden ejecutarse e interactuar entre sí de acuerdo con el alcance definido.
+
+**Landing Page**
+
+[Imagen pendiente: EXE-01 – Landing Page de Trakto Route ejecutándose durante Sprint 1]
+
+**Figura 4.10**  
+*Landing Page de Trakto Route en ejecución.*
+
+La captura deberá mostrar la versión realmente implementada y permitir contrastarla con la propuesta visual documentada previamente.
+
+**Android Mobile Application**
+
+[Imagen pendiente: EXE-02 – aplicación Android Trakto Route ejecutándose durante Sprint 1]
+
+**Figura 4.11**  
+*Aplicación móvil Trakto Route en ejecución.*
+
+La evidencia deberá presentar las principales pantallas core alcanzadas durante Sprint 1, principalmente aquellas relacionadas con autenticación y gestión inicial de viajes.
+
+**Flujo integrado**
+
+[Imagen pendiente: EXE-03 – evidencia de interacción de la aplicación Android con los RESTful Web Services]
+
+**Figura 4.12**  
+*Interacción entre la aplicación Android y los RESTful Web Services.*
+
+La evidencia deberá demostrar que la aplicación consume información procedente de la API y que los datos persistentes no dependen únicamente del dispositivo móvil.
+
+[Video pendiente: EXE-04 – video de ejecución y navegación de las funcionalidades implementadas durante Sprint 1]
+
+**URL del video:** [URL pendiente]
+
+El video deberá mostrar de manera continua los principales flujos implementados durante el Sprint y explicar su correspondencia con las User Stories comprometidas.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.7. Services Documentation Evidence for Sprint Review
+
+La documentación de servicios presenta los endpoints REST implementados durante Sprint 1 y su relación con las User Stories.
+
+Debido a que las rutas exactas deben corresponder con los Controllers del repositorio backend, estas deberán obtenerse directamente del código y de la especificación OpenAPI antes de completar la entrega.
+
+**Tabla 4.13**  
+*RESTful Services incluidos en el alcance del Sprint 1*
+
+| Endpoint | HTTP Method | Purpose | Related User Story | Parameters / Request | Response | Documentation URL |
+|---|---|---|---|---|---|---|
+| [Ruta real pendiente] | [Método real] | Registrar una cuenta | US01 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Iniciar sesión | US02 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Consultar viajes | US05 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Consultar detalle de viaje | US06 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Consultar estado del viaje | US07 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Programar viaje | US17 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Asignar ruta | US18 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Actualizar estado | US19 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Registrar vehículo | US23 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Registrar conductor | US25 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Asignar vehículo | US27 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| [Ruta real pendiente] | [Método real] | Asignar conductor | US28 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+
+Para cada endpoint documentado deberán especificarse los parámetros, request body cuando corresponda, posibles códigos HTTP y un ejemplo del response.
+
+[Imagen pendiente: API-01 – Swagger/OpenAPI mostrando los endpoints implementados en Sprint 1]
+
+**Figura 4.13**  
+*Documentación OpenAPI de los RESTful Web Services.*
+
+[Imagen pendiente: API-02 – request y response correspondiente a un endpoint representativo del Sprint 1]
+
+**Figura 4.14**  
+*Ejemplo de interacción con un RESTful endpoint de Trakto Route.*
+
+**REST API Repository:**  
+[URL pendiente: repositorio de los RESTful Web Services]
+
+**OpenAPI / Swagger:**  
+[URL pendiente: URL pública o local utilizada durante Sprint 1]
+
+Si los RESTful Web Services todavía no se encuentran desplegados públicamente durante esta etapa, puede utilizarse la URL local realmente configurada en el proyecto. Esta URL no deberá presentarse como un deployment público.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.8. Software Deployment Evidence for Sprint Review
+
+Esta sección documenta únicamente las actividades de deployment realizadas durante Sprint 1. Debe diferenciarse de la configuración general presentada en 4.1.4, ya que aquí se incorporan evidencias concretas del trabajo ejecutado durante la iteración.
+
+Para TB1, el Landing Page debe encontrarse disponible públicamente. Las evidencias deberán mostrar el proceso utilizado para generar y publicar la versión correspondiente al Sprint.
+
+**Landing Page**
+
+[Imagen pendiente: DEP-S1-01 – configuración utilizada para desplegar el Landing Page durante Sprint 1]
+
+**Figura 4.15**  
+*Configuración de deployment del Landing Page.*
+
+[Imagen pendiente: DEP-S1-02 – Landing Page públicamente desplegado]
+
+**Figura 4.16**  
+*Landing Page desplegado durante Sprint 1.*
+
+**URL:**  
+[URL pendiente: Landing Page público]
+
+**RESTful Web Services**
+
+[Imagen pendiente: DEP-S1-03 – configuración del entorno de ejecución del backend durante Sprint 1]
+
+**Figura 4.17**  
+*Configuración del backend correspondiente al Sprint 1.*
+
+[Dato pendiente: especificar si durante Sprint 1 el backend se ejecuta localmente o se encuentra desplegado en un proveedor cloud]
+
+**Android Application**
+
+[Imagen pendiente: DEP-S1-04 – build o instalación de Trakto Route en Android durante Sprint 1]
+
+**Figura 4.18**  
+*Build de la aplicación Android correspondiente al Sprint 1.*
+
+La aplicación deberá presentarse instalada y ejecutándose en el entorno utilizado por el equipo. La distribución mediante Firebase App Distribution o servicio equivalente deberá incorporarse cuando corresponda a la etapa de publicación establecida en el proyecto.
+
+<div style="page-break-after: always;"></div>
+
+##### 4.2.1.9. Team Collaboration Insights during Sprint
+
+La colaboración durante Sprint 1 debe analizarse utilizando evidencias obtenidas de los repositorios y de la herramienta de gestión del Sprint. El análisis no debe limitarse a contabilizar commits, sino relacionar las contribuciones con los aspectos y responsabilidades definidos previamente en la Leadership-and-Collaboration Matrix.
+
+[Imagen pendiente: TC-01 – GitHub Contributors correspondiente a los repositorios utilizados durante Sprint 1]
+
+**Figura 4.19**  
+*Contribuciones del equipo durante Sprint 1.*
+
+[Imagen pendiente: TC-02 – GitHub Commit Activity correspondiente a Sprint 1]
+
+**Figura 4.20**  
+*Actividad de commits registrada durante Sprint 1.*
+
+[Imagen pendiente: TC-03 – actividad del Board utilizado durante Sprint 1]
+
+**Figura 4.21**  
+*Actividad colaborativa registrada en el Sprint Board.*
+
+Una vez incorporadas las evidencias, el equipo deberá analizar la distribución real del trabajo señalando qué productos o features concentraron mayor participación, cómo se relacionaron los líderes y colaboradores y si la contribución observada coincide con las responsabilidades definidas inicialmente.
+
+[Contenido pendiente: análisis de GitHub Insights y actividad real del equipo durante Sprint 1]
+
+<div style="page-break-after: always;"></div>
+
+### 4.3. Validation Interviews
+
+Las Validation Interviews tienen como finalidad evaluar la experiencia propuesta mediante la interacción de usuarios representativos de los segmentos objetivo con el Landing Page y la aplicación móvil de Trakto Route.
+
+A diferencia de las entrevistas realizadas durante Needfinding, estas sesiones no buscan descubrir inicialmente las necesidades del dominio, sino observar si la solución diseñada permite a los usuarios completar sus principales tareas de forma comprensible y consistente.
+
+La validación considera los dos segmentos definidos en el proyecto:
+
+1. **Empresas de transporte de carga**, representadas mediante el User Persona Carlos Mendoza.
+2. **Clientes que requieren servicios de transporte de carga**, representados mediante el User Persona Andrea Salazar.
+
+Las sesiones deberán evaluar tanto la comprensión del Landing Page como la ejecución de User Flows relevantes dentro de la aplicación móvil.
+
+#### 4.3.1. Diseño de Entrevistas
+
+Las sesiones de validación seguirán una estructura consistente para ambos segmentos. En primer lugar, se presentará brevemente el propósito de la sesión sin explicar anticipadamente cómo completar las tareas. Posteriormente, el participante interactuará con el Landing Page y con las funcionalidades asignadas de la aplicación.
+
+Durante la interacción, el entrevistador deberá observar las acciones realizadas, dudas, retrocesos, errores y comentarios espontáneos del participante. Una vez finalizadas las tareas, se realizarán preguntas orientadas a conocer la claridad, facilidad de navegación y percepción de la solución.
+
+**Tabla 4.14**  
+*Actividades previstas para las Validation Interviews*
+
+| Segment | Product | User Flow / Task | Validation Objective |
+|---|---|---|---|
+| Empresa de transporte de carga | Landing Page | Identificar qué problema resuelve Trakto Route y sus principales funcionalidades | Evaluar claridad de la propuesta de valor y encontrabilidad de información |
+| Empresa de transporte de carga | Mobile App | Iniciar sesión | Comprobar claridad del proceso de autenticación |
+| Empresa de transporte de carga | Mobile App | Programar un viaje | Evaluar comprensión del flujo y campos necesarios |
+| Empresa de transporte de carga | Mobile App | Asignar ruta, vehículo y conductor | Evaluar claridad del proceso de preparación de la operación |
+| Empresa de transporte de carga | Mobile App | Consultar y actualizar el estado de un viaje | Evaluar facilidad para supervisar una operación |
+| Cliente de transporte de carga | Landing Page | Identificar beneficios dirigidos al cliente | Evaluar si el Landing Page comunica adecuadamente el valor para este segmento |
+| Cliente de transporte de carga | Mobile App | Iniciar sesión | Evaluar facilidad de acceso |
+| Cliente de transporte de carga | Mobile App | Consultar un envío | Evaluar encontrabilidad de una operación autorizada |
+| Cliente de transporte de carga | Mobile App | Consultar progreso y ruta | Evaluar comprensión de la información operativa |
+| Cliente de transporte de carga | Mobile App | Consultar eventos relevantes | Evaluar claridad de eventos e incidencias visibles |
+
+**Preguntas introductorias**
+
+1. ¿Con qué frecuencia utiliza aplicaciones o plataformas digitales relacionadas con transporte, logística o seguimiento de operaciones?
+2. ¿Qué información espera encontrar rápidamente en una solución como Trakto Route?
+3. Cuando necesita conocer el estado de una operación de transporte, ¿qué información considera más importante?
+
+**Preguntas relacionadas con el Landing Page**
+
+1. ¿Cuál considera que es el principal propósito de Trakto Route después de revisar esta página?
+2. ¿Pudo identificar con facilidad las principales funcionalidades de la solución?
+3. ¿La información dirigida a su tipo de usuario resulta clara?
+4. ¿Hubo alguna sección cuyo contenido le resultara difícil de comprender o localizar?
+5. ¿Qué información adicional esperaría encontrar antes de utilizar la solución?
+
+**Preguntas posteriores a las tareas de la aplicación**
+
+1. ¿Qué tan claro resultó el recorrido para completar la tarea?
+2. ¿En algún momento no supo qué acción realizar a continuación?
+3. ¿Las etiquetas utilizadas representaron adecuadamente las acciones disponibles?
+4. ¿La información mostrada fue suficiente para tomar una decisión?
+5. ¿Hubo algún elemento que le generara confusión?
+6. ¿Qué modificaría para completar la tarea con menor esfuerzo?
+7. ¿Considera que los mensajes de confirmación o error fueron suficientemente claros?
+8. ¿Utilizaría este flujo en una operación real? ¿Por qué?
+
+Las respuestas deberán analizarse conjuntamente con la observación del comportamiento durante la ejecución de las tareas.
+
+<div style="page-break-after: always;"></div>
+
+#### 4.3.2. Registro de Entrevistas
+
+El proceso de validación requiere realizar entre **3 y 5 entrevistas por cada segmento objetivo**. Cada sesión debe registrarse en video y documentar los datos del participante, timing y duración.
+
+##### Segmento 1: Empresas de transporte de carga
+
+###### Entrevista de validación 1
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Empresa de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-01 – screenshot de la entrevista de validación 1]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar únicamente con las apreciaciones reales obtenidas durante la entrevista]
+
+---
+
+###### Entrevista de validación 2
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Empresa de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-02 – screenshot de la entrevista de validación 2]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+---
+
+###### Entrevista de validación 3
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Empresa de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-03 – screenshot de la entrevista de validación 3]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+##### Segmento 2: Clientes que requieren servicios de transporte de carga
+
+###### Entrevista de validación 4
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Cliente de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-04 – screenshot de la entrevista de validación 4]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+---
+
+###### Entrevista de validación 5
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Cliente de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-05 – screenshot de la entrevista de validación 5]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+---
+
+###### Entrevista de validación 6
+
+| Elemento | Información |
+|---|---|
+| Nombres y apellidos | [Dato pendiente] |
+| Edad | [Dato pendiente] |
+| Distrito | [Dato pendiente] |
+| Segmento | Cliente de transporte de carga |
+| Fecha | [Dato pendiente] |
+| Inicio en video | [Dato pendiente: hh:mm:ss] |
+| Duración | [Dato pendiente] |
+| URL | [URL pendiente] |
+
+[Imagen pendiente: VAL-06 – screenshot de la entrevista de validación 6]
+
+**Resumen de la entrevista**
+
+[Contenido pendiente: completar con información obtenida de la entrevista real]
+
+<div style="page-break-after: always;"></div>
+
+#### 4.3.3. Evaluaciones según heurísticas
+
+Las sesiones de validación deberán complementarse mediante la evaluación de la experiencia siguiendo el formato establecido en el **Anexo E: UX Heuristics & Principles Evaluation** del enunciado del proyecto.
+
+El análisis considera tres dimensiones:
+
+- **Usability.**
+- **Inclusive Design.**
+- **Information Architecture.**
+
+Los hallazgos deben derivarse de problemas observados durante la interacción con el Landing Page y la aplicación. No deben registrarse problemas hipotéticos como si hubieran sido identificados por participantes reales.
+
+**Escala de severidad**
+
+**Tabla 4.15**  
+*Escala de severidad para la evaluación heurística*
+
+| Nivel | Descripción |
+|---:|---|
+| **1** | **Problema superficial:** puede ser superado fácilmente por el usuario y ocurre con poca frecuencia. No requiere una corrección inmediata salvo disponibilidad de tiempo. |
+| **2** | **Problema menor:** puede ocurrir con mayor frecuencia o requerir mayor esfuerzo por parte del usuario. Debe considerarse una prioridad baja para la siguiente release. |
+| **3** | **Problema mayor:** ocurre frecuentemente o impide a algunos usuarios resolver adecuadamente una tarea. Su corrección requiere prioridad alta. |
+| **4** | **Problema muy grave:** tiene un impacto considerable e impide que el usuario continúe utilizando correctamente la experiencia. Debe corregirse antes del lanzamiento. |
+
+**Tabla resumen**
+
+**Tabla 4.16**  
+*Resumen de problemas identificados durante las Validation Interviews*
+
+| # | Problema | Escala de severidad | Heurística / Principio violada(o) |
+|---:|---|---:|---|
+| 1 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 2 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 3 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 4 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+| 5 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
+
+Los nombres de las heurísticas y principios deberán corresponder exactamente a los establecidos en el formato oficial del Anexo E, evitando crear denominaciones propias.
+
+**Descripción de problemas**
+
+##### Problema #1: [Nombre del problema identificado]
+
+**Severidad:** [1-4]
+
+**Heurística / Principio violada(o):**  
+[Denominación correspondiente al Anexo E]
+
+**Problema**
+
+[Contenido pendiente: describir el comportamiento observado, la tarea que intentaba realizar el participante y la consecuencia del problema]
+
+[Imagen pendiente: HEU-01 – captura que evidencia el Problema #1]
+
+**Recomendación**
+
+[Contenido pendiente: propuesta concreta para resolver el problema sin alterar innecesariamente el flujo]
+
+---
+
+##### Problema #2: [Nombre del problema identificado]
+
+**Severidad:** [1-4]
+
+**Heurística / Principio violada(o):**  
+[Denominación correspondiente al Anexo E]
+
+**Problema**
+
+[Contenido pendiente: descripción basada en evidencia real]
+
+[Imagen pendiente: HEU-02 – captura que evidencia el Problema #2]
+
+**Recomendación**
+
+[Contenido pendiente: recomendación de mejora]
+
+---
+
+##### Problema #3: [Nombre del problema identificado]
+
+**Severidad:** [1-4]
+
+**Heurística / Principio violada(o):**  
+[Denominación correspondiente al Anexo E]
+
+**Problema**
+
+[Contenido pendiente: descripción basada en evidencia real]
+
+[Imagen pendiente: HEU-03 – captura que evidencia el Problema #3]
+
+**Recomendación**
+
+[Contenido pendiente: recomendación de mejora]
+
+Una vez finalizadas las sesiones, los hallazgos deberán contrastarse entre ambos segmentos para identificar problemas recurrentes y diferencias relacionadas con sus respectivos User Goals. Las mejoras priorizadas deberán considerar primero los problemas de severidad 4 y 3, y posteriormente aquellos de severidad 2 y 1.
 
 
 # Anexos
