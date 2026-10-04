@@ -4462,9 +4462,9 @@ El Landing Page y el backend se despliegan mediante Railway. Las evidencias regi
 
 | Producto | Configuración y resultado | Enlace |
 |---|---|---|
-| Landing Page | [Configuración del servicio y estado del despliegue] | [Sitio publicado](URL_LANDING) |
-| Backend | [Configuración de ejecución, conexión a MySQL y estado del despliegue] | [REST API](URL_BACKEND) |
-| Aplicación Android | [APK generado e instalado, o pendiente] | [APK de la entrega](URL_APK) |
+| Landing Page | Sitio estático desarrollado con HTML y CSS, desplegado en Railway desde su repositorio de GitHub. | [Sitio publicado](URL_LANDING) |
+| Backend | Servicios REST desarrollados con Java y Spring Boot, conectados a MySQL y desplegados en Railway. La conexión y las credenciales se configuran mediante variables de entorno. | [REST API](URL_BACKEND) |
+| Aplicación Android | Aplicación desarrollada con Kotlin y Jetpack Compose, compilada en Android Studio. [Indicar si se ejecutó en emulador o dispositivo y si se generó el APK]. | [APK de la entrega](URL_APK) |
 
 **Railway:** servicios configurados y estado del despliegue.
 
@@ -4494,65 +4494,23 @@ Las capturas de GitHub muestran la distribución de contribuciones en cada produ
 
 ### 4.3. Validation Interviews
 
-Las Validation Interviews tienen como finalidad evaluar la experiencia propuesta mediante la interacción de usuarios representativos de los segmentos objetivo con el Landing Page y la aplicación móvil de Trakto Route.
-
-A diferencia de las entrevistas realizadas durante Needfinding, estas sesiones no buscan descubrir inicialmente las necesidades del dominio, sino observar si la solución diseñada permite a los usuarios completar sus principales tareas de forma comprensible y consistente.
-
-La validación considera los dos segmentos definidos en el proyecto:
-
-1. **Empresas de transporte de carga**, representadas mediante el User Persona Carlos Mendoza.
-2. **Clientes que requieren servicios de transporte de carga**, representados mediante el User Persona Andrea Salazar.
-
-Las sesiones deberán evaluar tanto la comprensión del Landing Page como la ejecución de User Flows relevantes dentro de la aplicación móvil.
+La validación de Trakto Route considera entrevistas con representantes de las empresas de transporte y los clientes que contratan sus servicios. Las sesiones permiten evaluar la comprensión del Landing Page y la facilidad de uso de la aplicación, identificando oportunidades de mejora.
 
 #### 4.3.1. Diseño de Entrevistas
 
-Las sesiones de validación seguirán una estructura consistente para ambos segmentos. En primer lugar, se presentará brevemente el propósito de la sesión sin explicar anticipadamente cómo completar las tareas. Posteriormente, el participante interactuará con el Landing Page y con las funcionalidades asignadas de la aplicación.
+Se realizarán entre 3 y 5 entrevistas por segmento. Cada participante interactuará con el Landing Page y las pantallas disponibles de la aplicación. Cuando se utilice un prototipo, se indicará expresamente.
 
-Durante la interacción, el entrevistador deberá observar las acciones realizadas, dudas, retrocesos, errores y comentarios espontáneos del participante. Una vez finalizadas las tareas, se realizarán preguntas orientadas a conocer la claridad, facilidad de navegación y percepción de la solución.
+| Segmento | Tareas de validación |
+|---|---|
+| Empresas de transporte | Identificar la propuesta de valor en el Landing Page; recorrer el inicio de sesión; consultar viajes y sus estados; localizar información de conductores y vehículos; consultar el perfil. |
+| Clientes de transporte | Identificar los beneficios del producto en el Landing Page; recorrer el inicio de sesión; consultar la información de un viaje autorizado y su estado; consultar el perfil. |
 
-**Tabla 4.14**  
-*Actividades previstas para las Validation Interviews*
+Se observarán los pasos completados, las dificultades y la ayuda requerida. Al finalizar, se formularán las siguientes preguntas:
 
-| Segment | Product | User Flow / Task | Validation Objective |
-|---|---|---|---|
-| Empresa de transporte de carga | Landing Page | Identificar qué problema resuelve Trakto Route y sus principales funcionalidades | Evaluar claridad de la propuesta de valor y encontrabilidad de información |
-| Empresa de transporte de carga | Mobile App | Iniciar sesión | Comprobar claridad del proceso de autenticación |
-| Empresa de transporte de carga | Mobile App | Programar un viaje | Evaluar comprensión del flujo y campos necesarios |
-| Empresa de transporte de carga | Mobile App | Asignar ruta, vehículo y conductor | Evaluar claridad del proceso de preparación de la operación |
-| Empresa de transporte de carga | Mobile App | Consultar y actualizar el estado de un viaje | Evaluar facilidad para supervisar una operación |
-| Cliente de transporte de carga | Landing Page | Identificar beneficios dirigidos al cliente | Evaluar si el Landing Page comunica adecuadamente el valor para este segmento |
-| Cliente de transporte de carga | Mobile App | Iniciar sesión | Evaluar facilidad de acceso |
-| Cliente de transporte de carga | Mobile App | Consultar un envío | Evaluar encontrabilidad de una operación autorizada |
-| Cliente de transporte de carga | Mobile App | Consultar progreso y ruta | Evaluar comprensión de la información operativa |
-| Cliente de transporte de carga | Mobile App | Consultar eventos relevantes | Evaluar claridad de eventos e incidencias visibles |
-
-**Preguntas introductorias**
-
-1. ¿Con qué frecuencia utiliza aplicaciones o plataformas digitales relacionadas con transporte, logística o seguimiento de operaciones?
-2. ¿Qué información espera encontrar rápidamente en una solución como Trakto Route?
-3. Cuando necesita conocer el estado de una operación de transporte, ¿qué información considera más importante?
-
-**Preguntas relacionadas con el Landing Page**
-
-1. ¿Cuál considera que es el principal propósito de Trakto Route después de revisar esta página?
-2. ¿Pudo identificar con facilidad las principales funcionalidades de la solución?
-3. ¿La información dirigida a su tipo de usuario resulta clara?
-4. ¿Hubo alguna sección cuyo contenido le resultara difícil de comprender o localizar?
-5. ¿Qué información adicional esperaría encontrar antes de utilizar la solución?
-
-**Preguntas posteriores a las tareas de la aplicación**
-
-1. ¿Qué tan claro resultó el recorrido para completar la tarea?
-2. ¿En algún momento no supo qué acción realizar a continuación?
-3. ¿Las etiquetas utilizadas representaron adecuadamente las acciones disponibles?
-4. ¿La información mostrada fue suficiente para tomar una decisión?
-5. ¿Hubo algún elemento que le generara confusión?
-6. ¿Qué modificaría para completar la tarea con menor esfuerzo?
-7. ¿Considera que los mensajes de confirmación o error fueron suficientemente claros?
-8. ¿Utilizaría este flujo en una operación real? ¿Por qué?
-
-Las respuestas deberán analizarse conjuntamente con la observación del comportamiento durante la ejecución de las tareas.
+- ¿Qué entiende que ofrece Trakto Route?
+- ¿Fue sencillo encontrar la información solicitada?
+- ¿Qué etiquetas o acciones le resultaron confusas?
+- ¿Qué cambiaría para facilitar su uso?
 
 <div style="page-break-after: always;"></div>
 
@@ -4690,101 +4648,20 @@ El proceso de validación requiere realizar entre **3 y 5 entrevistas por cada s
 
 #### 4.3.3. Evaluaciones según heurísticas
 
-Las sesiones de validación deberán complementarse mediante la evaluación de la experiencia siguiendo el formato establecido en el **Anexo E: UX Heuristics & Principles Evaluation** del enunciado del proyecto.
+Las sesiones se evaluarán mediante el formato establecido en el Anexo E. El análisis considerará usabilidad, arquitectura de información y diseño inclusivo.
 
-El análisis considera tres dimensiones:
+| Criterio | Aspectos observados |
+|---|---|
+| Usabilidad | Claridad de las acciones, respuesta de la interfaz, consistencia y recuperación ante errores. |
+| Arquitectura de información | Organización del contenido, comprensión de etiquetas y facilidad de navegación y búsqueda. |
+| Diseño inclusivo | Legibilidad, contraste, tamaño de controles e información que no dependa únicamente del color. |
 
-- **Usability.**
-- **Inclusive Design.**
-- **Information Architecture.**
+Cada hallazgo registrará la tarea y pantalla afectadas, la evidencia, la heurística correspondiente, la severidad según el Anexo E y la mejora propuesta.
 
-Los hallazgos deben derivarse de problemas observados durante la interacción con el Landing Page y la aplicación. No deben registrarse problemas hipotéticos como si hubieran sido identificados por participantes reales.
+![Trakto Route - Evaluación heurística](assets/images/chapter4/validation-heuristic-evaluation.png)
 
-**Escala de severidad**
+**Formato completado:** [Evaluación según el Anexo E](URL_EVALUACION_HEURISTICA).
 
-**Tabla 4.15**  
-*Escala de severidad para la evaluación heurística*
-
-| Nivel | Descripción |
-|---:|---|
-| **1** | **Problema superficial:** puede ser superado fácilmente por el usuario y ocurre con poca frecuencia. No requiere una corrección inmediata salvo disponibilidad de tiempo. |
-| **2** | **Problema menor:** puede ocurrir con mayor frecuencia o requerir mayor esfuerzo por parte del usuario. Debe considerarse una prioridad baja para la siguiente release. |
-| **3** | **Problema mayor:** ocurre frecuentemente o impide a algunos usuarios resolver adecuadamente una tarea. Su corrección requiere prioridad alta. |
-| **4** | **Problema muy grave:** tiene un impacto considerable e impide que el usuario continúe utilizando correctamente la experiencia. Debe corregirse antes del lanzamiento. |
-
-**Tabla resumen**
-
-**Tabla 4.16**  
-*Resumen de problemas identificados durante las Validation Interviews*
-
-| # | Problema | Escala de severidad | Heurística / Principio violada(o) |
-|---:|---|---:|---|
-| 1 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 2 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 3 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 4 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 5 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-
-Los nombres de las heurísticas y principios deberán corresponder exactamente a los establecidos en el formato oficial del Anexo E, evitando crear denominaciones propias.
-
-**Descripción de problemas**
-
-##### Problema #1: [Nombre del problema identificado]
-
-**Severidad:** [1-4]
-
-**Heurística / Principio violada(o):**  
-[Denominación correspondiente al Anexo E]
-
-**Problema**
-
-[Contenido pendiente: describir el comportamiento observado, la tarea que intentaba realizar el participante y la consecuencia del problema]
-
-[Imagen pendiente: HEU-01 – captura que evidencia el Problema #1]
-
-**Recomendación**
-
-[Contenido pendiente: propuesta concreta para resolver el problema sin alterar innecesariamente el flujo]
-
----
-
-##### Problema #2: [Nombre del problema identificado]
-
-**Severidad:** [1-4]
-
-**Heurística / Principio violada(o):**  
-[Denominación correspondiente al Anexo E]
-
-**Problema**
-
-[Contenido pendiente: descripción basada en evidencia real]
-
-[Imagen pendiente: HEU-02 – captura que evidencia el Problema #2]
-
-**Recomendación**
-
-[Contenido pendiente: recomendación de mejora]
-
----
-
-##### Problema #3: [Nombre del problema identificado]
-
-**Severidad:** [1-4]
-
-**Heurística / Principio violada(o):**  
-[Denominación correspondiente al Anexo E]
-
-**Problema**
-
-[Contenido pendiente: descripción basada en evidencia real]
-
-[Imagen pendiente: HEU-03 – captura que evidencia el Problema #3]
-
-**Recomendación**
-
-[Contenido pendiente: recomendación de mejora]
-
-Una vez finalizadas las sesiones, los hallazgos deberán contrastarse entre ambos segmentos para identificar problemas recurrentes y diferencias relacionadas con sus respectivos User Goals. Las mejoras priorizadas deberán considerar primero los problemas de severidad 4 y 3, y posteriormente aquellos de severidad 2 y 1.
 
 
 # Anexos
