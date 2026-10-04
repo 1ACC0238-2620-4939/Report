@@ -4392,255 +4392,105 @@ Los estados utilizados son `Todo`, `InProcess`, `To-Review` y `Done`.
 
 ##### 4.2.1.4. Development Evidence for Sprint Review
 
-Esta sección evidencia los avances de implementación relacionados con el alcance definido para Sprint 1. La evidencia deberá demostrar la participación en los productos que forman parte de Trakto Route y mantener relación directa con las User Stories y Work-items del Sprint Backlog.
+Durante el Sprint 1 se alcanzó aproximadamente un 70 % de avance del backend, se desarrolló la primera versión de la aplicación Android y se completaron los prototipos y el Landing Page. Los commits relacionados se presentan a continuación.
 
-**Landing Page**
-
-[Imagen pendiente: DEV-01 – captura del avance de implementación del Landing Page durante Sprint 1]
-
-**Figura 4.4**  
-*Avance de implementación del Landing Page durante Sprint 1.*
-
-La evidencia deberá mostrar las secciones implementadas del Landing Page y su correspondencia con los Wireframes y Mock-ups definidos en el Capítulo III.
-
-**Android Mobile Application**
-
-[Imagen pendiente: DEV-02 – captura del avance de implementación de la aplicación Android durante Sprint 1]
-
-**Figura 4.5**  
-*Avance de implementación de la aplicación Android durante Sprint 1.*
-
-La captura deberá evidenciar las principales pantallas implementadas para autenticación y gestión inicial de viajes.
-
-**RESTful Web Services**
-
-[Imagen pendiente: DEV-03 – evidencia de implementación de RESTful Web Services durante Sprint 1]
-
-**Figura 4.6**  
-*Avance de implementación de RESTful Web Services durante Sprint 1.*
-
-La evidencia deberá mostrar la implementación correspondiente a IAM, Trip Management y Fleet Management incluida en el alcance de Sprint 1.
-
-**Tabla 4.10**  
-*Commits relacionados con Development durante Sprint 1*
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-|---|---|---|---|---|---|
-| [Repositorio Landing Page] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-
-[Contenido pendiente: sustituir las filas anteriores por todos los commits reales relacionados con la implementación del Sprint 1]
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|---|---|---|---|---|
+| 1ACC0238-2620-4939/front | main | f261c1b | feat(ui): add core screens and bottom navigation | 2026-10-03 |
+| 1ACC0238-2620-4939/front | main | 85c1c05 | feat(fleet): add views for list driver and vehicles | 2026-10-03 |
+| 1ACC0238-2620-4939/front | main | 9e42c38 | feat(profile): add views for profile | 2026-10-03 |
+| 1ACC0238-2620-4939/front | main | 747bc3c | fix(ui): apply brand palette and correct app background | 2026-10-03 |
+| 1ACC0238-2620-4939/front | main | fe46c7a | feat(branding): add Trakto Route launcher icon | 2026-10-03 |
+| 1ACC0238-2620-4939/landing-page | main | 7c87668 | feat: add styles for Trakto Route landing page | 2026-10-02 |
+| 1ACC0238-2620-4939/landing-page | main | 86beed9 | feat: add image logo | 2026-10-02 |
+| 1ACC0238-2620-4939/landing-page | main | c2d28f9 | docs(landing): connect public project resources | 2026-10-03 |
+| 1ACC0238-2620-4939/landing-page | main | 5e72057 | docs(landing): add tb1 visual evidence | 2026-10-03 |
+| 1ACC0238-2620-4939/backend | main | 70f68aa | feat(fleet): add driver and vehicle command and query controllers | 2026-10-02 |
+| 1ACC0238-2620-4939/backend | main | bc5b6bc | feat(tracking): add aggregates,value objects, domain events and entities | 2026-10-03 |
+| 1ACC0238-2620-4939/backend | main | 494a74b | feat(tracking): add commands and queries services | 2026-10-03 |
+| 1ACC0238-2620-4939/backend | main | 9d27de5 | feat(profile): add domain, infrastructure and application for profile management | 2026-10-03 |
+| 1ACC0238-2620-4939/backend | main | 5238676 | feat(profile): add resources,controllers and assemblers for profile management | 2026-10-03 |
+| 1ACC0238-2620-4939/backend | main | d85705e | refactor(shared): update documentation for swagger | 2026-10-03 |
+| 1ACC0238-2620-4939/backend | main | e11a4ff | chore(deployment): make backend build reproducible | 2026-10-03 |
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-La estrategia de Testing debe comprobar que las funcionalidades incluidas en Sprint 1 satisfacen los comportamientos especificados en sus User Stories y Acceptance Criteria.
-
-Para los RESTful Web Services, las evidencias deben distinguir **Unit Tests**, **Integration Tests** y, cuando corresponda, **Acceptance Tests** automatizados. Las pruebas de Android pueden complementar estas evidencias mediante Local Unit Tests, Instrumented Tests o UI Tests cuando estén implementados.
-
-**Tabla 4.11**  
-*Testing Suite correspondiente al Sprint 1*
-
-| Test ID | Product | Test Type | Related User Story | Tested Component / Behavior | Result |
-|---|---|---|---|---|---|
-| [TEST-ID] | Backend | Unit Test | US17 | Programación de un viaje con datos válidos | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Unit Test | US05 | Obtención de viajes registrados | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Unit Test | US06 | Obtención del detalle de un viaje | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US01 | Registro de una cuenta y persistencia del usuario | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US02 | Autenticación utilizando credenciales registradas | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US23 | Registro y persistencia de vehículo | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US25 | Registro y persistencia de conductor | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US27 | Asociación de vehículo con viaje | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US28 | Asociación de conductor con viaje | [Resultado real pendiente] |
-| [TEST-ID] | Android | [Tipo de prueba real] | [US relacionada] | [Comportamiento realmente probado] | [Resultado real pendiente] |
-
-La tabla anterior identifica los comportamientos que requieren evidencia para el Sprint; los identificadores y resultados deberán sustituirse por los obtenidos de la suite real de pruebas.
-
-Cuando se implementen Acceptance Tests en Gherkin, deberá incorporarse el `.feature` realmente utilizado y explicar su relación con la User Story correspondiente.
-
-```gherkin
-[Contenido pendiente: incorporar aquí únicamente un escenario Gherkin real existente en el repositorio de Testing]
-```
-
-[Imagen pendiente: TEST-01 – ejecución de Unit Tests de los RESTful Web Services durante Sprint 1]
-
-**Figura 4.7**  
-*Ejecución de Unit Tests correspondiente al Sprint 1.*
-
-[Imagen pendiente: TEST-02 – ejecución de Integration Tests correspondiente al Sprint 1]
-
-**Figura 4.8**  
-*Ejecución de Integration Tests correspondiente al Sprint 1.*
-
-[Imagen pendiente: TEST-03 – ejecución de pruebas Android correspondiente al Sprint 1]
-
-**Figura 4.9**  
-*Ejecución de pruebas de la aplicación Android correspondiente al Sprint 1.*
-
-**Tabla 4.12**  
-*Commits relacionados con Testing durante Sprint 1*
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-|---|---|---|---|---|---|
-| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit `test:` real] | [Body real] | [Fecha real] |
-| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-
-[Contenido pendiente: sustituir con commits reales correspondientes a las pruebas implementadas]
+Durante el Sprint 1 no se implementaron pruebas automatizadas unitarias, de integración ni de aceptación. Su implementación queda pendiente para los siguientes Sprints, priorizando los servicios de viajes, conductores y vehículos.
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.6. Execution Evidence for Sprint Review
 
-La Execution Evidence permite demostrar que las funcionalidades desarrolladas durante Sprint 1 pueden ejecutarse e interactuar entre sí de acuerdo con el alcance definido.
+Las capturas muestran el Landing Page y las pantallas implementadas en la primera versión de Android.
 
-**Landing Page**
+**Landing Page:** presentación de la propuesta de valor y navegación entre secciones.
 
-[Imagen pendiente: EXE-01 – Landing Page de Trakto Route ejecutándose durante Sprint 1]
+![Trakto Route - Landing Page Sprint 1](assets/images/chapter4/sprint-1-landing-execution.png)
 
-**Figura 4.10**  
-*Landing Page de Trakto Route en ejecución.*
+**Aplicación Android:** pantallas iniciales y navegación implementada.
 
-La captura deberá mostrar la versión realmente implementada y permitir contrastarla con la propuesta visual documentada previamente.
+![Trakto Route - Aplicación Android Sprint 1](assets/images/chapter4/sprint-1-app-execution.png)
 
-**Android Mobile Application**
-
-[Imagen pendiente: EXE-02 – aplicación Android Trakto Route ejecutándose durante Sprint 1]
-
-**Figura 4.11**  
-*Aplicación móvil Trakto Route en ejecución.*
-
-La evidencia deberá presentar las principales pantallas core alcanzadas durante Sprint 1, principalmente aquellas relacionadas con autenticación y gestión inicial de viajes.
-
-**Flujo integrado**
-
-[Imagen pendiente: EXE-03 – evidencia de interacción de la aplicación Android con los RESTful Web Services]
-
-**Figura 4.12**  
-*Interacción entre la aplicación Android y los RESTful Web Services.*
-
-La evidencia deberá demostrar que la aplicación consume información procedente de la API y que los datos persistentes no dependen únicamente del dispositivo móvil.
-
-[Video pendiente: EXE-04 – video de ejecución y navegación de las funcionalidades implementadas durante Sprint 1]
-
-**URL del video:** [URL pendiente]
-
-El video deberá mostrar de manera continua los principales flujos implementados durante el Sprint y explicar su correspondencia con las User Stories comprometidas.
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
-La documentación de servicios presenta los endpoints REST implementados durante Sprint 1 y su relación con las User Stories.
+La documentación OpenAPI permite consultar y ejecutar los endpoints disponibles del backend. La tabla registra las acciones implementadas dentro del alcance del Sprint.
 
-Debido a que las rutas exactas deben corresponder con los Controllers del repositorio backend, estas deberán obtenerse directamente del código y de la especificación OpenAPI antes de completar la entrega.
+**Repositorio:** [Backend](https://github.com/1ACC0238-2620-4939/backend).
 
-**Tabla 4.13**  
-*RESTful Services incluidos en el alcance del Sprint 1*
 
-| Endpoint | HTTP Method | Purpose | Related User Story | Parameters / Request | Response | Documentation URL |
-|---|---|---|---|---|---|---|
-| [Ruta real pendiente] | [Método real] | Registrar una cuenta | US01 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Iniciar sesión | US02 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Consultar viajes | US05 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Consultar detalle de viaje | US06 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Consultar estado del viaje | US07 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Programar viaje | US17 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Asignar ruta | US18 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Actualizar estado | US19 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Registrar vehículo | US23 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Registrar conductor | US25 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Asignar vehículo | US27 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Asignar conductor | US28 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| Acción | HTTP | Sintaxis de llamada | Parámetros / Body | Response: ejemplo y explicación |
+|---|---|---|---|---|
+| Consultar viajes | GET | `/api/v1/trips` | Sin body. | `200 OK`: arreglo JSON con los viajes registrados. `[]` cuando no existen registros. |
+| Consultar conductores | GET | `/api/v1/drivers` | Sin body. | `200 OK`: arreglo JSON con la información de los conductores. `[]` cuando no existen registros. |
+| Consultar vehículos | GET | `/api/v1/vehicles` | Sin body. | `200 OK`: arreglo JSON con la información de los vehículos. `[]` cuando no existen registros. |
 
-Para cada endpoint documentado deberán especificarse los parámetros, request body cuando corresponda, posibles códigos HTTP y un ejemplo del response.
+La captura muestra una solicitud realizada con datos de ejemplo y la respuesta del servicio.
 
-[Imagen pendiente: API-01 – Swagger/OpenAPI mostrando los endpoints implementados en Sprint 1]
+![Trakto Route - Swagger Sprint 1](assets/images/chapter4/sprint-1-swagger.png)
 
-**Figura 4.13**  
-*Documentación OpenAPI de los RESTful Web Services.*
-
-[Imagen pendiente: API-02 – request y response correspondiente a un endpoint representativo del Sprint 1]
-
-**Figura 4.14**  
-*Ejemplo de interacción con un RESTful endpoint de Trakto Route.*
-
-**REST API Repository:**  
-[URL pendiente: repositorio de los RESTful Web Services]
-
-**OpenAPI / Swagger:**  
-[URL pendiente: URL pública o local utilizada durante Sprint 1]
-
-Si los RESTful Web Services todavía no se encuentran desplegados públicamente durante esta etapa, puede utilizarse la URL local realmente configurada en el proyecto. Esta URL no deberá presentarse como un deployment público.
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
-Esta sección documenta únicamente las actividades de deployment realizadas durante Sprint 1. Debe diferenciarse de la configuración general presentada en 4.1.4, ya que aquí se incorporan evidencias concretas del trabajo ejecutado durante la iteración.
+El Landing Page y el backend se despliegan mediante Railway. Las evidencias registran la configuración de los servicios y el resultado alcanzado durante el Sprint. Para Android se indica la disponibilidad del APK y su instalación.
 
-Para TB1, el Landing Page debe encontrarse disponible públicamente. Las evidencias deberán mostrar el proceso utilizado para generar y publicar la versión correspondiente al Sprint.
+| Producto | Configuración y resultado | Enlace |
+|---|---|---|
+| Landing Page | [Configuración del servicio y estado del despliegue] | [Sitio publicado](URL_LANDING) |
+| Backend | [Configuración de ejecución, conexión a MySQL y estado del despliegue] | [REST API](URL_BACKEND) |
+| Aplicación Android | [APK generado e instalado, o pendiente] | [APK de la entrega](URL_APK) |
 
-**Landing Page**
+**Railway:** servicios configurados y estado del despliegue.
 
-[Imagen pendiente: DEP-S1-01 – configuración utilizada para desplegar el Landing Page durante Sprint 1]
+![Trakto Route - Railway Sprint 1](assets/images/chapter4/sprint-1-railway.png)
 
-**Figura 4.15**  
-*Configuración de deployment del Landing Page.*
+**Android:** ejecución de la aplicación instalada en un dispositivo o emulador.
 
-[Imagen pendiente: DEP-S1-02 – Landing Page públicamente desplegado]
+![Trakto Route - Android Sprint 1](assets/images/chapter4/sprint-1-android-installation.png)
 
-**Figura 4.16**  
-*Landing Page desplegado durante Sprint 1.*
-
-**URL:**  
-[URL pendiente: Landing Page público]
-
-**RESTful Web Services**
-
-[Imagen pendiente: DEP-S1-03 – configuración del entorno de ejecución del backend durante Sprint 1]
-
-**Figura 4.17**  
-*Configuración del backend correspondiente al Sprint 1.*
-
-[Dato pendiente: especificar si durante Sprint 1 el backend se ejecuta localmente o se encuentra desplegado en un proveedor cloud]
-
-**Android Application**
-
-[Imagen pendiente: DEP-S1-04 – build o instalación de Trakto Route en Android durante Sprint 1]
-
-**Figura 4.18**  
-*Build de la aplicación Android correspondiente al Sprint 1.*
-
-La aplicación deberá presentarse instalada y ejecutándose en el entorno utilizado por el equipo. La distribución mediante Firebase App Distribution o servicio equivalente deberá incorporarse cuando corresponda a la etapa de publicación establecida en el proyecto.
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.9. Team Collaboration Insights during Sprint
 
-La colaboración durante Sprint 1 debe analizarse utilizando evidencias obtenidas de los repositorios y de la herramienta de gestión del Sprint. El análisis no debe limitarse a contabilizar commits, sino relacionar las contribuciones con los aspectos y responsabilidades definidos previamente en la Leadership-and-Collaboration Matrix.
+El equipo coordinó las actividades mediante Discord y utilizó GitHub para registrar los cambios. Durante el Sprint se avanzó en el backend y la primera versión de Android, y se completaron los prototipos y el Landing Page.
 
-[Imagen pendiente: TC-01 – GitHub Contributors correspondiente a los repositorios utilizados durante Sprint 1]
+Las capturas de GitHub muestran la distribución de contribuciones en cada producto.
 
-**Figura 4.19**  
-*Contribuciones del equipo durante Sprint 1.*
+![Trakto Route - Colaboración Backend Sprint 1](assets/images/chapter4/sprint-1-backend-contributors.png)
 
-[Imagen pendiente: TC-02 – GitHub Commit Activity correspondiente a Sprint 1]
+![Trakto Route - Colaboración Android Sprint 1](assets/images/chapter4/sprint-1-android-contributors.png)
 
-**Figura 4.20**  
-*Actividad de commits registrada durante Sprint 1.*
-
-[Imagen pendiente: TC-03 – actividad del Board utilizado durante Sprint 1]
-
-**Figura 4.21**  
-*Actividad colaborativa registrada en el Sprint Board.*
-
-Una vez incorporadas las evidencias, el equipo deberá analizar la distribución real del trabajo señalando qué productos o features concentraron mayor participación, cómo se relacionaron los líderes y colaboradores y si la contribución observada coincide con las responsabilidades definidas inicialmente.
-
-[Contenido pendiente: análisis de GitHub Insights y actividad real del equipo durante Sprint 1]
+![Trakto Route - Colaboración Landing Page Sprint 1](assets/images/chapter4/sprint-1-landing-contributors.png)
 
 <div style="page-break-after: always;"></div>
+
 
 ### 4.3. Validation Interviews
 
