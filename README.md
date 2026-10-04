@@ -4092,6 +4092,9 @@ Desde Perfil, el usuario selecciona “Cerrar sesión” y vuelve a la pantalla 
 ![Trakto Route - Wireflow de cierre de sesión](assets/images/chapter3/app-wireflow-logout.png)
 
 
+**Wireflows en Lucidchart:** [Ver diagramas de Trakto Route](https://lucid.app/lucidchart/16c216a1-8a57-45b4-b935-3eebdfa8efca/edit?viewport_loc=2463%2C2106%2C2064%2C949%2C0_0&invitationId=inv_61427efe-04a5-4da6-99c4-10828bc7d992)
+
+
 <div style="page-break-after: always;"></div>
 
 
@@ -4179,6 +4182,10 @@ La ruta esperada muestra el perfil. Si la información no puede cargarse, se pre
 La ruta esperada conduce de Perfil a Iniciar sesión. Cuando la acción requiere confirmación, el flujo incluye la alternativa de cancelar y permanecer en Perfil.
 
 ![Trakto Route - User Flow de cierre de sesión](assets/images/chapter3/app-user-flow-logout.png)
+
+
+
+**User Flow en Lucidchart:** [Ver diagramas de Trakto Route](https://lucid.app/lucidchart/8cef2211-8ff9-46c5-b351-2ab7bf62c41e/edit?viewport_loc=-3616%2C2943%2C3288%2C1921%2C0_0&invitationId=inv_0b4dc3ef-dfc5-42b0-9590-027918e81afb)
 
 
 <div style="page-break-after: always;"></div>
