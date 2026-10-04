@@ -64,13 +64,19 @@
 | Versión | Fecha | Autor | Descripción de modificación |
 |---|---|---|---|
 | AV1 | 20/09/2026 | Fecha | Creación del informe. Inclusión de la presentación de la startup y del producto, Lean UX, análisis de competidores, entrevistas, Needfinding y Requirements Specification hasta Product Backlog. |
+| AV1.1 | 21/09/2026 | Jean Franck Loa Rojas | Incorporación del integrante, fotografía y estructura del Student Outcome 7 conforme al enunciado. |
+| TB1 | 03/10/2026 | Equipo Trakto Route | Incorporación de los capítulos III y IV, aplicación Android, evidencias reales de ejecución, repositorios GitFlow, despliegue público del Landing Page y estado verificable de pruebas y dependencias externas. |
 
 
 <h2 align="center">Project Report Collaboration Insights</h2>
 
+**Repositorio del informe:** [1ACC0238-2620-4939/Report](https://github.com/1ACC0238-2620-4939/Report)
+
 ![Project Report Collaboration Insights AV1](./assets/images/shared/report_av1.png)
 
 **AV1.** Para el primer avance, el equipo trabajó en la definición de la startup **Trakto** y de su producto **Trakto Route**, el desarrollo del proceso Lean UX, el análisis competitivo, las entrevistas, los artefactos de Needfinding y la especificación inicial de requisitos. Las actividades fueron distribuidas entre los integrantes y consolidadas mediante herramientas colaborativas y control de versiones.
+
+**TB1.** El informe se sincronizó con los aportes de los integrantes antes de cerrar la entrega. Los repositorios del [informe](https://github.com/1ACC0238-2620-4939/Report), [backend](https://github.com/1ACC0238-2620-4939/backend), [Landing Page](https://github.com/1ACC0238-2620-4939/landing-page) y [aplicación Android](https://github.com/1ACC0238-2620-4939/mobile-app) utilizan ramas `feature`, `develop`, `release` y `main`. La evidencia verificable incluye el Landing Page publicado, la aplicación instalada en un emulador Android y el backend compilado y probado. Las entrevistas de validación, el video continuo y la integración móvil-API quedan identificados como dependencias externas pendientes para evitar presentar evidencia inexistente.
 
 <div style="page-break-after: always;"></div>
 
@@ -175,11 +181,17 @@
             - [2.6.6.6. Bounded Context Software Architecture Code Level Diagrams](#2666-bounded-context-software-architecture-code-level-diagrams)
                 - [2.6.6.6.1. Bounded Context Domain Layer Class Diagrams](#26661-bounded-context-domain-layer-class-diagrams)
                 - [2.6.6.6.2. Bounded Context Database Design Diagram](#26662-bounded-context-database-design-diagram)
+- [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
+- [Capítulo IV: Product Implementation & Validation](#capítulo-iv-product-implementation--validation)
+- [Conclusiones](#conclusiones)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
 
 <div style="page-break-after: always;"></div>
 
-### ABET – EAC - Student Outcome 7
+# Student Outcome
 
+## ABET - EAC - Student Outcome 7
 **Aprendizaje Continuo y Autónomo**
 
 **Criterio:** La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas.
@@ -195,6 +207,13 @@ En el siguiente cuadro se describen las acciones realizadas y los enunciados de 
 |  | **Chirito Torres, Jose Raul** | Aplicó conocimientos relacionados con la especificación de requisitos mediante la elaboración y organización de User Stories y la revisión de funcionalidades orientadas a las necesidades identificadas en los usuarios. | Reconoció la importancia de actualizar sus conocimientos sobre gestión y especificación de requisitos, así como buenas prácticas de desarrollo, para mantener una adecuada relación entre las necesidades del usuario y las funcionalidades del producto. |
 |  | **Loa Rojas, Jean Franck** | Fortaleció sus conocimientos sobre planificación de productos mediante la elaboración del Impact Map y la organización y priorización del Product Backlog, contribuyendo a definir las funcionalidades necesarias para la solución. | Identificó la necesidad del aprendizaje permanente en técnicas de planificación, gestión de productos y desarrollo de software para responder adecuadamente a nuevos requerimientos y cambios que puedan presentarse durante el proyecto. |
 |  | **Conclusiones** | **El equipo actualizó y aplicó conocimientos relacionados con Lean UX, investigación de usuarios, análisis de requisitos, planificación del producto, Domain-Driven Design y arquitectura de software, integrándolos en el desarrollo del proyecto Trakto Route.** | **El equipo reconoció la importancia del aprendizaje continuo y autónomo para fortalecer sus competencias profesionales y adaptar el desarrollo de soluciones de software a las necesidades de los usuarios, los cambios tecnológicos y la evolución del proyecto.** |
+
+| **TB1** | **Fernandez Garfias, Alexander Piero** | Aplicó DDD, Spring Boot, persistencia y documentación OpenAPI al implementar los contextos de viajes, flota, seguimiento y perfiles del backend. También contribuyó a la base del Landing Page. | Reconoció la necesidad de mantener actualizados sus conocimientos de arquitectura, persistencia y contratos REST para evolucionar varios contextos sin romper sus interfaces. |
+|  | **Aguilar Aguayo, Jeferson Renzo** | Integró y estructuró los capítulos de diseño UI/UX e implementación y validación del producto, relacionando artefactos, Sprint y evidencias esperadas. | Identificó que la documentación técnica debe contrastarse continuamente con los repositorios y la ejecución real para conservar trazabilidad. |
+|  | **Loa Rojas, Jean Franck** | Construyó la aplicación Android con Kotlin y Jetpack Compose, preparó la ejecución reproducible del backend, verificó las pruebas y el build, publicó el Landing Page y consolidó evidencias reales en el informe. | Reconoció la necesidad de aprender y aplicar GitFlow, Compose, Android tooling, contenedores y despliegue continuo para cerrar un incremento verificable. |
+|  | **Cesar Alejandro Linares Bernable** | No se identificó evidencia de implementación TB1 atribuible en los repositorios revisados al 03/10/2026. | Requiere validación personal y evidencia del integrante antes de atribuir aprendizaje o contribuciones en TB1. |
+|  | **Chirito Torres, Jose Raul** | Se identificaron aportes previos al informe, pero no evidencia de implementación TB1 en los repositorios de producto revisados al 03/10/2026. | Requiere validación personal y evidencia del integrante antes de atribuir aprendizaje o contribuciones en TB1. |
+|  | **Conclusiones** | **La evidencia disponible muestra adquisición y aplicación de conocimientos en arquitectura DDD, desarrollo Android, construcción reproducible, despliegue web y documentación técnica.** | **El equipo debe continuar fortaleciendo pruebas automatizadas, integración móvil-API y validación con usuarios; esos resultados solo podrán declararse cuando exista evidencia directa.** |
 
 
 <div style="page-break-after: always;"></div>
@@ -238,7 +257,7 @@ Trakto Route permite gestionar y consultar viajes, rutas, vehículos, conductore
 | <img src="assets/images/shared/miembro2.png" width="400"/> | **Nombre:** Aguilar Aguayo Jeferson Renzo<br><br>**Código:** U20251B991<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en JavaScript, HTML, CSS y MySQL. Me interesa el desarrollo de aplicaciones y la creación de soluciones orientadas a las necesidades de los usuarios. Entre mis fortalezas se encuentran el trabajo colaborativo, la responsabilidad en las entregas y la propuesta de ideas para mejorar el proyecto. |
 | <img src="assets/images/shared/miembro3.png" width="400"/> | **Nombre:** Alexander Piero Fernandez Garfias<br><br>**Código:** U202019498<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, JavaScript, TypeScript, Angular, Vue, Vite, Kotlin, Flutter, C#, C++ y desarrollo Android. Me interesa seguir fortaleciendo mis conocimientos en desarrollo de software y participar en la construcción de aplicaciones aplicando buenas prácticas de programación y organización del código. |
 | <img src="assets/images/shared/miembro4.png" width="400"/> | **Nombre:** Jose Raul Chirito Torres<br><br>**Código:** U20201A293<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C++, desarrollo web y tecnologías como Angular y Vue. Me interesa ampliar mis habilidades en el desarrollo de aplicaciones y contribuir al equipo mediante la implementación de funcionalidades, la resolución de problemas y el trabajo coordinado. |
-| <img src="assets/images/shared/miembro5.png" width="400"/> | **Nombre:** Loa Rojas, Jean Franck<br><br>**Código:** U20241E406<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C#, C++, .NET y fundamentos de desarrollo web. Me interesa mejorar continuamente mis capacidades técnicas y participar en proyectos que me permitan aplicar lo aprendido, contribuir al desarrollo de funcionalidades y fortalecer mi experiencia trabajando en equipo. |
+| <img src="assets/images/shared/jean-loa.jpg" width="400"/> | **Nombre:** Loa Rojas, Jean Franck<br><br>**Código:** U20241E406<br><br>**Carrera:** Ingeniería de Software<br><br>**Acerca de mí:** Soy estudiante de Ingeniería de Software con conocimientos en Java, C#, C++, .NET y fundamentos de desarrollo web. Me interesa mejorar continuamente mis capacidades técnicas y participar en proyectos que me permitan aplicar lo aprendido, contribuir al desarrollo de funcionalidades y fortalecer mi experiencia trabajando en equipo. |
 
 
 <div style="page-break-after: always;"></div>
@@ -3989,7 +4008,7 @@ El branding debe mantener una composición visual limpia, con predominio de supe
 
 En caso de utilizar el nombre completo del producto, debe conservarse la denominación **Trakto Route**, evitando variaciones innecesarias que puedan generar inconsistencias entre el Landing Page, la aplicación móvil y la documentación del proyecto.
 
-[Imagen pendiente: SG-01 – Branding de Trakto Route mostrando logotipo oficial, variantes permitidas y ejemplos de uso – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual SG-01 – Branding de Trakto Route mostrando logotipo oficial, variantes permitidas y ejemplos de uso – elaborado en Figma en los repositorios sincronizados.
 
 La figura SG-01 deberá consolidar la identidad visual utilizada en los productos digitales, incluyendo el logotipo seleccionado por el equipo, sus principales variantes y las condiciones básicas de uso sobre superficies claras y oscuras.
 
@@ -4045,7 +4064,7 @@ Como propuesta de diseño para el Capítulo III, se establece un sistema cromát
 
 Los estados no deberán diferenciarse únicamente mediante color. Cuando se represente una incidencia, un retraso o un viaje finalizado, se utilizará también texto, iconografía o indicadores que permitan identificar el significado sin depender de la percepción cromática.
 
-[Imagen pendiente: SG-02 – Color System de Trakto Route mostrando tokens, códigos HEX y ejemplos de aplicación – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual SG-02 – Color System de Trakto Route mostrando tokens, códigos HEX y ejemplos de aplicación – elaborado en Figma en los repositorios sincronizados.
 
 La figura SG-02 deberá representar visualmente la relación entre los colores principales, secundarios y semánticos, incluyendo ejemplos de su aplicación sobre buttons, cards, chips de estado y mensajes.
 
@@ -4101,7 +4120,7 @@ El sistema visual utilizará componentes reutilizables que permitan conservar co
 | Empty States | Ausencia de viajes, incidencias o resultados |
 | Navigation Components | Navegación principal según el rol |
 
-[Imagen pendiente: SG-03 – General Style Guidelines y principales UI Components de Trakto Route – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual SG-03 – General Style Guidelines y principales UI Components de Trakto Route – elaborado en Figma en los repositorios sincronizados.
 
 La figura SG-03 deberá presentar los componentes principales en sus estados normal, pressed, disabled, error y selected cuando corresponda, estableciendo una referencia visual reutilizable para el equipo.
 
@@ -4148,11 +4167,11 @@ El Landing Page se propone con una estructura basada en los siguientes bloques c
 
 La aplicación, en cambio, organiza la información alrededor de las responsabilidades definidas previamente en los Epics y Bounded Contexts: **Identity and Access Management, Profile Management, Trip Management, Fleet Management, Incident Management y Operational History**.
 
-[Imagen pendiente: IA-01 – Information Architecture del Landing Page de Trakto Route]
+**NOT_VERIFIED:** No se encontró el artefacto visual IA-01 – Information Architecture del Landing Page de Trakto Route en los repositorios sincronizados.
 
 La figura IA-01 deberá representar la jerarquía de contenido del Landing Page y las relaciones entre sus principales secciones, evidenciando el recorrido desde la propuesta de valor hasta la llamada a la acción.
 
-[Imagen pendiente: IA-02 – Information Architecture de la aplicación móvil diferenciada para Carlos Mendoza y Andrea Salazar]
+**NOT_VERIFIED:** No se encontró el artefacto visual IA-02 – Information Architecture de la aplicación móvil diferenciada para Carlos Mendoza y Andrea Salazar en los repositorios sincronizados.
 
 La figura IA-02 deberá mostrar qué grupos de información se encuentran disponibles para cada User Persona, evidenciando que las capacidades administrativas de flota y operación permanecen separadas de las capacidades de consulta del cliente.
 
@@ -4235,7 +4254,7 @@ El fragmento propuesto para el Landing Page es el siguiente:
 
     <link
         rel="canonical"
-        href="[URL pública pendiente del Landing Page]"
+        href="https://1acc0238-2620-4939.github.io/landing-page/"
     >
 
     <meta
@@ -4252,12 +4271,12 @@ El fragmento propuesto para el Landing Page es el siguiente:
 
     <meta
         property="og:url"
-        content="[URL pública pendiente del Landing Page]"
+        content="https://1acc0238-2620-4939.github.io/landing-page/"
     >
 
     <meta
         property="og:image"
-        content="[URL pública pendiente de la imagen Open Graph]"
+        content="https://1acc0238-2620-4939.github.io/landing-page/logo.png"
     >
 </head>
 ```
@@ -4325,15 +4344,15 @@ La navegación móvil se define de acuerdo con las responsabilidades de cada rol
 
 Las acciones específicas como programar un viaje, registrar una incidencia, asignar un recurso o consultar un detalle se encuentran dentro de los destinos principales y no requieren ocupar permanentemente un elemento de navegación global.
 
-[Imagen pendiente: NAV-01 – Navigation System del Landing Page de Trakto Route]
+**NOT_VERIFIED:** No se encontró el artefacto visual NAV-01 – Navigation System del Landing Page de Trakto Route en los repositorios sincronizados.
 
 La figura NAV-01 deberá representar la navegación entre las principales secciones del Landing Page y su comportamiento responsive.
 
-[Imagen pendiente: NAV-02 – Navigation System de la aplicación móvil para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual NAV-02 – Navigation System de la aplicación móvil para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
 La figura NAV-02 deberá evidenciar el acceso del supervisor a viajes, flota, incidencias e historial, manteniendo las acciones específicas dentro de cada módulo.
 
-[Imagen pendiente: NAV-03 – Navigation System de la aplicación móvil para Andrea Salazar – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual NAV-03 – Navigation System de la aplicación móvil para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
 
 La figura NAV-03 deberá evidenciar una estructura simplificada orientada a consulta de envíos, eventos e historial, sin mostrar capacidades internas de Fleet Management.
 
@@ -4367,7 +4386,7 @@ Los Wireframes del Landing Page se elaborarán en **Figma** y representarán ini
 
 **Desktop Web Browser**
 
-[Imagen pendiente: LP-WF-01 – Wireframe Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual LP-WF-01 – Wireframe Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
 
 El wireframe Desktop organiza el contenido utilizando el mayor espacio horizontal disponible. El Hero prioriza la propuesta de valor y un CTA principal, mientras que las secciones posteriores separan claramente beneficios, funcionalidades y segmentos. La navegación se mantiene visible en el header para permitir saltos directos hacia las principales áreas de contenido.
 
@@ -4375,7 +4394,7 @@ Las funcionalidades pueden representarse mediante cards agrupadas, facilitando u
 
 **Mobile Web Browser**
 
-[Imagen pendiente: LP-WF-02 – Wireframe Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual LP-WF-02 – Wireframe Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
 
 En Mobile Web, los bloques se reorganizan verticalmente para mantener una secuencia clara de lectura. Los elementos presentados en múltiples columnas en Desktop pasan a una distribución de una columna o grupos reducidos. El menú principal se transforma en navegación compacta y los CTAs utilizan un ancho suficiente para facilitar la interacción táctil.
 
@@ -4387,7 +4406,7 @@ Los Mock-ups representan la versión visual de alta fidelidad del Landing Page. 
 
 **Desktop Web Browser**
 
-[Imagen pendiente: LP-MK-01 – Mock-up Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual LP-MK-01 – Mock-up Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
 
 El Mock-up Desktop deberá aplicar la paleta visual propuesta, mantener una jerarquía clara entre encabezados y supporting text, y utilizar recursos visuales relacionados con transporte y trazabilidad sin saturar la interfaz.
 
@@ -4395,7 +4414,7 @@ La propuesta de valor debe ser visible desde la primera sección y los CTAs debe
 
 **Mobile Web Browser**
 
-[Imagen pendiente: LP-MK-02 – Mock-up Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual LP-MK-02 – Mock-up Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
 
 El Mock-up Mobile debe conservar la identidad visual de la versión Desktop y adaptar tamaños, espacios y agrupaciones sin reducir la legibilidad. Los componentes interactivos deberán considerar una interacción táctil cómoda y mantener suficiente separación entre acciones.
 
@@ -4426,35 +4445,35 @@ Los Mobile Applications Wireframes representan la estructura inicial de las pant
 | Shipment Tracking – Cliente | Mis envíos, detalle, ruta, progreso y eventos | Andrea Salazar | US08, US12, US35, US40, US41 |
 | Operational History – Cliente | Historial, filtros e incidencias anteriores | Andrea Salazar | US13, US16, US36 |
 
-[Imagen pendiente: MW-01 – Wireframes de Authentication & Profile para Carlos Mendoza y Andrea Salazar – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-01 – Wireframes de Authentication & Profile para Carlos Mendoza y Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
 
 MW-01 deberá representar registro, inicio de sesión, consulta y edición de perfil, manteniendo los formularios simples y mostrando mensajes de validación próximos al campo correspondiente.
 
-[Imagen pendiente: MW-02 – Wireframes de Home y Trip Management para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-02 – Wireframes de Home y Trip Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
 MW-02 deberá mostrar el Dashboard del supervisor, la lista de viajes y el acceso al detalle de una operación. Desde este grupo deberá poder visualizarse información resumida del viaje y acceder a acciones relacionadas con su ciclo de vida.
 
-[Imagen pendiente: MW-03 – Wireframes de programación y asignación de recursos para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-03 – Wireframes de programación y asignación de recursos para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
 MW-03 deberá representar el proceso de programación de un viaje y la posterior asignación de ruta, conductor y vehículo, incluyendo la consulta previa de disponibilidad establecida por US29 y US30.
 
-[Imagen pendiente: MW-04 – Wireframes de Fleet Management para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-04 – Wireframes de Fleet Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
 MW-04 deberá incluir listados, detalle, registro y actualización de vehículos y conductores, diferenciando claramente ambos tipos de recurso.
 
-[Imagen pendiente: MW-05 – Wireframes de Incident Management para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-05 – Wireframes de Incident Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
 MW-05 deberá representar el registro de incidencias y sus variaciones para retrasos, problemas y accidentes, además del detalle y actualización de estado.
 
-[Imagen pendiente: MW-06 – Wireframes de Operational History para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-06 – Wireframes de Operational History para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
 MW-06 deberá permitir revisar operaciones finalizadas, desempeño e historial relacionado con vehículos y conductores.
 
-[Imagen pendiente: MW-07 – Wireframes de seguimiento de envíos para Andrea Salazar – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-07 – Wireframes de seguimiento de envíos para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
 
 MW-07 deberá concentrarse en la consulta de envíos autorizados, progreso, ruta y eventos relevantes sin exponer acciones administrativas.
 
-[Imagen pendiente: MW-08 – Wireframes de historial y filtrado para Andrea Salazar – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MW-08 – Wireframes de historial y filtrado para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
 
 MW-08 deberá representar la consulta del historial y el mecanismo de filtrado correspondiente a US16, contemplando estados con resultados y sin resultados.
 
@@ -4478,7 +4497,7 @@ Los Wireflow Diagrams relacionan los Wireframes anteriores con las rutas de inte
 
 **User Goal:** registrar una nueva operación y asignar los recursos necesarios antes de su ejecución.
 
-[Imagen pendiente: WF-01 – Wireflow del User Goal “Programar y preparar un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual WF-01 – Wireflow del User Goal “Programar y preparar un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 El flujo inicia desde la sección Viajes. El supervisor selecciona la acción para programar una operación, registra la información requerida, asigna una ruta y posteriormente consulta la disponibilidad de vehículos y conductores para seleccionar los recursos correspondientes. El flujo finaliza cuando el viaje cuenta con la información necesaria para continuar su ciclo de operación.
 
@@ -4486,7 +4505,7 @@ El flujo inicia desde la sección Viajes. El supervisor selecciona la acción pa
 
 **User Persona:** Carlos Mendoza.
 
-[Imagen pendiente: WF-02 – Wireflow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual WF-02 – Wireflow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 El flujo inicia con la consulta de viajes y continúa con el detalle de la operación. Desde esta vista se consulta el estado actual y se registran las actualizaciones permitidas, incluyendo paradas y descansos. Cuando la operación concluye, el supervisor ejecuta la acción de finalización.
 
@@ -4494,7 +4513,7 @@ El flujo inicia con la consulta de viajes y continúa con el detalle de la opera
 
 **User Persona:** Carlos Mendoza.
 
-[Imagen pendiente: WF-03 – Wireflow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual WF-03 – Wireflow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 El supervisor ingresa desde un viaje o desde Incident Management, selecciona el tipo de evento correspondiente, registra la información necesaria y confirma el registro. Posteriormente puede consultar el detalle y actualizar el estado de la incidencia.
 
@@ -4502,7 +4521,7 @@ El supervisor ingresa desde un viaje o desde Incident Management, selecciona el 
 
 **User Persona:** Carlos Mendoza.
 
-[Imagen pendiente: WF-04 – Wireflow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual WF-04 – Wireflow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 El flujo permite acceder a la sección Flota y seleccionar el tipo de recurso. Desde allí el supervisor puede consultar información existente, registrar nuevos recursos y mantener actualizados los datos correspondientes.
 
@@ -4510,7 +4529,7 @@ El flujo permite acceder a la sección Flota y seleccionar el tipo de recurso. D
 
 **User Persona:** Andrea Salazar.
 
-[Imagen pendiente: WF-05 – Wireflow del User Goal “Consultar el progreso de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual WF-05 – Wireflow del User Goal “Consultar el progreso de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 El flujo inicia en Mis envíos. Andrea selecciona una operación autorizada y accede a su detalle, donde consulta el estado actual, la ruta asociada y la información de progreso disponible.
 
@@ -4518,7 +4537,7 @@ El flujo inicia en Mis envíos. Andrea selecciona una operación autorizada y ac
 
 **User Persona:** Andrea Salazar.
 
-[Imagen pendiente: WF-06 – Wireflow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual WF-06 – Wireflow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 El flujo permite acceder a los eventos visibles asociados al envío, consultar si existe una incidencia y revisar su información autorizada. Cuando no existen eventos relevantes, la aplicación comunica el estado actual sin generar alertas inexistentes.
 
@@ -4526,7 +4545,7 @@ El flujo permite acceder a los eventos visibles asociados al envío, consultar s
 
 **User Persona:** Andrea Salazar.
 
-[Imagen pendiente: WF-07 – Wireflow del User Goal “Consultar operaciones anteriores” para Andrea Salazar – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual WF-07 – Wireflow del User Goal “Consultar operaciones anteriores” para Andrea Salazar – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 El flujo inicia en Historial y presenta las operaciones autorizadas. El usuario puede aplicar los criterios contemplados por US16 y visualizar los resultados coincidentes o un estado vacío cuando ningún registro cumple las condiciones seleccionadas.
 
@@ -4545,21 +4564,21 @@ Los Mock-ups transforman los Wireframes en representaciones de alta fidelidad ap
 | MM-07 | Client Shipment Tracking | Mis envíos, progreso y eventos | Proporcionar visibilidad sin exponer controles administrativos |
 | MM-08 | Client History | Historial y filtros | Facilitar la localización de operaciones anteriores |
 
-[Imagen pendiente: MM-01 – Mock-ups de Authentication & Profile – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-01 – Mock-ups de Authentication & Profile – elaborado en Figma en los repositorios sincronizados.
 
-[Imagen pendiente: MM-02 – Mock-ups de Home y Trip Management para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-02 – Mock-ups de Home y Trip Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
-[Imagen pendiente: MM-03 – Mock-ups de programación y asignación de recursos – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-03 – Mock-ups de programación y asignación de recursos – elaborado en Figma en los repositorios sincronizados.
 
-[Imagen pendiente: MM-04 – Mock-ups de Fleet Management – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-04 – Mock-ups de Fleet Management – elaborado en Figma en los repositorios sincronizados.
 
-[Imagen pendiente: MM-05 – Mock-ups de Incident Management – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-05 – Mock-ups de Incident Management – elaborado en Figma en los repositorios sincronizados.
 
-[Imagen pendiente: MM-06 – Mock-ups de Operational History para Carlos Mendoza – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-06 – Mock-ups de Operational History para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
 
-[Imagen pendiente: MM-07 – Mock-ups de seguimiento de envíos para Andrea Salazar – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-07 – Mock-ups de seguimiento de envíos para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
 
-[Imagen pendiente: MM-08 – Mock-ups de historial y filtrado para Andrea Salazar – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MM-08 – Mock-ups de historial y filtrado para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
 
 Los Mock-ups deberán conservar correspondencia directa con los Wireframes MW-01 a MW-08. Las diferencias entre ambos tipos de artefacto se limitarán a la incorporación de estilo visual, recursos gráficos, contenido representativo y estados de interacción, sin modificar arbitrariamente la arquitectura previamente definida.
 
@@ -4583,7 +4602,7 @@ Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. 
 
 **Alternative / Unhappy Paths:** el sistema conserva la información válida y comunica claramente si existen datos incompletos o si el vehículo o conductor seleccionado no se encuentra disponible.
 
-[Imagen pendiente: UF-01 – User Flow del User Goal “Programar y preparar un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual UF-01 – User Flow del User Goal “Programar y preparar un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 **UF-02 – Supervisar el ciclo de vida de un viaje**
 
@@ -4591,7 +4610,7 @@ Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. 
 
 **Alternative / Unhappy Paths:** si el recurso consultado no está disponible o una actualización no cumple las reglas establecidas, el sistema comunica la situación sin modificar información válida previamente registrada.
 
-[Imagen pendiente: UF-02 – User Flow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual UF-02 – User Flow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 **UF-03 – Registrar y gestionar una incidencia**
 
@@ -4599,7 +4618,7 @@ Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. 
 
 **Alternative / Unhappy Paths:** se contemplan datos incompletos, información inválida o inexistencia del viaje asociado.
 
-[Imagen pendiente: UF-03 – User Flow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual UF-03 – User Flow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 **UF-04 – Gestionar vehículos y conductores**
 
@@ -4607,7 +4626,7 @@ Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. 
 
 **Alternative / Unhappy Paths:** si los datos no cumplen las reglas establecidas, se mantiene la información anterior y se comunica el error antes de confirmar el cambio.
 
-[Imagen pendiente: UF-04 – User Flow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual UF-04 – User Flow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 **UF-05 – Consultar el progreso de un envío**
 
@@ -4615,7 +4634,7 @@ Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. 
 
 **Alternative / Unhappy Paths:** si intenta consultar un envío no autorizado, el sistema deniega el acceso sin revelar información de la operación.
 
-[Imagen pendiente: UF-05 – User Flow del User Goal “Consultar el progreso de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual UF-05 – User Flow del User Goal “Consultar el progreso de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 **UF-06 – Consultar eventos relevantes de un envío**
 
@@ -4623,7 +4642,7 @@ Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. 
 
 **Alternative / Unhappy Paths:** cuando no existen eventos relevantes, la interfaz muestra el estado actual sin presentar información inexistente; si el evento no pertenece a una operación autorizada, se deniega el acceso.
 
-[Imagen pendiente: UF-06 – User Flow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual UF-06 – User Flow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 **UF-07 – Consultar operaciones anteriores**
 
@@ -4631,7 +4650,7 @@ Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. 
 
 **Alternative / Unhappy Paths:** si no existen operaciones que cumplan los criterios, la interfaz muestra un estado vacío y permite limpiar o modificar los filtros.
 
-[Imagen pendiente: UF-07 – User Flow del User Goal “Consultar operaciones anteriores” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow]
+**NOT_VERIFIED:** No se encontró el artefacto visual UF-07 – User Flow del User Goal “Consultar operaciones anteriores” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
 
 La trazabilidad entre los artefactos se conserva mediante la siguiente relación:
 
@@ -4667,19 +4686,19 @@ Las decisiones de interacción consideradas incluyen:
 
 El prototipo no debe incorporar funcionalidades que no se encuentren respaldadas por las User Stories o por las decisiones de diseño establecidas en este capítulo.
 
-[Imagen pendiente: MP-01 – Vista general del prototipo interactivo Android de Trakto Route – elaborado en Figma]
+**NOT_VERIFIED:** No se encontró el artefacto visual MP-01 – Vista general del prototipo interactivo Android de Trakto Route – elaborado en Figma en los repositorios sincronizados.
 
 La figura MP-01 deberá mostrar la conexión general entre los principales grupos de pantallas y permitir identificar las rutas de navegación correspondientes a Carlos Mendoza y Andrea Salazar.
 
-[Enlace pendiente: MP-01 – Prototipo interactivo Android de Trakto Route en Figma]
+**Enlace del prototipo Figma:** `NOT_VERIFIED`; no se encontró un enlace público en los repositorios sincronizados.
 
 El enlace deberá dirigir al prototipo navegable utilizado para demostrar los flujos principales definidos en UF-01 a UF-07.
 
-[Imagen pendiente: MP-02 – Screenshot representativo del video de demostración del prototipo móvil]
+**NOT_VERIFIED:** No se encontró el artefacto visual MP-02 – Screenshot representativo del video de demostración del prototipo móvil en los repositorios sincronizados.
 
 La captura MP-02 deberá mostrar un momento representativo del recorrido por uno de los User Goals core de Trakto Route.
 
-[Video pendiente: MP-02 – Video de demostración de navegación del prototipo móvil de Trakto Route]
+**BLOCKED:** El video MP-02 – Video de demostración de navegación del prototipo móvil de Trakto Route requiere grabación y publicación por el equipo.
 
 El video deberá demostrar y explicar los principales flujos de interacción del prototipo, manteniendo correspondencia con los Wireflows, Mock-ups y User Flow Diagrams documentados previamente.
 
@@ -4723,15 +4742,15 @@ Las herramientas seleccionadas responden a las diferentes actividades realizadas
 | Collaborative Modeling | Miro | SaaS | Elaboración del Lean UX Canvas, Big Picture EventStorming y Candidate Context Discovery. | https://miro.com/ |
 | UX/UI Design | Figma | SaaS | Elaboración de Wireframes, Mock-ups y prototipos del Landing Page y aplicación móvil. | https://www.figma.com/ |
 | Software Architecture | Structurizr | SaaS / DSL | Elaboración de Context, Container, Deployment y Component Diagrams bajo C4 Model. | https://structurizr.com/ |
-| UML / Diagram-as-Code | PlantUML | [Versión pendiente de verificar] | Elaboración de Class Diagrams y Database Design Diagrams. | https://plantuml.com/ |
-| Mobile Development | Android Studio | [Versión pendiente de verificar en repositorio Android] | Desarrollo, compilación, ejecución y pruebas de la aplicación Android en Kotlin. | https://developer.android.com/studio |
-| Mobile Programming | Kotlin | [Versión pendiente de verificar] | Lenguaje utilizado para desarrollar la aplicación Android. | https://kotlinlang.org/ |
-| Backend Development | Spring Boot | [Versión pendiente de verificar en `pom.xml` o configuración del backend] | Implementación de RESTful Web Services y casos de uso del dominio. | https://spring.io/projects/spring-boot |
-| Backend Programming | Java | [Versión pendiente de verificar] | Lenguaje utilizado para implementar el backend. | https://www.java.com/ |
-| Database Management | MySQL | [Versión pendiente de verificar] | Persistencia central de usuarios, viajes, vehículos, conductores, incidencias e historial operativo. | https://www.mysql.com/ |
-| Source Code Management | Git | [Versión pendiente de verificar] | Control distribuido de versiones. | https://git-scm.com/ |
+| UML / Diagram-as-Code | PlantUML | `NOT_VERIFIED` | Elaboración de Class Diagrams y Database Design Diagrams. | https://plantuml.com/ |
+| Mobile Development | Android Studio | JBR 25.0.2; versión de IDE `NOT_VERIFIED` | Desarrollo, compilación y ejecución de la aplicación Android. | https://developer.android.com/studio |
+| Mobile Programming | Kotlin | 2.2.10 | Lenguaje utilizado para desarrollar la aplicación Android. | https://kotlinlang.org/ |
+| Backend Development | Spring Boot | 4.1.1 | Implementación de RESTful Web Services y casos de uso del dominio. | https://spring.io/projects/spring-boot |
+| Backend Programming | Java | 25 | Lenguaje utilizado para implementar el backend. | https://www.java.com/ |
+| Database Management | MySQL | Driver administrado por Spring Boot; servidor `NOT_VERIFIED` | Persistencia central de datos operativos. | https://www.mysql.com/ |
+| Source Code Management | Git | Instalación local verificada; versión no relevante para el entregable | Control distribuido de versiones. | https://git-scm.com/ |
 | Repository Hosting | GitHub | SaaS | Alojamiento de repositorios y colaboración mediante branches y commits. | https://github.com/ |
-| API Documentation | OpenAPI / Swagger | [Versión pendiente de verificar en backend] | Documentación y comprobación de los endpoints REST implementados. | https://swagger.io/ |
+| API Documentation | OpenAPI / Swagger | springdoc 3.0.3 | Documentación de los endpoints REST implementados. | https://swagger.io/ |
 
 El Product Backlog ya se encuentra administrado mediante Trello y contiene las User Stories organizadas por prioridad, Story Points y Sprint. El enlace público documentado actualmente es:
 
@@ -4753,9 +4772,9 @@ Los productos de Trakto Route requieren repositorios independientes para evitar 
 
 | Product | Repository | Purpose |
 |---|---|---|
-| Landing Page | [URL pendiente: repositorio del Landing Page] | Código HTML, CSS, JavaScript y assets correspondientes al sitio público de Trakto Route. |
-| RESTful Web Services | [URL pendiente: repositorio del backend] | Backend Java/Spring Boot, REST API, persistencia y pruebas automatizadas. |
-| Android Mobile Application | [URL pendiente: repositorio de la aplicación Android] | Código Kotlin correspondiente a la experiencia móvil de Trakto Route. |
+| Landing Page | https://github.com/1ACC0238-2620-4939/landing-page | Código HTML, CSS, JavaScript y assets correspondientes al sitio público de Trakto Route. |
+| RESTful Web Services | https://github.com/1ACC0238-2620-4939/backend | Backend Java/Spring Boot, REST API, persistencia y prueba de contexto. |
+| Android Mobile Application | https://github.com/1ACC0238-2620-4939/mobile-app | Código Kotlin y Jetpack Compose correspondiente a la experiencia móvil de Trakto Route. |
 
 Como recurso complementario, el informe del proyecto se encuentra bajo control de versiones en el siguiente repositorio:
 
@@ -4777,7 +4796,22 @@ Para la administración de branches se adopta **GitFlow**, manteniendo separaci�
 
 Una funcionalidad nueva debe desarrollarse en un feature branch generado a partir de `develop`. Una vez revisada y comprobada, deberá integrarse nuevamente a `develop`. Las versiones preparadas para publicación se gestionarán mediante release branches, mientras que los hotfix branches se reservarán para correcciones críticas sobre una versión estable.
 
-[Imagen pendiente: SCM-01 – diagrama GitFlow utilizado por los repositorios de Trakto Route]
+```mermaid
+gitGraph
+  commit id: "base"
+  branch develop
+  checkout develop
+  branch feature/tb1
+  checkout feature/tb1
+  commit id: "implementación"
+  checkout develop
+  merge feature/tb1 id: "integración"
+  branch release/tb1
+  checkout release/tb1
+  commit id: "release"
+  checkout main
+  merge release/tb1 id: "publicación"
+```
 
 **Figura 4.1**  
 *GitFlow utilizado por Trakto Route.*
@@ -4827,7 +4861,7 @@ MAJOR.MINOR.PATCH
 
 Por ejemplo, `1.0.0` representa conceptualmente una primera versión estable. No obstante, las versiones reales de Trakto Route deberán obtenerse de los tags o releases de los repositorios.
 
-[Dato pendiente: tags/releases existentes en los repositorios de Trakto Route]
+No se encontraron tags SemVer publicados. Los releases TB1 quedan identificados por los commits `3d2cad9` (backend), `3af2425` (Landing Page) y `5641a0f` (Android); el etiquetado SemVer permanece `NOT_VERIFIED`.
 
 <div style="page-break-after: always;"></div>
 
@@ -4969,10 +5003,10 @@ La configuración de deployment mantiene la separación arquitectónica definida
 
 | Product / Component | Source Repository | Build | Deployment Target | Public URL / Distribution |
 |---|---|---|---|---|
-| Landing Page | [URL pendiente: repositorio Landing Page] | HTML5, CSS3 y JavaScript | [Dato pendiente: servicio de hosting público] | [URL pendiente: Landing Page desplegado] |
-| RESTful Web Services | [URL pendiente: repositorio backend] | Java / Spring Boot | [Dato pendiente: cloud runtime utilizado] | [URL pendiente: REST API desplegada] |
-| MySQL Database | No aplica como repositorio independiente | MySQL | [Dato pendiente: servidor o servicio de base de datos] | Acceso restringido desde backend |
-| Android Application | [URL pendiente: repositorio Android] | Kotlin / Android | Ejecución en dispositivo Android; distribución posterior mediante Firebase App Distribution o servicio equivalente | [URL/enlace de distribución pendiente] |
+| Landing Page | [landing-page](https://github.com/1ACC0238-2620-4939/landing-page) | HTML5, CSS3 y JavaScript | GitHub Pages desde `main` | [Sitio público](https://1acc0238-2620-4939.github.io/landing-page/) |
+| RESTful Web Services | [backend](https://github.com/1ACC0238-2620-4939/backend) | Java 25 / Spring Boot / Docker | Railway; deployment existente confirmado por el owner | La URL de administración está registrada en GitHub; el health check público no fue comprobado durante este cierre |
+| MySQL Database | No aplica como repositorio independiente | MySQL | Variable de conexión gestionada por el runtime | Acceso restringido desde backend; entorno cloud `NOT_VERIFIED` |
+| Android Application | [mobile-app](https://github.com/1ACC0238-2620-4939/mobile-app) | Kotlin / Jetpack Compose / Gradle | APK debug instalado en Android Emulator | [Repositorio y APK reproducible](https://github.com/1ACC0238-2620-4939/mobile-app) |
 
 Para el **Landing Page**, el deployment debe generar un sitio público accesible mediante navegador web.
 
@@ -5036,16 +5070,16 @@ El Sprint Planning 1 establece el alcance inicial de implementación y organiza 
 | Sprint # | Sprint 1 |
 |---|---|
 | **Sprint Planning Background** | |
-| Date | [Dato pendiente: fecha real del Sprint Planning 1] |
-| Time | [Dato pendiente: hora real de inicio] |
-| Location | [Dato pendiente: ubicación física o virtual] |
-| Prepared By | [Dato pendiente: integrante responsable de preparar el Sprint Planning] |
+| Date | `NOT_VERIFIED`: requiere el acta real del equipo |
+| Time | `NOT_VERIFIED`: requiere el acta real del equipo |
+| Location | `NOT_VERIFIED`: requiere el acta real del equipo |
+| Prepared By | `NOT_VERIFIED`: requiere el acta real del equipo |
 | Attendees (to planning meeting) | Cesar Alejandro Linares Bernable / Aguilar Aguayo Jeferson Renzo / Fernandez Garfias, Alexander Piero / Chirito Torres, Jose Raul / Loa Rojas, Jean Franck |
 | Sprint 0 Review Summary | No aplica. Sprint 1 corresponde a la primera iteración de implementación del producto. |
 | Sprint 0 Retrospective Summary | No aplica. No existe una iteración anterior que deba ser evaluada. |
 | **Sprint Goal & User Stories** | |
 | Sprint 1 Goal | Our focus is on enabling the fleet supervisor to create and prepare transport operations through an initial end-to-end trip management flow. We believe it delivers centralized operational control to transport companies by allowing authenticated users to schedule trips, assign routes, vehicles and drivers, and consult or update trip information. This will be confirmed when a supervisor can authenticate, create a trip, associate its required resources and consult its current state through the implemented solution. |
-| Sprint 1 Velocity | [Dato pendiente: Velocity acordada por el equipo para Sprint 1] |
+| Sprint 1 Velocity | `NOT_VERIFIED`: no se encontró una velocidad acordada en los repositorios |
 | Sum of Story Points | **41 Story Points** |
 
 El Sprint Goal no se limita al cumplimiento individual de User Stories. Su propósito es proporcionar un incremento coherente que permita comprobar el flujo base de gestión de una operación de transporte.
@@ -5063,15 +5097,15 @@ Para Sprint 1, los principales aspectos funcionales son **Landing Page**, **Auth
 
 | Team Member (Last Name, First Name) | GitHub Username | Landing Page | Authentication | Trip Management | Fleet Management | Backend & API | Testing & Integration |
 |---|---|---|---|---|---|---|---|
-| Linares Bernable, Cesar Alejandro | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Aguilar Aguayo, Jeferson Renzo | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Fernandez Garfias, Alexander Piero | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Chirito Torres, Jose Raul | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Loa Rojas, Jean Franck | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
+| Linares Bernable, Cesar Alejandro | `NOT_VERIFIED` | `NOT_VERIFIED` | `NOT_VERIFIED` | `NOT_VERIFIED` | `NOT_VERIFIED` | `NOT_VERIFIED` |
+| Aguilar Aguayo, Jeferson Renzo | `JeferSomBlan` | C | C | C | C | C | C |
+| Fernandez Garfias, Alexander Piero | `Dostoyevsk1` | L | C | L | L | L | L |
+| Chirito Torres, Jose Raul | `JoseR044` | C | `NOT_VERIFIED` | `NOT_VERIFIED` | `NOT_VERIFIED` | `NOT_VERIFIED` | `NOT_VERIFIED` |
+| Loa Rojas, Jean Franck | `JeanLoa` | C | C | L | L | C | L |
 
 **Leyenda:** `L = Leader`, `C = Collaborator`.
 
-[Contenido pendiente: reemplazar las celdas L/C con la distribución real acordada por el equipo antes de la entrega]
+La matriz anterior se deriva de la autoría observable en GitHub. Las celdas marcadas `NOT_VERIFIED` requieren confirmación del equipo porque los repositorios no permiten inferir acuerdos personales o trabajo realizado fuera de GitHub.
 
 La asignación final debe mantener coherencia con los Work-items, responsables y commits que posteriormente se documenten en las evidencias del Sprint.
 
@@ -5081,30 +5115,30 @@ La asignación final debe mantener coherencia con los Work-items, responsables y
 
 El Sprint Backlog convierte el alcance establecido en Sprint Planning en actividades concretas. Las User Stories fueron seleccionadas desde el Product Backlog atendiendo al Sprint previamente definido.
 
-[Imagen pendiente: SB-01 – screenshot del Board utilizado para gestionar Sprint 1]
+`NOT_VERIFIED`: no se encontró un Sprint Board público asociado a los repositorios revisados.
 
 **Figura 4.3**  
 *Board de gestión correspondiente al Sprint 1.*
 
-[URL pendiente: enlace público al Board específico del Sprint 1]
+**URL del Board:** `NOT_VERIFIED`.
 
 **Tabla 4.9**  
 *Sprint Backlog 1*
 
 | User Story Id | User Story Title | Work-Item / Task Id | Work-Item / Task Title | Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---:|---|---|
-| US17 | Programar viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US05 | Consultar viajes | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US06 | Consultar detalle de viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US18 | Asignar ruta a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US23 | Registrar vehículo | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US25 | Registrar conductor | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US27 | Asignar vehículo a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US28 | Asignar conductor a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US07 | Consultar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US19 | Actualizar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US01 | Registrar cuenta | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US02 | Iniciar sesión | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+| US17 | Programar viaje | API-TRIP-CREATE | Implementar creación de viaje | Command, controller y persistencia de viajes | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
+| US05 | Consultar viajes | API-TRIP-LIST | Implementar consulta de viajes | Query service y endpoint de listado | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
+| US06 | Consultar detalle de viaje | API-TRIP-DETAIL | Implementar detalle de viaje | Query service y endpoint por identificador | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
+| US18 | Asignar ruta a un viaje | MOB-TRACKING | Preparar vista de seguimiento | Presentar ruta y progreso operativo | `NOT_VERIFIED` | Jean | Prototipo ejecutable con datos temporales |
+| US23 | Registrar vehículo | API-VEHICLE-CREATE | Implementar vehículo | Command y controller de vehículos | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
+| US25 | Registrar conductor | API-DRIVER-CREATE | Implementar conductor | Command y controller de conductores | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
+| US27 | Asignar vehículo a un viaje | MOB-FLEET | Preparar gestión de flota | Vista de vehículos y estados | `NOT_VERIFIED` | Jean | Prototipo ejecutable; integración `NOT_VERIFIED` |
+| US28 | Asignar conductor a un viaje | MOB-FLEET | Preparar gestión de conductores | Vista de conductores y estados | `NOT_VERIFIED` | Jean | Prototipo ejecutable; integración `NOT_VERIFIED` |
+| US07 | Consultar estado del viaje | MOB-TRIPS | Mostrar estado de viajes | Lista y resumen operativo | `NOT_VERIFIED` | Jean | Verificado en emulador con datos temporales |
+| US19 | Actualizar estado del viaje | API-TRIP-STATE | Implementar cambios de estado | Endpoints `start`, `complete` y `cancel` | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
+| US01 | Registrar cuenta | IAM | Registrar cuenta | Contexto IAM requerido | `NOT_VERIFIED` | `NOT_VERIFIED` | No implementado en el backend revisado |
+| US02 | Iniciar sesión | IAM | Iniciar sesión | Contexto IAM requerido | `NOT_VERIFIED` | `NOT_VERIFIED` | No implementado en el backend revisado |
 
 Los estados utilizados deberán corresponder a `To-do`, `In-Process`, `To-Review` o `Done`. Cada Work-item debe contar con estimación en horas y un responsable claramente identificado.
 
@@ -5112,102 +5146,79 @@ Los estados utilizados deberán corresponder a `To-do`, `In-Process`, `To-Review
 
 ##### 4.2.1.4. Development Evidence for Sprint Review
 
-Esta sección evidencia los avances de implementación relacionados con el alcance definido para Sprint 1. La evidencia deberá demostrar la participación en los productos que forman parte de Trakto Route y mantener relación directa con las User Stories y Work-items del Sprint Backlog.
+Esta sección presenta evidencia obtenida de los productos ejecutados y de sus historiales Git.
 
 **Landing Page**
 
-[Imagen pendiente: DEV-01 – captura del avance de implementación del Landing Page durante Sprint 1]
+![Landing Page de Trakto Route](assets/images/chapter4/tb1-landing.png)
 
 **Figura 4.4**  
 *Avance de implementación del Landing Page durante Sprint 1.*
 
-La evidencia deberá mostrar las secciones implementadas del Landing Page y su correspondencia con los Wireframes y Mock-ups definidos en el Capítulo III.
+La captura corresponde al código publicado desde `main` y muestra la propuesta de valor, funcionalidades y equipo.
 
 **Android Mobile Application**
 
-[Imagen pendiente: DEV-02 – captura del avance de implementación de la aplicación Android durante Sprint 1]
+![Dashboard Android de Trakto Route](assets/images/chapter4/tb1-mobile-dashboard.png)
+
+![Viajes Android de Trakto Route](assets/images/chapter4/tb1-mobile-trips.png)
+
+![Seguimiento Android de Trakto Route](assets/images/chapter4/tb1-mobile-tracking.png)
+
+![Flota Android de Trakto Route](assets/images/chapter4/tb1-mobile-fleet.png)
 
 **Figura 4.5**  
 *Avance de implementación de la aplicación Android durante Sprint 1.*
 
-La captura deberá evidenciar las principales pantallas implementadas para autenticación y gestión inicial de viajes.
+Las capturas se obtuvieron de un APK instalado en Android Emulator. El dashboard, los viajes, el seguimiento y la flota son ejecutables. Los datos temporales están centralizados en `DemoTraktoRepository`; el consumo del backend permanece `NOT_VERIFIED`.
 
 **RESTful Web Services**
 
-[Imagen pendiente: DEV-03 – evidencia de implementación de RESTful Web Services durante Sprint 1]
+El backend implementa controllers, command/query services, repositorios JPA y recursos para viajes, seguimiento, vehículos, conductores y perfiles. El contexto IAM descrito en el diseño no está implementado en el código revisado.
 
 **Figura 4.6**  
 *Avance de implementación de RESTful Web Services durante Sprint 1.*
 
-La evidencia deberá mostrar la implementación correspondiente a IAM, Trip Management y Fleet Management incluida en el alcance de Sprint 1.
+**Repositorio:** [1ACC0238-2620-4939/backend](https://github.com/1ACC0238-2620-4939/backend)
 
 **Tabla 4.10**  
 *Commits relacionados con Development durante Sprint 1*
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |---|---|---|---|---|---|
-| [Repositorio Landing Page] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-
-[Contenido pendiente: sustituir las filas anteriores por todos los commits reales relacionados con la implementación del Sprint 1]
+| landing-page | `feature/tb1-landing-readiness` | `c2d28f9` | `docs(landing): connect public project resources` | Conecta recursos públicos y corrige referencias del proyecto. | 2026-10-03 |
+| landing-page | `feature/tb1-landing-readiness` | `5e72057` | `docs(landing): add tb1 visual evidence` | Agrega evidencia visual real del Landing Page. | 2026-10-03 |
+| mobile-app | `feature/tb1-mobile` | `0d80734` | `feat(mobile): add tb1 core operations experience` | Implementa la experiencia Android core y sus capturas. | 2026-10-03 |
+| backend | `main` | `d85705e` | `refactor(shared): update documentation for swagger` | Actualiza la documentación OpenAPI del backend. | 2026-10-03 |
+| backend | `feature/tb1-deployment-readiness` | `e11a4ff` | `chore(deployment): make backend build reproducible` | Añade entorno de prueba reproducible y build Docker. | 2026-10-03 |
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-La estrategia de Testing debe comprobar que las funcionalidades incluidas en Sprint 1 satisfacen los comportamientos especificados en sus User Stories y Acceptance Criteria.
-
-Para los RESTful Web Services, las evidencias deben distinguir **Unit Tests**, **Integration Tests** y, cuando corresponda, **Acceptance Tests** automatizados. Las pruebas de Android pueden complementar estas evidencias mediante Local Unit Tests, Instrumented Tests o UI Tests cuando estén implementados.
+La verificación ejecutada se limita a las pruebas y gates existentes o reproducibles. No se atribuyen Unit Tests, Integration Tests ni Acceptance Tests que no existan en los repositorios.
 
 **Tabla 4.11**  
 *Testing Suite correspondiente al Sprint 1*
 
 | Test ID | Product | Test Type | Related User Story | Tested Component / Behavior | Result |
 |---|---|---|---|---|---|
-| [TEST-ID] | Backend | Unit Test | US17 | Programación de un viaje con datos válidos | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Unit Test | US05 | Obtención de viajes registrados | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Unit Test | US06 | Obtención del detalle de un viaje | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US01 | Registro de una cuenta y persistencia del usuario | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US02 | Autenticación utilizando credenciales registradas | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US23 | Registro y persistencia de vehículo | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US25 | Registro y persistencia de conductor | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US27 | Asociación de vehículo con viaje | [Resultado real pendiente] |
-| [TEST-ID] | Backend | Integration Test | US28 | Asociación de conductor con viaje | [Resultado real pendiente] |
-| [TEST-ID] | Android | [Tipo de prueba real] | [US relacionada] | [Comportamiento realmente probado] | [Resultado real pendiente] |
+| BACKEND-CTX-01 | Backend | Spring context smoke test | Transversal | Arranque del contexto con H2, sin depender de MySQL externo | `PASS`: 1 test, 0 failures, 0 errors |
+| BACKEND-BUILD-01 | Backend | Container build | Transversal | Compilación Java 25 y construcción de imagen Docker | `PASS` |
+| ANDROID-BUILD-01 | Android | Build gate | Transversal | `clean assembleDebug` | `PASS`: APK generado |
+| ANDROID-LINT-01 | Android | Static analysis | Transversal | `lintDebug` | `PASS` |
+| ANDROID-RUNTIME-01 | Android | Runtime smoke | US05, US07, US18, US23, US25 | Instalación y navegación por Dashboard, Viajes, Seguimiento y Flota | `PASS` en Android Emulator |
+| ACCEPTANCE-01 | Backend/Android | Acceptance | US01-US28 | Criterios de aceptación automatizados | `NOT_VERIFIED`: suite inexistente |
 
-La tabla anterior identifica los comportamientos que requieren evidencia para el Sprint; los identificadores y resultados deberán sustituirse por los obtenidos de la suite real de pruebas.
-
-Cuando se implementen Acceptance Tests en Gherkin, deberá incorporarse el `.feature` realmente utilizado y explicar su relación con la User Story correspondiente.
-
-```gherkin
-[Contenido pendiente: incorporar aquí únicamente un escenario Gherkin real existente en el repositorio de Testing]
-```
-
-[Imagen pendiente: TEST-01 – ejecución de Unit Tests de los RESTful Web Services durante Sprint 1]
-
-**Figura 4.7**  
-*Ejecución de Unit Tests correspondiente al Sprint 1.*
-
-[Imagen pendiente: TEST-02 – ejecución de Integration Tests correspondiente al Sprint 1]
-
-**Figura 4.8**  
-*Ejecución de Integration Tests correspondiente al Sprint 1.*
-
-[Imagen pendiente: TEST-03 – ejecución de pruebas Android correspondiente al Sprint 1]
-
-**Figura 4.9**  
-*Ejecución de pruebas de la aplicación Android correspondiente al Sprint 1.*
+Los comandos reproducibles son `./mvnw test`, `docker build -t trakto-route-backend:tb1 .` y `./gradlew clean assembleDebug lintDebug` en sus respectivos repositorios.
 
 **Tabla 4.12**  
 *Commits relacionados con Testing durante Sprint 1*
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |---|---|---|---|---|---|
-| [Repositorio Backend] | [Branch real] | [Hash real] | [Commit `test:` real] | [Body real] | [Fecha real] |
-| [Repositorio Android] | [Branch real] | [Hash real] | [Commit real] | [Body real] | [Fecha real] |
-
-[Contenido pendiente: sustituir con commits reales correspondientes a las pruebas implementadas]
+| backend | `feature/tb1-deployment-readiness` | `e11a4ff` | `chore(deployment): make backend build reproducible` | Incorpora H2 para el test de contexto y Dockerfile reproducible. | 2026-10-03 |
+| mobile-app | `feature/tb1-mobile` | `0d80734` | `feat(mobile): add tb1 core operations experience` | Incluye el proyecto Android validado mediante build, lint e instalación. | 2026-10-03 |
 
 <div style="page-break-after: always;"></div>
 
@@ -5217,34 +5228,32 @@ La Execution Evidence permite demostrar que las funcionalidades desarrolladas du
 
 **Landing Page**
 
-[Imagen pendiente: EXE-01 – Landing Page de Trakto Route ejecutándose durante Sprint 1]
+![Landing Page de Trakto Route en ejecución](assets/images/chapter4/tb1-landing.png)
 
 **Figura 4.10**  
 *Landing Page de Trakto Route en ejecución.*
 
-La captura deberá mostrar la versión realmente implementada y permitir contrastarla con la propuesta visual documentada previamente.
+**URL pública:** https://1acc0238-2620-4939.github.io/landing-page/
 
 **Android Mobile Application**
 
-[Imagen pendiente: EXE-02 – aplicación Android Trakto Route ejecutándose durante Sprint 1]
+![Aplicación Android Trakto Route en ejecución](assets/images/chapter4/tb1-mobile-dashboard.png)
 
 **Figura 4.11**  
 *Aplicación móvil Trakto Route en ejecución.*
 
-La evidencia deberá presentar las principales pantallas core alcanzadas durante Sprint 1, principalmente aquellas relacionadas con autenticación y gestión inicial de viajes.
+La ejecución en Android Emulator fue verificada mediante instalación del APK y navegación automatizada por las cuatro secciones disponibles.
 
 **Flujo integrado**
 
-[Imagen pendiente: EXE-03 – evidencia de interacción de la aplicación Android con los RESTful Web Services]
+`NOT_VERIFIED`: la aplicación utiliza `DemoTraktoRepository`; todavía no existe un adaptador REST conectado al backend.
 
 **Figura 4.12**  
 *Interacción entre la aplicación Android y los RESTful Web Services.*
 
 La evidencia deberá demostrar que la aplicación consume información procedente de la API y que los datos persistentes no dependen únicamente del dispositivo móvil.
 
-[Video pendiente: EXE-04 – video de ejecución y navegación de las funcionalidades implementadas durante Sprint 1]
-
-**URL del video:** [URL pendiente]
+**URL del video:** `BLOCKED`: requiere que el equipo grabe y publique una demostración continua con su cuenta institucional.
 
 El video deberá mostrar de manera continua los principales flujos implementados durante el Sprint y explicar su correspondencia con las User Stories comprometidas.
 
@@ -5261,36 +5270,28 @@ Debido a que las rutas exactas deben corresponder con los Controllers del reposi
 
 | Endpoint | HTTP Method | Purpose | Related User Story | Parameters / Request | Response | Documentation URL |
 |---|---|---|---|---|---|---|
-| [Ruta real pendiente] | [Método real] | Registrar una cuenta | US01 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Iniciar sesión | US02 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Consultar viajes | US05 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Consultar detalle de viaje | US06 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Consultar estado del viaje | US07 | [Parameters reales] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Programar viaje | US17 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Asignar ruta | US18 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Actualizar estado | US19 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Registrar vehículo | US23 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Registrar conductor | US25 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Asignar vehículo | US27 | [Request real] | [Response real] | [Swagger/OpenAPI] |
-| [Ruta real pendiente] | [Método real] | Asignar conductor | US28 | [Request real] | [Response real] | [Swagger/OpenAPI] |
+| `/api/v1/trips` | GET | Consultar viajes | US05 | Sin body | Colección de recursos de viaje | `/swagger-ui.html` local |
+| `/api/v1/trips/{id}` | GET | Consultar detalle | US06 | `id` | Recurso de viaje | `/swagger-ui.html` local |
+| `/api/v1/trips` | POST | Programar viaje | US17 | Recurso de creación | Recurso de viaje creado | `/swagger-ui.html` local |
+| `/api/v1/trips/{id}/start` | PATCH | Iniciar viaje | US19 | `id` | Viaje actualizado | `/swagger-ui.html` local |
+| `/api/v1/trips/{id}/complete` | PATCH | Completar viaje | US19 | `id` | Viaje actualizado | `/swagger-ui.html` local |
+| `/api/v1/trips/{id}/cancel` | PATCH | Cancelar viaje | US19 | `id` | Viaje actualizado | `/swagger-ui.html` local |
+| `/api/v1/vehicles` | GET / POST | Consultar o registrar vehículo | US10, US23 | Filtros o recurso de creación | Recurso(s) de vehículo | `/swagger-ui.html` local |
+| `/api/v1/drivers` | GET / POST | Consultar o registrar conductor | US09, US25 | Filtros o recurso de creación | Recurso(s) de conductor | `/swagger-ui.html` local |
+| `/api/v1/trackings` | POST | Registrar seguimiento | US18 | Recurso de creación | Recurso de seguimiento | `/swagger-ui.html` local |
+| `/api/v1/trackings/{id}/positions` | POST | Registrar posición | US40 | Recurso de posición | Seguimiento actualizado | `/swagger-ui.html` local |
+| `/api/v1/profiles` | GET / POST | Consultar o registrar perfil | US03 | Filtros o recurso de creación | Recurso(s) de perfil | `/swagger-ui.html` local |
+| No implementado | — | Registrar cuenta / iniciar sesión | US01, US02 | — | — | `NOT_VERIFIED`: IAM no existe en el backend revisado |
 
 Para cada endpoint documentado deberán especificarse los parámetros, request body cuando corresponda, posibles códigos HTTP y un ejemplo del response.
 
-[Imagen pendiente: API-01 – Swagger/OpenAPI mostrando los endpoints implementados en Sprint 1]
-
-**Figura 4.13**  
-*Documentación OpenAPI de los RESTful Web Services.*
-
-[Imagen pendiente: API-02 – request y response correspondiente a un endpoint representativo del Sprint 1]
-
-**Figura 4.14**  
-*Ejemplo de interacción con un RESTful endpoint de Trakto Route.*
+La UI de Swagger está configurada en `/swagger-ui.html`. Su ejecución contra una base MySQL y un request/response persistente permanece `NOT_VERIFIED`.
 
 **REST API Repository:**  
-[URL pendiente: repositorio de los RESTful Web Services]
+[https://github.com/1ACC0238-2620-4939/backend](https://github.com/1ACC0238-2620-4939/backend)
 
 **OpenAPI / Swagger:**  
-[URL pendiente: URL pública o local utilizada durante Sprint 1]
+`http://localhost:8080/swagger-ui.html` (URL local; no se presenta como deployment público)
 
 Si los RESTful Web Services todavía no se encuentran desplegados públicamente durante esta etapa, puede utilizarse la URL local realmente configurada en el proyecto. Esta URL no deberá presentarse como un deployment público.
 
@@ -5304,36 +5305,35 @@ Para TB1, el Landing Page debe encontrarse disponible públicamente. Las evidenc
 
 **Landing Page**
 
-[Imagen pendiente: DEP-S1-01 – configuración utilizada para desplegar el Landing Page durante Sprint 1]
+El repositorio usa GitHub Pages con source `main` y raíz `/`. El release documentado corresponde al commit `3af2425`.
 
 **Figura 4.15**  
 *Configuración de deployment del Landing Page.*
 
-[Imagen pendiente: DEP-S1-02 – Landing Page públicamente desplegado]
+![Landing Page desplegado](assets/images/chapter4/tb1-landing.png)
 
 **Figura 4.16**  
 *Landing Page desplegado durante Sprint 1.*
 
-**URL:**  
-[URL pendiente: Landing Page público]
+**URL:** https://1acc0238-2620-4939.github.io/landing-page/
 
 **RESTful Web Services**
 
-[Imagen pendiente: DEP-S1-03 – configuración del entorno de ejecución del backend durante Sprint 1]
+El backend contiene un `Dockerfile` multi-stage con Java 25, `.dockerignore` y variables de entorno documentadas. La imagen `trakto-route-backend:tb1` se construyó correctamente.
 
 **Figura 4.17**  
 *Configuración del backend correspondiente al Sprint 1.*
 
-[Dato pendiente: especificar si durante Sprint 1 el backend se ejecuta localmente o se encuentra desplegado en un proveedor cloud]
+El owner confirmó que el backend ya se encuentra desplegado en Railway y pidió conservarlo sin cambios. Este cierre no modificó el proyecto ni sus variables. GitHub registra el entorno `precious-analysis / production`; la URL pública del servicio y su health check no fueron comprobados de forma independiente.
 
 **Android Application**
 
-[Imagen pendiente: DEP-S1-04 – build o instalación de Trakto Route en Android durante Sprint 1]
+![Aplicación instalada en Android Emulator](assets/images/chapter4/tb1-mobile-dashboard.png)
 
 **Figura 4.18**  
 *Build de la aplicación Android correspondiente al Sprint 1.*
 
-La aplicación deberá presentarse instalada y ejecutándose en el entorno utilizado por el equipo. La distribución mediante Firebase App Distribution o servicio equivalente deberá incorporarse cuando corresponda a la etapa de publicación establecida en el proyecto.
+El APK debug fue generado, instalado y ejecutado en Android Emulator. No se publicó en Firebase App Distribution; esa distribución queda fuera de la evidencia verificada.
 
 <div style="page-break-after: always;"></div>
 
@@ -5341,24 +5341,14 @@ La aplicación deberá presentarse instalada y ejecutándose en el entorno utili
 
 La colaboración durante Sprint 1 debe analizarse utilizando evidencias obtenidas de los repositorios y de la herramienta de gestión del Sprint. El análisis no debe limitarse a contabilizar commits, sino relacionar las contribuciones con los aspectos y responsabilidades definidos previamente en la Leadership-and-Collaboration Matrix.
 
-[Imagen pendiente: TC-01 – GitHub Contributors correspondiente a los repositorios utilizados durante Sprint 1]
+| Repositorio | Evidencia de colaboradores observada en GitHub | Resultado |
+|---|---|---|
+| Report | `Dostoyevsk1` 23, `JeferSomBlan` 7, `JoseR044` 2 contribuciones visibles antes del cierre; Jean integró el cierre TB1 | Evidencia de documentación distribuida |
+| backend | `Dostoyevsk1` 28, `JeanLoa` 3 | Alexander concentra la implementación; Jean añadió reproducibilidad y verificación |
+| landing-page | `JeanLoa` 7, `Dostoyevsk1` 4 | Base visual de Alexander y cierre/publicación de Jean |
+| mobile-app | `JeanLoa` 4 | Implementación y evidencias a cargo de Jean |
 
-**Figura 4.19**  
-*Contribuciones del equipo durante Sprint 1.*
-
-[Imagen pendiente: TC-02 – GitHub Commit Activity correspondiente a Sprint 1]
-
-**Figura 4.20**  
-*Actividad de commits registrada durante Sprint 1.*
-
-[Imagen pendiente: TC-03 – actividad del Board utilizado durante Sprint 1]
-
-**Figura 4.21**  
-*Actividad colaborativa registrada en el Sprint Board.*
-
-Una vez incorporadas las evidencias, el equipo deberá analizar la distribución real del trabajo señalando qué productos o features concentraron mayor participación, cómo se relacionaron los líderes y colaboradores y si la contribución observada coincide con las responsabilidades definidas inicialmente.
-
-[Contenido pendiente: análisis de GitHub Insights y actividad real del equipo durante Sprint 1]
+La actividad muestra una concentración técnica en Alexander para el backend y en Jean para la aplicación Android, el cierre de despliegue y la integración del informe. Jeferson aportó los capítulos III y IV, mientras Jose registra aportes previos al informe. No se encontró un Board público ni contribuciones atribuibles a Cesar en los repositorios revisados; esas actividades no se infieren.
 
 <div style="page-break-after: always;"></div>
 
@@ -5428,235 +5418,46 @@ Las respuestas deberán analizarse conjuntamente con la observación del comport
 
 #### 4.3.2. Registro de Entrevistas
 
-El proceso de validación requiere realizar entre **3 y 5 entrevistas por cada segmento objetivo**. Cada sesión debe registrarse en video y documentar los datos del participante, timing y duración.
+Las entrevistas de validación requieren entre **3 y 5 participantes por segmento**, grabación, datos del participante, timing y resumen de hallazgos reales.
 
-##### Segmento 1: Empresas de transporte de carga
+| Evidencia requerida | Estado al 03/10/2026 | Condición de cierre |
+|---|---|---|
+| 3-5 entrevistas: empresas de transporte | `BLOCKED` | El equipo debe reclutar participantes, grabar las sesiones y publicar los enlaces autorizados |
+| 3-5 entrevistas: clientes de transporte | `BLOCKED` | El equipo debe reclutar participantes, grabar las sesiones y publicar los enlaces autorizados |
+| Capturas y timing de cada sesión | `BLOCKED` | Solo pueden extraerse de videos reales |
+| Resumen de apreciaciones | `BLOCKED` | Debe redactarse desde respuestas y observación reales |
 
-###### Entrevista de validación 1
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Empresa de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-01 – screenshot de la entrevista de validación 1]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar únicamente con las apreciaciones reales obtenidas durante la entrevista]
-
----
-
-###### Entrevista de validación 2
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Empresa de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-02 – screenshot de la entrevista de validación 2]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
-
----
-
-###### Entrevista de validación 3
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Empresa de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-03 – screenshot de la entrevista de validación 3]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
-
-##### Segmento 2: Clientes que requieren servicios de transporte de carga
-
-###### Entrevista de validación 4
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Cliente de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-04 – screenshot de la entrevista de validación 4]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
-
----
-
-###### Entrevista de validación 5
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Cliente de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-05 – screenshot de la entrevista de validación 5]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
-
----
-
-###### Entrevista de validación 6
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Cliente de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-06 – screenshot de la entrevista de validación 6]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
+No se reutilizan las entrevistas de Needfinding como si fueran pruebas de validación y no se atribuyen opiniones a participantes inexistentes.
 
 <div style="page-break-after: always;"></div>
 
 #### 4.3.3. Evaluaciones según heurísticas
 
-Las sesiones de validación deberán complementarse mediante la evaluación de la experiencia siguiendo el formato establecido en el **Anexo E: UX Heuristics & Principles Evaluation** del enunciado del proyecto.
+La evaluación debe usar el formato oficial del **Anexo E: UX Heuristics & Principles Evaluation** y hallazgos observados durante las entrevistas.
 
-El análisis considera tres dimensiones:
+| Resultado | Estado |
+|---|---|
+| Tabla de problemas y severidad | `BLOCKED`: depende de las entrevistas de validación |
+| Capturas que evidencian cada problema | `BLOCKED`: depende de interacción real |
+| Recomendaciones priorizadas | `BLOCKED`: no pueden formularse como hallazgos de usuario antes de observarlos |
 
-- **Usability.**
-- **Inclusive Design.**
-- **Information Architecture.**
+La escala prevista es: 1 problema superficial, 2 problema menor, 3 problema mayor y 4 problema muy grave. Los nombres de heurísticas y principios deberán copiarse exactamente del Anexo E cuando se completen las sesiones.
 
-Los hallazgos deben derivarse de problemas observados durante la interacción con el Landing Page y la aplicación. No deben registrarse problemas hipotéticos como si hubieran sido identificados por participantes reales.
+# Conclusiones
 
-**Escala de severidad**
+1. El incremento TB1 cuenta con tres productos versionados: Landing Page público, backend Spring Boot reproducible y aplicación Android ejecutable.
+2. La aplicación móvil demuestra navegación y presentación de operaciones en emulador, pero su repositorio temporal de datos todavía debe reemplazarse por un adaptador REST para demostrar persistencia end-to-end.
+3. El backend implementa viajes, seguimiento, flota y perfiles; IAM y una suite de pruebas de comportamiento siguen pendientes y no forman parte de la evidencia aceptada.
+4. GitFlow quedó aplicado mediante ramas `feature`, `develop`, `release` y `main`, conservando trazabilidad entre el trabajo técnico y los releases.
+5. La aceptación del producto requiere aún entrevistas reales, evaluación heurística derivada de esas sesiones, video de demostración y validación de los datos del Sprint Planning.
 
-**Tabla 4.15**  
-*Escala de severidad para la evaluación heurística*
+# Bibliografía
 
-| Nivel | Descripción |
-|---:|---|
-| **1** | **Problema superficial:** puede ser superado fácilmente por el usuario y ocurre con poca frecuencia. No requiere una corrección inmediata salvo disponibilidad de tiempo. |
-| **2** | **Problema menor:** puede ocurrir con mayor frecuencia o requerir mayor esfuerzo por parte del usuario. Debe considerarse una prioridad baja para la siguiente release. |
-| **3** | **Problema mayor:** ocurre frecuentemente o impide a algunos usuarios resolver adecuadamente una tarea. Su corrección requiere prioridad alta. |
-| **4** | **Problema muy grave:** tiene un impacto considerable e impide que el usuario continúe utilizando correctamente la experiencia. Debe corregirse antes del lanzamiento. |
-
-**Tabla resumen**
-
-**Tabla 4.16**  
-*Resumen de problemas identificados durante las Validation Interviews*
-
-| # | Problema | Escala de severidad | Heurística / Principio violada(o) |
-|---:|---|---:|---|
-| 1 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 2 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 3 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 4 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-| 5 | [Contenido pendiente: problema real identificado] | [1-4] | [Heurística/principio correspondiente del Anexo E] |
-
-Los nombres de las heurísticas y principios deberán corresponder exactamente a los establecidos en el formato oficial del Anexo E, evitando crear denominaciones propias.
-
-**Descripción de problemas**
-
-##### Problema #1: [Nombre del problema identificado]
-
-**Severidad:** [1-4]
-
-**Heurística / Principio violada(o):**  
-[Denominación correspondiente al Anexo E]
-
-**Problema**
-
-[Contenido pendiente: describir el comportamiento observado, la tarea que intentaba realizar el participante y la consecuencia del problema]
-
-[Imagen pendiente: HEU-01 – captura que evidencia el Problema #1]
-
-**Recomendación**
-
-[Contenido pendiente: propuesta concreta para resolver el problema sin alterar innecesariamente el flujo]
-
----
-
-##### Problema #2: [Nombre del problema identificado]
-
-**Severidad:** [1-4]
-
-**Heurística / Principio violada(o):**  
-[Denominación correspondiente al Anexo E]
-
-**Problema**
-
-[Contenido pendiente: descripción basada en evidencia real]
-
-[Imagen pendiente: HEU-02 – captura que evidencia el Problema #2]
-
-**Recomendación**
-
-[Contenido pendiente: recomendación de mejora]
-
----
-
-##### Problema #3: [Nombre del problema identificado]
-
-**Severidad:** [1-4]
-
-**Heurística / Principio violada(o):**  
-[Denominación correspondiente al Anexo E]
-
-**Problema**
-
-[Contenido pendiente: descripción basada en evidencia real]
-
-[Imagen pendiente: HEU-03 – captura que evidencia el Problema #3]
-
-**Recomendación**
-
-[Contenido pendiente: recomendación de mejora]
-
-Una vez finalizadas las sesiones, los hallazgos deberán contrastarse entre ambos segmentos para identificar problemas recurrentes y diferencias relacionadas con sus respectivos User Goals. Las mejoras priorizadas deberán considerar primero los problemas de severidad 4 y 3, y posteriormente aquellos de severidad 2 y 1.
-
-
+- Android Developers. *Jetpack Compose*. https://developer.android.com/compose
+- GitHub Docs. *Configuring a publishing source for your GitHub Pages site*. https://docs.github.com/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+- Spring. *Spring Boot Reference Documentation*. https://docs.spring.io/spring-boot/reference/
+- Docker Docs. *Multi-stage builds*. https://docs.docker.com/build/building/multi-stage/
+- OpenAPI Initiative. *OpenAPI Specification*. https://spec.openapis.org/oas/latest.html
 # Anexos
 
 ## Anexo A. Herramientas utilizadas
@@ -5686,4 +5487,3 @@ Una vez finalizadas las sesiones, los hallazgos deberán contrastarse entre ambo
 | Jael Pinta | Cliente de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAz-85vOfF1R46gy8UA0z54AfCV6TF7BxvrpjY63Y2yBAs) |
 
 <div style="page-break-after: always;"></div>
-
