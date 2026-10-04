@@ -5487,3 +5487,16 @@ La escala prevista es: 1 problema superficial, 2 problema menor, 3 problema mayo
 | Jael Pinta | Cliente de transporte de carga | [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202218899_upc_edu_pe/IQAz-85vOfF1R46gy8UA0z54AfCV6TF7BxvrpjY63Y2yBAs) |
 
 <div style="page-break-after: always;"></div>
+
+## Anexo C. Videos de Exposiciones
+
+| Entrega | Video | Estado | URL |
+|---|---|---|---|
+| TB1 | Exposición del proyecto | `BLOCKED`: requiere grabación editada de máximo 15 minutos con participación ante cámara | `NOT_VERIFIED` |
+| TB1 | App Validation | `BLOCKED`: depende de sesiones reales de validación y su grabación | `NOT_VERIFIED` |
+| TB1 | About the Product | `BLOCKED`: requiere demostración del producto y testimonios reales autorizados | `NOT_VERIFIED` |
+| TB1 | About the Team | `BLOCKED`: requiere escenas reales de trabajo y testimonio de cada integrante | `NOT_VERIFIED` |
+
+Los archivos deberán publicarse en el OneDrive indicado por el docente. Los videos About the Product y About the Team también deberán publicarse en YouTube e incorporarse al Landing Page cuando el equipo los produzca.
+
+<div style="page-break-after: always;"></div>
