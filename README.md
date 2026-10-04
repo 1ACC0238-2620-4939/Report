@@ -1745,21 +1745,15 @@ Estos hallazgos complementan los resultados obtenidos mediante los User Personas
 
 ### 2.3.5. Big Picture EventStorming
 
-En esta sección se presenta el resultado del **Big Picture EventStorming elaborado en Miro** con el objetivo de explorar y comprender el dominio de negocio de **Trakto Route** a alto nivel. Durante la sesión, el equipo identificó y organizó cronológicamente los principales **Domain Events**, actores y procesos relacionados con la gestión de las operaciones de transporte.
+El modelo actualizado de Trakto Route distribuye los eventos en seis Bounded Contexts: **Trip Management, Fleet Management, Tracking, Route Planning, IAM y Profile**.
 
-A partir del análisis colaborativo se identificaron seis **Bounded Contexts** principales: **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**. Cada contexto agrupa eventos y conceptos relacionados con una responsabilidad específica del dominio, permitiendo establecer una primera separación siguiendo los principios de **Domain-Driven Design**.
+Trip Management controla la programación, asignaciones y ciclo de vida del viaje. Fleet Management es propietario de conductores y vehículos. Tracking recibe posiciones del dispositivo, detecta paradas y conserva su motivo y duración. Route Planning calcula el recorrido previsto mediante un adaptador del proveedor de rutas. IAM administra identidad y acceso; Profile administra los datos del perfil.
 
-El contexto **IAM (Identity and Access Management)** gestiona los eventos relacionados con la autenticación, autorización y acceso de los usuarios. **Profile** administra la información asociada al perfil de cada usuario. **Trip Management** concentra el ciclo de vida de los viajes, incluyendo rutas, estados, paradas y descansos. **Fleet Management** administra los vehículos y conductores involucrados en las operaciones. **Incident Management** gestiona los retrasos, problemas, accidentes e incidencias ocurridas durante los viajes. Finalmente, **Operational History** mantiene el historial de viajes, vehículos y conductores, permitiendo conservar la trazabilidad de las operaciones realizadas.
-
-Durante la sesión también se identificaron **Hot Spots** relacionados con los cambios de estado de los viajes, la disponibilidad de vehículos y conductores, los tipos de incidencias y las condiciones bajo las cuales una operación puede continuar o finalizar. Estos puntos representan aspectos del dominio que requieren un análisis posterior con mayor nivel de detalle.
-
-A continuación, se presenta una captura del **Big Picture EventStorming de Trakto Route elaborado en Miro** durante la sesión.
+Los eventos de inicio y finalización del viaje permiten coordinar el seguimiento mediante contratos públicos. Tracking registra posiciones y detecta una parada al acumular al menos diez minutos de inmovilidad; el movimiento posterior cierra la parada. Los puntos de análisis incluyen tolerancia GPS, reportes atrasados, cambios de estado y disponibilidad de flota.
 
 ![Big Picture EventStorming - Trakto Route](assets/images/chapter2/big-picture-eventstorming.png)
 
-<div style="page-break-after: always;"></div>
-
-
+**Actualización de imagen requerida:** representar estos seis contextos y separar ruta planificada de posiciones y paradas reales.
 
 ### 2.3.6. Ubiquitous Language
 
@@ -1768,6 +1762,10 @@ El siguiente glosario reúne los principales términos y conceptos utilizados de
 Los términos se presentan en inglés junto con su equivalente en español y corresponden exclusivamente a conceptos del dominio del negocio identificados durante el proceso de análisis y Big Picture EventStorming.
 
 | **Term** | **Definition** |
+| **Tracking (Seguimiento)** | Registro de posiciones y paradas reales de un viaje. |
+| **Position Report (Reporte de posición)** | Ubicación GPS y fecha de captura recordedAt. |
+| **Route Plan (Plan de ruta)** | Resultado previsto del cálculo: distancia, duración y referencia. |
+| **Stop Reason (Motivo de parada)** | Clasificación editable de una parada detectada automáticamente; descanso es un motivo REST. |
 |---|---|
 | **Trip (Viaje)** | Operación de transporte realizada desde un punto de origen hasta un destino determinado, utilizando un vehículo, un conductor y una ruta asignada. |
 | **Trip Status (Estado del viaje)** | Condición en la que se encuentra un viaje durante su ciclo de vida, como programado, preparado, en curso, finalizado o cancelado. |
@@ -1790,6 +1788,7 @@ Los términos se presentan en inglés junto con su equivalente en español y cor
 | **Operation Performance (Desempeño de la operación)** | Resultado de la revisión de una operación de transporte considerando su desarrollo, cumplimiento y eventos registrados. |
 
 <div style="page-break-after: always;"></div>
+
 
 
 ## 2.4. Requirements Specification
@@ -2653,8 +2652,8 @@ Durante el análisis se identificaron progresivamente los siguientes Candidate B
 - **Profile**
 - **Trip Management**
 - **Fleet Management**
-- **Incident Management**
-- **Operational History**
+- **Tracking**
+- **Route Planning**
 
 
 ![Candidate Context Discovery - Proceso 1](assets/images/chapter2/candidate-context-discovery.png)
@@ -2664,19 +2663,13 @@ Durante el análisis se identificaron progresivamente los siguientes Candidate B
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
-En esta sección se modela la colaboración entre los Bounded Contexts de Trakto Route mediante la técnica Domain Storytelling, con el objetivo de visualizar cómo interactúan entre sí para resolver los principales casos de negocio.
+**Flujo 1 — Preparación del viaje:** IAM autentica al usuario. Trip Management consulta los contratos públicos de Fleet Management para validar conductor y vehículo; solicita a Route Planning un cálculo entre origen y destino. Route Planning llama a Google Maps Compute Routes mediante infraestructura y devuelve un resultado traducido. Trip conserva referencias de flota y un TripRoutePlan propio.
 
-Para ello, se elaboraron diagramas utilizando Structurizr, representando la participación y comunicación entre los Bounded Contexts IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History en los principales escenarios del dominio.
-
-Estos diagramas permiten identificar los actores involucrados, las interacciones entre los diferentes contextos y el flujo de información necesario para ejecutar las operaciones de Trakto Route, facilitando la comprensión de las dependencias y responsabilidades existentes entre los Bounded Contexts.
-
-A continuación, se presentan los diagramas de Domain Storytelling elaborados.
+**Flujo 2 — Ejecución y seguimiento:** el inicio de Trip coordina la creación de Tracking. El dispositivo obtiene la ubicación GPS y envía PositionReport a la API. Tracking registra las posiciones, detecta paradas automáticamente y permite cambiar su motivo. Trip consulta información de seguimiento mediante una ACL; finalizar o cancelar el viaje coordina la finalización del seguimiento. Estos flujos describen el contrato de integración previsto, sin afirmar que los handlers de integración ya estén implementados.
 
 ![Domain Storytelling - Flujo 1](assets/images/chapter2/domain-storytelling-1.png)
 
 ![Domain Storytelling - Flujo 2](assets/images/chapter2/domain-storytelling-2.png)
-
-<div style="page-break-after: always;"></div>
 
 #### 2.5.1.3. Bounded Context Canvases
 
@@ -2695,10 +2688,19 @@ Para **Trakto Route** se elaboran los siguientes Bounded Context Canvases:
 
 1. **Trip Management**
 2. **Fleet Management**
-3. **Incident Management**
-4. **Operational History**
+3. **Tracking**
+4. **Route Planning**
 5. **IAM**
 6. **Profile**
+
+| Contexto | Responsabilidad y dependencia |
+|---|---|
+| Trip Management | Viajes, estados y asignaciones; consume Fleet, Route Planning y consultas de Tracking mediante ACL. |
+| Fleet Management | Conductores y vehículos; expone contratos públicos a Trip. |
+| Tracking | Posiciones y paradas automáticas; recibe referencia del viaje y reportes GPS. |
+| Route Planning | Cálculo del recorrido previsto; integra Google Maps y publica resultados a Trip. |
+| IAM | Identidad, autenticación y autorización. |
+| Profile | Perfil asociado a la identidad de IAM mediante referencia. |
 
 Los Bounded Context Canvases fueron representados utilizando **Structurizr**, organizando visualmente la información correspondiente a las responsabilidades de cada contexto, sus principales capacidades de negocio, reglas, términos del **Ubiquitous Language** y dependencias con otros Bounded Contexts.
 
@@ -2710,9 +2712,9 @@ A continuación, se presentan las representaciones de los Bounded Context Canvas
 
 ![Bounded Context Canvas - Fleet Management](assets/images/chapter2/bounded-context-canvas-fleet-management.png)
 
-![Bounded Context Canvas - Incident Management](assets/images/chapter2/bounded-context-canvas-incident-management.png)
+![Bounded Context Canvas - Tracking](assets/images/chapter2/bounded-context-canvas-tracking.png)
 
-![Bounded Context Canvas - Operational History](assets/images/chapter2/bounded-context-canvas-operational-history.png)
+![Bounded Context Canvas - Route Planning](assets/images/chapter2/bounded-context-canvas-route-planning.png)
 
 ![Bounded Context Canvas - IAM](assets/images/chapter2/bounded-context-canvas-iam.png)
 
@@ -2722,24 +2724,27 @@ A continuación, se presentan las representaciones de los Bounded Context Canvas
 
 ### 2.5.2. Context Mapping
 
-En esta sección se analizan las relaciones entre los **Bounded Contexts** de **Trakto Route**, evaluando sus responsabilidades y dependencias para mantener una adecuada separación del dominio.
+El Context Map actualizado incluye **Trip Management, Fleet Management, Tracking, Route Planning, IAM y Profile**. Los contratos públicos y las ACL mantienen independientes los modelos de cada contexto. Una ACL es una capa de traducción del consumidor; no equivale a compartir entidades, repositorios ni tablas.
 
-Durante el proceso se consideraron alternativas de organización y patrones de relación de **Domain-Driven Design**, principalmente **Customer/Supplier** y **Conformist**.
+En la siguiente tabla la dirección **proveedor → consumidor** indica el suministro de información o eventos, no necesariamente quién inicia la llamada HTTP.
 
-Se evaluó una alternativa donde **IAM y Profile** se integraban en un mismo contexto. Finalmente, se decidió mantenerlos separados debido a que cumplen responsabilidades diferentes.
+| Proveedor → consumidor | Información / colaboración | Relación y protección |
+|---|---|---|
+| IAM → Profile | Identificador de usuario y evento de registro para asociar el perfil. | Customer/Supplier; Profile traduce mediante contrato público y ACL. |
+| IAM → contextos protegidos | Identidad y permisos de acceso. | Contrato de seguridad aplicado en interfaces; no importar el agregado User en dominios de negocio. |
+| Fleet Management → Trip Management | Datos y estado de conductor y vehículo para validar asignaciones. | Customer/Supplier; ACL en Trip, referencias DriverId y VehicleId. |
+| Route Planning → Trip Management | Ruta calculada, distancia, duración y referencia. | Customer/Supplier; ACL en Trip transforma el resultado a TripRoutePlan. |
+| Trip Management → Tracking | Referencia del viaje e inicio, finalización o cancelación. | Customer/Supplier; contrato de integración y ACL en Tracking para coordinar su ciclo de vida. |
+| Tracking → Trip Management | Posición y paradas del viaje para consultas de detalle. | Customer/Supplier; ACL en Trip. Tracking es propietario de las paradas, evitando duplicar reglas y persistencia. |
+| Google Maps Compute Routes → Route Planning | Cálculo externo del recorrido previsto. | ACL/adaptador en infraestructura de Route Planning; el dominio no depende del SDK del proveedor. |
+
+Las dos direcciones Trip–Tracking corresponden a contratos distintos: ciclo de vida y consultas de seguimiento. Se evita un ciclo de llamadas síncronas; la coordinación del ciclo de vida puede realizarse mediante eventos y handlers de aplicación. El mapa describe límites lógicos dentro del backend; no exige microservicios ni un broker.
+
+El GPS se obtiene en el dispositivo y llega a Tracking mediante la API REST. **Tracking no consume Google Maps Compute Routes.** El mapa visual de Android es una responsabilidad de presentación.
+
+Incident Management y Operational History dejan de ser Bounded Contexts independientes en el modelo actual. El historial de viajes se obtiene mediante consultas de Trip, complementadas con Tracking y referencias a Fleet. Una parada por avería no implementa por sí misma la gestión de accidentes, severidad o atención de incidencias; esas historias del backlog requieren reconciliación de alcance.
 
 ![Context Mapping - Alternativa 1](assets/images/chapter2/context-mapping-1.png)
-
-Como resultado, se definió el Context Map final con los Bounded Contexts **IAM, Profile, Trip Management, Fleet Management, Incident Management y Operational History**.
-
-Las principales relaciones son:
-
-- **IAM → Profile:** Customer/Supplier.
-- **Fleet Management → Trip Management:** Customer/Supplier.
-- **Trip Management → Incident Management:** Customer/Supplier.
-- **Trip Management, Fleet Management e Incident Management → Operational History:** Conformist.
-
-El Context Map final fue elaborado utilizando **Structurizr**.
 
 ![Context Mapping - Final](assets/images/chapter2/context-mapping-final.png)
 
@@ -2751,7 +2756,7 @@ La arquitectura de **Trakto Route** sigue un enfoque cliente-servidor. El produc
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-El Context Diagram representa a **Trakto Route** como el sistema central. Los actores principales son el **Supervisor de flota**, responsable de gestionar operaciones de transporte, y el **Cliente de transporte**, que consulta únicamente los envíos asociados a su organización. El sistema puede interactuar con servicios externos futuros —por ejemplo mapas o notificaciones— mediante adaptadores, sin incorporar esas dependencias al núcleo del dominio.
+El Context Diagram representa a **Trakto Route** como el sistema central. Los actores principales son el **Supervisor de flota**, responsable de gestionar operaciones de transporte, y el **Cliente de transporte**, que consulta únicamente los envíos asociados a su organización. El sistema integra Google Maps Compute Routes desde Route Planning. El dispositivo obtiene GPS y envía posiciones a Tracking. Estas dependencias se mantienen fuera del núcleo del dominio mediante adaptadores.
 
 ![Software Architecture Context Diagram - Trakto Route](assets/images/chapter2/software-architecture-context.png)
 
@@ -2765,7 +2770,7 @@ El Container Diagram debe mostrar como mínimo los siguientes containers:
 |---|---|---|
 | **Trakto Route Mobile App** | Kotlin, Android | Presentar la experiencia móvil, manejar navegación y estado de UI, validar entradas básicas y consumir la API REST mediante HTTPS. |
 | **Trakto Route REST API** | Java, Spring Boot, Spring Web | Exponer endpoints, aplicar autenticación/autorización, ejecutar casos de uso y coordinar los Bounded Contexts. |
-| **Relational Database** | MySQL | Persistir usuarios, perfiles, viajes, rutas, vehículos, conductores, incidencias e información histórica. |
+| **Relational Database** | MySQL | Persistir usuarios, perfiles, viajes, vehículos, conductores, seguimientos y paradas. Las consultas de historial utilizan estos datos sin un contexto Operational History. |
 
 La aplicación móvil **no accede directamente a MySQL**. Toda lectura o modificación persistente se realiza a través de la API REST.
 
@@ -2775,7 +2780,8 @@ La aplicación móvil **no accede directamente a MySQL**. Toda lectura o modific
 
 El Deployment Diagram representa la distribución física de la solución:
 
-- **Android Device:** ejecuta la aplicación Trakto Route desarrollada en Kotlin.
+- **Android Device:** ejecuta la aplicación Trakto Route desarrollada en Kotlin, obtiene GPS y envía reportes a Tracking.
+- **Google Maps Compute Routes:** servicio externo invocado por Route Planning mediante HTTPS.
 - **Application Server / Cloud Runtime:** ejecuta la aplicación Java/Spring Boot y expone la API mediante HTTPS.
 - **MySQL Database Server:** aloja la base de datos relacional y solo es accesible desde el backend.
 - La comunicación entre la aplicación móvil y el backend se realiza mediante **HTTPS/JSON**; la comunicación entre Spring Boot y MySQL utiliza el driver JDBC correspondiente a través de Spring Data JPA.
@@ -2794,8 +2800,8 @@ Los Bounded Contexts definidos son:
 
 1. **Trip Management**
 2. **Fleet Management**
-3. **Incident Management**
-4. **Operational History**
+3. **Tracking**
+4. **Route Planning**
 5. **IAM**
 6. **Profile**
 
@@ -2807,28 +2813,13 @@ El Bounded Context **Trip Management** gestiona el ciclo de vida de los viajes, 
 
 #### 2.6.1.1. Domain Layer
 
-Esta capa representa el core y las reglas de negocio de **Trip Management**.
-
-| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
-|---|---|---|---|
-| `Trip` | Aggregate Root | Representar y controlar un viaje. | `id`, `route`, `status`, `stops`, `rests`; `assignRoute()`, `start()`, `updateStatus()`, `registerStop()`, `registerRest()`, `complete()` |
-| `Route` | Entity | Representar la ruta asignada. | `id`, `origin`, `destination`; `updateRoute()` |
-| `Stop` | Entity | Representar una parada. | `id`, `reason`, `startedAt`, `endedAt`; `finish()` |
-| `Rest` | Entity | Representar un descanso. | `id`, `startedAt`, `endedAt`; `finish()` |
-| `TripId` | Value Object | Identificar un viaje. | `value` |
-| `TripStatus` | Enumeration | Representar el estado del viaje. | `SCHEDULED`, `PREPARED`, `IN_PROGRESS`, `COMPLETED`, `CANCELLED` |
-| `TripRepository` | Repository Interface | Definir las operaciones de persistencia de viajes. | `save()`, `findById()`, `findAll()` |
-
-Relaciones principales:
-
-```text
-Trip "1" ─── "1" Route
-Trip "1" ─── "0..*" Stop
-Trip "1" ─── "0..*" Rest
-Trip ─────── TripStatus
-Trip ─────── TripId
-TripRepository ───> Trip
-```
+| Clase / concepto | Tipo | Responsabilidad |
+|---|---|---|
+| Trip | Aggregate Root | Programar, iniciar, completar y cancelar viajes; conserva DriverId, VehicleId, TripLocation, TripSchedule y TripRoutePlan. |
+| TripId, DriverId, VehicleId | Value Objects | Referencias de identidad sin importar agregados de Fleet. |
+| TripStatus | Enum | SCHEDULED, IN_PROGRESS, COMPLETED, CANCELED. |
+| TripLocation, TripSchedule, TripRoutePlan | Value Objects | Origen/destino, tiempos y resumen propio del cálculo de ruta. |
+| TripRepository | Interfaz | findById, findAll, findByStatus, save, existsById. |
 
 #### 2.6.1.2. Interface Layer
 
@@ -3246,378 +3237,101 @@ Las tablas `vehicles` y `drivers` son independientes dentro de Fleet Management.
 
 
 
-### 2.6.3. Bounded Context: Incident Management
+### 2.6.3. Bounded Context: Tracking
 
-El Bounded Context **Incident Management** gestiona las incidencias ocurridas durante los viajes, incluyendo retrasos, problemas, accidentes y su estado de atención.
+Recibe reportes desde el dispositivo. Detecta parada después de diez minutos inmóvil según recordedAt y tolerancia espacial; startedAt corresponde al inicio de la inmovilidad. Al moverse asigna endedAt. El conductor modifica sólo el motivo, no tiempos ni ubicación. Emite TrackingStartedEvent, TrackingFinishedEvent, TrackingStopDetectedEvent, TrackingStopFinishedEvent y TrackingStopReasonChangedEvent.
 
 #### 2.6.3.1. Domain Layer
 
-Esta capa representa el core y las reglas de negocio de **Incident Management**.
-
-| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
-|---|---|---|---|
-| `Incident` | Aggregate Root | Representar y gestionar una incidencia. | `id`, `tripId`, `type`, `status`, `description`, `occurredAt`; `updateStatus()`, `resolve()` |
-| `IncidentId` | Value Object | Identificar una incidencia. | `value` |
-| `IncidentType` | Enumeration | Clasificar el tipo de incidencia. | `DELAY`, `PROBLEM`, `ACCIDENT`, `OTHER` |
-| `IncidentStatus` | Enumeration | Representar el estado de la incidencia. | `PENDING`, `IN_PROGRESS`, `RESOLVED` |
-| `IncidentRepository` | Repository Interface | Definir las operaciones de persistencia de incidencias. | `save()`, `findById()`, `findByTripId()`, `findAll()` |
-
-Relaciones principales:
-
-```text
-Incident ───── IncidentId
-Incident ───── IncidentType
-Incident ───── IncidentStatus
-IncidentRepository ───> Incident
-```
+| Clase / concepto | Tipo | Responsabilidad |
+|---|---|---|
+| Tracking | Aggregate Root | create, reconstitute, registerPosition, changeStopReason, finish. Un seguimiento por TripReferenceId. |
+| TrackingStop | Entity | Parada con StopId, ubicación, startedAt, endedAt opcional y motivo. |
+| TrackingId, StopId, TripReferenceId | Value Objects | Identidades UUID; referencia del viaje sin importar Trip. |
+| GeoLocation | Value Object | Coordenadas finitas; latitud entre -90 y 90, longitud entre -180 y 180. |
+| PositionReport | Value Object | GeoLocation y recordedAt de la captura GPS. |
+| StopReason | Enum | TRAFFIC, REST, LOADING, UNLOADING, BREAKDOWN, UNKNOWN. |
+| TrackingRepository | Interfaz | Contrato de almacenamiento y recuperación del agregado. |
 
 #### 2.6.3.2. Interface Layer
 
-Esta capa contiene las clases de presentación utilizadas para interactuar con las funcionalidades de Incident Management.
-
-| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
-|---|---|---|---|
-| `IncidentController` | REST Controller | Gestionar acciones relacionadas con incidencias. | `loadIncidents()`, `loadIncident()`, `registerIncident()`, `updateStatus()` |
-| `IncidentUiState` | UI State | Representar la información mostrada en la interfaz. | `incidents`, `selectedIncident`, `isLoading`, `error` |
+Interfaces REST separadas para comandos y consultas, requests/resources y assemblers de frontera. Los estados y ViewModels de Compose pertenecen al frontend Android y no a esta capa del backend.
 
 #### 2.6.3.3. Application Layer
 
-Esta capa coordina los flujos y capabilities relacionados con el registro y gestión de incidencias.
+CQRS estricto: Commands, Queries y sus handlers se ubican en application; el dominio conserva agregados, entidades, VO, reglas, eventos y puertos. CreateTrackingCommand, RegisterPositionCommand, ChangeStopReasonCommand, FinishTrackingCommand; consultas de seguimiento y paradas separadas de los comandos.
 
-| **Clase** | **Tipo** | **Propósito** |
-|---|---|---|
-| `RegisterIncidentCommand` | Command | Contener los datos para registrar una incidencia. |
-| `RegisterIncidentCommandHandler` | Command Handler | Procesar el registro de una incidencia. |
-| `RegisterDelayCommand` | Command | Solicitar el registro de un retraso. |
-| `RegisterDelayCommandHandler` | Command Handler | Procesar el registro de un retraso. |
-| `RegisterProblemCommand` | Command | Solicitar el registro de un problema. |
-| `RegisterProblemCommandHandler` | Command Handler | Procesar el registro de un problema. |
-| `RegisterAccidentCommand` | Command | Solicitar el registro de un accidente. |
-| `RegisterAccidentCommandHandler` | Command Handler | Procesar el registro de un accidente. |
-| `UpdateIncidentStatusCommand` | Command | Solicitar la actualización del estado. |
-| `UpdateIncidentStatusCommandHandler` | Command Handler | Procesar el cambio de estado de una incidencia. |
-| `GetIncidentsQuery` | Query | Solicitar las incidencias registradas. |
-| `GetIncidentsQueryHandler` | Query Handler | Obtener las incidencias registradas. |
-| `GetIncidentByIdQuery` | Query | Solicitar una incidencia específica. |
-| `GetIncidentByIdQueryHandler` | Query Handler | Obtener el detalle de una incidencia. |
+La integración entre contextos usa contratos públicos, eventos y ACL; no se accede directamente a sus repositorios ni entidades internas.
 
 #### 2.6.3.4. Infrastructure Layer
 
-Esta capa implementa la persistencia de Incident Management mediante **Spring Data JPA y MySQL**.
-
-| **Clase** | **Tipo** | **Propósito** |
-|---|---|---|
-| `IncidentJpaEntity` | JPA Entity | Representar una incidencia persistida. |
-| `IncidentDao` | Spring Data Repository | Realizar operaciones de persistencia y consulta de incidencias. |
-| `IncidentRepositoryAdapter` | Repository Implementation | Implementar `IncidentRepository` utilizando Spring Data JPA. |
-
-<div style="page-break-after: always;"></div>
+TrackingPersistenceEntity y TrackingStopPersistenceEntity; TrackingPersistenceAssembler y TrackingRepositoryImpl. Relación interna 1:N con cascade y orphanRemoval; tripReferenceId es referencia, sin relación JPA con Trip.
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-El **Component Diagram del C4 Model** representa los componentes principales de Incident Management, sus responsabilidades, tecnologías e interacciones.
+Interfaces invoca casos de uso de Application; Application utiliza Domain y puertos; Infrastructure implementa esos puertos. Las dependencias de código apuntan hacia el dominio, que no depende de JPA ni de servicios externos.
 
-```text
-Incident Presentation
-        ↓
-Incident Application
-        ↓
-Incident Domain
-        ↓
-Incident Infrastructure
-        ↓
-Spring Data JPA / MySQL
-```
-
-Tecnologías utilizadas: **Java, Spring Boot, Spring Web, Spring Data JPA y MySQL**.
-
-![Incident Management - Component Diagram](assets/images/chapter2/incident-management-component-diagram.png)
-
-<div style="page-break-after: always;"></div>
+![Tracking - Component Diagram](assets/images/chapter2/tracking-component-diagram.png)
 
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-En esta sección se presentan los diagramas de mayor detalle de implementación de **Incident Management**.
-
 ##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-El UML Class Diagram representa las clases, interfaces, enumeraciones, atributos, métodos, scopes, relaciones y multiplicidades del Domain Layer.
+El diagrama debe reflejar los conceptos anteriores y referencias entre contextos por identificador o contrato público.
 
-```text
-Incident
---------------------------------
-- id: IncidentId
-- tripId: Long
-- type: IncidentType
-- status: IncidentStatus
-- description: String
-- occurredAt: LocalDateTime
---------------------------------
-+ updateStatus(status: IncidentStatus): Unit
-+ resolve(): Unit
-
-
-IncidentId
---------------------------------
-- value: Long
-
-
-<<enumeration>>
-IncidentType
---------------------------------
-DELAY
-PROBLEM
-ACCIDENT
-OTHER
-
-
-<<enumeration>>
-IncidentStatus
---------------------------------
-PENDING
-IN_PROGRESS
-RESOLVED
-
-
-<<interface>>
-IncidentRepository
---------------------------------
-+ save(incident: Incident): Unit
-+ findById(id: IncidentId): Incident?
-+ findByTripId(tripId: Long): List<Incident>
-+ findAll(): List<Incident>
-```
-
-Relaciones:
-
-```text
-Incident ───── IncidentId
-Incident ───── IncidentType
-Incident ───── IncidentStatus
-IncidentRepository ───> Incident
-```
-
-![Incident Management - Domain Layer Class Diagram](assets/images/chapter2/incident-management-domain-class-diagram.png)
-
-<div style="page-break-after: always;"></div>
+![Tracking - Domain Layer Class Diagram](assets/images/chapter2/tracking-domain-class-diagram.png)
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
 
-El Database Diagram representa las tablas, columnas, constraints y relaciones utilizadas para la persistencia central de **Incident Management** mediante Spring Data JPA y MySQL.
+Representar la persistencia propia del contexto y distinguir asociaciones internas de referencias lógicas hacia otros contextos. Para Route Planning, documentar la decisión de persistencia antes de dibujar tablas.
 
-| **Tabla** | **Columnas** | **Constraints** |
-|---|---|---|
-| `incidents` | `id`, `trip_id`, `type`, `status`, `description`, `occurred_at` | `id PK`, `trip_id NOT NULL`, `type NOT NULL`, `status NOT NULL`, `description NOT NULL`, `occurred_at NOT NULL` |
+![Tracking - Database Diagram](assets/images/chapter2/tracking-database-diagram.png)
 
-```text
-incidents
---------------------------------
-PK  id
-    trip_id NOT NULL
-    type NOT NULL
-    status NOT NULL
-    description NOT NULL
-    occurred_at NOT NULL
-```
+### 2.6.4. Bounded Context: Route Planning
 
-`trip_id` permite asociar la incidencia con el viaje correspondiente del Bounded Context **Trip Management**.
-
-![Incident Management - Database Diagram](assets/images/chapter2/incident-management-database-diagram.png)
-
-<div style="page-break-after: always;"></div>
-
-
-
-
-
-### 2.6.4. Bounded Context: Operational History
-
-El Bounded Context **Operational History** gestiona la consulta del historial de viajes, vehículos, conductores e incidencias, así como la revisión del desempeño de las operaciones realizadas.
+Publica el resultado por una interfaz pública a Trip; la ACL de Trip lo transforma en TripRoutePlan. No recibe posiciones GPS ni detecta paradas.
 
 #### 2.6.4.1. Domain Layer
 
-Esta capa representa el core y las reglas de negocio de **Operational History**.
-
-| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
-|---|---|---|---|
-| `OperationHistory` | Aggregate Root | Representar el historial general de una operación. | `id`, `tripId`, `completedAt`, `performance`; `reviewPerformance()` |
-| `TripHistory` | Entity | Representar información histórica de un viaje. | `tripId`, `status`, `startedAt`, `completedAt` |
-| `VehicleHistory` | Entity | Representar el historial operativo de un vehículo. | `vehicleId`, `tripId`, `recordedAt` |
-| `DriverHistory` | Entity | Representar el historial operativo de un conductor. | `driverId`, `tripId`, `recordedAt` |
-| `OperationPerformance` | Value Object | Representar información de desempeño de una operación. | `completedTrips`, `incidentCount`, `delayCount` |
-| `HistoryRepository` | Repository Interface | Definir las operaciones de consulta del historial. | `findTripHistory()`, `findVehicleHistory()`, `findDriverHistory()`, `findIncidentHistory()` |
-
-Relaciones principales:
-
-```text
-OperationHistory ───── TripHistory
-OperationHistory ───── VehicleHistory
-OperationHistory ───── DriverHistory
-OperationHistory ───── OperationPerformance
-HistoryRepository ───> OperationHistory
-```
+| Clase / concepto | Tipo | Responsabilidad |
+|---|---|---|
+| Resultado de planificación | Modelo de dominio propuesto | Recorrido previsto, distancia, duración, referencia y fecha de cálculo. |
+| Ubicaciones de origen y destino | Value Objects | Coordenadas válidas necesarias para calcular el recorrido. |
+| Contrato de cálculo de ruta | Puerto | Abstraer el cálculo externo sin dependencias de Google Maps en el dominio. |
 
 #### 2.6.4.2. Interface Layer
 
-Esta capa contiene las clases de presentación utilizadas para consultar el historial operativo.
-
-| **Clase** | **Tipo** | **Propósito** | **Atributos / Métodos principales** |
-|---|---|---|---|
-| `HistoryController` | REST Controller | Gestionar las consultas del historial operativo. | `loadTripHistory()`, `loadVehicleHistory()`, `loadDriverHistory()`, `loadIncidentHistory()`, `reviewPerformance()` |
-| `HistoryUiState` | UI State | Representar los datos históricos mostrados en la interfaz. | `tripHistory`, `vehicleHistory`, `driverHistory`, `incidentHistory`, `performance`, `isLoading`, `error` |
+Interfaces REST separadas para comandos y consultas, requests/resources y assemblers de frontera. Los estados y ViewModels de Compose pertenecen al frontend Android y no a esta capa del backend.
 
 #### 2.6.4.3. Application Layer
 
-Esta capa coordina los flujos y capabilities relacionados con la consulta del historial y desempeño operativo.
+CQRS estricto: Commands, Queries y sus handlers se ubican en application; el dominio conserva agregados, entidades, VO, reglas, eventos y puertos. Caso de uso de cálculo entre origen y destino y consulta del resultado. Los nombres concretos de clases se definirán al implementar este contexto.
 
-| **Clase** | **Tipo** | **Propósito** |
-|---|---|---|
-| `GetTripHistoryQuery` | Query | Solicitar el historial de viajes. |
-| `GetTripHistoryQueryHandler` | Query Handler | Obtener el historial de viajes. |
-| `GetVehicleHistoryQuery` | Query | Solicitar el historial de un vehículo. |
-| `GetVehicleHistoryQueryHandler` | Query Handler | Obtener el historial de un vehículo. |
-| `GetDriverHistoryQuery` | Query | Solicitar el historial de un conductor. |
-| `GetDriverHistoryQueryHandler` | Query Handler | Obtener el historial de un conductor. |
-| `GetIncidentHistoryQuery` | Query | Solicitar el historial de incidencias. |
-| `GetIncidentHistoryQueryHandler` | Query Handler | Obtener el historial de incidencias. |
-| `ReviewOperationPerformanceQuery` | Query | Solicitar la revisión del desempeño operativo. |
-| `ReviewOperationPerformanceQueryHandler` | Query Handler | Obtener la información de desempeño de una operación. |
-| `RecordCompletedTripEventHandler` | Event Handler | Registrar información histórica cuando un viaje finaliza. |
+La integración entre contextos usa contratos públicos, eventos y ACL; no se accede directamente a sus repositorios ni entidades internas.
 
 #### 2.6.4.4. Infrastructure Layer
 
-Esta capa implementa el acceso a la información histórica mediante **Spring Data JPA y MySQL**.
-
-| **Clase** | **Tipo** | **Propósito** |
-|---|---|---|
-| `OperationHistoryJpaEntity` | JPA Entity | Representar una operación histórica persistida. |
-| `TripHistoryJpaEntity` | JPA Entity | Representar el historial de viajes persistido. |
-| `VehicleHistoryJpaEntity` | JPA Entity | Representar el historial de vehículos persistido. |
-| `DriverHistoryJpaEntity` | JPA Entity | Representar el historial de conductores persistido. |
-| `HistoryDao` | DAO | Realizar consultas y operaciones sobre el historial. |
-| `HistoryRepositoryAdapter` | Repository Implementation | Implementar `HistoryRepository` utilizando Spring Data JPA. |
-
-<div style="page-break-after: always;"></div>
+Adaptador de Google Maps Compute Routes y assembler del resultado externo. La persistencia o caché del cálculo depende de la implementación; no se inventan tablas de historial operativo.
 
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 
-El **Component Diagram del C4 Model** representa los componentes principales de Operational History, sus responsabilidades, tecnologías e interacciones.
+Interfaces invoca casos de uso de Application; Application utiliza Domain y puertos; Infrastructure implementa esos puertos. Las dependencias de código apuntan hacia el dominio, que no depende de JPA ni de servicios externos.
 
-```text
-History Presentation
-        ↓
-History Application
-        ↓
-History Domain
-        ↓
-History Infrastructure
-        ↓
-Spring Data JPA / MySQL
-```
-
-Tecnologías utilizadas: **Java, Spring Boot, Spring Web, Spring Data JPA y MySQL**.
-
-![Operational History - Component Diagram](assets/images/chapter2/operational-history-component-diagram.png)
-
-<div style="page-break-after: always;"></div>
+![Route Planning - Component Diagram](assets/images/chapter2/route-planning-component-diagram.png)
 
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 
-En esta sección se presentan los diagramas de mayor detalle de implementación de **Operational History**.
-
 ##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
-El UML Class Diagram representa las clases, interfaces, atributos, métodos, scopes, relaciones y multiplicidades del Domain Layer.
+El diagrama debe reflejar los conceptos anteriores y referencias entre contextos por identificador o contrato público.
 
-```text
-OperationHistory
---------------------------------
-- id: Long
-- tripId: Long
-- completedAt: LocalDateTime
-- performance: OperationPerformance
---------------------------------
-+ reviewPerformance(): OperationPerformance
-
-
-TripHistory
---------------------------------
-- tripId: Long
-- status: String
-- startedAt: LocalDateTime
-- completedAt: LocalDateTime
-
-
-VehicleHistory
---------------------------------
-- vehicleId: Long
-- tripId: Long
-- recordedAt: LocalDateTime
-
-
-DriverHistory
---------------------------------
-- driverId: Long
-- tripId: Long
-- recordedAt: LocalDateTime
-
-
-OperationPerformance
---------------------------------
-- completedTrips: Int
-- incidentCount: Int
-- delayCount: Int
-
-
-<<interface>>
-HistoryRepository
---------------------------------
-+ findTripHistory(tripId: Long): TripHistory?
-+ findVehicleHistory(vehicleId: Long): List<VehicleHistory>
-+ findDriverHistory(driverId: Long): List<DriverHistory>
-+ findIncidentHistory(tripId: Long): List<Long>
-```
-
-Relaciones:
-
-```text
-OperationHistory "1" ─── "1" TripHistory
-OperationHistory "1" ─── "0..*" VehicleHistory
-OperationHistory "1" ─── "0..*" DriverHistory
-OperationHistory "1" ─── "1" OperationPerformance
-HistoryRepository ───> OperationHistory
-```
-
-![Operational History - Domain Layer Class Diagram](assets/images/chapter2/operational-history-domain-class-diagram.png)
-
-<div style="page-break-after: always;"></div>
+![Route Planning - Domain Layer Class Diagram](assets/images/chapter2/route-planning-domain-class-diagram.png)
 
 ##### 2.6.4.6.2. Bounded Context Database Design Diagram
 
-El Database Diagram representa las tablas, columnas, constraints y relaciones utilizadas para la persistencia central de **Operational History** mediante Spring Data JPA y MySQL.
+Representar la persistencia propia del contexto y distinguir asociaciones internas de referencias lógicas hacia otros contextos. Para Route Planning, documentar la decisión de persistencia antes de dibujar tablas.
 
-| **Tabla** | **Columnas** | **Constraints** |
-|---|---|---|
-| `operation_history` | `id`, `trip_id`, `completed_at`, `completed_trips`, `incident_count`, `delay_count` | `id PK`, `trip_id NOT NULL` |
-| `trip_history` | `id`, `trip_id`, `status`, `started_at`, `completed_at` | `id PK`, `trip_id NOT NULL` |
-| `vehicle_history` | `id`, `vehicle_id`, `trip_id`, `recorded_at` | `id PK`, `vehicle_id NOT NULL`, `trip_id NOT NULL` |
-| `driver_history` | `id`, `driver_id`, `trip_id`, `recorded_at` | `id PK`, `driver_id NOT NULL`, `trip_id NOT NULL` |
-
-Relaciones:
-
-```text
-operation_history.trip_id ─── trip_history.trip_id
-trip_history.trip_id ─── vehicle_history.trip_id
-trip_history.trip_id ─── driver_history.trip_id
-```
-
-![Operational History - Database Diagram](assets/images/chapter2/operational-history-database-diagram.png)
-
-<div style="page-break-after: always;"></div>
-
-
-
-
+![Route Planning - Database Diagram](assets/images/chapter2/route-planning-database-diagram.png)
 
 ### 2.6.5. Bounded Context: IAM
 
