@@ -5492,10 +5492,10 @@ La escala prevista es: 1 problema superficial, 2 problema menor, 3 problema mayo
 
 | Entrega | Video | Estado | URL |
 |---|---|---|---|
-| TB1 | Exposición del proyecto | `BLOCKED`: requiere grabación editada de máximo 15 minutos con participación ante cámara | `NOT_VERIFIED` |
-| TB1 | App Validation | `BLOCKED`: depende de sesiones reales de validación y su grabación | `NOT_VERIFIED` |
-| TB1 | About the Product | `BLOCKED`: requiere demostración del producto y testimonios reales autorizados | `NOT_VERIFIED` |
-| TB1 | About the Team | `BLOCKED`: requiere escenas reales de trabajo y testimonio de cada integrante | `NOT_VERIFIED` |
+| TB1 | Exposición del proyecto | `BLOCKED`: requiere grabación editada de máximo 15 minutos con participación ante cámara | Sin URL |
+| TB1 | App Validation | `BLOCKED`: depende de sesiones reales de validación y su grabación | Sin URL |
+| TB1 | About the Product | `BLOCKED`: requiere demostración del producto y testimonios reales autorizados | Sin URL |
+| TB1 | About the Team | `BLOCKED`: requiere escenas reales de trabajo y testimonio de cada integrante | Sin URL |
 
 Los archivos deberán publicarse en el OneDrive indicado por el docente. Los videos About the Product y About the Team también deberán publicarse en YouTube e incorporarse al Landing Page cuando el equipo los produzca.
 
