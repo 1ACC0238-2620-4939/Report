@@ -4215,428 +4215,179 @@ El video muestra la navegación por secciones y la adaptación del sitio a ambos
 <div style="page-break-after: always;"></div>
 
 
+
 # Capítulo IV: Product Implementation & Validation
 
 ## 4. Product Implementation & Validation
 
-En este capítulo se documenta el proceso mediante el cual **Trakto Route** evoluciona desde los requisitos, modelos de dominio y decisiones de UX/UI definidos en los capítulos anteriores hacia una solución de software implementada, comprobada, desplegada y posteriormente validada con representantes de los segmentos objetivo.
+Este capítulo documenta la implementación, pruebas, despliegue y validación de **Trakto Route**, conformado por el Landing Page, la aplicación Android en Kotlin y los servicios REST en Java con Spring Boot. La aplicación consume la API, que administra las reglas de negocio y la persistencia en MySQL.
 
-La solución está conformada por tres productos digitales principales: el **Landing Page**, encargado de comunicar la propuesta de valor de Trakto Route; la **aplicación móvil Android**, desarrollada en Kotlin y orientada a la interacción de supervisores de flota y clientes; y los **RESTful Web Services**, desarrollados con Java y Spring Boot para centralizar las reglas de negocio, autenticación y operaciones correspondientes a los Bounded Contexts definidos mediante Domain-Driven Design.
-
-La persistencia central se realiza mediante **MySQL**. La aplicación Android no accede directamente a la base de datos, sino que consume los servicios ofrecidos por la REST API utilizando comunicación basada en HTTP/HTTPS y JSON. Esta separación conserva las responsabilidades establecidas previamente en los diagramas de arquitectura de software.
-
-El proceso de implementación se organiza mediante Sprints. Para la presente entrega se documenta el **Sprint 1**, cuyo alcance se encuentra definido a partir de las User Stories priorizadas en el Product Backlog. Las siguientes subsecciones presentan las decisiones de Software Configuration Management, el Sprint Planning, el Sprint Backlog y las evidencias que deberán demostrar implementación, pruebas, ejecución, documentación de servicios, despliegue y colaboración del equipo.
-
-Las evidencias de implementación mantienen como principio de trazabilidad la relación:
-
-**User Story → Sprint → Work-item → Commit → Test → Execution Evidence → Deployment → Validation.**
+El trabajo se organiza por Sprints, vinculando las User Stories con tareas, commits y evidencias de pruebas y ejecución. Para cada Sprint se presentan los resultados, el despliegue y la colaboración del equipo. También se incluyen el video About-The-Product y las validaciones con representantes de los segmentos objetivo.
 
 <div style="page-break-after: always;"></div>
 
 ### 4.1. Software Configuration Management
 
-El Software Configuration Management de **Trakto Route** establece las herramientas, convenciones y prácticas utilizadas por el equipo para mantener consistencia durante el desarrollo de los productos digitales. Este conjunto de decisiones comprende la configuración del entorno de desarrollo, el control de versiones mediante Git y GitHub, las convenciones de código y el esquema de deployment.
+Trakto Route establece convenciones para mantener la consistencia del entorno de desarrollo, código fuente y despliegue. El equipo utiliza Git y GitHub para registrar cambios y colaborar, conservando configuraciones separadas para el Landing Page, la aplicación Android y el backend.
 
-Debido a que Trakto Route está compuesto por productos con responsabilidades diferentes, la configuración considera separadamente el Landing Page, la aplicación Android y los RESTful Web Services. No obstante, todos los productos comparten criterios relacionados con nomenclatura en inglés, gestión de versiones, trazabilidad de cambios y organización del código fuente.
+Las siguientes secciones detallan las herramientas, prácticas de control de versiones, convenciones de código y configuración de despliegue.
 
 #### 4.1.1. Software Development Environment Configuration
 
-Las herramientas seleccionadas responden a las diferentes actividades realizadas durante el ciclo de vida del proyecto: Requirements Management, UX/UI Design, Architecture Design, Software Development, Source Code Management y Product Management.
+La siguiente tabla identifica las herramientas utilizadas durante el ciclo de vida del proyecto, su propósito y su referencia de acceso o descarga.
 
-**Tabla 4.1**  
-*Software Development Environment Configuration de Trakto Route*
+| Activity | Product | Purpose | Reference |
+|---|---|---|---|
+| Landing Page Development | Visual Studio Code | Edición del código HTML y CSS del Landing Page. | https://code.visualstudio.com/ |
+| Backend Development | IntelliJ IDEA | Desarrollo y ejecución de los RESTful Web Services con Java y Spring Boot. | https://www.jetbrains.com/idea/ |
+| Backend Framework | Spring Boot | Implementación de la REST API y las operaciones del negocio. | https://spring.io/projects/spring-boot |
+| Mobile Development | Android Studio | Desarrollo, compilación y ejecución de la aplicación Android. | https://developer.android.com/studio |
+| Mobile Programming | Kotlin | Lenguaje utilizado para desarrollar la aplicación Android. | https://kotlinlang.org/ |
+| Software Deployment | Railway | Despliegue del Landing Page y los RESTful Web Services. | https://railway.com/ |
 
-| Category | Product | Version | Purpose | Reference |
-|---|---|---|---|---|
-| Product Management | Trello | SaaS | Organización y priorización del Product Backlog de Trakto Route. | https://trello.com/ |
-| UX Research | UXPressia | SaaS | Elaboración de User Personas, User Journey Maps y Empathy Maps. | https://uxpressia.com/ |
-| Collaborative Modeling | Miro | SaaS | Elaboración del Lean UX Canvas, Big Picture EventStorming y Candidate Context Discovery. | https://miro.com/ |
-| UX/UI Design | Figma | SaaS | Elaboración de Wireframes, Mock-ups y prototipos del Landing Page y aplicación móvil. | https://www.figma.com/ |
-| Software Architecture | Structurizr | SaaS / DSL | Elaboración de Context, Container, Deployment y Component Diagrams bajo C4 Model. | https://structurizr.com/ |
-| UML / Diagram-as-Code | PlantUML | [Versión pendiente de verificar] | Elaboración de Class Diagrams y Database Design Diagrams. | https://plantuml.com/ |
-| Mobile Development | Android Studio | [Versión pendiente de verificar en repositorio Android] | Desarrollo, compilación, ejecución y pruebas de la aplicación Android en Kotlin. | https://developer.android.com/studio |
-| Mobile Programming | Kotlin | [Versión pendiente de verificar] | Lenguaje utilizado para desarrollar la aplicación Android. | https://kotlinlang.org/ |
-| Backend Development | Spring Boot | [Versión pendiente de verificar en `pom.xml` o configuración del backend] | Implementación de RESTful Web Services y casos de uso del dominio. | https://spring.io/projects/spring-boot |
-| Backend Programming | Java | [Versión pendiente de verificar] | Lenguaje utilizado para implementar el backend. | https://www.java.com/ |
-| Database Management | MySQL | [Versión pendiente de verificar] | Persistencia central de usuarios, viajes, vehículos, conductores, incidencias e historial operativo. | https://www.mysql.com/ |
-| Source Code Management | Git | [Versión pendiente de verificar] | Control distribuido de versiones. | https://git-scm.com/ |
-| Repository Hosting | GitHub | SaaS | Alojamiento de repositorios y colaboración mediante branches y commits. | https://github.com/ |
-| API Documentation | OpenAPI / Swagger | [Versión pendiente de verificar en backend] | Documentación y comprobación de los endpoints REST implementados. | https://swagger.io/ |
 
-El Product Backlog ya se encuentra administrado mediante Trello y contiene las User Stories organizadas por prioridad, Story Points y Sprint. El enlace público documentado actualmente es:
+**Product Backlog:** [Tablero de Trakto Route en Trello](https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello)
 
-**Product Backlog:**  
-https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello
 
-Las versiones exactas correspondientes a Android Studio, Kotlin, Java, Spring Boot, MySQL y las herramientas de build deberán obtenerse directamente de los repositorios de implementación para mantener consistencia con la configuración realmente utilizada por el equipo.
+
 
 <div style="page-break-after: always;"></div>
 
 #### 4.1.2. Source Code Management
 
-El equipo utiliza **Git** como sistema distribuido de control de versiones y **GitHub** como plataforma para almacenar los repositorios, aislar el desarrollo de funcionalidades mediante branches y mantener trazabilidad entre las modificaciones realizadas y las funcionalidades del producto.
+Trakto Route utiliza Git y GitHub para controlar los cambios y organizar la colaboración mediante Pull Requests.
 
-Los productos de Trakto Route requieren repositorios independientes para evitar mezclar responsabilidades correspondientes al Landing Page, los RESTful Web Services y la aplicación Android.
+| Producto | Repositorio |
+|---|---|
+| Reporte | [Report](https://github.com/1ACC0238-2620-4939/Report) |
+| Aplicación Android | [front](https://github.com/1ACC0238-2620-4939/front) |
+| RESTful Web Services | [backend](https://github.com/1ACC0238-2620-4939/backend) |
+| Landing Page | [landing-page](https://github.com/1ACC0238-2620-4939/landing-page) |
 
-**Tabla 4.2**  
-*Repositorios de los productos de Trakto Route*
+Se adopta GitFlow con las siguientes ramas:
 
-| Product | Repository | Purpose |
-|---|---|---|
-| Landing Page | [URL pendiente: repositorio del Landing Page] | Código HTML, CSS, JavaScript y assets correspondientes al sitio público de Trakto Route. |
-| RESTful Web Services | [URL pendiente: repositorio del backend] | Backend Java/Spring Boot, REST API, persistencia y pruebas automatizadas. |
-| Android Mobile Application | [URL pendiente: repositorio de la aplicación Android] | Código Kotlin correspondiente a la experiencia móvil de Trakto Route. |
+| Rama | Uso |
+|---|---|
+| `main` | Versiones publicadas. |
+| `develop` | Integración del desarrollo. |
+| `feature/nombre` | Una rama por funcionalidad, creada desde `develop`. Ejemplo: `feature/tracking`. |
+| `release/x.y.z` | Preparación de versiones. Ejemplo: `release/1.0.0`. |
+| `hotfix/x.y.z` | Correcciones de producción desde `main`. Ejemplo: `hotfix/1.0.1`. |
 
-Como recurso complementario, el informe del proyecto se encuentra bajo control de versiones en el siguiente repositorio:
+Las funcionalidades se integran en `develop`; las releases y hotfixes se integran en `main` y `develop`.
 
-`https://github.com/1ACC0238-2620-4939/Report`
+Las versiones siguen **Semantic Versioning** (`MAJOR.MINOR.PATCH`): cambios incompatibles, nuevas funcionalidades y correcciones, respectivamente. Las publicaciones se etiquetan, por ejemplo, como `v1.0.0`.
 
-El repositorio del informe no sustituye a los repositorios de los productos de software, pero permite mantener trazabilidad de la evolución de la documentación del proyecto.
+Los commits siguen **Conventional Commits**: `tipo(alcance): descripción`, con mensajes en inglés. Ejemplo: `feat(fleet): add vehicle controller`. El backend debe incluir las pruebas unitarias y de integración/aceptación correspondientes.
 
-**GitFlow Workflow**
+Referencias: [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/), [Semantic Versioning](https://semver.org/) y [Conventional Commits](https://www.conventionalcommits.org/).
 
-Para la administración de branches se adopta **GitFlow**, manteniendo separación entre código estable, integración y desarrollo de funcionalidades.
-
-| Branch | Convention | Purpose |
-|---|---|---|
-| Main | `main` | Contener versiones estables del producto. |
-| Development | `develop` | Integrar funcionalidades que formarán parte de la siguiente versión. |
-| Feature | `feature/<short-description>` | Aislar la implementación de una funcionalidad específica. |
-| Release | `release/<version>` | Preparar una versión para su liberación. |
-| Hotfix | `hotfix/<short-description>` | Resolver errores críticos identificados sobre una versión estable. |
-
-Una funcionalidad nueva debe desarrollarse en un feature branch generado a partir de `develop`. Una vez revisada y comprobada, deberá integrarse nuevamente a `develop`. Las versiones preparadas para publicación se gestionarán mediante release branches, mientras que los hotfix branches se reservarán para correcciones críticas sobre una versión estable.
-
-[Imagen pendiente: SCM-01 – diagrama GitFlow utilizado por los repositorios de Trakto Route]
-
-**Figura 4.1**  
-*GitFlow utilizado por Trakto Route.*
-
-La figura deberá evidenciar la relación entre `main`, `develop`, `feature`, `release` y `hotfix`, así como el flujo esperado de integración de cambios.
-
-**Conventional Commits**
-
-Los mensajes de commit deben seguir la estructura propuesta por Conventional Commits:
-
-```text
-<type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer]
-```
-
-**Tabla 4.3**  
-*Tipos de commits adoptados*
-
-| Type | Purpose | Example |
-|---|---|---|
-| `feat` | Incorporar una nueva funcionalidad. | `feat(trips): add trip scheduling` |
-| `fix` | Corregir un comportamiento defectuoso. | `fix(auth): handle invalid credentials` |
-| `docs` | Actualizar documentación. | `docs(api): update trip endpoints documentation` |
-| `style` | Modificar formato sin alterar comportamiento. | `style(mobile): format trip screen` |
-| `refactor` | Reestructurar código sin modificar su comportamiento externo. | `refactor(fleet): simplify vehicle mapper` |
-| `test` | Incorporar o modificar pruebas. | `test(trips): add trip service tests` |
-| `build` | Modificar configuración de build o dependencias. | `build(android): update project dependencies` |
-| `ci` | Modificar integración continua. | `ci(backend): configure build workflow` |
-| `chore` | Realizar tareas de mantenimiento. | `chore: update repository configuration` |
-
-Los ejemplos anteriores representan la **convención adoptada** y no constituyen evidencia de commits ya existentes.
-
-**Semantic Versioning**
-
-Para identificar releases se adopta Semantic Versioning bajo la estructura:
-
-```text
-MAJOR.MINOR.PATCH
-```
-
-- **MAJOR:** cambios incompatibles con una versión anterior.
-- **MINOR:** incorporación de funcionalidades compatibles.
-- **PATCH:** correcciones compatibles con versiones anteriores.
-
-Por ejemplo, `1.0.0` representa conceptualmente una primera versión estable. No obstante, las versiones reales de Trakto Route deberán obtenerse de los tags o releases de los repositorios.
-
-[Dato pendiente: tags/releases existentes en los repositorios de Trakto Route]
 
 <div style="page-break-after: always;"></div>
 
 #### 4.1.3. Source Code Style Guide & Conventions
 
-Las convenciones de programación tienen como propósito mantener una base de código legible y consistente entre los integrantes. La nomenclatura de clases, funciones, variables, endpoints y demás elementos del proyecto se realizará en inglés.
+El código utiliza nombres descriptivos en inglés y formato consistente, aplicado con Visual Studio Code, IntelliJ IDEA y Android Studio.
 
-**Tabla 4.4**  
-*Source Code Style Guide & Conventions*
+| Lenguaje | Convenciones y referencia |
+|---|---|
+| HTML y CSS | HTML semántico, atributos en minúsculas y clases CSS en `kebab-case`. [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). |
+| Java | Clases en `PascalCase`, métodos y variables en `camelCase`, constantes en `UPPER_SNAKE_CASE`. [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html). |
+| Kotlin | Clases y componentes Composable en `PascalCase`; variables y funciones generales en `camelCase`. [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html). |
+| Gherkin, si se utiliza | Escenarios de comportamiento con `Given`, `When` y `Then`. [Gherkin Reference](https://cucumber.io/docs/gherkin/reference/). |
 
-| Technology | Convention / Style Guide | Application in Trakto Route |
-|---|---|---|
-| Kotlin | Kotlin Coding Conventions | Aplicación Android. |
-| Java | Google Java Style Guide y convenciones de Spring Boot | RESTful Web Services. |
-| HTML5 | Convenciones de estructura semántica HTML | Landing Page. |
-| CSS3 | Convenciones de nomenclatura y organización de estilos | Landing Page. |
-| JavaScript | Nomenclatura consistente en inglés y `camelCase` | Interacciones del Landing Page. |
-| Gherkin | Given-When-Then | Acceptance Tests únicamente cuando existan archivos `.feature`. |
-
-**Kotlin**
-
-Las clases y objetos utilizan `PascalCase`.
-
-```kotlin
-class TripRepository
-class TripDetailsViewModel
-data class TripUiState(...)
-```
-
-Las funciones y variables utilizan `camelCase`.
-
-```kotlin
-fun loadTrips()
-fun scheduleTrip()
-val selectedTrip
-var isLoading
-```
-
-Las constantes utilizan `UPPER_SNAKE_CASE` cuando corresponda.
-
-```kotlin
-const val BASE_URL = "..."
-```
-
-Los packages se mantienen en minúsculas y organizados según las responsabilidades del proyecto.
-
-```text
-com.trakto.route
-com.trakto.route.trip
-com.trakto.route.fleet
-```
-
-**Java**
-
-Las clases, interfaces y enumeraciones utilizan `PascalCase`.
-
-```java
-TripController
-ScheduleTripCommand
-TripRepository
-TripStatus
-```
-
-Los métodos y variables utilizan `camelCase`.
-
-```java
-scheduleTrip()
-findById()
-updateStatus()
-```
-
-Las constantes utilizan `UPPER_SNAKE_CASE`.
-
-```java
-private static final String DEFAULT_STATUS = "SCHEDULED";
-```
-
-Los packages se expresan en minúsculas y deben reflejar de forma coherente los Bounded Contexts y capas definidas en el diseño táctico.
-
-**HTML**
-
-El Landing Page utiliza elementos semánticos cuando corresponda:
-
-```html
-<header>
-<nav>
-<main>
-<section>
-<footer>
-```
-
-Los tags y atributos se mantienen en minúsculas y la indentación debe permanecer consistente.
-
-**CSS**
-
-Los estilos deberán utilizar nombres descriptivos relacionados con la función del componente y evitar duplicaciones innecesarias.
-
-```css
-.hero-section {}
-.trip-feature-card {}
-.primary-button {}
-```
-
-**JavaScript**
-
-Las funciones y variables utilizan nomenclatura en inglés y `camelCase`.
-
-```javascript
-const navigationMenu = document.querySelector(...);
-
-function openNavigationMenu() {
-    ...
-}
-```
-
-**Gherkin**
-
-En caso de implementar Acceptance Tests bajo BDD, los criterios deben conservar la estructura:
-
-```gherkin
-Feature: Trip management
-
-  Scenario: Schedule a valid trip
-    Given ...
-    When ...
-    Then ...
-```
-
-Los archivos `.feature` deberán relacionarse con las Acceptance Criteria de las User Stories correspondientes y no crear comportamientos que no formen parte del Product Backlog.
 
 <div style="page-break-after: always;"></div>
 
 #### 4.1.4. Software Deployment Configuration
 
-La configuración de deployment mantiene la separación arquitectónica definida en el Capítulo II. La aplicación móvil funciona como cliente, los RESTful Web Services centralizan las reglas de negocio y MySQL mantiene la fuente persistente de información.
+El Landing Page y el backend se despliegan en Railway. La aplicación Android se distribuye mediante un APK firmado.
 
-**Tabla 4.5**  
-*Software Deployment Configuration*
+| Producto | Procedimiento |
+|---|---|
+| Landing Page | Conectar el repositorio a Railway, configurar el servidor de archivos estáticos y su comando de inicio, generar el dominio público y comprobar la navegación. |
+| Backend | Conectar el repositorio a Railway, configurar la compilación y ejecución de Spring Boot, las variables de conexión a MySQL y el puerto del servicio. Comprobar los endpoints desplegados. |
+| Aplicación Android | Configurar la URL HTTPS del backend, generar el APK firmado en Android Studio e instalarlo en un dispositivo para comprobar los principales flujos. |
 
-| Product / Component | Source Repository | Build | Deployment Target | Public URL / Distribution |
-|---|---|---|---|---|
-| Landing Page | [URL pendiente: repositorio Landing Page] | HTML5, CSS3 y JavaScript | [Dato pendiente: servicio de hosting público] | [URL pendiente: Landing Page desplegado] |
-| RESTful Web Services | [URL pendiente: repositorio backend] | Java / Spring Boot | [Dato pendiente: cloud runtime utilizado] | [URL pendiente: REST API desplegada] |
-| MySQL Database | No aplica como repositorio independiente | MySQL | [Dato pendiente: servidor o servicio de base de datos] | Acceso restringido desde backend |
-| Android Application | [URL pendiente: repositorio Android] | Kotlin / Android | Ejecución en dispositivo Android; distribución posterior mediante Firebase App Distribution o servicio equivalente | [URL/enlace de distribución pendiente] |
+Las credenciales se configuran mediante variables de entorno. Los comandos y requisitos exactos se documentan en el README de cada repositorio.
 
-Para el **Landing Page**, el deployment debe generar un sitio público accesible mediante navegador web.
+- **Landing Page:** [Sitio desplegado](URL_LANDING).
+- **Backend:** [REST API desplegada](URL_BACKEND).
+- **Aplicación Android:** [APK de la entrega](URL_APK).
 
-Para el **backend**, el proceso debe generar una instancia ejecutable de Spring Boot accesible mediante HTTPS. Las variables sensibles, como credenciales de base de datos, no deben incluirse directamente en el código fuente.
+El Deployment Diagram C4 muestra el navegador, el dispositivo Android, los servicios en Railway, MySQL y Google Maps.
 
-La base de datos MySQL debe permanecer accesible únicamente por el backend y no por la aplicación Android.
-
-Para la aplicación móvil, la demostración del Sprint puede ejecutarse en un dispositivo físico o entorno Android configurado. La distribución formal deberá documentarse cuando se utilice Firebase App Distribution o un servicio equivalente.
-
-El Deployment Diagram previamente definido para Trakto Route representa esta separación.
-
-**Figura 4.2**  
-*Software Architecture Deployment Diagram de Trakto Route.*
-
-![Software Architecture Deployment Diagram - Trakto Route](assets/images/chapter2/software-architecture-deployment.png)
-
-El diagrama muestra al dispositivo Android como cliente de la solución, un entorno de ejecución encargado de alojar la REST API desarrollada con Spring Boot y un servidor MySQL utilizado como persistencia central. La comunicación entre la aplicación y el backend se realiza mediante HTTPS/JSON, mientras que el acceso a MySQL se concentra en la capa de infraestructura del backend.
+![Trakto Route - Deployment Diagram](assets/images/chapter4/trakto-route-deployment-diagram.png)
 
 <div style="page-break-after: always;"></div>
 
 ### 4.2. Landing Page & Mobile Application Implementation
 
-Esta sección documenta el avance de implementación de Trakto Route organizado por Sprint. Para la entrega TB1 se considera el **Sprint 1**, el cual concentra las primeras funcionalidades core relacionadas con autenticación, programación y consulta de viajes, registro de recursos de flota y asignación de conductor y vehículo.
-
-El alcance se obtiene directamente del Product Backlog establecido en el Capítulo II. De esta manera, las evidencias presentadas en Sprint Review deberán mantener correspondencia con las User Stories comprometidas y con los Work-items definidos por el equipo durante el Sprint Planning.
+Esta sección documenta el avance del Landing Page, los RESTful Web Services y la aplicación Android de Trakto Route, junto con sus evidencias de implementación y colaboración por Sprint.
 
 #### 4.2.1. Sprint 1
 
-El Sprint 1 se centra en construir una primera base funcional del proceso de transporte. El Sprint comprende la posibilidad de registrar e iniciar sesión en el sistema y las capacidades fundamentales para que un supervisor pueda programar un viaje, consultar sus datos, asignar una ruta, registrar vehículos y conductores, asignar ambos recursos a una operación y mantener actualizado su estado.
-
-De acuerdo con el Product Backlog, el Sprint 1 está conformado por **12 User Stories**, que representan en conjunto **41 Story Points**.
-
-**Tabla 4.6**  
-*User Stories correspondientes al Sprint 1*
-
-| Order | User Story | Title | Story Points |
-|---:|---|---|---:|
-| 1 | US17 | Programar viaje | 5 |
-| 2 | US05 | Consultar viajes | 3 |
-| 3 | US06 | Consultar detalle de viaje | 3 |
-| 4 | US18 | Asignar ruta a un viaje | 3 |
-| 5 | US23 | Registrar vehículo | 3 |
-| 6 | US25 | Registrar conductor | 3 |
-| 7 | US27 | Asignar vehículo a un viaje | 5 |
-| 8 | US28 | Asignar conductor a un viaje | 5 |
-| 9 | US07 | Consultar estado del viaje | 2 |
-| 10 | US19 | Actualizar estado del viaje | 3 |
-| 11 | US01 | Registrar cuenta | 3 |
-| 12 | US02 | Iniciar sesión | 3 |
-|  |  | **Total** | **41** |
+En el Sprint 1 se alcanzó aproximadamente un 70 % de avance del backend y se desarrolló la primera versión de la aplicación Android. Asimismo, se cuenta con los prototipos de interfaz y el Landing Page. Las funcionalidades pendientes de integración y comprobación continúan en desarrollo.
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.1. Sprint Planning 1
 
-El Sprint Planning 1 establece el alcance inicial de implementación y organiza el trabajo necesario para alcanzar un incremento funcional de Trakto Route. Debido a que corresponde al primer Sprint, no existe un Sprint Review ni Sprint Retrospective anterior que deban utilizarse como entrada.
+El equipo organizó el trabajo inicial bajo el liderazgo de Cesar Alejandro Linares Bernable, priorizando los servicios del negocio y la primera versión de la experiencia móvil.
 
-**Tabla 4.7**  
-*Sprint Planning 1*
-
-| Sprint # | Sprint 1 |
+| Campo | Detalle |
 |---|---|
-| **Sprint Planning Background** | |
-| Date | [Dato pendiente: fecha real del Sprint Planning 1] |
-| Time | [Dato pendiente: hora real de inicio] |
-| Location | [Dato pendiente: ubicación física o virtual] |
-| Prepared By | [Dato pendiente: integrante responsable de preparar el Sprint Planning] |
-| Attendees (to planning meeting) | Cesar Alejandro Linares Bernable / Aguilar Aguayo Jeferson Renzo / Fernandez Garfias, Alexander Piero / Chirito Torres, Jose Raul / Loa Rojas, Jean Franck |
-| Sprint 0 Review Summary | No aplica. Sprint 1 corresponde a la primera iteración de implementación del producto. |
-| Sprint 0 Retrospective Summary | No aplica. No existe una iteración anterior que deba ser evaluada. |
-| **Sprint Goal & User Stories** | |
-| Sprint 1 Goal | Our focus is on enabling the fleet supervisor to create and prepare transport operations through an initial end-to-end trip management flow. We believe it delivers centralized operational control to transport companies by allowing authenticated users to schedule trips, assign routes, vehicles and drivers, and consult or update trip information. This will be confirmed when a supervisor can authenticate, create a trip, associate its required resources and consult its current state through the implemented solution. |
-| Sprint 1 Velocity | [Dato pendiente: Velocity acordada por el equipo para Sprint 1] |
-| Sum of Story Points | **41 Story Points** |
+| Sprint # | Sprint 1 |
+| Date | 2026-10-03 |
+| Time | [Hora de la reunión] |
+| Location | Reunión virtual mediante Discord |
+| Prepared By | Cesar Alejandro Linares Bernable |
+| Attendees | Cesar Alejandro Linares Bernable / Jeferson Renzo Aguilar Aguayo / Alexander Piero Fernandez Garfias / Jose Raul Chirito Torres / Jean Franck Loa Rojas |
+| Sprint 1 Goal | Avanzar en la consulta de información de viajes y flota para facilitar el acceso del supervisor a sus operaciones. El cumplimiento se evaluará mediante la demostración de las vistas iniciales y los servicios disponibles, identificando las integraciones pendientes. |
+| User Stories relacionadas | US02, US03, US05, US07, US09 y US10 |
+| Technical Stories relacionadas | TS01 y TS02 |
+| Sprint 1 Velocity | 20 Story Points de capacidad estimada para el primer Sprint |
+| Sum of Story Points | 20 Story Points correspondientes a las historias seleccionadas |
 
-El Sprint Goal no se limita al cumplimiento individual de User Stories. Su propósito es proporcionar un incremento coherente que permita comprobar el flujo base de gestión de una operación de transporte.
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.2. Aspect Leaders and Collaborators
 
-Para establecer responsabilidades durante el Sprint se utiliza una **Leadership-and-Collaboration Matrix (LACX)**. Los aspectos deben relacionarse con el trabajo definido posteriormente en el Sprint Backlog.
+Cesar Alejandro Linares Bernable lideró el Sprint. La matriz LACX registra las responsabilidades específicas de cada integrante: **L** indica líder y **C**, colaborador.
 
-Para Sprint 1, los principales aspectos funcionales son **Landing Page**, **Authentication**, **Trip Management**, **Fleet Management**, **Backend & API** y **Testing & Integration**.
-
-**Tabla 4.8**  
-*Leadership-and-Collaboration Matrix del Sprint 1*
-
-| Team Member (Last Name, First Name) | GitHub Username | Landing Page | Authentication | Trip Management | Fleet Management | Backend & API | Testing & Integration |
-|---|---|---|---|---|---|---|---|
-| Linares Bernable, Cesar Alejandro | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Aguilar Aguayo, Jeferson Renzo | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Fernandez Garfias, Alexander Piero | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Chirito Torres, Jose Raul | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-| Loa Rojas, Jean Franck | [Dato pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] | [L/C pendiente] |
-
-**Leyenda:** `L = Leader`, `C = Collaborator`.
-
-[Contenido pendiente: reemplazar las celdas L/C con la distribución real acordada por el equipo antes de la entrega]
-
-La asignación final debe mantener coherencia con los Work-items, responsables y commits que posteriormente se documenten en las evidencias del Sprint.
+| Team Member | GitHub Username | Backend | Aplicación Android | Prototipos y Landing Page |
+|---|---|---|---|---|
+| Cesar Alejandro Linares Bernable | Cesar-Linares | — | — | C |
+| Jeferson Renzo Aguilar Aguayo | JeferSomBlan | — | — | — |
+| Alexander Piero Fernandez Garfias | Dostoyevsk1 | L | L | L |
+| Jose Raul Chirito Torres | JoseR044 | — | — | — |
+| Jean Franck Loa Rojas | JeanLoa | — | C | — |
 
 <div style="page-break-after: always;"></div>
 
 ##### 4.2.1.3. Sprint Backlog 1
 
-El Sprint Backlog convierte el alcance establecido en Sprint Planning en actividades concretas. Las User Stories fueron seleccionadas desde el Product Backlog atendiendo al Sprint previamente definido.
+El backlog reúne las tareas relacionadas con los servicios de viajes y flota, las pantallas iniciales de Android y los entregables de diseño. El avance parcial del backend no implica que todas las historias estén completadas.
 
-[Imagen pendiente: SB-01 – screenshot del Board utilizado para gestionar Sprint 1]
+![Trakto Route - Sprint Backlog 1](assets/images/chapter2/product-backlog.png)
 
-**Figura 4.3**  
-*Board de gestión correspondiente al Sprint 1.*
 
-[URL pendiente: enlace público al Board específico del Sprint 1]
+**Sprint #:** Sprint 1.
 
-**Tabla 4.9**  
-*Sprint Backlog 1*
+| Story ID | Story Title | Task ID | Task Title | Description | Hours | Assigned To | Status |
+|---|---|---|---|---|---|---|---|
+| TS01 | Proporcionar servicios para la gestión de viajes | T01 | Desarrollar servicios de viajes | Avanzar en las operaciones y consultas del backend. | [Horas] | [Nombre] | InProcess |
+| TS02 | Proporcionar servicios para la gestión de flota | T02 | Desarrollar servicios de flota | Avanzar en los servicios de conductores y vehículos. | [Horas] | [Nombre] | InProcess |
+| US02 | Iniciar sesión | T03 | Desarrollar pantalla de acceso | Implementar la vista inicial de inicio de sesión. | [Horas] | [Nombre] | InProcess |
+| US03 | Consultar perfil | T04 | Desarrollar vista de perfil | Presentar la información del usuario en la app. | [Horas] | [Nombre] | InProcess |
+| US05 / US07 | Consultar viajes / Consultar estado del viaje | T05 | Desarrollar vista de viajes | Presentar los viajes y sus estados. | [Horas] | [Nombre] | InProcess |
+| US09 / US10 | Consultar conductor / Consultar vehículo | T06 | Desarrollar vistas de flota | Avanzar en la presentación de conductores y vehículos. | [Horas] | [Nombre] | InProcess |
+| — | Tarea transversal | T07 | Elaborar prototipos | Diseñar las pantallas y su navegación en Figma. | [Horas] | [Nombre] | [Estado] |
+| — | Tarea transversal | T08 | Implementar Landing Page | Presentar la propuesta de valor del producto. | [Horas] | [Nombre] | [Estado] |
 
-| User Story Id | User Story Title | Work-Item / Task Id | Work-Item / Task Title | Description | Estimation (Hours) | Assigned To | Status |
-|---|---|---|---|---|---:|---|---|
-| US17 | Programar viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US05 | Consultar viajes | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US06 | Consultar detalle de viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US18 | Asignar ruta a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US23 | Registrar vehículo | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US25 | Registrar conductor | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US27 | Asignar vehículo a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US28 | Asignar conductor a un viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US07 | Consultar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US19 | Actualizar estado del viaje | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US01 | Registrar cuenta | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
-| US02 | Iniciar sesión | [Dato pendiente] | [Dato pendiente] | [Descomposición real registrada en el Board] | [ ] | [ ] | [ ] |
+Los estados utilizados son `Todo`, `InProcess`, `To-Review` y `Done`. Una tarea se marca como `Done` cuando cuenta con la verificación correspondiente.
 
-Los estados utilizados deberán corresponder a `To-do`, `In-Process`, `To-Review` o `Done`. Cada Work-item debe contar con estimación en horas y un responsable claramente identificado.
 
 <div style="page-break-after: always;"></div>
 
