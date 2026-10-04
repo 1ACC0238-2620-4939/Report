@@ -14,7 +14,7 @@ Fecha de corte: 04/10/2026.
 - [x] **8. Incorporar evidencia.** Se añadieron capturas reales, commits, repositorios, endpoints, resultados y límites verificables al informe.
 - [x] **9. Completar los artefactos UX/UI.** Se incorporaron los wireframes y mock-ups de Landing Page y aplicación móvil, siete Wireflows y siete User Flows trazables a los User Goals.
 - [x] **10. Completar el prototipado.** Se añadió un prototipo móvil navegable, una vista general y videos MP4 reproducibles para la aplicación y el Landing Page.
-- [x] **11. Verificar el informe actualizado.** Se validaron 92 referencias locales sin archivos faltantes y se revisó visualmente el PDF final de 218 páginas.
+- [x] **11. Verificar el informe actualizado.** Se validaron 92 referencias locales sin archivos faltantes y se revisó visualmente el PDF final de 214 páginas.
 - [ ] **12. Completar evidencias humanas.** `BLOCKED`: requiere entrevistas reales, videos, timing, consentimiento y hallazgos del equipo.
 - [ ] **13. Completar gestión del Sprint.** `BLOCKED`: requiere fecha, hora, lugar, responsable, estimaciones y Board reales acordados por el equipo.
 - [ ] **14. Demostrar integración end-to-end.** `NOT_VERIFIED`: mobile-app usa `DemoTraktoRepository`; falta el adaptador REST y una API pública saludable.
