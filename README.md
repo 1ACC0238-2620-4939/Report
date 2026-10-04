@@ -4566,22 +4566,61 @@ Las sesiones se evaluarán mediante el formato establecido en el Anexo E. El an�
 Cada hallazgo registrará la tarea y pantalla afectadas, la evidencia, la heurística correspondiente, la severidad según el Anexo E y la mejora propuesta.
 
 
+## Conclusiones y recomendaciones
+
+El trabajo realizado en Trakto Route permitió definir una propuesta orientada a reducir la falta de visibilidad y la dependencia de llamadas o mensajes para consultar las operaciones de transporte. La investigación de los segmentos objetivo respaldó la necesidad de organizar la información de viajes, conductores y vehículos, aunque los supuestos sobre el uso frecuente de la aplicación y la autonomía de consulta todavía requieren comprobarse mediante entrevistas de validación. Durante el Sprint 1 se completaron el Landing Page y los prototipos, se desarrolló la primera versión de Android y se alcanzó aproximadamente un 70 % de avance del backend. Estos resultados constituyen un avance de implementación, pero aún no permiten confirmar las hipótesis de Lean UX ni el cumplimiento de sus criterios de éxito, pues falta contrastarlos con el comportamiento de los usuarios durante las validaciones. Como siguientes pasos del roadmap, se recomienda completar la integración entre la aplicación y los servicios, implementar y comprobar la planificación de rutas y el seguimiento con paradas automáticas, incorporar pruebas automatizadas y realizar las sesiones de validación con ambos segmentos. Los hallazgos deberán orientar la priorización de mejoras en navegación, búsqueda y claridad de la información antes de ampliar las funcionalidades del producto.
+
+
+## Referencias bibliográficas
+
+Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+
+Google. (s. f.). *Google HTML/CSS style guide*. https://google.github.io/styleguide/htmlcssguide.html
+
+Google. (s. f.). *Google Java style guide*. https://google.github.io/styleguide/javaguide.html
+
+JetBrains. (s. f.). *Kotlin coding conventions*. https://kotlinlang.org/docs/coding-conventions.html
+
+*Conventional Commits*. (s. f.). https://www.conventionalcommits.org/
+
+*Semantic Versioning 2.0.0*. (s. f.). https://semver.org/
 
 
 # Anexos
 
 ## Anexo A. Herramientas utilizadas
 
-| Herramienta | Uso en el proyecto |
+| Herramienta | Uso en el proyecto | Enlace |
+|---|---|---|
+| UXPressia | Elaboración de User Personas, User Journey Maps y Empathy Maps. | [UXPressia](https://uxpressia.com/) |
+| Miro | Elaboración de Lean UX Canvas, EventStorming y Candidate Context Discovery. | [Miro](https://miro.com/) |
+| Structurizr | Elaboración de diagramas C4 y Context Mapping. | [Structurizr](https://structurizr.com/) |
+| PlantUML | Elaboración de diagramas de clases y diseño de base de datos. | [PlantUML](https://plantuml.com/) |
+| Figma | Elaboración de wireframes, mock-ups y prototipo interactivo. | [Prototipo Android](https://www.figma.com/proto/iki5xVD77DlyMXdc7jURuv/%E2%9D%96-Untitled-UI-Icons-%E2%80%93-1-100--essential-Figma-icons--Community-?node-id=3304-1968&p=f&t=dASNVbd0gkis1VNP-1&scaling=min-zoom&content-scaling=fixed&page-id=184%3A34401&starting-point-node-id=3304%3A1306) |
+| Lucidchart | Elaboración de Mobile Applications Wireflow Diagrams y Mobile Applications User Flow Diagrams. | [Wireflows](https://lucid.app/lucidchart/16c216a1-8a57-45b4-b935-3eebdfa8efca/edit?viewport_loc=2463%2C2106%2C2064%2C949%2C0_0&invitationId=inv_61427efe-04a5-4da6-99c4-10828bc7d992) / [User Flows](https://lucid.app/lucidchart/8cef2211-8ff9-46c5-b351-2ab7bf62c41e/edit?viewport_loc=-3616%2C2943%2C3288%2C1921%2C0_0&invitationId=inv_0b4dc3ef-dfc5-42b0-9590-027918e81afb) |
+| Trello | Organización del Product Backlog y seguimiento de tareas por Sprint. | [Tablero del proyecto](https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello) |
+| Git y GitHub | Control de versiones y almacenamiento del reporte y código fuente. | [Reporte](https://github.com/1ACC0238-2620-4939/Report) / [Android](https://github.com/1ACC0238-2620-4939/front) / [Backend](https://github.com/1ACC0238-2620-4939/backend) / [Landing Page](https://github.com/1ACC0238-2620-4939/landing-page) |
+| Visual Studio Code | Desarrollo del Landing Page con HTML y CSS. | [Visual Studio Code](https://code.visualstudio.com/) |
+| IntelliJ IDEA | Desarrollo del backend con Java y Spring Boot. | [IntelliJ IDEA](https://www.jetbrains.com/idea/) |
+| Spring Boot | Implementación de los RESTful Web Services. | [Spring Boot](https://spring.io/projects/spring-boot) |
+| Android Studio | Desarrollo y ejecución de la aplicación Android. | [Android Studio](https://developer.android.com/studio) |
+| Kotlin | Lenguaje de programación de la aplicación Android. | [Kotlin](https://kotlinlang.org/) |
+| MySQL | Persistencia central de los datos del sistema. | [MySQL](https://www.mysql.com/) |
+| Railway | Despliegue del Landing Page y backend. | [Railway](https://railway.com/) |
+| Microsoft Stream / OneDrive | Alojamiento y consulta de videos de entrevistas y demostraciones. | [Demostración del prototipo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202019498_upc_edu_pe/IQDz1xsdKdncT7IZwYQYkurNAcopYM6Z85fVXp6svpAwkpw?e=qOW1e6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+
+**Referencias de convenciones utilizadas**
+
+| Referencia | Enlace |
 |---|---|
-| **UXPressia** | Elaboración de User Personas, User Journey Maps y Empathy Maps. |
-| **Miro** | Elaboración de Lean UX Canvas, EventStorming y Candidate Context Discovery. |
-| **Structurizr** | Elaboración de diagramas del C4 Model, Context Mapping y Component Diagrams. |
-| **PlantUML** | Elaboración de UML Class Diagrams y Database Design Diagrams. |
-| **GitHub** | Control de versiones, almacenamiento del informe, código fuente e imágenes del proyecto. |
-| **Android Studio** | Desarrollo de la aplicación móvil Android en Kotlin. |
-| **Spring Boot** | Desarrollo del backend y API REST en Java. |
-| **MySQL** | Persistencia central de los datos del sistema. |
+| GitFlow | [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/) |
+| Semantic Versioning | [Semantic Versioning](https://semver.org/) |
+| Conventional Commits | [Conventional Commits](https://www.conventionalcommits.org/) |
+| Convenciones HTML y CSS | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| Convenciones Java | [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) |
+| Convenciones Kotlin | [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html) |
+| Referencia Gherkin | [Gherkin Reference](https://cucumber.io/docs/gherkin/reference/) |
+
 
 <div style="page-break-after: always;"></div>
 
