@@ -74,6 +74,13 @@
 
 <div style="page-break-after: always;"></div>
 
+![Project Report Collaboration Insights TB1](./assets/images/shared/report_tb1.png)
+
+**TB1.** En esta entrega, el equipo desarrolló los capítulos III y IV del reporte de **Trakto Route**, incluyendo las guías de estilo, arquitectura de información, wireframes, mock-ups, flujos y prototipos. Para el **Sprint 1**, se documentaron la configuración del entorno, el control de versiones, la planificación, las responsabilidades, el backlog y las evidencias disponibles de implementación, ejecución, documentación y despliegue. Se completó el Landing Page, se alcanzó aproximadamente un 70 % de avance del backend y se desarrolló la primera versión de la aplicación Android. También se estableció el diseño de las entrevistas de validación, quedando pendientes su ejecución, la evaluación heurística y las pruebas automatizadas. El reporte se consolidó mediante herramientas colaborativas y GitHub.
+
+<div style="page-break-after: always;"></div>
+
+
 ## Contenido
 
 - [Student Outcome](#student-outcome)
@@ -196,6 +203,16 @@ En el siguiente cuadro se describen las acciones realizadas y los enunciados de 
 |  | **Loa Rojas, Jean Franck** | Fortaleció sus conocimientos sobre planificación de productos mediante la elaboración del Impact Map y la organización y priorización del Product Backlog, contribuyendo a definir las funcionalidades necesarias para la solución. | Identificó la necesidad del aprendizaje permanente en técnicas de planificación, gestión de productos y desarrollo de software para responder adecuadamente a nuevos requerimientos y cambios que puedan presentarse durante el proyecto. |
 |  | **Conclusiones** | **El equipo actualizó y aplicó conocimientos relacionados con Lean UX, investigación de usuarios, análisis de requisitos, planificación del producto, Domain-Driven Design y arquitectura de software, integrándolos en el desarrollo del proyecto Trakto Route.** | **El equipo reconoció la importancia del aprendizaje continuo y autónomo para fortalecer sus competencias profesionales y adaptar el desarrollo de soluciones de software a las necesidades de los usuarios, los cambios tecnológicos y la evolución del proyecto.** |
 
+<div style="page-break-after: always;"></div>
+
+| Avance | Integrante | Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. |
+|---|---|---|---|
+| **TB1** | **Cesar Alejandro Linares Bernable** | Reforzó sus conocimientos de documentación del proyecto y coordinación del equipo durante el Sprint. | Reconoció la importancia de continuar aprendiendo sobre organización y documentación de proyectos de software. |
+| | **Aguilar Aguayo Jeferson Renzo** | Reforzó sus conocimientos mediante aportes a la elaboración del reporte. | Identificó la necesidad de seguir aprendiendo para mejorar la documentación técnica del proyecto. |
+| | **Fernandez Garfias, Alexander Piero** | Profundizó en Kotlin, Jetpack Compose y organización de aplicaciones móviles durante el desarrollo de la primera versión de Android. Aplicó Java, Spring Boot, DDD y CQRS para avanzar en el backend, incluyendo modelado de dominio, persistencia con MySQL y servicios REST. También fortaleció sus conocimientos de HTML y CSS mediante el Landing Page, y de UX/UI mediante prototipos, wireflows y user flows. | Reconoció que el aprendizaje autónomo y la consulta de documentación son esenciales para resolver dificultades técnicas y mantener coherencia entre diseño e implementación. Identificó la necesidad de continuar profundizando en integración entre Android y el backend, pruebas automatizadas, seguridad y despliegue para completar una solución mantenible y verificable. |
+| | **Chirito Torres, Jose Raul** | Reforzó sus conocimientos de organización y presentación de información mediante aportes al reporte. | Reconoció la necesidad de actualizar sus conocimientos para comunicar mejor las decisiones del proyecto. |
+| | **Loa Rojas, Jean Franck** | Aplicó y fortaleció sus conocimientos de Kotlin y desarrollo Android al avanzar en la primera versión de la aplicación móvil. | Reconoció la importancia de continuar aprendiendo sobre interfaces móviles e integración con servicios REST. |
+| | **Conclusiones** | El equipo desarrolló la primera versión de Android, completó el Landing Page y los prototipos, y alcanzó aproximadamente un 70 % de avance del backend, documentando las decisiones y resultados de TB1. | El equipo reconoció la necesidad de continuar aprendiendo sobre integración, pruebas y validación con usuarios para completar y mejorar Trakto Route. |
 
 <div style="page-break-after: always;"></div>
 
