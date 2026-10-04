@@ -3671,15 +3671,9 @@ PK  id
 
 ## 3.1. Product design
 
-El diseño de **Trakto Route** se plantea como la continuidad de las decisiones obtenidas durante el proceso de investigación, Needfinding y especificación de requisitos desarrollado en los capítulos anteriores. La solución debe responder a las necesidades de los dos segmentos identificados: las empresas de transporte de carga, representadas por **Carlos Mendoza**, supervisor de flota, y los clientes que contratan servicios de transporte, representados por **Andrea Salazar**, responsable logística.
+El diseño de Trakto Route responde a las necesidades de las empresas de transporte de carga y sus clientes, facilitando la gestión y consulta de viajes, flota, rutas y seguimiento.
 
-A partir de las entrevistas, User Personas, User Task Matrix, User Journey Maps, Empathy Maps, User Stories y Product Backlog, se identificó que ambos perfiles necesitan interactuar con la misma operación de transporte, pero desde responsabilidades diferentes. Carlos Mendoza requiere administrar viajes, vehículos, conductores, rutas, estados e incidencias, mientras que Andrea Salazar necesita consultar información autorizada sobre sus envíos, conocer su progreso, identificar eventos relevantes y acceder al historial de operaciones sin depender continuamente de llamadas o mensajes a la empresa transportista.
-
-Por esta razón, el Product Design de Trakto Route establece una experiencia diferenciada según el rol del usuario. La aplicación móvil concentra las funcionalidades operativas y de consulta definidas en las User Stories, mientras que el Landing Page cumple una función informativa y de presentación de la propuesta de valor del producto. Esta separación permite que la arquitectura visual y funcional se mantenga alineada con el alcance establecido previamente.
-
-Trakto Route no incorpora dentro de su alcance inicial dispositivos físicos o infraestructura telemática propia. Su propuesta se concentra en el producto digital conformado por la aplicación móvil Android, el Landing Page y los servicios que permiten gestionar y consultar la información de las operaciones de transporte.
-
-El diseño prioriza la claridad, trazabilidad y reducción de carga cognitiva. Las funcionalidades asociadas a viajes, flota, incidencias, historial y perfil se organizan de acuerdo con las tareas que cada tipo de usuario necesita realizar y con los Bounded Contexts definidos previamente. De esta manera, las decisiones de UI/UX mantienen trazabilidad con la arquitectura funcional de la solución y evitan presentar al cliente funciones internas de administración que corresponden exclusivamente al supervisor de flota.
+La aplicación móvil presenta una interfaz minimalista, con fondos claros, acentos azules y navegación sencilla. El diseño prioriza la claridad y el acceso a la información según el rol del usuario, mientras que el Landing Page comunica la propuesta de valor del producto.
 
 <div style="page-break-after: always;"></div>
 
@@ -3691,215 +3685,132 @@ La propuesta utiliza como referencia los principios de **Material Design 3**, ad
 
 Estas reglas también consideran la accesibilidad. La interfaz no dependerá exclusivamente del color para representar estados; las acciones importantes deberán acompañarse de etiquetas o iconografía comprensible; y los elementos interactivos de la aplicación móvil utilizarán áreas táctiles suficientemente amplias para favorecer una interacción confiable.
 
+<div style="page-break-after: always;"></div>
+
 #### 3.1.1.1. General Style Guidelines
 
-Las General Style Guidelines definen las decisiones visuales aplicables transversalmente a los productos digitales de Trakto Route. La propuesta busca proyectar una identidad tecnológica, confiable y orientada al control de operaciones, evitando una apariencia excesivamente informal que pueda disminuir la percepción de precisión necesaria en un producto relacionado con transporte y logística.
+Trakto Route toma **Material Design 3** como referencia y adapta sus componentes a una identidad minimalista. Las superficies claras, tarjetas con relieve discreto y acentos azules facilitan la lectura y destacan las acciones principales. El diseño se sustenta en jerarquía visual, consistencia, proximidad y accesibilidad.
 
 **Branding**
 
-La identidad de Trakto Route debe transmitir principalmente **control, movimiento, trazabilidad y confianza**. Estos conceptos se relacionan directamente con la propuesta de valor del producto: centralizar información asociada a operaciones de transporte y permitir que cada usuario pueda identificar oportunamente el estado de un viaje.
+La marca representa movimiento, ubicación y control del transporte. El logotipo combina una “T” con forma de carretera y un marcador de ubicación. Se conserva su proporción y espacio libre alrededor para facilitar su reconocimiento. El icono de la aplicación utiliza el símbolo sobre fondo blanco; el nombre **Trakto Route** lo acompaña cuando existe espacio suficiente.
 
-El branding debe mantener una composición visual limpia, con predominio de superficies claras, elementos de contraste y componentes fácilmente reconocibles. Los elementos gráficos asociados a rutas, ubicación, vehículos, progreso y estados operativos pueden utilizarse como referencias visuales, siempre que mantengan un lenguaje gráfico homogéneo.
+![Trakto Route - Logotipo](assets/images/shared/trakto-route-logo.png)
 
-En caso de utilizar el nombre completo del producto, debe conservarse la denominación **Trakto Route**, evitando variaciones innecesarias que puedan generar inconsistencias entre el Landing Page, la aplicación móvil y la documentación del proyecto.
-
-[Imagen pendiente: SG-01 – Branding de Trakto Route mostrando logotipo oficial, variantes permitidas y ejemplos de uso – elaborado en Figma]
-
-La figura SG-01 deberá consolidar la identidad visual utilizada en los productos digitales, incluyendo el logotipo seleccionado por el equipo, sus principales variantes y las condiciones básicas de uso sobre superficies claras y oscuras.
-
-**Tone of Voice**
-
-El tono de comunicación se define utilizando las cuatro dimensiones propuestas para productos digitales: serio/divertido, formal/casual, respetuoso/irreverente y entusiasta/sereno. Debido al contexto operativo de Trakto Route, se adopta un tono predominantemente serio, profesional, respetuoso y sereno.
-
-| Dimensión | Posición seleccionada | Justificación |
-|---|---|---|
-| Divertido ↔ Serio | Predominantemente serio | Trakto Route comunica información relacionada con viajes, retrasos, incidencias, vehículos y conductores. La precisión debe prevalecer sobre el humor. |
-| Formal ↔ Casual | Formal con lenguaje directo | El producto está orientado a un contexto empresarial y logístico. Sin embargo, los textos deben evitar tecnicismos innecesarios y mantenerse comprensibles. |
-| Respetuoso ↔ Irreverente | Altamente respetuoso | Los mensajes pueden involucrar problemas operativos, accidentes o retrasos, por lo que deben expresarse de forma objetiva y profesional. |
-| Entusiasta ↔ Sereno | Predominantemente sereno | La interfaz debe transmitir control y estabilidad, especialmente cuando se comunican cambios de estado o incidencias. |
-
-Este tono se aplicará en títulos, mensajes informativos, estados vacíos, confirmaciones y mensajes de error. Por ejemplo, ante una consulta sin resultados se utilizará un mensaje como **“No se encontraron viajes con los criterios seleccionados”**, evitando expresiones ambiguas o excesivamente informales.
+<div style="page-break-after: always;"></div>
 
 **Typography**
 
-Se propone **Roboto** como familia tipográfica principal debido a su legibilidad en interfaces digitales, compatibilidad con Android y adecuación con Material Design. El uso de una única familia tipográfica facilita mantener consistencia entre la experiencia móvil y la versión web.
+Se utiliza **Roboto** por su legibilidad y coherencia con Android. Los tamaños y pesos establecen una jerarquía clara sin recargar la interfaz.
 
-La jerarquía propuesta toma como referencia la escala de Material Design 3 y se adapta al nivel de información necesario en Trakto Route.
-
-| Token | Tamaño orientativo | Weight | Uso principal |
-|---|---:|---|---|
-| Display | 36 sp / px | Regular | Mensajes principales o encabezados promocionales del Landing Page |
-| H1 | 32 sp / px | Medium | Títulos principales de páginas o pantallas |
-| H2 | 24 sp / px | Medium | Secciones principales |
-| H3 | 20 sp / px | Medium | Subsecciones y encabezados de cards |
-| Body Large | 16 sp / px | Regular | Contenido principal y datos operativos |
-| Body Medium | 14 sp / px | Regular | Información complementaria |
-| Label | 14 sp / px | Medium | Buttons, filtros y controles |
-| Caption | 12 sp / px | Regular | Metadatos, fechas y textos auxiliares |
-
-Los tamaños deben respetar las posibilidades de escalamiento del sistema operativo y no deben utilizarse como dimensiones rígidas cuando puedan afectar la accesibilidad.
-
-**Color System**
-
-Como propuesta de diseño para el Capítulo III, se establece un sistema cromático orientado a transmitir confianza, estabilidad y claridad. El azul se utiliza como color principal por su asociación visual con control y confiabilidad, mientras que un tono teal se utiliza como apoyo para elementos secundarios. Los colores de estado se diferencian claramente para representar resultados exitosos, advertencias, errores e información.
-
-| Token | HEX | Uso |
-|---|---|---|
-| Primary | `#155EEF` | Acciones principales, elementos activos y énfasis |
-| Primary Container | `#E8EEFF` | Fondos destacados y elementos seleccionados |
-| Secondary | `#0E7490` | Acciones secundarias y elementos complementarios |
-| Background | `#F7F9FC` | Fondo general de las experiencias |
-| Surface | `#FFFFFF` | Cards, dialogs y superficies elevadas |
-| Text Primary | `#172033` | Títulos y contenido principal |
-| Text Secondary | `#5B6472` | Información secundaria y supporting text |
-| Success | `#2E7D32` | Operaciones completadas o estados correctos |
-| Warning | `#A15C00` | Retrasos, alertas preventivas o atención requerida |
-| Error | `#B3261E` | Errores, accidentes o acciones fallidas |
-| Info | `#00639A` | Información contextual y mensajes informativos |
-
-Los estados no deberán diferenciarse únicamente mediante color. Cuando se represente una incidencia, un retraso o un viaje finalizado, se utilizará también texto, iconografía o indicadores que permitan identificar el significado sin depender de la percepción cromática.
-
-[Imagen pendiente: SG-02 – Color System de Trakto Route mostrando tokens, códigos HEX y ejemplos de aplicación – elaborado en Figma]
-
-La figura SG-02 deberá representar visualmente la relación entre los colores principales, secundarios y semánticos, incluyendo ejemplos de su aplicación sobre buttons, cards, chips de estado y mensajes.
-
-**Spacing**
-
-Se adopta una escala de espaciado basada en múltiplos de **4**, facilitando la consistencia entre componentes.
-
-| Token | Valor | Aplicación |
+| Elemento | Tamaño en Android | Peso |
 |---|---:|---|
-| XS | 4 dp / px | Separación mínima entre icono y label |
-| S | 8 dp / px | Elementos estrechamente relacionados |
-| M | 16 dp / px | Padding estándar en cards y formularios |
-| L | 24 dp / px | Separación entre grupos de contenido |
-| XL | 32 dp / px | Separación entre bloques principales |
-| XXL | 48 dp / px | Separación de secciones principales del Landing Page |
+| Título de pantalla | 24 sp | Medium |
+| Encabezado de sección o tarjeta | 20 sp | Medium |
+| Texto principal | 16 sp | Regular |
+| Texto secundario | 14 sp | Regular |
+| Botones y filtros | 14 sp | Medium |
+| Fechas y metadatos | 12 sp | Regular |
 
-El sistema permite generar agrupaciones visuales predecibles. Los elementos relacionados se sitúan más próximos entre sí, mientras que las secciones con diferentes propósitos utilizan una separación mayor.
+Los textos admiten el escalamiento del dispositivo. El Landing Page mantiene la misma familia y adapta los tamaños al ancho disponible.
 
-**Iconography**
 
-La iconografía utilizará un mismo lenguaje visual, preferentemente basado en **Material Symbols** o un set equivalente coherente. Los iconos se utilizarán como apoyo visual y no como sustituto de información crítica.
+**Colors**
 
-Entre los conceptos que requieren representación gráfica se encuentran:
+El azul marino mantiene la relación con el logotipo, mientras que el azul principal destaca acciones y selecciones. Los fondos neutros permiten que la información sea protagonista.
 
-- Viajes.
-- Rutas.
-- Vehículos.
-- Conductores.
-- Incidencias.
-- Historial.
-- Perfil.
-- Estados de operación.
-- Paradas y descansos.
+| Color | HEX | Aplicación |
+|---|---|---|
+| Azul marino | `#00265F` | Identidad, títulos y énfasis |
+| Azul principal | `#007BDF` | Acciones, iconos activos e indicadores |
+| Azul claro | `#E8F3FF` | Fondos de filtros y selecciones |
+| Fondo general | `#FAFAFA` | Pantallas de la aplicación |
+| Superficie | `#FFFFFF` | Tarjetas, formularios y diálogos |
+| Texto secundario | `#5B6472` | Descripciones y metadatos |
+| Borde | `#DCE2E8` | Delimitación de controles |
+| Éxito | `#2E7D32` | Confirmaciones |
+| Advertencia | `#A15C00` | Situaciones que requieren atención |
+| Error | `#B3261E` | Validaciones y acciones fallidas |
 
-Los iconos relacionados con acciones críticas, como finalizar un viaje o registrar una incidencia, deberán acompañarse de labels comprensibles para minimizar errores de interpretación.
+El rojo del marcador se conserva como acento del logotipo. Los estados incluyen texto o iconos además del color. Las combinaciones de texto y fondo deben mantener un contraste suficiente para la lectura.
 
-**UI Components**
+![Trakto Route - Paleta de colores](assets/images/chapter3/trakto-route-color-palette.png)
 
-El sistema visual utilizará componentes reutilizables que permitan conservar consistencia entre pantallas.
+<div style="page-break-after: always;"></div>
 
-| Componente | Aplicación en Trakto Route |
-|---|---|
-| Buttons | Confirmar acciones primarias como programar, guardar o actualizar |
-| Outlined Buttons | Acciones secundarias o cancelaciones |
-| Text Fields | Registro, autenticación y edición de información |
-| Cards | Resumen de viajes, vehículos, conductores e incidencias |
-| Chips | Representación de estados y filtros |
-| Lists | Viajes, eventos, historial, vehículos y conductores |
-| Dialogs | Confirmación de acciones de impacto |
-| Snackbar | Feedback breve de acciones completadas o fallidas |
-| Progress Indicators | Procesamiento y carga de información |
-| Search / Filter Controls | Filtrado del historial cuando corresponda a US16 |
-| Empty States | Ausencia de viajes, incidencias o resultados |
-| Navigation Components | Navegación principal según el rol |
+**Spacing y componentes**
 
-[Imagen pendiente: SG-03 – General Style Guidelines y principales UI Components de Trakto Route – elaborado en Figma]
+Se utiliza una escala de **4, 8, 16, 24 y 32 dp**: 4–8 dp entre elementos relacionados, 16 dp para márgenes y padding, y 24–32 dp entre secciones. Esta distribución agrupa la información por proximidad y evita la saturación visual.
 
-La figura SG-03 deberá presentar los componentes principales en sus estados normal, pressed, disabled, error y selected cuando corresponda, estableciendo una referencia visual reutilizable para el equipo.
+Las tarjetas presentan esquinas redondeadas y sombras suaves. Los botones, campos y filtros mantienen estilos consistentes y estados visibles. Se utilizan **Material Symbols**, acompañados de etiquetas cuando sea necesario, y áreas táctiles de al menos **48 × 48 dp**.
 
-**Web Style Guidelines**
+La aplicación respeta las barras del sistema. El Landing Page adapta su distribución al ancho de pantalla y mantiene indicadores de foco visibles.
 
-Para el Landing Page se utilizará una estructura responsive que permita reorganizar el contenido según el ancho disponible. En Desktop se priorizará una composición amplia, con navegación visible en el header y contenido distribuido mediante secciones claramente diferenciadas. En Mobile Web, los componentes se reorganizarán de manera vertical, manteniendo la prioridad de la propuesta de valor y de las llamadas a la acción.
+**Tone of Voice**
 
-Los buttons y enlaces deberán presentar estados de hover y focus visibles. Los encabezados mantendrán una jerarquía consistente y el contenido se dividirá en bloques que faciliten la exploración rápida.
+| Dimensión | Tono adoptado | Sustento |
+|---|---|---|
+| Divertido / Serio | Serio | Prioriza la precisión de la información. |
+| Formal / Casual | Formal y directo | Utiliza lenguaje profesional y sencillo. |
+| Respetuoso / Irreverente | Respetuoso | Informa sin culpar al usuario. |
+| Entusiasta / Sereno | Sereno | Comunica resultados y errores con calma. |
 
-**Mobile Style Guidelines**
-
-La aplicación Android utilizará los patrones visuales de Material Design adaptados a la identidad de Trakto Route. Los componentes interactivos deberán contemplar objetivos táctiles de al menos **48 dp × 48 dp**, evitando controles difíciles de seleccionar.
-
-Las acciones frecuentes se mantendrán fácilmente accesibles y las acciones críticas requerirán confirmación cuando exista riesgo de modificar información relevante. Los elementos deberán respetar los system insets del dispositivo para evitar superposición con barras del sistema.
+Los mensajes indican el resultado o la acción necesaria. Ejemplos: **“Viaje creado correctamente”**, **“No se encontraron viajes”** y **“No se pudo guardar. Intenta nuevamente”**.
 
 <div style="page-break-after: always;"></div>
 
 ### 3.1.2. Information Architecture
 
-La Information Architecture de Trakto Route define la organización y agrupación del contenido que será presentado en el Landing Page y en la aplicación móvil. La estructura se fundamenta en las necesidades identificadas para Carlos Mendoza y Andrea Salazar, así como en las User Stories y los Bounded Contexts definidos en el capítulo anterior.
+La arquitectura de información de **Trakto Route** organiza el contenido del Landing Page y de la aplicación móvil para facilitar la comprensión del producto y el acceso a sus funcionalidades.
 
-La organización de la aplicación respeta la diferencia existente entre ambos perfiles. El supervisor de flota necesita acceder a información operativa asociada a viajes, flota, incidencias e historial, mientras que el cliente de transporte requiere principalmente consultar la información correspondiente a sus propios envíos.
+El Landing Page presenta la propuesta de valor, funcionalidades, equipo y preguntas frecuentes. La aplicación agrupa la información en **Viajes, Vehículos, Conductores y Perfil**, integrando la ruta y el seguimiento dentro del detalle de cada viaje. Las acciones disponibles se adaptan al rol y los permisos del usuario.
 
-Esto significa que ambos usuarios no deben visualizar necesariamente la misma estructura. El sistema debe presentar información y acciones de acuerdo con el rol autenticado, reduciendo opciones que no aportan a las tareas del usuario y evitando exponer capacidades administrativas a quienes no corresponden.
+La propuesta considera sistemas de organización, etiquetas claras, navegación consistente y mecanismos de búsqueda y filtrado para encontrar información con pocos pasos.
 
-La Information Architecture determina **qué contenido se agrupa y cómo se relaciona**, mientras que el Navigation System establece **cómo se desplazará el usuario entre dichos grupos**. Esta distinción permite estructurar la información antes de seleccionar los componentes concretos de navegación.
+<div style="page-break-after: always;"></div>
 
 #### 3.1.2.1. Organization Systems
 
-Trakto Route utiliza una combinación de organización jerárquica, secuencial, temática, cronológica y por audiencia. La selección depende del tipo de información y de la tarea realizada.
+Se aplican diferentes formas de organización visual y esquemas de categorización según el contenido y la tarea del usuario.
 
-| Producto | Contenido | Sistema de organización | Esquema | Justificación |
-|---|---|---|---|---|
-| Landing Page | Propuesta de valor y presentación del producto | Jerárquico | Por tópico | Prioriza primero el problema y valor de Trakto Route y luego amplía sus principales capacidades |
-| Landing Page | Explicación del funcionamiento | Secuencial | Por tópico | Permite presentar de forma progresiva cómo el producto apoya una operación de transporte |
-| Mobile App | Funcionalidades del supervisor | Jerárquico | Por audiencia/rol | Presenta viajes, flota, incidencias e historial únicamente al perfil que administra operaciones |
-| Mobile App | Funcionalidades del cliente | Jerárquico | Por audiencia/rol | Prioriza envíos, progreso, eventos e historial sin exponer gestión interna de flota |
-| Viajes | Operaciones registradas | Jerárquico | Por tópico y estado | Agrupa la información principal del viaje y sus recursos relacionados |
-| Eventos de viaje | Paradas, descansos e incidencias | Secuencial | Cronológico | Permite comprender la evolución de la operación según el momento en que ocurrieron los eventos |
-| Operational History | Operaciones anteriores | Jerárquico | Cronológico | Facilita la revisión de operaciones finalizadas y su trazabilidad |
-| Fleet Management | Vehículos y conductores | Jerárquico | Por tópico | Separa los dos principales tipos de recursos administrados por el supervisor |
+**Organización visual**
 
-El Landing Page se propone con una estructura basada en los siguientes bloques conceptuales: presentación principal, problemática, propuesta de valor, funcionalidades, funcionamiento, segmentos objetivo, llamada a la acción y contacto. Estos bloques no representan funcionalidades adicionales del sistema, sino contenido informativo destinado a comunicar el modelo de negocio.
+| Sistema | Aplicación | Sustento |
+|---|---|---|
+| Jerárquico | Secciones del Landing Page y pantallas de listado y detalle de la aplicación. | Prioriza la información principal y permite acceder progresivamente a los detalles. |
+| Secuencial | Formularios de registro y programación de viajes: datos del viaje, asignaciones, revisión y confirmación. | Ordena las tareas y reduce omisiones durante el ingreso de información. |
+| Matricial | Tarjetas de funcionalidades e integrantes en el Landing Page, distribuidas en una cuadrícula adaptable. | Facilita explorar elementos del mismo nivel; en pantallas pequeñas se presentan en una columna. |
 
-La aplicación, en cambio, organiza la información alrededor de las responsabilidades definidas previamente en los Epics y Bounded Contexts: **Identity and Access Management, Profile Management, Trip Management, Fleet Management, Incident Management y Operational History**.
+**Categorización del contenido**
 
-[Imagen pendiente: IA-01 – Information Architecture del Landing Page de Trakto Route]
+| Esquema | Aplicación | Sustento |
+|---|---|---|
+| Por tópicos | Funcionalidades del Landing Page y módulos de Viajes, Vehículos, Conductores y Perfil. | Agrupa información relacionada con una misma necesidad. |
+| Cronológico | Viajes por fecha programada y posiciones y paradas por momento de registro. | Facilita comprender la planificación y la secuencia de una operación. |
+| Alfabético | Listado de conductores por nombre. | Permite localizar personas de forma predecible. |
+| Según audiencia | Funciones de gestión para la empresa transportista y consultas autorizadas para sus clientes. | Presenta a cada usuario contenido relevante para sus responsabilidades. |
 
-La figura IA-01 deberá representar la jerarquía de contenido del Landing Page y las relaciones entre sus principales secciones, evidenciando el recorrido desde la propuesta de valor hasta la llamada a la acción.
+Los estados de viajes y conductores funcionan como categorías de filtrado dentro de sus respectivos listados, facilitando identificar la información necesaria.
 
-[Imagen pendiente: IA-02 – Information Architecture de la aplicación móvil diferenciada para Carlos Mendoza y Andrea Salazar]
-
-La figura IA-02 deberá mostrar qué grupos de información se encuentran disponibles para cada User Persona, evidenciando que las capacidades administrativas de flota y operación permanecen separadas de las capacidades de consulta del cliente.
+<div style="page-break-after: always;"></div>
 
 #### 3.1.2.2. Labelling Systems
 
-El Labelling System utiliza denominaciones breves y relacionadas con el lenguaje empleado por los usuarios durante las actividades del dominio. Se evita presentar términos internos de arquitectura como *Bounded Context*, *IAM*, *Aggregate* o *Repository*, debido a que dichos conceptos pertenecen a la implementación y no al modelo mental del usuario.
+Trakto Route utiliza etiquetas breves y conocidas para representar información y acciones. Se mantiene el mismo vocabulario entre pantallas y se acompañan los iconos con texto cuando su significado no resulta evidente.
 
-**Landing Page**
+| Experiencia | Etiquetas | Información o acción |
+|---|---|---|
+| Landing Page | Inicio, Funcionalidades, Nosotros, Preguntas frecuentes | Secciones informativas del producto |
+| Navegación móvil | Viajes, Vehículos, Conductores, Perfil | Grupos principales de información |
+| Detalle del viaje | Ruta, Seguimiento, Paradas | Información asociada al viaje seleccionado |
+| Estados del viaje | Programado, En curso, Finalizado, Cancelado | Situación actual del viaje |
+| Estados del conductor | Disponible, No disponible, Inactivo | Disponibilidad del conductor |
+| Estados del vehículo | Activo, Inactivo | Estado del vehículo |
+| Acciones | Crear viaje, Guardar, Editar, Iniciar viaje, Finalizar viaje | Operaciones disponibles según permisos |
 
-| Contexto | Etiqueta | Información representada | Usuario |
-|---|---|---|---|
-| Navegación principal | Inicio | Presentación general del producto | Visitante |
-| Sección de valor | Beneficios | Principales mejoras que aporta Trakto Route | Visitante |
-| Capacidades | Funcionalidades | Resumen de capacidades del producto | Visitante |
-| Explicación | Cómo funciona | Descripción resumida del flujo de uso | Visitante |
-| Público objetivo | Para transportistas | Valor para empresas que gestionan operaciones | Empresa transportista |
-| Público objetivo | Para clientes | Valor para organizaciones que contratan transporte | Cliente |
-| Comunicación | Contacto | Canal de contacto relacionado con el producto | Visitante |
+Las etiquetas Ruta, Seguimiento y Paradas dependen del viaje seleccionado. Los mensajes y botones utilizan nombres específicos para evitar acciones ambiguas.
 
-**Mobile Application**
-
-| Contexto | Etiqueta | Información representada | Usuario |
-|---|---|---|---|
-| Resumen | Inicio | Estado general y accesos relevantes | Ambos |
-| Trip Management | Viajes | Operaciones de transporte | Supervisor |
-| Trip Management | Mis envíos | Viajes autorizados asociados al cliente | Cliente |
-| Fleet Management | Flota | Vehículos y conductores | Supervisor |
-| Incident Management | Incidencias | Eventos que afectan las operaciones | Supervisor |
-| Incident Management | Eventos | Eventos relevantes visibles para el cliente | Cliente |
-| Operational History | Historial | Operaciones anteriores | Ambos, según permisos |
-| Profile | Perfil | Información de la cuenta | Ambos |
-
-Las labels de acciones también utilizarán verbos directos y específicos. Por ejemplo: **Programar viaje**, **Asignar vehículo**, **Asignar conductor**, **Registrar incidencia**, **Actualizar estado** y **Finalizar viaje**. Esto permite comunicar con claridad el resultado esperado de cada interacción.
+<div style="page-break-after: always;"></div>
 
 #### 3.1.2.3. SEO Tags and Meta Tags
 
@@ -3997,59 +3908,44 @@ Para Google Play, los campos correspondientes se plantean de la siguiente manera
 
 En este informe, **App Keywords** representa el conjunto de términos objetivo de la estrategia ASO y no un campo independiente de Google Play Console.
 
+<div style="page-break-after: always;"></div>
+
 #### 3.1.2.4. Searching Systems
 
-Trakto Route no plantea una búsqueda global que permita consultar indiscriminadamente información de todos los Bounded Contexts. Esta decisión mantiene el alcance alineado con las User Stories existentes y reduce la posibilidad de presentar información que no corresponde al usuario autenticado.
+La aplicación combina campos de búsqueda y filtros para localizar información sin recorrer todos los registros.
 
-El mecanismo de recuperación más claramente especificado en los requisitos es el **filtrado del historial de viajes**, definido en la User Story **US16 – Filtrar historial de viajes**. Las demás operaciones se resuelven principalmente mediante consultas de listas estructuradas y selección de elementos específicos.
+| Pantalla | Búsqueda | Filtros |
+|---|---|---|
+| Viajes | Identificador del viaje, origen o destino | Todos, Programados, En curso, Finalizados, Cancelados |
+| Vehículos | Placa | Todos, Activos, Inactivos |
+| Conductores | Nombre o licencia | Todos, Disponibles, No disponibles, Inactivos |
 
-| Módulo | Búsqueda / consulta | Filtros | Ordenamiento | Presentación de resultados |
-|---|---|---|---|---|
-| Viajes | Consulta de viajes registrados | No se incorporan filtros adicionales sin requisito previo | Según criterio definido por la implementación | Cards o list items con estado e información resumida |
-| Historial de viajes | Consulta de operaciones anteriores | Criterios definidos para US16 | Cronológico como representación principal | Lista de viajes coincidentes |
-| Conductores | Consulta de información y disponibilidad | Según disponibilidad cuando aplica US30 | No se incorpora criterio adicional no definido | Lista de conductores |
-| Vehículos | Consulta de información y disponibilidad | Según disponibilidad cuando aplica US29 | No se incorpora criterio adicional no definido | Lista de vehículos |
-| Incidencias | Consulta asociada a una operación | Por asociación con el viaje | Cronológico | Timeline o lista de eventos |
-| Historial de incidencias | Consulta de registros anteriores | Según operaciones autorizadas | Cronológico | Lista de incidencias |
+La búsqueda y los filtros se aplican juntos sobre los registros autorizados para el usuario. Los resultados conservan el formato de tarjetas del listado original y muestran sus datos principales y estado.
 
-Cuando un filtro no produce coincidencias, el sistema presentará un estado vacío mediante un mensaje directo como **“No se encontraron resultados con los criterios seleccionados”** y proporcionará una acción para limpiar los criterios aplicados.
+Cuando no existen coincidencias, se presenta el mensaje **“No se encontraron resultados”** y la opción de limpiar la búsqueda. Durante la consulta se muestra un indicador de carga.
 
-En el caso de los clientes, cualquier consulta debe permanecer limitada a viajes y eventos asociados a su organización, respetando las restricciones contempladas en las User Stories US40 y US41.
+El Landing Page permite localizar información mediante su menú de secciones y el bloque de preguntas frecuentes, sin requerir un buscador.
+
+
+<div style="page-break-after: always;"></div>
+
 
 #### 3.1.2.5. Navigation Systems
 
-El Navigation System define la manera en que los usuarios recorrerán los grupos de información establecidos previamente.
+La navegación utiliza accesos visibles y recorridos cortos para facilitar las tareas de cada usuario.
 
-**Landing Page**
+| Experiencia | Sistema de navegación | Recorrido |
+|---|---|---|
+| Landing Page | Menú con enlaces a secciones y desplazamiento vertical | Inicio → Funcionalidades → Nosotros → Preguntas frecuentes |
+| Aplicación móvil | Barra inferior persistente | Viajes, Vehículos, Conductores y Perfil |
+| Consulta de información | Navegación de listado a detalle | Listado → Selección de tarjeta → Detalle → Volver |
+| Consulta del viaje | Accesos dentro del detalle | Detalle → Ruta, Seguimiento o Paradas |
+| Registro o edición | Botón de acción y formulario | Crear o Editar → Completar datos → Guardar → Listado o detalle |
 
-El Landing Page utilizará navegación global mediante un header y enlaces internos hacia las principales secciones. En Desktop, los principales enlaces permanecerán visibles en el encabezado. En Mobile Web, la navegación se adaptará a un componente compacto que permita acceder a las mismas secciones sin ocupar un espacio excesivo.
+La sección activa se destaca mediante icono, texto y color. Las pantallas de detalle permiten regresar al listado, y los formularios ofrecen una opción para cancelar. Las acciones disponibles se ajustan a los permisos del usuario; las acciones de impacto, como finalizar o cancelar un viaje, solicitan confirmación.
 
-Los CTAs se utilizarán para dirigir la atención hacia las acciones principales relacionadas con conocer el producto o acceder al ecosistema de Trakto Route.
+En dispositivos móviles, el menú del Landing Page se adapta al ancho disponible. Los enlaces del footer permiten acceder a información complementaria.
 
-**Mobile Application**
-
-La navegación móvil se define de acuerdo con las responsabilidades de cada rol. Se propone utilizar una **Navigation Bar** para los destinos principales de mayor frecuencia, complementada con **Top App Bars** y navegación contextual para acciones internas.
-
-| Producto / Usuario | Tipo de navegación | Destinos principales | Justificación |
-|---|---|---|---|
-| Landing Page Desktop | Header navigation + anchors | Inicio, Beneficios, Funcionalidades, Cómo funciona, Contacto | Facilita recorrer rápidamente una página de contenido continuo |
-| Landing Page Mobile | Menú responsive + anchors | Mismos destinos del Desktop | Conserva el contenido reduciendo espacio ocupado |
-| Carlos Mendoza | Navigation Bar + Top App Bar | Inicio, Viajes, Flota, Incidencias, Historial | Corresponde a sus principales tareas operativas |
-| Andrea Salazar | Navigation Bar + Top App Bar | Inicio, Mis envíos, Historial, Perfil | Prioriza consulta de envíos y elimina administración de flota |
-
-Las acciones específicas como programar un viaje, registrar una incidencia, asignar un recurso o consultar un detalle se encuentran dentro de los destinos principales y no requieren ocupar permanentemente un elemento de navegación global.
-
-[Imagen pendiente: NAV-01 – Navigation System del Landing Page de Trakto Route]
-
-La figura NAV-01 deberá representar la navegación entre las principales secciones del Landing Page y su comportamiento responsive.
-
-[Imagen pendiente: NAV-02 – Navigation System de la aplicación móvil para Carlos Mendoza – elaborado en Figma]
-
-La figura NAV-02 deberá evidenciar el acceso del supervisor a viajes, flota, incidencias e historial, manteniendo las acciones específicas dentro de cada módulo.
-
-[Imagen pendiente: NAV-03 – Navigation System de la aplicación móvil para Andrea Salazar – elaborado en Figma]
-
-La figura NAV-03 deberá evidenciar una estructura simplificada orientada a consulta de envíos, eventos e historial, sin mostrar capacidades internas de Fleet Management.
 
 <div style="page-break-after: always;"></div>
 
