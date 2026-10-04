@@ -4382,41 +4382,33 @@ Estas secciones corresponden a contenido informativo y no implican la incorporac
 
 #### 3.1.3.1. Landing Page Wireframe
 
-Los Wireframes del Landing Page se elaborarán en **Figma** y representarán inicialmente la estructura, jerarquía y ubicación de los elementos sin depender todavía de los detalles gráficos finales.
+Los wireframes establecen la jerarquía, distribución y navegación del Landing Page antes de aplicar el lenguaje visual. La versión desktop aprovecha el espacio horizontal para mantener visible la navegación y agrupar beneficios y funcionalidades; la versión móvil reorganiza el contenido en una columna y utiliza un menú compacto.
 
 **Desktop Web Browser**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual LP-WF-01 – Wireframe Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
-
-El wireframe Desktop organiza el contenido utilizando el mayor espacio horizontal disponible. El Hero prioriza la propuesta de valor y un CTA principal, mientras que las secciones posteriores separan claramente beneficios, funcionalidades y segmentos. La navegación se mantiene visible en el header para permitir saltos directos hacia las principales áreas de contenido.
-
-Las funcionalidades pueden representarse mediante cards agrupadas, facilitando una lectura rápida y permitiendo diferenciar capacidades relacionadas con viajes, flota, incidencias, trazabilidad e historial.
+![Trakto Route - Landing Page Wireframe Desktop](assets/images/chapter3/landing-wireframe-desktop.png)
 
 **Mobile Web Browser**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual LP-WF-02 – Wireframe Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - Landing Page Wireframe Mobile](assets/images/chapter3/landing-wireframe-mobile.png)
 
-En Mobile Web, los bloques se reorganizan verticalmente para mantener una secuencia clara de lectura. Los elementos presentados en múltiples columnas en Desktop pasan a una distribución de una columna o grupos reducidos. El menú principal se transforma en navegación compacta y los CTAs utilizan un ancho suficiente para facilitar la interacción táctil.
+Ambas versiones conservan el mismo orden semántico: propuesta de valor, funcionalidades, equipo, preguntas frecuentes y llamada a la acción. La adaptación evita desplazamiento horizontal y mantiene áreas de interacción legibles.
 
-La versión móvil conserva la misma información esencial que Desktop y modifica únicamente la distribución necesaria para responder al espacio disponible.
+<div style="page-break-after: always;"></div>
 
 #### 3.1.3.2. Landing Page Mock-up
 
-Los Mock-ups representan la versión visual de alta fidelidad del Landing Page. A diferencia de los Wireframes, incorporan los colores, tipografía, iconografía, imágenes y componentes definidos en las General Style Guidelines.
+Los mock-ups aplican la identidad visual de Trakto Route sobre la estructura validada en los wireframes. La composición utiliza contraste, espacios consistentes, jerarquía tipográfica y estados de interacción visibles.
 
 **Desktop Web Browser**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual LP-MK-01 – Mock-up Desktop Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
-
-El Mock-up Desktop deberá aplicar la paleta visual propuesta, mantener una jerarquía clara entre encabezados y supporting text, y utilizar recursos visuales relacionados con transporte y trazabilidad sin saturar la interfaz.
-
-La propuesta de valor debe ser visible desde la primera sección y los CTAs deben distinguirse claramente del contenido secundario mediante el color Primary.
+![Trakto Route - Landing Page Mock-up Desktop](assets/images/chapter3/landing-mockup-desktop.png)
 
 **Mobile Web Browser**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual LP-MK-02 – Mock-up Mobile Web Browser del Landing Page de Trakto Route – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - Landing Page Mock-up Mobile](assets/images/chapter3/landing-mockup-mobile.png)
 
-El Mock-up Mobile debe conservar la identidad visual de la versión Desktop y adaptar tamaños, espacios y agrupaciones sin reducir la legibilidad. Los componentes interactivos deberán considerar una interacción táctil cómoda y mantener suficiente separación entre acciones.
+La propuesta conserva contenido y navegación entre tamaños. Las imágenes informativas requieren texto alternativo y los estados no dependen únicamente del color.
 
 <div style="page-break-after: always;"></div>
 
@@ -4432,275 +4424,278 @@ La aplicación utilizará principios de Material Design para mantener patrones d
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
-Los Mobile Applications Wireframes representan la estructura inicial de las pantallas antes de aplicar el diseño visual de alta fidelidad. Se elaborarán en **Figma** y se agrupan por capacidades funcionales para evitar generar una pantalla independiente por cada User Story cuando varias historias pueden resolverse mediante una misma vista.
+Los wireframes de baja fidelidad cubren los ocho grupos funcionales de la aplicación móvil y mantienen correspondencia con la arquitectura de información, los User Personas y el Product Backlog.
 
-| Grupo funcional | Pantallas necesarias | User Persona | User Stories relacionadas |
-|---|---|---|---|
-| Authentication & Profile | Registro, inicio de sesión, perfil y edición de perfil | Carlos / Andrea | US01, US02, US03, US04 |
-| Home | Dashboard según rol | Carlos / Andrea | Acceso contextual a funcionalidades relacionadas |
-| Trip Management – Supervisor | Lista de viajes, detalle, programación, ruta, estado, paradas, descansos y finalización | Carlos Mendoza | US05, US06, US07, US17, US18, US19, US20, US21, US22 |
-| Fleet Management | Vehículos, conductores, disponibilidad, registro, actualización y asignación | Carlos Mendoza | US09, US10, US23, US24, US25, US26, US27, US28, US29, US30 |
-| Incident Management – Supervisor | Registro, clasificación, detalle y actualización de incidencias | Carlos Mendoza | US11, US31, US32, US33, US34 |
-| Operational History – Supervisor | Historial por operación, conductor y vehículo | Carlos Mendoza | US14, US15, US37, US38, US39 |
-| Shipment Tracking – Cliente | Mis envíos, detalle, ruta, progreso y eventos | Andrea Salazar | US08, US12, US35, US40, US41 |
-| Operational History – Cliente | Historial, filtros e incidencias anteriores | Andrea Salazar | US13, US16, US36 |
+**MW-01 – Authentication & Profile**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-01 – Wireframes de Authentication & Profile para Carlos Mendoza y Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-01 Authentication & Profile](assets/images/chapter3/mobile-wireframes-mw-01.png)
 
-MW-01 deberá representar registro, inicio de sesión, consulta y edición de perfil, manteniendo los formularios simples y mostrando mensajes de validación próximos al campo correspondiente.
+**MW-02 – Home & Trip Management**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-02 – Wireframes de Home y Trip Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-02 Home & Trip Management](assets/images/chapter3/mobile-wireframes-mw-02.png)
 
-MW-02 deberá mostrar el Dashboard del supervisor, la lista de viajes y el acceso al detalle de una operación. Desde este grupo deberá poder visualizarse información resumida del viaje y acceder a acciones relacionadas con su ciclo de vida.
+**MW-03 – Trip Preparation**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-03 – Wireframes de programación y asignación de recursos para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-03 Trip Preparation](assets/images/chapter3/mobile-wireframes-mw-03.png)
 
-MW-03 deberá representar el proceso de programación de un viaje y la posterior asignación de ruta, conductor y vehículo, incluyendo la consulta previa de disponibilidad establecida por US29 y US30.
+**MW-04 – Fleet Management**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-04 – Wireframes de Fleet Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-04 Fleet Management](assets/images/chapter3/mobile-wireframes-mw-04.png)
 
-MW-04 deberá incluir listados, detalle, registro y actualización de vehículos y conductores, diferenciando claramente ambos tipos de recurso.
+**MW-05 – Incident Management**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-05 – Wireframes de Incident Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-05 Incident Management](assets/images/chapter3/mobile-wireframes-mw-05.png)
 
-MW-05 deberá representar el registro de incidencias y sus variaciones para retrasos, problemas y accidentes, además del detalle y actualización de estado.
+**MW-06 – Operational History**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-06 – Wireframes de Operational History para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-06 Operational History](assets/images/chapter3/mobile-wireframes-mw-06.png)
 
-MW-06 deberá permitir revisar operaciones finalizadas, desempeño e historial relacionado con vehículos y conductores.
+**MW-07 – Client Shipment Tracking**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-07 – Wireframes de seguimiento de envíos para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-07 Client Shipment Tracking](assets/images/chapter3/mobile-wireframes-mw-07.png)
 
-MW-07 deberá concentrarse en la consulta de envíos autorizados, progreso, ruta y eventos relevantes sin exponer acciones administrativas.
+**MW-08 – Client History**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MW-08 – Wireframes de historial y filtrado para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MW-08 Client History](assets/images/chapter3/mobile-wireframes-mw-08.png)
 
-MW-08 deberá representar la consulta del historial y el mecanismo de filtrado correspondiente a US16, contemplando estados con resultados y sin resultados.
+Las pantallas priorizan estructura, orden de lectura, navegación y cambios de estado antes de incorporar detalles visuales.
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
-Los Wireflow Diagrams relacionan los Wireframes anteriores con las rutas de interacción necesarias para que los User Personas alcancen sus principales User Goals. Estos diagramas se elaborarán en **LucidChart u Overflow** y utilizarán pantallas de baja o media fidelidad.
+Los Wireflow Diagrams relacionan pantallas de baja fidelidad con las acciones necesarias para alcanzar cada User Goal. Cada cambio visible de estado se representa con una nueva pantalla y cada alternativa conserva el contexto para que el usuario pueda corregir o reintentar. Los siete artefactos mantienen correspondencia con los User Personas y User Stories del Product Backlog.
 
-| ID | User Persona | User Goal | User Stories relacionadas | Wireflow requerido |
-|---|---|---|---|---|
-| WF-01 | Carlos Mendoza | Programar y preparar un viaje | US17, US18, US27, US28, US29, US30 | Programación y asignación de recursos |
-| WF-02 | Carlos Mendoza | Supervisar el ciclo de vida de un viaje | US05, US06, US07, US19, US20, US21, US22 | Consulta, actualización y cierre |
-| WF-03 | Carlos Mendoza | Registrar y gestionar una incidencia | US11, US31, US32, US33, US34 | Registro y actualización de eventos |
-| WF-04 | Carlos Mendoza | Gestionar vehículos y conductores | US09, US10, US23, US24, US25, US26 | Gestión de flota |
-| WF-05 | Andrea Salazar | Consultar el progreso de un envío | US08, US40 | Consulta de ruta y progreso |
-| WF-06 | Andrea Salazar | Consultar eventos relevantes de un envío | US12, US35, US41 | Consulta de eventos e incidencias |
-| WF-07 | Andrea Salazar | Consultar operaciones anteriores | US13, US16, US36 | Historial y filtrado |
+| ID | User Persona | User Goal | User Stories relacionadas |
+|---|---|---|---|
+| WF-01 | Carlos Mendoza - Supervisor de flota | Programar y preparar un viaje | US17, US18, US27, US28, US29, US30 |
+| WF-02 | Carlos Mendoza - Supervisor de flota | Supervisar el ciclo de vida de un viaje | US05, US06, US07, US19, US20, US21, US22 |
+| WF-03 | Carlos Mendoza - Supervisor de flota | Registrar y gestionar una incidencia | US11, US31, US32, US33, US34 |
+| WF-04 | Carlos Mendoza - Supervisor de flota | Gestionar vehículos y conductores | US09, US10, US23, US24, US25, US26 |
+| WF-05 | Andrea Salazar - Cliente de transporte | Consultar el progreso de un envío | US08, US40 |
+| WF-06 | Andrea Salazar - Cliente de transporte | Consultar eventos relevantes de un envío | US12, US35, US41 |
+| WF-07 | Andrea Salazar - Cliente de transporte | Consultar operaciones anteriores | US13, US16, US36 |
 
 **WF-01 – Programar y preparar un viaje**
 
-**User Persona:** Carlos Mendoza.
+**User Persona:** Carlos Mendoza - Supervisor de flota.
 
-**User Goal:** registrar una nueva operación y asignar los recursos necesarios antes de su ejecución.
+**User Goal:** Programar y preparar un viaje.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual WF-01 – Wireflow del User Goal “Programar y preparar un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+El recorrido principal sigue la secuencia **Viajes → Datos → Recursos → Revisión → Programado**. La ruta alternativa contempla: Datos inválidos o recurso no disponible: corregir y volver a validar.
 
-El flujo inicia desde la sección Viajes. El supervisor selecciona la acción para programar una operación, registra la información requerida, asigna una ruta y posteriormente consulta la disponibilidad de vehículos y conductores para seleccionar los recursos correspondientes. El flujo finaliza cuando el viaje cuenta con la información necesaria para continuar su ciclo de operación.
+![Trakto Route - Wireflow 01 Programar y preparar un viaje](assets/images/chapter3/app-wireflow-01-programar-viaje.png)
 
 **WF-02 – Supervisar el ciclo de vida de un viaje**
 
-**User Persona:** Carlos Mendoza.
+**User Persona:** Carlos Mendoza - Supervisor de flota.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual WF-02 – Wireflow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+**User Goal:** Supervisar el ciclo de vida de un viaje.
 
-El flujo inicia con la consulta de viajes y continúa con el detalle de la operación. Desde esta vista se consulta el estado actual y se registran las actualizaciones permitidas, incluyendo paradas y descansos. Cuando la operación concluye, el supervisor ejecuta la acción de finalización.
+El recorrido principal sigue la secuencia **Viajes → Detalle → Iniciar → En curso → Finalizado**. La ruta alternativa contempla: Si ocurre una incidencia, se registra y el viaje permanece trazable.
+
+![Trakto Route - Wireflow 02 Supervisar el ciclo de vida de un viaje](assets/images/chapter3/app-wireflow-02-ciclo-viaje.png)
 
 **WF-03 – Registrar y gestionar una incidencia**
 
-**User Persona:** Carlos Mendoza.
+**User Persona:** Carlos Mendoza - Supervisor de flota.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual WF-03 – Wireflow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+**User Goal:** Registrar y gestionar una incidencia.
 
-El supervisor ingresa desde un viaje o desde Incident Management, selecciona el tipo de evento correspondiente, registra la información necesaria y confirma el registro. Posteriormente puede consultar el detalle y actualizar el estado de la incidencia.
+El recorrido principal sigue la secuencia **Seguimiento → Incidencia → Evidencia → Confirmación → Registrada**. La ruta alternativa contempla: Campos incompletos o error de red: conservar datos y permitir reintento.
+
+![Trakto Route - Wireflow 03 Registrar y gestionar una incidencia](assets/images/chapter3/app-wireflow-03-incidencia.png)
 
 **WF-04 – Gestionar vehículos y conductores**
 
-**User Persona:** Carlos Mendoza.
+**User Persona:** Carlos Mendoza - Supervisor de flota.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual WF-04 – Wireflow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+**User Goal:** Gestionar vehículos y conductores.
 
-El flujo permite acceder a la sección Flota y seleccionar el tipo de recurso. Desde allí el supervisor puede consultar información existente, registrar nuevos recursos y mantener actualizados los datos correspondientes.
+El recorrido principal sigue la secuencia **Flota → Listado → Detalle → Editar → Guardado**. La ruta alternativa contempla: Registro duplicado o recurso asignado: mostrar regla y no perder cambios.
+
+![Trakto Route - Wireflow 04 Gestionar vehículos y conductores](assets/images/chapter3/app-wireflow-04-flota.png)
 
 **WF-05 – Consultar el progreso de un envío**
 
-**User Persona:** Andrea Salazar.
+**User Persona:** Andrea Salazar - Cliente de transporte.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual WF-05 – Wireflow del User Goal “Consultar el progreso de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+**User Goal:** Consultar el progreso de un envío.
 
-El flujo inicia en Mis envíos. Andrea selecciona una operación autorizada y accede a su detalle, donde consulta el estado actual, la ruta asociada y la información de progreso disponible.
+El recorrido principal sigue la secuencia **Mis envíos → Detalle → Seguimiento → Progreso → Actualización**. La ruta alternativa contempla: Sin ubicación reciente: informar la última actualización disponible.
+
+![Trakto Route - Wireflow 05 Consultar el progreso de un envío](assets/images/chapter3/app-wireflow-05-progreso-envio.png)
 
 **WF-06 – Consultar eventos relevantes de un envío**
 
-**User Persona:** Andrea Salazar.
+**User Persona:** Andrea Salazar - Cliente de transporte.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual WF-06 – Wireflow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+**User Goal:** Consultar eventos relevantes de un envío.
 
-El flujo permite acceder a los eventos visibles asociados al envío, consultar si existe una incidencia y revisar su información autorizada. Cuando no existen eventos relevantes, la aplicación comunica el estado actual sin generar alertas inexistentes.
+El recorrido principal sigue la secuencia **Envío → Eventos → Filtrar → Evento → Regresar**. La ruta alternativa contempla: Sin eventos coincidentes: limpiar filtros o regresar al resumen.
+
+![Trakto Route - Wireflow 06 Consultar eventos relevantes de un envío](assets/images/chapter3/app-wireflow-06-eventos-envio.png)
 
 **WF-07 – Consultar operaciones anteriores**
 
-**User Persona:** Andrea Salazar.
+**User Persona:** Andrea Salazar - Cliente de transporte.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual WF-07 – Wireflow del User Goal “Consultar operaciones anteriores” para Andrea Salazar – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+**User Goal:** Consultar operaciones anteriores.
 
-El flujo inicia en Historial y presenta las operaciones autorizadas. El usuario puede aplicar los criterios contemplados por US16 y visualizar los resultados coincidentes o un estado vacío cuando ningún registro cumple las condiciones seleccionadas.
+El recorrido principal sigue la secuencia **Historial → Filtros → Resultados → Detalle → Volver**. La ruta alternativa contempla: Sin resultados: ampliar fechas o limpiar criterios de búsqueda.
+
+![Trakto Route - Wireflow 07 Consultar operaciones anteriores](assets/images/chapter3/app-wireflow-07-historial.png)
+
+La revisión conjunta confirma que cada interacción que modifica la interfaz produce un nuevo estado visible y que ninguna ruta alternativa elimina información válida ingresada previamente.
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
-Los Mock-ups transforman los Wireframes en representaciones de alta fidelidad aplicando el Design System de Trakto Route. Se elaborarán en **Figma** y conservarán la misma estructura funcional definida previamente.
+Los mock-ups de alta fidelidad cubren los ocho grupos funcionales de la aplicación móvil y mantienen correspondencia con la arquitectura de información, los User Personas y el Product Backlog.
 
-| ID | Grupo | Pantallas | Objetivo visual |
-|---|---|---|---|
-| MM-01 | Authentication & Profile | Registro, inicio de sesión y perfil | Presentar formularios claros, estados de error y branding consistente |
-| MM-02 | Trip Management | Home, viajes y detalle | Facilitar la lectura del estado de cada operación |
-| MM-03 | Trip Preparation | Programación y asignación | Guiar paso a paso la preparación del viaje |
-| MM-04 | Fleet Management | Vehículos y conductores | Diferenciar recursos manteniendo componentes consistentes |
-| MM-05 | Incident Management | Registro y detalle de incidencias | Comunicar severidad y estado sin depender exclusivamente del color |
-| MM-06 | Operational History | Historial y desempeño | Priorizar trazabilidad y lectura cronológica |
-| MM-07 | Client Shipment Tracking | Mis envíos, progreso y eventos | Proporcionar visibilidad sin exponer controles administrativos |
-| MM-08 | Client History | Historial y filtros | Facilitar la localización de operaciones anteriores |
+**MM-01 – Authentication & Profile**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-01 – Mock-ups de Authentication & Profile – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MM-01 Authentication & Profile](assets/images/chapter3/mobile-mockups-mm-01.png)
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-02 – Mock-ups de Home y Trip Management para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+**MM-02 – Home & Trip Management**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-03 – Mock-ups de programación y asignación de recursos – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MM-02 Home & Trip Management](assets/images/chapter3/mobile-mockups-mm-02.png)
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-04 – Mock-ups de Fleet Management – elaborado en Figma en los repositorios sincronizados.
+**MM-03 – Trip Preparation**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-05 – Mock-ups de Incident Management – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MM-03 Trip Preparation](assets/images/chapter3/mobile-mockups-mm-03.png)
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-06 – Mock-ups de Operational History para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+**MM-04 – Fleet Management**
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-07 – Mock-ups de seguimiento de envíos para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
+![Trakto Route - MM-04 Fleet Management](assets/images/chapter3/mobile-mockups-mm-04.png)
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MM-08 – Mock-ups de historial y filtrado para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
+**MM-05 – Incident Management**
 
-Los Mock-ups deberán conservar correspondencia directa con los Wireframes MW-01 a MW-08. Las diferencias entre ambos tipos de artefacto se limitarán a la incorporación de estilo visual, recursos gráficos, contenido representativo y estados de interacción, sin modificar arbitrariamente la arquitectura previamente definida.
+![Trakto Route - MM-05 Incident Management](assets/images/chapter3/mobile-mockups-mm-05.png)
+
+**MM-06 – Operational History**
+
+![Trakto Route - MM-06 Operational History](assets/images/chapter3/mobile-mockups-mm-06.png)
+
+**MM-07 – Client Shipment Tracking**
+
+![Trakto Route - MM-07 Client Shipment Tracking](assets/images/chapter3/mobile-mockups-mm-07.png)
+
+**MM-08 – Client History**
+
+![Trakto Route - MM-08 Client History](assets/images/chapter3/mobile-mockups-mm-08.png)
+
+Los mock-ups incorporan color, tipografía y componentes consistentes sin modificar los recorridos definidos por los wireframes.
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
-Los User Flow Diagrams se derivan de los Wireflows desarrollados anteriormente. A diferencia de estos últimos, los User Flows emplearán los Mock-ups de alta fidelidad y representarán tanto el recorrido esperado o **happy path** como las decisiones y principales rutas alternativas o **unhappy paths**.
+Los User Flow Diagrams se derivan de los Wireflows y aplican el lenguaje visual del producto. Cada diagrama distingue la ruta esperada de las decisiones y rutas de recuperación, de modo que el happy path y los unhappy paths puedan evaluarse de manera independiente.
 
-| ID | User Persona | User Goal | Happy Path | Alternative / Unhappy Paths |
+| ID | User Persona | User Goal | Ruta esperada | Recuperación |
 |---|---|---|---|---|
-| UF-01 | Carlos Mendoza | Programar y preparar un viaje | Crear viaje → asignar ruta → seleccionar vehículo → seleccionar conductor → confirmar | Datos inválidos, vehículo no disponible, conductor no disponible |
-| UF-02 | Carlos Mendoza | Supervisar el ciclo de vida del viaje | Seleccionar viaje → consultar detalle → actualizar estado → registrar eventos → finalizar | Viaje inexistente, actualización inválida |
-| UF-03 | Carlos Mendoza | Gestionar incidencia | Seleccionar viaje → registrar incidencia → consultar detalle → actualizar estado | Datos incompletos, viaje inexistente |
-| UF-04 | Carlos Mendoza | Gestionar flota | Flota → seleccionar recurso → consultar/registrar/actualizar → confirmar | Datos inválidos, recurso inexistente |
-| UF-05 | Andrea Salazar | Consultar progreso | Mis envíos → seleccionar envío → consultar estado/ruta/progreso | Envío inexistente o no autorizado |
-| UF-06 | Andrea Salazar | Consultar eventos | Seleccionar envío → eventos → consultar incidencia | Sin eventos relevantes, acceso no autorizado |
-| UF-07 | Andrea Salazar | Consultar historial | Historial → aplicar criterios → revisar resultados → seleccionar operación | Sin coincidencias |
+| UF-01 | Carlos Mendoza - Supervisor de flota | Programar y preparar un viaje | Viajes → Datos → Recursos → Revisión → Programado | Datos inválidos o recurso no disponible: corregir y volver a validar. |
+| UF-02 | Carlos Mendoza - Supervisor de flota | Supervisar el ciclo de vida de un viaje | Viajes → Detalle → Iniciar → En curso → Finalizado | Si ocurre una incidencia, se registra y el viaje permanece trazable. |
+| UF-03 | Carlos Mendoza - Supervisor de flota | Registrar y gestionar una incidencia | Seguimiento → Incidencia → Evidencia → Confirmación → Registrada | Campos incompletos o error de red: conservar datos y permitir reintento. |
+| UF-04 | Carlos Mendoza - Supervisor de flota | Gestionar vehículos y conductores | Flota → Listado → Detalle → Editar → Guardado | Registro duplicado o recurso asignado: mostrar regla y no perder cambios. |
+| UF-05 | Andrea Salazar - Cliente de transporte | Consultar el progreso de un envío | Mis envíos → Detalle → Seguimiento → Progreso → Actualización | Sin ubicación reciente: informar la última actualización disponible. |
+| UF-06 | Andrea Salazar - Cliente de transporte | Consultar eventos relevantes de un envío | Envío → Eventos → Filtrar → Evento → Regresar | Sin eventos coincidentes: limpiar filtros o regresar al resumen. |
+| UF-07 | Andrea Salazar - Cliente de transporte | Consultar operaciones anteriores | Historial → Filtros → Resultados → Detalle → Volver | Sin resultados: ampliar fechas o limpiar criterios de búsqueda. |
 
 **UF-01 – Programar y preparar un viaje**
 
-**Happy Path:** Carlos accede a Viajes, inicia la programación, registra los datos requeridos, selecciona una ruta, consulta los recursos disponibles, asigna un vehículo y conductor y confirma la operación.
+La ruta esperada conduce a programado después de completar las validaciones correspondientes. Si la condición no se cumple, el flujo aplica esta recuperación: Datos inválidos o recurso no disponible: corregir y volver a validar.
 
-**Alternative / Unhappy Paths:** el sistema conserva la información válida y comunica claramente si existen datos incompletos o si el vehículo o conductor seleccionado no se encuentra disponible.
-
-**NOT_VERIFIED:** No se encontró el artefacto visual UF-01 – User Flow del User Goal “Programar y preparar un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+![Trakto Route - User Flow 01 Programar y preparar un viaje](assets/images/chapter3/app-user-flow-01-programar-viaje.png)
 
 **UF-02 – Supervisar el ciclo de vida de un viaje**
 
-**Happy Path:** Carlos consulta un viaje existente, revisa su estado y detalle, registra las actualizaciones correspondientes y finalmente marca la operación como finalizada.
+La ruta esperada conduce a finalizado después de completar las validaciones correspondientes. Si la condición no se cumple, el flujo aplica esta recuperación: Si ocurre una incidencia, se registra y el viaje permanece trazable.
 
-**Alternative / Unhappy Paths:** si el recurso consultado no está disponible o una actualización no cumple las reglas establecidas, el sistema comunica la situación sin modificar información válida previamente registrada.
-
-**NOT_VERIFIED:** No se encontró el artefacto visual UF-02 – User Flow del User Goal “Supervisar el ciclo de vida de un viaje” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+![Trakto Route - User Flow 02 Supervisar el ciclo de vida de un viaje](assets/images/chapter3/app-user-flow-02-ciclo-viaje.png)
 
 **UF-03 – Registrar y gestionar una incidencia**
 
-**Happy Path:** Carlos selecciona la operación, registra la incidencia correspondiente, verifica su detalle y posteriormente actualiza su estado cuando cambia la situación.
+La ruta esperada conduce a registrada después de completar las validaciones correspondientes. Si la condición no se cumple, el flujo aplica esta recuperación: Campos incompletos o error de red: conservar datos y permitir reintento.
 
-**Alternative / Unhappy Paths:** se contemplan datos incompletos, información inválida o inexistencia del viaje asociado.
-
-**NOT_VERIFIED:** No se encontró el artefacto visual UF-03 – User Flow del User Goal “Registrar y gestionar una incidencia” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+![Trakto Route - User Flow 03 Registrar y gestionar una incidencia](assets/images/chapter3/app-user-flow-03-incidencia.png)
 
 **UF-04 – Gestionar vehículos y conductores**
 
-**Happy Path:** Carlos accede a Flota, selecciona vehículos o conductores y posteriormente consulta, registra o actualiza el recurso correspondiente.
+La ruta esperada conduce a guardado después de completar las validaciones correspondientes. Si la condición no se cumple, el flujo aplica esta recuperación: Registro duplicado o recurso asignado: mostrar regla y no perder cambios.
 
-**Alternative / Unhappy Paths:** si los datos no cumplen las reglas establecidas, se mantiene la información anterior y se comunica el error antes de confirmar el cambio.
-
-**NOT_VERIFIED:** No se encontró el artefacto visual UF-04 – User Flow del User Goal “Gestionar vehículos y conductores” para Carlos Mendoza, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+![Trakto Route - User Flow 04 Gestionar vehículos y conductores](assets/images/chapter3/app-user-flow-04-flota.png)
 
 **UF-05 – Consultar el progreso de un envío**
 
-**Happy Path:** Andrea accede a Mis envíos, selecciona una operación asociada a su organización y consulta su estado, ruta y progreso.
+La ruta esperada conduce a actualización después de completar las validaciones correspondientes. Si la condición no se cumple, el flujo aplica esta recuperación: Sin ubicación reciente: informar la última actualización disponible.
 
-**Alternative / Unhappy Paths:** si intenta consultar un envío no autorizado, el sistema deniega el acceso sin revelar información de la operación.
-
-**NOT_VERIFIED:** No se encontró el artefacto visual UF-05 – User Flow del User Goal “Consultar el progreso de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+![Trakto Route - User Flow 05 Consultar el progreso de un envío](assets/images/chapter3/app-user-flow-05-progreso-envio.png)
 
 **UF-06 – Consultar eventos relevantes de un envío**
 
-**Happy Path:** Andrea selecciona su envío, accede a los eventos registrados y consulta el detalle de una incidencia relevante.
+La ruta esperada conduce a regresar después de completar las validaciones correspondientes. Si la condición no se cumple, el flujo aplica esta recuperación: Sin eventos coincidentes: limpiar filtros o regresar al resumen.
 
-**Alternative / Unhappy Paths:** cuando no existen eventos relevantes, la interfaz muestra el estado actual sin presentar información inexistente; si el evento no pertenece a una operación autorizada, se deniega el acceso.
-
-**NOT_VERIFIED:** No se encontró el artefacto visual UF-06 – User Flow del User Goal “Consultar eventos relevantes de un envío” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+![Trakto Route - User Flow 06 Consultar eventos relevantes de un envío](assets/images/chapter3/app-user-flow-06-eventos-envio.png)
 
 **UF-07 – Consultar operaciones anteriores**
 
-**Happy Path:** Andrea accede al historial, utiliza el mecanismo de filtrado disponible y selecciona una operación coincidente para revisar su información.
+La ruta esperada conduce a volver después de completar las validaciones correspondientes. Si la condición no se cumple, el flujo aplica esta recuperación: Sin resultados: ampliar fechas o limpiar criterios de búsqueda.
 
-**Alternative / Unhappy Paths:** si no existen operaciones que cumplan los criterios, la interfaz muestra un estado vacío y permite limpiar o modificar los filtros.
+![Trakto Route - User Flow 07 Consultar operaciones anteriores](assets/images/chapter3/app-user-flow-07-historial.png)
 
-**NOT_VERIFIED:** No se encontró el artefacto visual UF-07 – User Flow del User Goal “Consultar operaciones anteriores” para Andrea Salazar, incluyendo happy path y unhappy paths – elaborado en LucidChart/Overflow en los repositorios sincronizados.
+La trazabilidad entre artefactos se conserva mediante la siguiente relación:
 
-La trazabilidad entre los artefactos se conserva mediante la siguiente relación:
-
-| User Goal | Wireframes | Wireflow | Mock-ups | User Flow |
-|---|---|---|---|---|
-| Programar y preparar viaje | MW-02, MW-03 | WF-01 | MM-02, MM-03 | UF-01 |
-| Supervisar viaje | MW-02 | WF-02 | MM-02 | UF-02 |
-| Gestionar incidencia | MW-05 | WF-03 | MM-05 | UF-03 |
-| Gestionar flota | MW-04 | WF-04 | MM-04 | UF-04 |
-| Consultar progreso de envío | MW-07 | WF-05 | MM-07 | UF-05 |
-| Consultar eventos relevantes | MW-07 | WF-06 | MM-07 | UF-06 |
-| Consultar historial | MW-08 | WF-07 | MM-08 | UF-07 |
+| User Goal | Wireflow | User Flow | Prototipo |
+|---|---|---|---|
+| Programar y preparar un viaje | WF-01 | UF-01 | Recorrido disponible en el prototipo móvil |
+| Supervisar el ciclo de vida de un viaje | WF-02 | UF-02 | Recorrido disponible en el prototipo móvil |
+| Registrar y gestionar una incidencia | WF-03 | UF-03 | Recorrido disponible en el prototipo móvil |
+| Gestionar vehículos y conductores | WF-04 | UF-04 | Recorrido disponible en el prototipo móvil |
+| Consultar el progreso de un envío | WF-05 | UF-05 | Recorrido disponible en el prototipo móvil |
+| Consultar eventos relevantes de un envío | WF-06 | UF-06 | Recorrido disponible en el prototipo móvil |
+| Consultar operaciones anteriores | WF-07 | UF-07 | Recorrido disponible en el prototipo móvil |
 
 #### 3.1.4.5. Mobile Applications Prototyping
 
-El prototipo interactivo de **Trakto Route** se elaborará en **Figma** a partir de los Mock-ups y User Flows definidos en las secciones anteriores. Su propósito es representar de manera navegable las principales interacciones de la aplicación Android antes de su implementación definitiva.
+El prototipo interactivo de **Trakto Route** implementa los recorridos definidos en UF-01 a UF-07. La versión navegable se conserva como un artefacto HTML autocontenido dentro del repositorio, por lo que puede abrirse sin instalar dependencias ni utilizar credenciales reales. Los datos son demostrativos y están centralizados en el propio prototipo.
 
-El prototipo deberá cubrir principalmente los User Goals asociados al core del producto. Para el supervisor de flota, esto comprende la programación y preparación de viajes, la consulta y actualización de operaciones, la gestión de flota y el registro de incidencias. Para el cliente de transporte, deberá permitir consultar el progreso de un envío, revisar eventos relevantes y acceder al historial autorizado.
+Las decisiones de interacción aplicadas son:
 
-Las decisiones de interacción consideradas incluyen:
+- navegación persistente entre Viajes, Seguimiento, Flota y Perfil;
+- feedback inmediato después de registrar o actualizar información;
+- confirmación y resultado visible para las acciones de impacto;
+- estados de carga, error, ausencia de resultados y reintento;
+- conservación de filtros y datos válidos cuando una validación falla;
+- controles y áreas táctiles legibles en una pantalla móvil;
+- información y estados comunicados mediante texto además del color;
+- separación de capacidades según el rol del usuario.
 
-- Feedback inmediato después de acciones de registro o actualización.
-- Indicadores de carga cuando sea necesario recuperar información.
-- Confirmación antes de acciones de impacto, como finalizar una operación.
-- Mensajes de error próximos al elemento que requiere corrección.
-- Estados vacíos para listas sin información.
-- Estados diferenciados para viajes e incidencias.
-- Navegación coherente con el rol autenticado.
-- Preservación de la jerarquía definida en la Information Architecture.
-- Objetivos táctiles adecuados para la interacción móvil.
-- Uso de labels e iconografía comprensibles.
-- Transiciones discretas que apoyen la comprensión del cambio de estado.
+**Figura MP-01**  
+*Vista general del prototipo móvil y sus principales grupos de pantallas.*
 
-El prototipo no debe incorporar funcionalidades que no se encuentren respaldadas por las User Stories o por las decisiones de diseño establecidas en este capítulo.
+![Trakto Route - Vista general del prototipo móvil](assets/images/chapter3/app-prototype-overview.png)
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MP-01 – Vista general del prototipo interactivo Android de Trakto Route – elaborado en Figma en los repositorios sincronizados.
+**Prototipo navegable:** [Abrir prototipo móvil de Trakto Route](assets/prototype/trakto-route-mobile-prototype.html).
 
-La figura MP-01 deberá mostrar la conexión general entre los principales grupos de pantallas y permitir identificar las rutas de navegación correspondientes a Carlos Mendoza y Andrea Salazar.
+**Fuente visual del equipo:** [Diseño de Trakto Route en Figma](https://www.figma.com/design/vCqC47s66ZJhjitxluqHvS/Untitled?node-id=0-1&t=FXFR85qEsRYcTPdI-1).
 
-**Enlace del prototipo Figma:** `NOT_VERIFIED`; no se encontró un enlace público en los repositorios sincronizados.
+El recorrido permite iniciar sesión con un rol demostrativo, consultar y filtrar viajes, programar una operación, revisar su detalle, acceder al seguimiento, registrar una incidencia, consultar flota e historial y cerrar sesión. Las rutas alternativas conservan el contexto y ofrecen una acción de recuperación.
 
-El enlace deberá dirigir al prototipo navegable utilizado para demostrar los flujos principales definidos en UF-01 a UF-07.
+**Figura MP-02**  
+*Captura representativa del video de demostración del prototipo móvil.*
 
-**NOT_VERIFIED:** No se encontró el artefacto visual MP-02 – Screenshot representativo del video de demostración del prototipo móvil en los repositorios sincronizados.
+![Trakto Route - Video del prototipo móvil](assets/images/chapter3/app-prototype-video.png)
 
-La captura MP-02 deberá mostrar un momento representativo del recorrido por uno de los User Goals core de Trakto Route.
+**Video de demostración móvil:** [Reproducir archivo MP4](assets/media/trakto-route-mobile-prototype-demo.mp4).
 
-**BLOCKED:** El video MP-02 – Video de demostración de navegación del prototipo móvil de Trakto Route requiere grabación y publicación por el equipo.
+El video explica mediante rótulos los criterios de acceso, navegación, viajes, seguimiento, flota, incidencias y cierre de sesión. El archivo utiliza únicamente datos de demostración y puede reproducirse sin conexión.
 
-El video deberá demostrar y explicar los principales flujos de interacción del prototipo, manteniendo correspondencia con los Wireflows, Mock-ups y User Flow Diagrams documentados previamente.
+**Landing Page – Desktop y Mobile Web Browser**
+
+El video complementario muestra la relación entre los wireframes y mock-ups de la Landing Page para navegadores desktop y móviles, incluyendo la jerarquía del contenido y su adaptación responsive.
+
+![Trakto Route - Mock-up de Landing Page desktop](assets/images/chapter3/landing-mockup-desktop.png)
+
+**Video de demostración de Landing Page:** [Reproducir archivo MP4](assets/media/trakto-route-landing-prototype-demo.mp4).
+
+Los prototipos y videos cubren el alcance documental de la propuesta UX/UI. Su incorporación no altera el deployment existente del Landing Page, backend o aplicación Android.
 
 <div style="page-break-after: always;"></div>
 
