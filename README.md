@@ -4197,7 +4197,6 @@ El prototipo interactivo de Figma simula los recorridos definidos en los User Fl
 
 Se prioriza una respuesta visible a cada acción: cambios de selección, resultados de búsqueda, indicadores de carga y mensajes de error. Los datos utilizados son de demostración y permiten representar las rutas esperadas y alternativas.
 
-La aplicación Android se presenta mediante frames móviles en Figma. El Landing Page cuenta con un prototipo separado para navegadores desktop y móviles, conservando la distinción entre ambas experiencias.
 
 **Aplicación Android**
 
@@ -4205,19 +4204,10 @@ El video demuestra el inicio de sesión, la navegación entre módulos, las bús
 
 ![Trakto Route - Captura del video del prototipo Android](assets/images/chapter3/app-prototype-video.png)
 
-[Ver demostración del prototipo Android en Microsoft Stream](URL_DEL_VIDEO)
+[Ver demostración del prototipo Android en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202019498_upc_edu_pe/IQDz1xsdKdncT7IZwYQYkurNAcopYM6Z85fVXp6svpAwkpw?e=qOW1e6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-[Ver prototipo Android en Figma](https://www.figma.com/design/vCqC47s66ZJhjitxluqHvS/Untitled?node-id=0-1&t=FXFR85qEsRYcTPdI-1)
+[Ver prototipo Android en Figma](https://www.figma.com/proto/iki5xVD77DlyMXdc7jURuv/%E2%9D%96-Untitled-UI-Icons-%E2%80%93-1-100--essential-Figma-icons--Community-?node-id=3304-1968&p=f&t=dASNVbd0gkis1VNP-1&scaling=min-zoom&content-scaling=fixed&page-id=184%3A34401&starting-point-node-id=3304%3A1306)
 
-**Landing Page — Desktop y Mobile Web Browser**
-
-El video muestra la navegación por secciones y la adaptación del sitio a ambos tamaños de navegador.
-
-![Trakto Route - Captura del video del prototipo Landing Page](assets/images/chapter3/landing-prototype-video.png)
-
-[Ver demostración del Landing Page en Microsoft Stream](URL_DEL_VIDEO)
-
-[Ver prototipo del Landing Page en Figma](https://www.figma.com/design/vCqC47s66ZJhjitxluqHvS/Untitled?node-id=0-1&t=FXFR85qEsRYcTPdI-1)
 
 <div style="page-break-after: always;"></div>
 
