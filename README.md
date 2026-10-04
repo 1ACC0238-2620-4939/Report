@@ -4339,7 +4339,7 @@ El equipo organizó el trabajo inicial bajo el liderazgo de Cesar Alejandro Lina
 |---|---|
 | Sprint # | Sprint 1 |
 | Date | 2026-10-03 |
-| Time | [Hora de la reunión] |
+| Time | 10:30 |
 | Location | Reunión virtual mediante Discord |
 | Prepared By | Cesar Alejandro Linares Bernable |
 | Attendees | Cesar Alejandro Linares Bernable / Jeferson Renzo Aguilar Aguayo / Alexander Piero Fernandez Garfias / Jose Raul Chirito Torres / Jean Franck Loa Rojas |
@@ -4377,16 +4377,15 @@ El backlog reúne las tareas relacionadas con los servicios de viajes y flota, l
 
 | Story ID | Story Title | Task ID | Task Title | Description | Hours | Assigned To | Status |
 |---|---|---|---|---|---|---|---|
-| TS01 | Proporcionar servicios para la gestión de viajes | T01 | Desarrollar servicios de viajes | Avanzar en las operaciones y consultas del backend. | [Horas] | [Nombre] | InProcess |
-| TS02 | Proporcionar servicios para la gestión de flota | T02 | Desarrollar servicios de flota | Avanzar en los servicios de conductores y vehículos. | [Horas] | [Nombre] | InProcess |
-| US02 | Iniciar sesión | T03 | Desarrollar pantalla de acceso | Implementar la vista inicial de inicio de sesión. | [Horas] | [Nombre] | InProcess |
-| US03 | Consultar perfil | T04 | Desarrollar vista de perfil | Presentar la información del usuario en la app. | [Horas] | [Nombre] | InProcess |
-| US05 / US07 | Consultar viajes / Consultar estado del viaje | T05 | Desarrollar vista de viajes | Presentar los viajes y sus estados. | [Horas] | [Nombre] | InProcess |
-| US09 / US10 | Consultar conductor / Consultar vehículo | T06 | Desarrollar vistas de flota | Avanzar en la presentación de conductores y vehículos. | [Horas] | [Nombre] | InProcess |
-| — | Tarea transversal | T07 | Elaborar prototipos | Diseñar las pantallas y su navegación en Figma. | [Horas] | [Nombre] | [Estado] |
-| — | Tarea transversal | T08 | Implementar Landing Page | Presentar la propuesta de valor del producto. | [Horas] | [Nombre] | [Estado] |
+| TS01 | Proporcionar servicios para la gestión de viajes | T01 | Desarrollar servicios de viajes | Implementar operaciones y consultas de viajes. | 12 | Alexander Fernandez | InProcess |
+| TS02 | Proporcionar servicios para la gestión de flota | T02 | Desarrollar servicios de flota | Implementar servicios de conductores y vehículos. | 12 | Alexander Fernandez | InProcess |
+| US02 | Iniciar sesión | T03 | Desarrollar pantalla de acceso | Implementar la vista inicial de inicio de sesión. | 4 | Alexander Fernandez / Jean Loa | InProcess |
+| US03 | Consultar perfil | T04 | Desarrollar vista de perfil | Presentar la información del usuario. | 4 | Alexander Fernandez / Jean Loa | InProcess |
+| US05 / US07 | Consultar viajes / Consultar estado del viaje | T05 | Desarrollar vista de viajes | Presentar los viajes y sus estados. | 6 | Alexander Fernandez / Jean Loa | InProcess |
+| US09 / US10 | Consultar conductor / Consultar vehículo | T06 | Desarrollar vistas de flota | Presentar información de conductores y vehículos. | 6 | Alexander Fernandez / Jean Loa | InProcess |
 
-Los estados utilizados son `Todo`, `InProcess`, `To-Review` y `Done`. Una tarea se marca como `Done` cuando cuenta con la verificación correspondiente.
+
+Los estados utilizados son `Todo`, `InProcess`, `To-Review` y `Done`.
 
 
 <div style="page-break-after: always;"></div>
