@@ -4522,127 +4522,37 @@ El proceso de validación requiere realizar entre **3 y 5 entrevistas por cada s
 
 ###### Entrevista de validación 1
 
-| Elemento | Información |
+| Campo | Información |
 |---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Empresa de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
+| Nombres y apellidos | [Nombre completo] |
+| Edad | [Edad] |
+| Distrito | [Distrito] |
+| Producto evaluado | [Landing Page / aplicación / prototipo] |
+| Inicio en el video | [HH:MM:SS] |
+| Duración | [MM:SS] |
+| Video | [Entrevista de validación](URL_VIDEO_ONEDRIVE) |
 
-[Imagen pendiente: VAL-01 – screenshot de la entrevista de validación 1]
+![Trakto Route - Entrevista de validación](assets/images/chapter4/validation-interview-01.png)
 
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar únicamente con las apreciaciones reales obtenidas durante la entrevista]
-
----
-
-###### Entrevista de validación 2
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Empresa de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-02 – screenshot de la entrevista de validación 2]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
-
----
-
-###### Entrevista de validación 3
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Empresa de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-03 – screenshot de la entrevista de validación 3]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
+**Resumen:** [Describir las tareas realizadas, las principales apreciaciones del participante, las dificultades observadas y sus sugerencias].
 
 ##### Segmento 2: Clientes que requieren servicios de transporte de carga
 
-###### Entrevista de validación 4
+###### Entrevista de validación 1
 
-| Elemento | Información |
+| Campo | Información |
 |---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Cliente de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
+| Nombres y apellidos | [Nombre completo] |
+| Edad | [Edad] |
+| Distrito | [Distrito] |
+| Producto evaluado | [Landing Page / aplicación / prototipo] |
+| Inicio en el video | [HH:MM:SS] |
+| Duración | [MM:SS] |
+| Video | [Entrevista de validación](URL_VIDEO_ONEDRIVE) |
 
-[Imagen pendiente: VAL-04 – screenshot de la entrevista de validación 4]
+![Trakto Route - Entrevista de validación](assets/images/chapter4/validation-interview-01.png)
 
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
-
----
-
-###### Entrevista de validación 5
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Cliente de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-05 – screenshot de la entrevista de validación 5]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
-
----
-
-###### Entrevista de validación 6
-
-| Elemento | Información |
-|---|---|
-| Nombres y apellidos | [Dato pendiente] |
-| Edad | [Dato pendiente] |
-| Distrito | [Dato pendiente] |
-| Segmento | Cliente de transporte de carga |
-| Fecha | [Dato pendiente] |
-| Inicio en video | [Dato pendiente: hh:mm:ss] |
-| Duración | [Dato pendiente] |
-| URL | [URL pendiente] |
-
-[Imagen pendiente: VAL-06 – screenshot de la entrevista de validación 6]
-
-**Resumen de la entrevista**
-
-[Contenido pendiente: completar con información obtenida de la entrevista real]
+**Resumen:** [Describir las tareas realizadas, las principales apreciaciones del participante, las dificultades observadas y sus sugerencias].
 
 <div style="page-break-after: always;"></div>
 
@@ -4658,9 +4568,6 @@ Las sesiones se evaluarán mediante el formato establecido en el Anexo E. El an�
 
 Cada hallazgo registrará la tarea y pantalla afectadas, la evidencia, la heurística correspondiente, la severidad según el Anexo E y la mejora propuesta.
 
-![Trakto Route - Evaluación heurística](assets/images/chapter4/validation-heuristic-evaluation.png)
-
-**Formato completado:** [Evaluación según el Anexo E](URL_EVALUACION_HEURISTICA).
 
 
 
