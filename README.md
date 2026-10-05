@@ -5334,7 +5334,7 @@ Debido a que las rutas exactas deben corresponder con los Controllers del reposi
 
 Para cada endpoint documentado deberán especificarse los parámetros, request body cuando corresponda, posibles códigos HTTP y un ejemplo del response.
 
-La UI de Swagger está configurada en `/swagger-ui.html`. OpenAPI público y una escritura/lectura persistente contra MySQL fueron comprobados; véase [la evidencia Railway](docs/railway-deployment.md). Esto no acredita por sí solo el 70% de alcance funcional ni la integración Android–API.
+La UI de Swagger está configurada en `/swagger-ui.html`. OpenAPI público y una escritura/lectura persistente contra MySQL fueron comprobados; véase [la evidencia Railway](docs/railway-deployment.md). **Acreditación técnica actualizada:** los cinco escenarios API volvieron a pasar contra Railway el 05/10/2026. [Matriz de las 41 historias y contratos publicados](docs/backend-scope-accreditation.md) · [Solicitudes y respuestas reales](assets/evidence/backend-acceptance-now.json). El porcentaje de alcance completo no se certifica: los escenarios verifican capacidades concretas y no todos los criterios de aceptación del backlog. La integración Android–API no forma parte de esta prueba.
 
 **REST API Repository:**  
 [https://github.com/1ACC0238-2620-4939/backend](https://github.com/1ACC0238-2620-4939/backend)
