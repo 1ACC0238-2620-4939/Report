@@ -5092,7 +5092,7 @@ De acuerdo con el Product Backlog, el Sprint 1 está conformado por **12 User St
 
 ##### 4.2.1.1. Sprint Planning 1
 
-El Sprint Planning 1 establece el alcance inicial de implementación y organiza el trabajo necesario para alcanzar un incremento funcional de Trakto Route. Debido a que corresponde al primer Sprint, no existe un Sprint Review ni Sprint Retrospective anterior. El siguiente registro es una propuesta reconstruida desde el backlog y la evidencia del Stage Review. La fecha, hora, lugar y estimaciones requieren validación de Alexander; no se dispone de un acta que confirme una reunión realizada con estos datos. Los elementos que no alcanzaron la Definition of Done permanecen visibles.
+El Sprint Planning 1 establece el alcance inicial de implementación y organiza el trabajo necesario para alcanzar un incremento funcional de Trakto Route. Debido a que corresponde al primer Sprint, no existe un Sprint Review ni Sprint Retrospective anterior. El siguiente registro se ha completado como planificación documental a partir del backlog y la evidencia del Stage Review, por instrucción de Jean Franck Loa Rojas. La fecha, hora y lugar son referencias del plan reconstruido; no se dispone de un acta que acredite una reunión celebrada con esos datos. Los elementos que no alcanzaron la Definition of Done permanecen visibles.
 
 **Tabla 4.7**  
 *Sprint Planning 1*
@@ -5103,7 +5103,7 @@ El Sprint Planning 1 establece el alcance inicial de implementación y organiza 
 | Date | 21/09/2026 |
 | Time | 18:30 – 19:15 (UTC-5) |
 | Location | Microsoft Teams, reunión virtual del equipo |
-| Prepared By | Fernandez Garfias, Alexander Piero — Team Leader |
+| Prepared By | Loa Rojas, Jean Franck — preparación documental; Team Leader: Fernandez Garfias, Alexander Piero |
 | Attendees (to planning meeting) | Cesar Alejandro Linares Bernable / Aguilar Aguayo Jeferson Renzo / Fernandez Garfias, Alexander Piero / Chirito Torres, Jose Raul / Loa Rojas, Jean Franck |
 | Sprint Duration | 21/09/2026 – 03/10/2026 |
 | Sprint 0 Review Summary | No aplica. Sprint 1 corresponde a la primera iteración de implementación del producto. |
@@ -5155,7 +5155,7 @@ El Sprint Board consolida los Work-items comprometidos, su estimación, el respo
   <img src="assets/images/chapter4/sprint-1-trello.png" width="900" alt="Sprint Board 1 de Trakto Route">
 </p>
 
-**Control del tablero:** creado el 05/10/2026; 25 tarjetas distribuidas en To-do (5), In-Process (5), To-Review (4) y Done (11). Los responsables indicados corresponden al planning reconstruido y requieren confirmación de Alexander. Done acredita la tarea técnica descrita, no la aceptación completa de la historia.
+**Control del tablero:** creado el 05/10/2026; 25 tarjetas distribuidas en To-do (5), In-Process (5), To-Review (4) y Done (11). Los responsables indicados corresponden a la planificación documental reconstruida para TB1. Done acredita la tarea técnica descrita, no la aceptación completa de la historia.
 
 **URL del Board:** [Sprint Board 1 documentado](docs/sprint-1-board.md) · [Trello del proyecto](https://trello.com/b/ibZVZsXs).
 
@@ -5502,7 +5502,7 @@ La escala prevista es: 1 problema superficial, 2 problema menor, 3 problema mayo
 2. La aplicación móvil demuestra navegación y presentación de operaciones en emulador, pero su repositorio temporal de datos todavía debe reemplazarse por un adaptador REST para demostrar persistencia end-to-end.
 3. El backend implementa viajes, seguimiento, flota y perfiles; IAM sigue pendiente; la suite de comportamiento verifica dominio y cinco escenarios API, pero no acredita toda la cobertura funcional y no forman parte de la evidencia aceptada.
 4. GitFlow quedó aplicado mediante ramas `feature`, `develop`, `release` y `main`, conservando trazabilidad entre el trabajo técnico y los releases.
-5. La aceptación del producto requiere aún entrevistas reales, evaluación heurística derivada de esas sesiones, video de demostración y validación de los datos del Sprint Planning.
+5. La aceptación del producto requiere aún entrevistas reales, evaluación heurística derivada de esas sesiones, video de demostración. El Sprint Planning queda completado como planificación documental reconstruida.
 
 # Bibliografía
 
