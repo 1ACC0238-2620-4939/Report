@@ -19,7 +19,7 @@ Fecha de corte: 05/10/2026. Revisión final contra el enunciado TB1, páginas 3-
 - [x] **13. Completar gestión del Sprint.** Se consolidaron fecha, hora, lugar, Team Leader, duración, Story Points, estimaciones, responsables y Sprint Board, manteniendo integración y aceptación como trabajo abierto.
 - [ ] **14. Demostrar integración end-to-end.** `NOT_VERIFIED`: mobile-app usa `DemoTraktoRepository`; falta el adaptador REST. La API pública y su persistencia MySQL ya están verificadas.
 - [ ] **15. Publicar video de exposición.** `BLOCKED`: requiere grabación y carga con una cuenta del equipo; duración máxima indicada por el enunciado.
-- [x] **16. Preparar los documentos de entrega.** Informe PDF, presentación PPTX/PDF y participación DOCX/PDF generados. Las calificaciones son una propuesta que Alexander debe validar y firmar.
+- [ ] **16. Preparar los documentos de entrega.** Informe PDF y participación DOCX/PDF generados. La presentación oficial es [el Canva proporcionado por Jean](https://canva.link/kblei7h4yf7tva3); falta exportar sus entregables PPTX/PDF. La presentación generada anteriormente queda como apoyo técnico. Las calificaciones son una propuesta que Alexander debe validar y firmar.
 - [x] **17. Desplegar frontend y backend en Railway.** Servicios RUNNING; landing HTTP 200 y `/health`; OpenAPI HTTP 200; POST/GET de vehículo con MySQL verificados. Ver `railway-deployment.md`.
 - [ ] **18. Completar fotografías.** Cesar y Jose deben proporcionar fotografías reales para la diapositiva del equipo.
 - [ ] **19. Validar participación.** Alexander debe revisar responsabilidades, calificaciones y firma del informe de participación.
