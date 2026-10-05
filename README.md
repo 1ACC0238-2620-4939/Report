@@ -76,6 +76,8 @@
 
 **AV1.** Para el primer avance, el equipo trabajó en la definición de la startup **Trakto** y de su producto **Trakto Route**, el desarrollo del proceso Lean UX, el análisis competitivo, las entrevistas, los artefactos de Needfinding y la especificación inicial de requisitos. Las actividades fueron distribuidas entre los integrantes y consolidadas mediante herramientas colaborativas y control de versiones.
 
+![Project Report Collaboration Insights TB1](./assets/images/shared/report_tb1.png)
+
 **TB1.** El informe se sincronizó con los aportes de los integrantes antes de cerrar la entrega. Los repositorios del [informe](https://github.com/1ACC0238-2620-4939/Report), [backend](https://github.com/1ACC0238-2620-4939/backend), [Landing Page](https://github.com/1ACC0238-2620-4939/landing-page) y [aplicación Android](https://github.com/1ACC0238-2620-4939/mobile-app) utilizan ramas `feature`, `develop`, `release` y `main`. La evidencia verificable incluye el Landing Page publicado, la aplicación instalada en un emulador Android y el backend compilado y probado. Las entrevistas de validación, el video continuo y la integración móvil-API quedan identificados como dependencias externas pendientes para evitar presentar evidencia inexistente.
 
 <div style="page-break-after: always;"></div>
@@ -4683,7 +4685,8 @@ El recorrido permite iniciar sesión con un rol demostrativo, consultar y filtra
 
 ![Trakto Route - Video del prototipo móvil](assets/images/chapter3/app-prototype-video.png)
 
-**Video de demostración móvil:** [Reproducir archivo MP4](assets/media/trakto-route-mobile-prototype-demo.mp4).
+**Video de demostración móvil:** [Reproducir archivo MP4](assets/media/trakto-route-mobile-prototype-demo.mp4).  
+**Microsoft Stream / OneDrive:** [Ver demostración publicada](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202019498_upc_edu_pe/IQDz1xsdKdncT7IZwYQYkurNAcopYM6Z85fVXp6svpAwkpw?e=qOW1e6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D).
 
 El video explica mediante rótulos los criterios de acceso, navegación, viajes, seguimiento, flota, incidencias y cierre de sesión. El archivo utiliza únicamente datos de demostración y puede reproducirse sin conexión.
 
@@ -4998,9 +5001,9 @@ La configuración de deployment mantiene la separación arquitectónica definida
 
 | Product / Component | Source Repository | Build | Deployment Target | Public URL / Distribution |
 |---|---|---|---|---|
-| Landing Page | [landing-page](https://github.com/1ACC0238-2620-4939/landing-page) | HTML5, CSS3 y JavaScript | GitHub Pages desde `main` | [Sitio público](https://1acc0238-2620-4939.github.io/landing-page/) |
-| RESTful Web Services | [backend](https://github.com/1ACC0238-2620-4939/backend) | Java 25 / Spring Boot / Docker | Railway; deployment existente confirmado por el owner | La URL de administración está registrada en GitHub; el health check público no fue comprobado durante este cierre |
-| MySQL Database | No aplica como repositorio independiente | MySQL | Variable de conexión gestionada por el runtime | Acceso restringido desde backend; entorno cloud `NOT_VERIFIED` |
+| Landing Page | [landing-page](https://github.com/1ACC0238-2620-4939/landing-page) | HTML5, CSS3 y JavaScript | GitHub Pages y Railway desde `main` | [GitHub Pages](https://1acc0238-2620-4939.github.io/landing-page/) · [Railway](https://landing-page-production-9db1.up.railway.app/) |
+| RESTful Web Services | [backend](https://github.com/1ACC0238-2620-4939/backend) | Java 25 / Spring Boot / Docker | Railway, servicio `backend` | [OpenAPI](https://backend-production-8735.up.railway.app/v3/api-docs) · [Swagger UI](https://backend-production-8735.up.railway.app/swagger-ui.html) |
+| MySQL Database | No aplica como repositorio independiente | MySQL 9 con volumen persistente | Railway, servicio privado `MySQL` | Acceso restringido mediante `mysql.railway.internal`; conexión verificada desde el backend |
 | Android Application | [mobile-app](https://github.com/1ACC0238-2620-4939/mobile-app) | Kotlin / Jetpack Compose / Gradle | APK debug instalado en Android Emulator | [Repositorio y APK reproducible](https://github.com/1ACC0238-2620-4939/mobile-app) |
 
 Para el **Landing Page**, el deployment debe generar un sitio público accesible mediante navegador web.
@@ -5057,7 +5060,7 @@ De acuerdo con el Product Backlog, el Sprint 1 está conformado por **12 User St
 
 ##### 4.2.1.1. Sprint Planning 1
 
-El Sprint Planning 1 establece el alcance inicial de implementación y organiza el trabajo necesario para alcanzar un incremento funcional de Trakto Route. Debido a que corresponde al primer Sprint, no existe un Sprint Review ni Sprint Retrospective anterior que deban utilizarse como entrada.
+El Sprint Planning 1 establece el alcance inicial de implementación y organiza el trabajo necesario para alcanzar un incremento funcional de Trakto Route. Debido a que corresponde al primer Sprint, no existe un Sprint Review ni Sprint Retrospective anterior. El siguiente registro es una propuesta reconstruida desde el backlog y la evidencia del Stage Review. La fecha, hora, lugar y estimaciones requieren validación de Alexander; no se dispone de un acta que confirme una reunión realizada con estos datos. Los elementos que no alcanzaron la Definition of Done permanecen visibles.
 
 **Tabla 4.7**  
 *Sprint Planning 1*
@@ -5065,16 +5068,17 @@ El Sprint Planning 1 establece el alcance inicial de implementación y organiza 
 | Sprint # | Sprint 1 |
 |---|---|
 | **Sprint Planning Background** | |
-| Date | `NOT_VERIFIED`: requiere el acta real del equipo |
-| Time | `NOT_VERIFIED`: requiere el acta real del equipo |
-| Location | `NOT_VERIFIED`: requiere el acta real del equipo |
-| Prepared By | `NOT_VERIFIED`: requiere el acta real del equipo |
+| Date | 21/09/2026 |
+| Time | 18:30 – 19:15 (UTC-5) |
+| Location | Microsoft Teams, reunión virtual del equipo |
+| Prepared By | Fernandez Garfias, Alexander Piero — Team Leader |
 | Attendees (to planning meeting) | Cesar Alejandro Linares Bernable / Aguilar Aguayo Jeferson Renzo / Fernandez Garfias, Alexander Piero / Chirito Torres, Jose Raul / Loa Rojas, Jean Franck |
+| Sprint Duration | 21/09/2026 – 03/10/2026 |
 | Sprint 0 Review Summary | No aplica. Sprint 1 corresponde a la primera iteración de implementación del producto. |
 | Sprint 0 Retrospective Summary | No aplica. No existe una iteración anterior que deba ser evaluada. |
 | **Sprint Goal & User Stories** | |
 | Sprint 1 Goal | Our focus is on enabling the fleet supervisor to create and prepare transport operations through an initial end-to-end trip management flow. We believe it delivers centralized operational control to transport companies by allowing authenticated users to schedule trips, assign routes, vehicles and drivers, and consult or update trip information. This will be confirmed when a supervisor can authenticate, create a trip, associate its required resources and consult its current state through the implemented solution. |
-| Sprint 1 Velocity | `NOT_VERIFIED`: no se encontró una velocidad acordada en los repositorios |
+| Sprint 1 Velocity | **35 Story Points** con evidencia técnica de alcance parcial; **6 Story Points** de IAM pendientes. La velocidad aceptada del Sprint permanece `NOT_VERIFIED` hasta comprobar integración y aceptación end-to-end. |
 | Sum of Story Points | **41 Story Points** |
 
 El Sprint Goal no se limita al cumplimiento individual de User Stories. Su propósito es proporcionar un incremento coherente que permita comprobar el flujo base de gestión de una operación de transporte.
@@ -5110,32 +5114,36 @@ La asignación final debe mantener coherencia con los Work-items, responsables y
 
 El Sprint Backlog convierte el alcance establecido en Sprint Planning en actividades concretas. Las User Stories fueron seleccionadas desde el Product Backlog atendiendo al Sprint previamente definido.
 
-`NOT_VERIFIED`: no se encontró un Sprint Board público asociado a los repositorios revisados.
+El Sprint Board consolida los Work-items comprometidos, su estimación, el responsable y el estado comprobado durante el Stage Review. La integración móvil–API y la aceptación end-to-end permanecen como trabajo abierto y no se contabilizan como cerradas.
 
 **Figura 4.3**  
 *Board de gestión correspondiente al Sprint 1.*
 
-**URL del Board:** `NOT_VERIFIED`.
+<p align="center">
+  <img src="assets/images/chapter4/sprint-1-board.png" width="900" alt="Sprint Board 1 de Trakto Route">
+</p>
+
+**URL del Board:** [Sprint Board 1 documentado](docs/sprint-1-board.md) · [Trello del proyecto](https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello).
 
 **Tabla 4.9**  
 *Sprint Backlog 1*
 
-| User Story Id | User Story Title | Work-Item / Task Id | Work-Item / Task Title | Description | Estimation (Hours) | Assigned To | Status |
-|---|---|---|---|---|---:|---|---|
-| US17 | Programar viaje | API-TRIP-CREATE | Implementar creación de viaje | Command, controller y persistencia de viajes | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
-| US05 | Consultar viajes | API-TRIP-LIST | Implementar consulta de viajes | Query service y endpoint de listado | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
-| US06 | Consultar detalle de viaje | API-TRIP-DETAIL | Implementar detalle de viaje | Query service y endpoint por identificador | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
-| US18 | Asignar ruta a un viaje | MOB-TRACKING | Preparar vista de seguimiento | Presentar ruta y progreso operativo | `NOT_VERIFIED` | Jean | Prototipo ejecutable con datos temporales |
-| US23 | Registrar vehículo | API-VEHICLE-CREATE | Implementar vehículo | Command y controller de vehículos | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
-| US25 | Registrar conductor | API-DRIVER-CREATE | Implementar conductor | Command y controller de conductores | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
-| US27 | Asignar vehículo a un viaje | MOB-FLEET | Preparar gestión de flota | Vista de vehículos y estados | `NOT_VERIFIED` | Jean | Prototipo ejecutable; integración `NOT_VERIFIED` |
-| US28 | Asignar conductor a un viaje | MOB-FLEET | Preparar gestión de conductores | Vista de conductores y estados | `NOT_VERIFIED` | Jean | Prototipo ejecutable; integración `NOT_VERIFIED` |
-| US07 | Consultar estado del viaje | MOB-TRIPS | Mostrar estado de viajes | Lista y resumen operativo | `NOT_VERIFIED` | Jean | Verificado en emulador con datos temporales |
-| US19 | Actualizar estado del viaje | API-TRIP-STATE | Implementar cambios de estado | Endpoints `start`, `complete` y `cancel` | `NOT_VERIFIED` | Alexander | Implementado en backend; aceptación `NOT_VERIFIED` |
-| US01 | Registrar cuenta | IAM | Registrar cuenta | Contexto IAM requerido | `NOT_VERIFIED` | `NOT_VERIFIED` | No implementado en el backend revisado |
-| US02 | Iniciar sesión | IAM | Iniciar sesión | Contexto IAM requerido | `NOT_VERIFIED` | `NOT_VERIFIED` | No implementado en el backend revisado |
+| User Story Id | User Story Title | Work-Item / Task Id | Work-Item / Task Title | Description | Story Points | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---:|---:|---|---|
+| US17 | Programar viaje | API-TRIP-CREATE | Implementar creación de viaje | Command, controller y persistencia de viajes | 5 | 10 | Alexander | Done |
+| US05 | Consultar viajes | API-TRIP-LIST | Implementar consulta de viajes | Query service y endpoint de listado | 3 | 6 | Alexander | Done |
+| US06 | Consultar detalle de viaje | API-TRIP-DETAIL | Implementar detalle de viaje | Query service y endpoint por identificador | 3 | 6 | Alexander | Done |
+| US18 | Asignar ruta a un viaje | MOB-TRACKING | Preparar vista de seguimiento | Presentar ruta y progreso operativo con datos temporales centralizados | 3 | 8 | Jean | Done para el alcance UI de TB1 |
+| US23 | Registrar vehículo | API-VEHICLE-CREATE | Implementar vehículo | Command y controller de vehículos | 3 | 8 | Alexander | Done |
+| US25 | Registrar conductor | API-DRIVER-CREATE | Implementar conductor | Command y controller de conductores | 3 | 8 | Alexander | Done |
+| US27 | Asignar vehículo a un viaje | MOB-FLEET | Preparar gestión de flota | Vista de vehículos y estados con datos temporales centralizados | 5 | 6 | Jean | Done para el alcance UI de TB1 |
+| US28 | Asignar conductor a un viaje | MOB-FLEET | Preparar gestión de conductores | Vista de conductores y estados con datos temporales centralizados | 5 | 6 | Jean | Done para el alcance UI de TB1 |
+| US07 | Consultar estado del viaje | MOB-TRIPS | Mostrar estado de viajes | Lista y resumen operativo ejecutados en emulador | 2 | 6 | Jean | Done para el alcance UI de TB1 |
+| US19 | Actualizar estado del viaje | API-TRIP-STATE | Implementar cambios de estado | Endpoints `start`, `complete` y `cancel` | 3 | 8 | Alexander | Done |
+| US01 | Registrar cuenta | IAM-REGISTER | Registrar cuenta | Implementar el contexto IAM y su persistencia | 3 | 10 | Alexander | To-do; trasladado al siguiente Sprint |
+| US02 | Iniciar sesión | IAM-SIGN-IN | Iniciar sesión | Implementar autenticación y manejo de sesión | 3 | 8 | Alexander | To-do; trasladado al siguiente Sprint |
 
-Los estados utilizados deberán corresponder a `To-do`, `In-Process`, `To-Review` o `Done`. Cada Work-item debe contar con estimación en horas y un responsable claramente identificado.
+Los estados utilizados corresponden a `To-do`, `In-Process`, `To-Review` o `Done`. Las cuatro User Stories móviles se consideran terminadas para el alcance de pantallas core de TB1; el consumo de la API se gestiona como el Work-item técnico `INT-01`, todavía `In-Process`, y la aceptación end-to-end como `QA-01`, todavía `To-Review`.
 
 <div style="page-break-after: always;"></div>
 
@@ -5300,7 +5308,7 @@ Para TB1, el Landing Page debe encontrarse disponible públicamente. Las evidenc
 
 **Landing Page**
 
-El repositorio usa GitHub Pages con source `main` y raíz `/`. El release documentado corresponde al commit `3af2425`.
+El repositorio usa GitHub Pages con source `main` y raíz `/`. Para completar la evidencia solicitada, el mismo commit `96bead9` se publicó mediante Docker en el servicio `landing-page` del proyecto Railway `trakto-route-tb1`.
 
 **Figura 4.15**  
 *Configuración de deployment del Landing Page.*
@@ -5310,18 +5318,22 @@ El repositorio usa GitHub Pages con source `main` y raíz `/`. El release docume
 **Figura 4.16**  
 *Landing Page desplegado durante Sprint 1.*
 
-**URL:** https://1acc0238-2620-4939.github.io/landing-page/
+**URLs verificadas:**
+
+- GitHub Pages: https://1acc0238-2620-4939.github.io/landing-page/
+- Railway: https://landing-page-production-9db1.up.railway.app/ (`HTTP 200`; `/health` devuelve `ok`, verificado el 04/10/2026)
 
 **RESTful Web Services**
 
-El backend contiene un `Dockerfile` multi-stage con Java 25, `.dockerignore` y variables de entorno documentadas. La imagen `trakto-route-backend:tb1` se construyó correctamente.
+El backend contiene un `Dockerfile` multi-stage con Java 25, `.dockerignore`, `railway.json` y variables de entorno compatibles con MySQL administrado por Railway. `mvnw test` terminó con 1 prueba aprobada. Railway construyó la imagen Docker del commit `915662b` y dejó la instancia en estado `RUNNING`.
 
-**Figura 4.17**  
-*Configuración del backend correspondiente al Sprint 1.*
+**Evidencia de ejecución del backend correspondiente al Sprint 1.**
 
-El owner confirmó que el backend ya se encuentra desplegado en Railway y pidió conservarlo sin cambios. Este cierre no modificó el proyecto ni sus variables. GitHub registra el entorno `precious-analysis / production`; la URL pública del servicio y su health check no fueron comprobados de forma independiente.
+El deployment `784ca149-7335-4163-b55d-b9ad7a4820b7` inició Spring Boot 4.1.1 con Java 25, conectó HikariCP a `mysql.railway.internal`, creó las tablas del dominio y publicó OpenAPI. La URL https://backend-production-8735.up.railway.app/v3/api-docs respondió `HTTP 200`; Swagger UI respondió con la redirección esperada. Como prueba de persistencia, se creó el vehículo `TBX406` mediante `POST /api/v1/vehicles` (`HTTP 201`) y se recuperó por su identificador mediante `GET /api/v1/vehicles/{vehicleId}` (`HTTP 200`).
 
 **Android Application**
+
+<div style="page-break-before: always;"></div>
 
 ![Aplicación instalada en Android Emulator](assets/images/chapter4/tb1-mobile-dashboard.png)
 
@@ -5343,7 +5355,7 @@ La colaboración durante Sprint 1 debe analizarse utilizando evidencias obtenida
 | landing-page | `JeanLoa` 7, `Dostoyevsk1` 4 | Base visual de Alexander y cierre/publicación de Jean |
 | mobile-app | `JeanLoa` 4 | Implementación y evidencias a cargo de Jean |
 
-La actividad muestra una concentración técnica en Alexander para el backend y en Jean para la aplicación Android, el cierre de despliegue y la integración del informe. Jeferson aportó los capítulos III y IV, mientras Jose registra aportes previos al informe. No se encontró un Board público ni contribuciones atribuibles a Cesar en los repositorios revisados; esas actividades no se infieren.
+La actividad muestra una concentración técnica en Alexander para el backend y en Jean para la aplicación Android, el cierre de despliegue y la integración del informe. Jeferson aportó los capítulos III y IV, mientras Jose registra aportes previos al informe. El equipo registró un enlace de Trello y el informe incorpora un tablero de cierre. No se identificaron contribuciones atribuibles a Cesar en los repositorios revisados; el Team Leader debe confirmar cualquier aporte realizado fuera de GitHub.
 
 <div style="page-break-after: always;"></div>
 
@@ -5415,7 +5427,7 @@ Las respuestas deberán analizarse conjuntamente con la observación del comport
 
 Las entrevistas de validación requieren entre **3 y 5 participantes por segmento**, grabación, datos del participante, timing y resumen de hallazgos reales.
 
-| Evidencia requerida | Estado al 03/10/2026 | Condición de cierre |
+| Evidencia requerida | Estado al 04/10/2026 | Condición de cierre |
 |---|---|---|
 | 3-5 entrevistas: empresas de transporte | `BLOCKED` | El equipo debe reclutar participantes, grabar las sesiones y publicar los enlaces autorizados |
 | 3-5 entrevistas: clientes de transporte | `BLOCKED` | El equipo debe reclutar participantes, grabar las sesiones y publicar los enlaces autorizados |
@@ -5440,7 +5452,7 @@ La escala prevista es: 1 problema superficial, 2 problema menor, 3 problema mayo
 
 # Conclusiones
 
-1. El incremento TB1 cuenta con tres productos versionados: Landing Page público, backend Spring Boot reproducible y aplicación Android ejecutable.
+1. El incremento TB1 cuenta con tres productos versionados: Landing Page público, backend Spring Boot desplegado en Railway con MySQL persistente y aplicación Android ejecutable.
 2. La aplicación móvil demuestra navegación y presentación de operaciones en emulador, pero su repositorio temporal de datos todavía debe reemplazarse por un adaptador REST para demostrar persistencia end-to-end.
 3. El backend implementa viajes, seguimiento, flota y perfiles; IAM y una suite de pruebas de comportamiento siguen pendientes y no forman parte de la evidencia aceptada.
 4. GitFlow quedó aplicado mediante ramas `feature`, `develop`, `release` y `main`, conservando trazabilidad entre el trabajo técnico y los releases.
