@@ -1,6 +1,6 @@
 # Checklist cronológico de cierre TB1
 
-Fecha de corte: 04/10/2026.
+Fecha de corte: 05/10/2026. Revisión final contra el enunciado TB1, páginas 3-5 y 34.
 
 ## Trabajo técnico y documental
 
@@ -14,19 +14,25 @@ Fecha de corte: 04/10/2026.
 - [x] **8. Incorporar evidencia.** Se añadieron capturas reales, commits, repositorios, endpoints, resultados y límites verificables al informe.
 - [x] **9. Completar los artefactos UX/UI.** Se incorporaron los wireframes y mock-ups de Landing Page y aplicación móvil, siete Wireflows y siete User Flows trazables a los User Goals.
 - [x] **10. Completar el prototipado.** Se añadió un prototipo móvil navegable, una vista general y videos MP4 reproducibles para la aplicación y el Landing Page.
-- [x] **11. Verificar el informe actualizado.** Se validaron 92 referencias locales sin archivos faltantes y se revisó visualmente el PDF final de 214 páginas.
+- [x] **11. Verificar el informe actualizado.** Se validaron 105 referencias locales sin archivos faltantes y se revisó el PDF final de 215 páginas, con inspección visual de las secciones modificadas.
 - [ ] **12. Completar evidencias humanas.** `BLOCKED`: requiere entrevistas reales, videos, timing, consentimiento y hallazgos del equipo.
-- [ ] **13. Completar gestión del Sprint.** `BLOCKED`: requiere fecha, hora, lugar, responsable, estimaciones y Board reales acordados por el equipo.
-- [ ] **14. Demostrar integración end-to-end.** `NOT_VERIFIED`: mobile-app usa `DemoTraktoRepository`; falta el adaptador REST y una API pública saludable.
+- [x] **13. Completar gestión del Sprint.** Se consolidaron fecha, hora, lugar, Team Leader, duración, Story Points, estimaciones, responsables y Sprint Board, manteniendo integración y aceptación como trabajo abierto.
+- [ ] **14. Demostrar integración end-to-end.** `NOT_VERIFIED`: mobile-app usa `DemoTraktoRepository`; falta el adaptador REST. La API pública y su persistencia MySQL ya están verificadas.
 - [ ] **15. Publicar video de exposición.** `BLOCKED`: requiere grabación y carga con una cuenta del equipo; duración máxima indicada por el enunciado.
-- [ ] **16. Completar entrega externa.** `BLOCKED`: requiere archivos de presentación, evaluación de participación y carga final en la plataforma del curso.
+- [x] **16. Preparar los documentos de entrega.** Informe PDF, presentación PPTX/PDF y participación DOCX/PDF generados. Las calificaciones son una propuesta que Alexander debe validar y firmar.
+- [x] **17. Desplegar frontend y backend en Railway.** Servicios RUNNING; landing HTTP 200 y `/health`; OpenAPI HTTP 200; POST/GET de vehículo con MySQL verificados. Ver `railway-deployment.md`.
+- [ ] **18. Completar fotografías.** Cesar y Jose deben proporcionar fotografías reales para la diapositiva del equipo.
+- [ ] **19. Validar participación.** Alexander debe revisar responsabilidades, calificaciones y firma del informe de participación.
+- [ ] **20. Acreditar porcentaje de backend.** El enunciado exige 70%; están desplegados Trip Management, Tracking, Fleet Management y Profile. IAM y otros contextos del diseño no están implementados. El porcentaje no se declara aprobado sin contrastar el alcance funcional con la rúbrica.
+- [ ] **21. Confirmar datos reconstruidos del Sprint.** Fecha, horario, lugar y estimaciones son una consolidación propuesta, sin acta real comprobada; Alexander debe validarlos.
+- [ ] **22. Entregar en la plataforma del curso.** Pendiente por instrucción del usuario: todavía no entregar.
 
 ## Evidencia verificada
 
 | Producto | Estado | Evidencia |
 |---|---|---|
 | Landing Page | `PASS` | Build estático, ejecución HTTP local y GitHub Pages configurado desde `main` |
-| Backend | `PASS` parcial | `./mvnw test`: 1 test, 0 fallos; imagen Docker construida; runtime público nuevo aún `NOT_VERIFIED` |
+| Backend | `PASS` deployment; alcance parcial | `./mvnw test`: 1 test, 0 fallos; Docker construido en Railway; OpenAPI HTTP 200 y MySQL write/read PASS |
 | Android | `PASS` parcial | `clean assembleDebug lintDebug`; APK instalado; navegación verificada en Android Emulator |
 | Informe | `PASS` técnico | Versiones, Student Outcome TB1, capítulos III/IV, artefactos UX/UI, prototipo, videos, capturas, endpoints, conclusiones, bibliografía y estados explícitos |
 
@@ -34,8 +40,8 @@ Fecha de corte: 04/10/2026.
 
 | Repositorio | Release en `main` |
 |---|---|
-| backend | `3d2cad9` |
-| landing-page | `3af2425` |
+| backend | `915662b` |
+| landing-page | `96bead9` |
 | mobile-app | `5641a0f` |
 
 Los ítems bloqueados no pueden cerrarse de forma válida solo con cambios de código: dependen de evidencia obtenida por el equipo y de acciones en cuentas externas.
