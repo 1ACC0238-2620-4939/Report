@@ -1,3 +1,5 @@
+ > Diagnóstico inicial. Para el estado posterior a las correcciones del 05/10/2026, consulte [el control final](tb1-final-check.md). Los conteos de páginas, diapositivas y pruebas de esta auditoría inicial han cambiado.
+
 # Auditoría general TB1
 
 Fecha: 05/10/2026, America/Lima. Fuentes: `../README.md`, `../../Enunciado.pdf` V4.0 (52 páginas), los cinco documentos de `../deliverables/` y el código/configuración de los productos. Se revisó el alcance específico TB1 de la página 34 y los requisitos transversales de las páginas 3-5, 20-30 y 32-33. **Resultado: PARTIAL; no está listo para entrega completa.**
