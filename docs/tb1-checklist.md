@@ -53,3 +53,7 @@ Fecha de corte: 05/10/2026. Revisión final contra el enunciado TB1, páginas 3-
 | mobile-app | `5641a0f` |
 
 Los ítems bloqueados no pueden cerrarse de forma válida solo con cambios de código: dependen de evidencia obtenida por el equipo y de acciones en cuentas externas.
+
+## Actualización final — 05/10/2026
+
+Artefactos SG/IA/NAV, diagrama de deployment, correcciones de tags/Railway, formato y bibliografía incorporados. Suite ampliada a 11 pruebas Java y 5 escenarios API PASS. Presentación ampliada a 19 diapositivas. La verificación de herramientas y tablero sigue pendiente. Consulte [control final](tb1-final-check.md). La reutilización del video AV1 está autorizada, pero falta su enlace exacto. No se declara entrega completa.
