@@ -2649,7 +2649,7 @@ A continuación, se presenta una captura del **Product Backlog de Trakto Route e
 
 **Enlace público del Product Backlog en Trello:**  
 
-https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello
+https://trello.com/b/ibZVZsXs
 
 <div style="page-break-after: always;"></div>
 
@@ -4014,7 +4014,7 @@ En caso de utilizar el nombre completo del producto, debe conservarse la denomin
 
 ![SG-01 – Diseño de Trakto Route](assets/images/chapter3/sg-01.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/sg-01.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-328), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/sg-01.svg).
 
 La figura SG-01 deberá consolidar la identidad visual utilizada en los productos digitales, incluyendo el logotipo seleccionado por el equipo, sus principales variantes y las condiciones básicas de uso sobre superficies claras y oscuras.
 
@@ -4074,7 +4074,7 @@ Los estados no deberán diferenciarse únicamente mediante color. Cuando se repr
 
 ![SG-02 – Diseño de Trakto Route](assets/images/chapter3/sg-02.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/sg-02.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-371), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/sg-02.svg).
 
 La figura SG-02 deberá representar visualmente la relación entre los colores principales, secundarios y semánticos, incluyendo ejemplos de su aplicación sobre buttons, cards, chips de estado y mensajes.
 
@@ -4132,7 +4132,7 @@ El sistema visual utilizará componentes reutilizables que permitan conservar co
 
 ![SG-03 – Diseño de Trakto Route](assets/images/chapter3/sg-03.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/sg-03.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-348), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/sg-03.svg).
 
 La figura SG-03 deberá presentar los componentes principales en sus estados normal, pressed, disabled, error y selected cuando corresponda, estableciendo una referencia visual reutilizable para el equipo.
 
@@ -4183,13 +4183,13 @@ La aplicación, en cambio, organiza la información alrededor de las responsabil
 
 ![IA-01 – Diseño de Trakto Route](assets/images/chapter3/ia-01.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/ia-01.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-399), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/ia-01.svg).
 
 La figura IA-01 deberá representar la jerarquía de contenido del Landing Page y las relaciones entre sus principales secciones, evidenciando el recorrido desde la propuesta de valor hasta la llamada a la acción.
 
 ![IA-02 – Diseño de Trakto Route](assets/images/chapter3/ia-02.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/ia-02.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-412), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/ia-02.svg).
 
 La figura IA-02 deberá mostrar qué grupos de información se encuentran disponibles para cada User Persona, evidenciando que las capacidades administrativas de flota y operación permanecen separadas de las capacidades de consulta del cliente.
 
@@ -4364,19 +4364,19 @@ Las acciones específicas como programar un viaje, registrar una incidencia, asi
 
 ![NAV-01 – Diseño de Trakto Route](assets/images/chapter3/nav-01.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/nav-01.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-432), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/nav-01.svg).
 
 La figura NAV-01 deberá representar la navegación entre las principales secciones del Landing Page y su comportamiento responsive.
 
 ![NAV-02 – Diseño de Trakto Route](assets/images/chapter3/nav-02.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/nav-02.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-445), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/nav-02.svg).
 
 La figura NAV-02 deberá evidenciar el acceso del supervisor a viajes, flota, incidencias e historial, manteniendo las acciones específicas dentro de cada módulo.
 
 ![NAV-03 – Diseño de Trakto Route](assets/images/chapter3/nav-03.png)
 
-**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/nav-03.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
+**Fuente:** [artefacto editable en Figma](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-458), creado el 05/10/2026 a partir del diseño documentado. [Fuente SVG local](assets/design/nav-03.svg).
 
 La figura NAV-03 deberá evidenciar una estructura simplificada orientada a consulta de envíos, eventos e historial, sin mostrar capacidades internas de Fleet Management.
 
@@ -4610,6 +4610,10 @@ Los mock-ups incorporan color, tipografía y componentes consistentes sin modifi
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
+**Fuente editable en Lucidchart:** [índice de los siete documentos UF/WF](docs/ux-lucid-links.md). Cada User Goal tiene un documento con User Flow y Wireflow. Fuentes Draw.io comprimidas incluidas. La captura siguiente corresponde a la importación corregida del primer recorrido; el acceso anónimo a los enlaces todavía requiere verificación.
+
+![Captura real de User Flow y Wireflow en Lucidchart](assets/images/chapter3/lucid-flow-01.png)
+
 Los User Flow Diagrams se derivan de los Wireflows y aplican el lenguaje visual del producto. Cada diagrama distingue la ruta esperada de las decisiones y rutas de recuperación, de modo que el happy path y los unhappy paths puedan evaluarse de manera independiente.
 
 | ID | User Persona | User Goal | Ruta esperada | Recuperación |
@@ -4698,7 +4702,9 @@ Las decisiones de interacción aplicadas son:
 
 **Prototipo navegable:** [Abrir prototipo móvil de Trakto Route](assets/prototype/trakto-route-mobile-prototype.html).
 
-**Fuente visual del equipo:** [Diseño de Trakto Route en Figma](https://www.figma.com/design/vCqC47s66ZJhjitxluqHvS/Untitled?node-id=0-1&t=FXFR85qEsRYcTPdI-1).
+**Diseño editable y prototipo Figma:** [Trakto Route — UX TB1](https://www.figma.com/design/O8MFizb7RGnoCqFWszIklF?node-id=4-671). El archivo contiene 8 artefactos SG/IA/NAV, 11 wireframes, 11 mockups y 20 conexiones de navegación guardadas. Los datos son demo y no prueban consumo de la API.
+
+![Captura real del mockup de viajes en Figma](assets/images/chapter3/figma-trips.png)
 
 El recorrido permite iniciar sesión con un rol demostrativo, consultar y filtrar viajes, programar una operación, revisar su detalle, acceder al seguimiento, registrar una incidencia, consultar flota e historial y cerrar sesión. Las rutas alternativas conservan el contexto y ofrecen una acción de recuperación.
 
@@ -4775,7 +4781,7 @@ Las herramientas seleccionadas responden a las diferentes actividades realizadas
 El Product Backlog ya se encuentra administrado mediante Trello y contiene las User Stories organizadas por prioridad, Story Points y Sprint. El enlace público documentado actualmente es:
 
 **Product Backlog:**  
-https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello
+https://trello.com/b/ibZVZsXs
 
 Las versiones exactas correspondientes a Android Studio, Kotlin, Java, Spring Boot, MySQL y las herramientas de build deberán obtenerse directamente de los repositorios de implementación para mantener consistencia con la configuración realmente utilizada por el equipo.
 
@@ -5146,10 +5152,12 @@ El Sprint Board consolida los Work-items comprometidos, su estimación, el respo
 *Board de gestión correspondiente al Sprint 1.*
 
 <p align="center">
-  <img src="assets/images/chapter4/sprint-1-board.png" width="900" alt="Sprint Board 1 de Trakto Route">
+  <img src="assets/images/chapter4/sprint-1-trello.png" width="900" alt="Sprint Board 1 de Trakto Route">
 </p>
 
-**URL del Board:** [Sprint Board 1 documentado](docs/sprint-1-board.md) · [Trello del proyecto](https://trello.com/invite/b/6a9f35b637f25ac414075cf7/ATTIf84a9d213de599cd378224b9c2fa3fe4F4197A6F/mi-tablero-de-trello).
+**Control del tablero:** creado el 05/10/2026; 25 tarjetas distribuidas en To-do (5), In-Process (5), To-Review (4) y Done (11). Los responsables indicados corresponden al planning reconstruido y requieren confirmación de Alexander. Done acredita la tarea técnica descrita, no la aceptación completa de la historia.
+
+**URL del Board:** [Sprint Board 1 documentado](docs/sprint-1-board.md) · [Trello del proyecto](https://trello.com/b/ibZVZsXs).
 
 **Tabla 4.9**  
 *Sprint Backlog 1*
