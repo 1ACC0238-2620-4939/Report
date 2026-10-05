@@ -22,7 +22,7 @@ Estado global: **PARTIAL**. No se asegura cumplimiento íntegro ni ausencia abso
 2. Fotos reales de Cesar y Jose, exigidas para presentar al equipo.
 3. Participación, calificaciones, firma y planning reconstruido: confirmar con Alexander.
 4. No se ha demostrado el 70% funcional del backend requerido en TB1; la disponibilidad de la API y las pruebas actuales no acreditan ese porcentaje. IAM sigue pendiente.
-5. Acceso al Sprint Board real y verificación de artefactos en Figma/LucidChart/Overflow: no comprobados. Los diagramas locales y el tablero consolidado no acreditan uso de esas herramientas.
+5. Sprint Board real: completado en Trello, 25 tarjetas y cuatro estados. Figma: 8 artefactos SG/IA/NAV, 11 wireframes, 11 mockups y 20 conexiones guardadas. Captura real incluida. Lucidchart: siete documentos importados con UF/WF; captura del primer recorrido corregido y fuentes editables incluidas. Falta verificar acceso anónimo y revisión visual individual de los otros seis. La cuota Starter de Figma bloqueó capturas adicionales y la ampliación de diseños de landing.
 6. Video de exposición: Jean autorizó reutilizar el de AV1, pero el enlace y archivo no aparecen en el repositorio ni en el tag AV1. No está verificada su duración, acceso o cobertura del incremento TB1. Adjuntar el enlace original; reutilizarlo puede incumplir la exposición del hito actual.
 
 About the Product también se reutilizará por instrucción de Jean cuando se proporcione el enlace. Su primera versión obligatoria, junto con App Validation y About the Team, corresponde a AV2; no se presentan como tres videos adicionales exigidos exclusivamente en TB1.
