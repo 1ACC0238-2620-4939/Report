@@ -268,6 +268,8 @@ Trakto Route permite gestionar y consultar viajes, rutas, vehículos, conductore
 
 ### 1.2.1. Antecedentes y problemática
 
+La velocidad y confiabilidad del movimiento de mercancías forman parte del contexto logístico descrito por World Bank (2023). Trakto Route toma este contexto como motivación para registrar operaciones y facilitar su seguimiento; no se atribuyen al producto mejoras cuantitativas no medidas.
+
 
 **Who (¿Quién?) - ¿A quiénes afecta el problema?**  
 Afecta, por un lado, a las **empresas de transporte de carga**, cuyos responsables necesitan gestionar viajes, vehículos, conductores, rutas e incidencias; y, por otro, a los **clientes que contratan servicios de transporte de carga**, quienes necesitan conocer el estado, progreso y eventos relevantes de sus envíos.
@@ -4010,11 +4012,15 @@ El branding debe mantener una composición visual limpia, con predominio de supe
 
 En caso de utilizar el nombre completo del producto, debe conservarse la denominación **Trakto Route**, evitando variaciones innecesarias que puedan generar inconsistencias entre el Landing Page, la aplicación móvil y la documentación del proyecto.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual SG-01 – Branding de Trakto Route mostrando logotipo oficial, variantes permitidas y ejemplos de uso – elaborado en Figma en los repositorios sincronizados.
+![SG-01 – Diseño de Trakto Route](assets/images/chapter3/sg-01.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/sg-01.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura SG-01 deberá consolidar la identidad visual utilizada en los productos digitales, incluyendo el logotipo seleccionado por el equipo, sus principales variantes y las condiciones básicas de uso sobre superficies claras y oscuras.
 
 **Tone of Voice**
+
+Las dimensiones se toman de Nielsen Norman Group (2016), aplicadas al contexto operativo de transporte.
 
 El tono de comunicación se define utilizando las cuatro dimensiones propuestas para productos digitales: serio/divertido, formal/casual, respetuoso/irreverente y entusiasta/sereno. Debido al contexto operativo de Trakto Route, se adopta un tono predominantemente serio, profesional, respetuoso y sereno.
 
@@ -4066,7 +4072,9 @@ Como propuesta de diseño para el Capítulo III, se establece un sistema cromát
 
 Los estados no deberán diferenciarse únicamente mediante color. Cuando se represente una incidencia, un retraso o un viaje finalizado, se utilizará también texto, iconografía o indicadores que permitan identificar el significado sin depender de la percepción cromática.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual SG-02 – Color System de Trakto Route mostrando tokens, códigos HEX y ejemplos de aplicación – elaborado en Figma en los repositorios sincronizados.
+![SG-02 – Diseño de Trakto Route](assets/images/chapter3/sg-02.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/sg-02.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura SG-02 deberá representar visualmente la relación entre los colores principales, secundarios y semánticos, incluyendo ejemplos de su aplicación sobre buttons, cards, chips de estado y mensajes.
 
@@ -4122,7 +4130,9 @@ El sistema visual utilizará componentes reutilizables que permitan conservar co
 | Empty States | Ausencia de viajes, incidencias o resultados |
 | Navigation Components | Navegación principal según el rol |
 
-**NOT_VERIFIED:** No se encontró el artefacto visual SG-03 – General Style Guidelines y principales UI Components de Trakto Route – elaborado en Figma en los repositorios sincronizados.
+![SG-03 – Diseño de Trakto Route](assets/images/chapter3/sg-03.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/sg-03.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura SG-03 deberá presentar los componentes principales en sus estados normal, pressed, disabled, error y selected cuando corresponda, estableciendo una referencia visual reutilizable para el equipo.
 
@@ -4133,6 +4143,8 @@ Para el Landing Page se utilizará una estructura responsive que permita reorgan
 Los buttons y enlaces deberán presentar estados de hover y focus visibles. Los encabezados mantendrán una jerarquía consistente y el contenido se dividirá en bloques que faciliten la exploración rápida.
 
 **Mobile Style Guidelines**
+
+La separación de estado y presentación sigue las recomendaciones de Android Developers (s. f.). WCAG 2.2 (World Wide Web Consortium, 2023) se utiliza como referencia de accesibilidad; no se declara certificación ni cumplimiento completo a partir del diseño.
 
 La aplicación Android utilizará los patrones visuales de Material Design adaptados a la identidad de Trakto Route. Los componentes interactivos deberán contemplar objetivos táctiles de al menos **48 dp × 48 dp**, evitando controles difíciles de seleccionar.
 
@@ -4169,11 +4181,15 @@ El Landing Page se propone con una estructura basada en los siguientes bloques c
 
 La aplicación, en cambio, organiza la información alrededor de las responsabilidades definidas previamente en los Epics y Bounded Contexts: **Identity and Access Management, Profile Management, Trip Management, Fleet Management, Incident Management y Operational History**.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual IA-01 – Information Architecture del Landing Page de Trakto Route en los repositorios sincronizados.
+![IA-01 – Diseño de Trakto Route](assets/images/chapter3/ia-01.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/ia-01.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura IA-01 deberá representar la jerarquía de contenido del Landing Page y las relaciones entre sus principales secciones, evidenciando el recorrido desde la propuesta de valor hasta la llamada a la acción.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual IA-02 – Information Architecture de la aplicación móvil diferenciada para Carlos Mendoza y Andrea Salazar en los repositorios sincronizados.
+![IA-02 – Diseño de Trakto Route](assets/images/chapter3/ia-02.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/ia-02.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura IA-02 deberá mostrar qué grupos de información se encuentran disponibles para cada User Persona, evidenciando que las capacidades administrativas de flota y operación permanecen separadas de las capacidades de consulta del cliente.
 
@@ -4346,15 +4362,21 @@ La navegación móvil se define de acuerdo con las responsabilidades de cada rol
 
 Las acciones específicas como programar un viaje, registrar una incidencia, asignar un recurso o consultar un detalle se encuentran dentro de los destinos principales y no requieren ocupar permanentemente un elemento de navegación global.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual NAV-01 – Navigation System del Landing Page de Trakto Route en los repositorios sincronizados.
+![NAV-01 – Diseño de Trakto Route](assets/images/chapter3/nav-01.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/nav-01.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura NAV-01 deberá representar la navegación entre las principales secciones del Landing Page y su comportamiento responsive.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual NAV-02 – Navigation System de la aplicación móvil para Carlos Mendoza – elaborado en Figma en los repositorios sincronizados.
+![NAV-02 – Diseño de Trakto Route](assets/images/chapter3/nav-02.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/nav-02.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura NAV-02 deberá evidenciar el acceso del supervisor a viajes, flota, incidencias e historial, manteniendo las acciones específicas dentro de cada módulo.
 
-**NOT_VERIFIED:** No se encontró el artefacto visual NAV-03 – Navigation System de la aplicación móvil para Andrea Salazar – elaborado en Figma en los repositorios sincronizados.
+![NAV-03 – Diseño de Trakto Route](assets/images/chapter3/nav-03.png)
+
+**Fuente:** artefacto reproducible del diseño documentado; [SVG editable](assets/design/nav-03.svg). No se atribuye elaboración en Figma ni LucidChart. La importación y revisión en la herramienta prescrita permanece pendiente.
 
 La figura NAV-03 deberá evidenciar una estructura simplificada orientada a consulta de envíos, eventos e historial, sin mostrar capacidades internas de Fleet Management.
 
@@ -4859,7 +4881,7 @@ MAJOR.MINOR.PATCH
 
 Por ejemplo, `1.0.0` representa conceptualmente una primera versión estable. No obstante, las versiones reales de Trakto Route deberán obtenerse de los tags o releases de los repositorios.
 
-No se encontraron tags SemVer publicados. Los releases TB1 quedan identificados por los commits `3d2cad9` (backend), `3af2425` (Landing Page) y `5641a0f` (Android); el etiquetado SemVer permanece `NOT_VERIFIED`.
+El repositorio Report publica los tags anotados `v1.0.0` (AV1, revisión `cca5be9`) y `v2.0.0` (TB1), con ramas `release/v1.0.0` y `release/v2.0.0` y releases en GitHub. Las revisiones de producto desplegadas se detallan en la evidencia Railway; los tags del reporte no se atribuyen automáticamente a los repositorios de producto.
 
 <div style="page-break-after: always;"></div>
 
@@ -4993,6 +5015,10 @@ Los archivos `.feature` deberán relacionarse con las Acceptance Criteria de las
 <div style="page-break-after: always;"></div>
 
 #### 4.1.4. Software Deployment Configuration
+
+![C4 Deployment Diagram](assets/images/chapter2/software-architecture-deployment.png)
+
+El diagrama C4 presenta la topología de diseño. El deployment efectivo de TB1 utiliza Railway para landing, API y MySQL; la distribución móvil comprobada corresponde a Android Emulator. Los nodos de servicios futuros del diagrama no se declaran desplegados.
 
 La configuración de deployment mantiene la separación arquitectónica definida en el Capítulo II. La aplicación móvil funciona como cliente, los RESTful Web Services centralizan las reglas de negocio y MySQL mantiene la fuente persistente de información.
 
@@ -5199,6 +5225,18 @@ El backend implementa controllers, command/query services, repositorios JPA y re
 
 ##### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
+**Actualización comprobada del 05/10/2026.** Backend ejecutó 11 pruebas Java sin fallos: nueve de dominio para transiciones/validación de viajes, una regresión que verifica HTTP 404 para viaje inexistente y una de contexto Spring. Los cinco escenarios técnicos de integración/aceptación de API también finalizaron PASS contra Railway después del despliegue de la corrección. No sustituyen entrevistas ni representan aceptación humana.
+
+| Evidencia | Historias / comportamiento | Repositorio |
+|---|---|---|
+| TripLifecycleTests | US17/US19/US22; inicio, finalización, cancelación, secuencia temporal y coordenadas | [Pruebas de dominio](https://github.com/1ACC0238-2620-4939/backend/blob/main/src/test/java/com/trakto/traktoroute/trip/TripLifecycleTests.java) |
+| TripQueryErrorTests | US06; consulta inexistente devuelve 404 con recurso de error | [Regresión](https://github.com/1ACC0238-2620-4939/backend/blob/main/src/test/java/com/trakto/traktoroute/trip/TripQueryErrorTests.java) |
+| sprint1.feature y Steps Python | US03/04/06/17/19/22/23/24/25/26; persistencia y reglas de estado vía HTTPS | [Gherkin](https://github.com/1ACC0238-2620-4939/backend/blob/main/tests/features/sprint1.feature) · [Steps](https://github.com/1ACC0238-2620-4939/backend/blob/main/tests/steps/sprint1_steps.py) |
+| Resultados HTTP | Requests/responses reales con datos técnicos identificados como test | [Resultados](docs/sprint1-api-results.json) |
+
+La corrección, servicios y pruebas están trazados por el commit `db2db63`, integrado en `main` como `0c12563`. El runner ejecuta los Steps del archivo Gherkin sin un framework BDD externo; su alcance es técnico y explícito.
+
+
 La verificación ejecutada se limita a las pruebas y gates existentes o reproducibles. No se atribuyen Unit Tests, Integration Tests ni Acceptance Tests que no existan en los repositorios.
 
 **Tabla 4.11**  
@@ -5211,7 +5249,7 @@ La verificación ejecutada se limita a las pruebas y gates existentes o reproduc
 | ANDROID-BUILD-01 | Android | Build gate | Transversal | `clean assembleDebug` | `PASS`: APK generado |
 | ANDROID-LINT-01 | Android | Static analysis | Transversal | `lintDebug` | `PASS` |
 | ANDROID-RUNTIME-01 | Android | Runtime smoke | US05, US07, US18, US23, US25 | Instalación y navegación por Dashboard, Viajes, Seguimiento y Flota | `PASS` en Android Emulator |
-| ACCEPTANCE-01 | Backend/Android | Acceptance | US01-US28 | Criterios de aceptación automatizados | `NOT_VERIFIED`: suite inexistente |
+| ACCEPTANCE-01 | Backend API | Acceptance técnica | US03/04/06/17/19/22/23/24/25/26 | Cinco escenarios Gherkin con Steps Python | `PASS`: requests/responses persistentes; no cubre IAM ni Android–API |
 
 Los comandos reproducibles son `./mvnw test`, `docker build -t trakto-route-backend:tb1 .` y `./gradlew clean assembleDebug lintDebug` en sus respectivos repositorios.
 
@@ -5288,7 +5326,7 @@ Debido a que las rutas exactas deben corresponder con los Controllers del reposi
 
 Para cada endpoint documentado deberán especificarse los parámetros, request body cuando corresponda, posibles códigos HTTP y un ejemplo del response.
 
-La UI de Swagger está configurada en `/swagger-ui.html`. Su ejecución contra una base MySQL y un request/response persistente permanece `NOT_VERIFIED`.
+La UI de Swagger está configurada en `/swagger-ui.html`. OpenAPI público y una escritura/lectura persistente contra MySQL fueron comprobados; véase [la evidencia Railway](docs/railway-deployment.md). Esto no acredita por sí solo el 70% de alcance funcional ni la integración Android–API.
 
 **REST API Repository:**  
 [https://github.com/1ACC0238-2620-4939/backend](https://github.com/1ACC0238-2620-4939/backend)
@@ -5454,17 +5492,38 @@ La escala prevista es: 1 problema superficial, 2 problema menor, 3 problema mayo
 
 1. El incremento TB1 cuenta con tres productos versionados: Landing Page público, backend Spring Boot desplegado en Railway con MySQL persistente y aplicación Android ejecutable.
 2. La aplicación móvil demuestra navegación y presentación de operaciones en emulador, pero su repositorio temporal de datos todavía debe reemplazarse por un adaptador REST para demostrar persistencia end-to-end.
-3. El backend implementa viajes, seguimiento, flota y perfiles; IAM y una suite de pruebas de comportamiento siguen pendientes y no forman parte de la evidencia aceptada.
+3. El backend implementa viajes, seguimiento, flota y perfiles; IAM sigue pendiente; la suite de comportamiento verifica dominio y cinco escenarios API, pero no acredita toda la cobertura funcional y no forman parte de la evidencia aceptada.
 4. GitFlow quedó aplicado mediante ramas `feature`, `develop`, `release` y `main`, conservando trazabilidad entre el trabajo técnico y los releases.
 5. La aceptación del producto requiere aún entrevistas reales, evaluación heurística derivada de esas sesiones, video de demostración y validación de los datos del Sprint Planning.
 
 # Bibliografía
 
-- Android Developers. *Jetpack Compose*. https://developer.android.com/compose
-- GitHub Docs. *Configuring a publishing source for your GitHub Pages site*. https://docs.github.com/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-- Spring. *Spring Boot Reference Documentation*. https://docs.spring.io/spring-boot/reference/
-- Docker Docs. *Multi-stage builds*. https://docs.docker.com/build/building/multi-stage/
-- OpenAPI Initiative. *OpenAPI Specification*. https://spec.openapis.org/oas/latest.html
+## Dominio de negocio
+
+<div class="bibliography">
+<p>World Bank. (2023, 21 de abril). <em>World Bank releases Logistics Performance Index 2023</em>. <a href="https://www.worldbank.org/en/news/press-release/2023/04/21/world-bank-releases-logistics-performance-index-2023">https://www.worldbank.org/en/news/press-release/2023/04/21/world-bank-releases-logistics-performance-index-2023</a></p>
+</div>
+
+## Métodos, técnicas y approaches
+
+<div class="bibliography">
+<p>Nielsen Norman Group. (2016, 17 de julio). <em>The four dimensions of tone of voice</em>. <a href="https://www.nngroup.com/articles/tone-of-voice-dimensions/">https://www.nngroup.com/articles/tone-of-voice-dimensions/</a></p>
+<p>World Wide Web Consortium. (2023, 5 de octubre). <em>Web Content Accessibility Guidelines (WCAG) 2.2</em>. <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a></p>
+</div>
+
+## Lenguajes, frameworks y herramientas
+
+<div class="bibliography">
+<p>Android Developers. (s. f.). <em>Recommendations for Android architecture</em>. Recuperado el 5 de octubre de 2026, de <a href="https://developer.android.com/topic/architecture/recommendations">https://developer.android.com/topic/architecture/recommendations</a></p>
+<p>Android Developers. (s. f.). <em>Jetpack Compose</em>. Recuperado el 5 de octubre de 2026, de <a href="https://developer.android.com/compose">https://developer.android.com/compose</a></p>
+<p>Docker. (s. f.). <em>Multi-stage builds</em>. Recuperado el 5 de octubre de 2026, de <a href="https://docs.docker.com/build/building/multi-stage/">https://docs.docker.com/build/building/multi-stage/</a></p>
+<p>GitHub. (s. f.). <em>Configuring a publishing source for your GitHub Pages site</em>. Recuperado el 5 de octubre de 2026, de <a href="https://docs.github.com/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">https://docs.github.com/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site</a></p>
+<p>OpenAPI Initiative. (s. f.). <em>OpenAPI Specification</em>. Recuperado el 5 de octubre de 2026, de <a href="https://spec.openapis.org/oas/latest.html">https://spec.openapis.org/oas/latest.html</a></p>
+<p>Spring. (s. f.). <em>Spring Boot reference documentation</em>. Recuperado el 5 de octubre de 2026, de <a href="https://docs.spring.io/spring-boot/reference/">https://docs.spring.io/spring-boot/reference/</a></p>
+</div>
+
+Los cuatro papers Q1/Q2 recientes que la página 32 exige al informe final deben seleccionarse y aplicarse en la investigación posterior. No se presenta documentación de frameworks como si fuera un paper académico.
+
 # Anexos
 
 ## Anexo A. Herramientas utilizadas
@@ -5499,11 +5558,16 @@ La escala prevista es: 1 problema superficial, 2 problema menor, 3 problema mayo
 
 | Entrega | Video | Estado | URL |
 |---|---|---|---|
-| TB1 | Exposición del proyecto | `BLOCKED`: requiere grabación editada de máximo 15 minutos con participación ante cámara | Sin URL |
-| TB1 | App Validation | `BLOCKED`: depende de sesiones reales de validación y su grabación | Sin URL |
-| TB1 | About the Product | `BLOCKED`: requiere demostración del producto y testimonios reales autorizados | Sin URL |
-| TB1 | About the Team | `BLOCKED`: requiere escenas reales de trabajo y testimonio de cada integrante | Sin URL |
+| TB1 | Exposición del proyecto | Reutilización del video AV1 autorizada por Jean el 05/10/2026; enlace y archivo no encontrados en el repositorio | Pendiente de proporcionar el enlace AV1 |
+| TB1 / referencia previa | About the Product | Reutilización del material anterior autorizada por Jean; no constituye una grabación nueva del Sprint 1 | Pendiente de proporcionar el enlace original |
+| AV2 | App Validation | Pendiente de sesiones reales; primera versión exigida para AV2 | Sin URL |
+| AV2 | About the Team | Pendiente de evidencia real; primera versión exigida para AV2 | Sin URL |
 
-Los archivos deberán publicarse en el OneDrive indicado por el docente. Los videos About the Product y About the Team también deberán publicarse en YouTube e incorporarse al Landing Page cuando el equipo los produzca.
+Se reutilizarán la exposición y About the Product del AV1 por instrucción expresa de Jean. No se ha localizado su URL en el repositorio actual ni en el tag v1.0.0. Los seis videos del Anexo B son entrevistas de descubrimiento y no se usan como exposición. La reutilización no acredita la presentación del incremento TB1 ni demuestra que el docente acepte una grabación de un hito anterior. No se declara comprobada su duración o accesibilidad. El video de exposición sigue pendiente de adjuntar antes de enviar.
 
 <div style="page-break-after: always;"></div>
+
+
+## Anexo D. Presentación TB1
+
+Fuente original: [Canva proporcionado por Jean](https://canva.link/kblei7h4yf7tva3). Se amplió su exportación con equipo, Sprint 1, arquitectura/despliegue, pruebas y estado de validación. [PPTX](deliverables/upc-pre-202620-1acc0238-4939-trakto-keynote-tb1.pptx) · [PDF](deliverables/upc-pre-202620-1acc0238-4939-trakto-keynote-tb1.pdf). Las fotografías de Cesar y Jose permanecen pendientes.
