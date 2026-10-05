@@ -1,0 +1,326 @@
+{
+  "base_url": "https://backend-production-8735.up.railway.app",
+  "utc_epoch": 1791191190.0568192,
+  "results": [
+    {
+      "scenario": "Vehicle registration survives a separate read",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/vehicles",
+          "request": {
+            "plateNumber": "TNN-663",
+            "capacity": 1500
+          },
+          "status": 201,
+          "response": {
+            "vehicleId": "40df5f3b-6b8f-4be5-a895-cbbef13c2f2e",
+            "plateNumber": "TNN663",
+            "capacity": 1500,
+            "status": "ACTIVE"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/vehicles/40df5f3b-6b8f-4be5-a895-cbbef13c2f2e/capacity",
+          "request": {
+            "capacity": 2500
+          },
+          "status": 200,
+          "response": {
+            "vehicleId": "40df5f3b-6b8f-4be5-a895-cbbef13c2f2e",
+            "plateNumber": "TNN663",
+            "capacity": 2500,
+            "status": "ACTIVE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/vehicles/40df5f3b-6b8f-4be5-a895-cbbef13c2f2e",
+          "request": null,
+          "status": 200,
+          "response": {
+            "vehicleId": "40df5f3b-6b8f-4be5-a895-cbbef13c2f2e",
+            "plateNumber": "TNN663",
+            "capacity": 2500.0,
+            "status": "ACTIVE"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "A scheduled trip can start and complete",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/vehicles",
+          "request": {
+            "plateNumber": "OZQ-261",
+            "capacity": 1500
+          },
+          "status": 201,
+          "response": {
+            "vehicleId": "7c13ef3b-09ac-4a55-b1d0-739c9bc76007",
+            "plateNumber": "OZQ261",
+            "capacity": 1500,
+            "status": "ACTIVE"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/profiles",
+          "request": {
+            "userReferenceId": "208701eb-5323-438d-8ae3-c74c7fdd3b8f",
+            "givenNames": "TB1 Technical Test",
+            "paternalSurname": "Evidence",
+            "maternalSurname": "Only"
+          },
+          "status": 201,
+          "response": {
+            "profileId": "fe977538-c230-4d28-8cf1-95bfdf2c2030"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/drivers",
+          "request": {
+            "profileId": "fe977538-c230-4d28-8cf1-95bfdf2c2030",
+            "licenseNumber": "A94417358"
+          },
+          "status": 201,
+          "response": {
+            "driverId": "9228b15c-67b9-44b0-b1d1-8ea0e9fcdb96",
+            "profileId": "fe977538-c230-4d28-8cf1-95bfdf2c2030",
+            "licenseNumber": "A94417358",
+            "status": "ACTIVE"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/trips",
+          "request": {
+            "driverId": "9228b15c-67b9-44b0-b1d1-8ea0e9fcdb96",
+            "vehicleId": "7c13ef3b-09ac-4a55-b1d0-739c9bc76007",
+            "originAddress": "TB1 test origin",
+            "originLatitude": -12.04,
+            "originLongitude": -77.03,
+            "destinationAddress": "TB1 test destination",
+            "destinationLatitude": -12.12,
+            "destinationLongitude": -77.02,
+            "scheduledAt": "2026-10-06T12:00:00Z",
+            "distanceKm": 15,
+            "durationMinutes": 45,
+            "routeReference": "tb1-test-2656a810514743168d4aca896a2a3f5b",
+            "calculatedAt": "2026-10-05T12:00:00Z"
+          },
+          "status": 201,
+          "response": {
+            "tripId": "e4ceea2b-72dd-4d55-83c7-52378a4bac70"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/trips/e4ceea2b-72dd-4d55-83c7-52378a4bac70/start",
+          "request": {
+            "startedAt": "2026-10-06T12:00:00Z"
+          },
+          "status": 204,
+          "response": null
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/trips/e4ceea2b-72dd-4d55-83c7-52378a4bac70/complete",
+          "request": {
+            "completedAt": "2026-10-06T13:00:00Z"
+          },
+          "status": 204,
+          "response": null
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/trips/e4ceea2b-72dd-4d55-83c7-52378a4bac70",
+          "request": null,
+          "status": 200,
+          "response": {
+            "tripId": "e4ceea2b-72dd-4d55-83c7-52378a4bac70",
+            "driverId": "9228b15c-67b9-44b0-b1d1-8ea0e9fcdb96",
+            "vehicleId": "7c13ef3b-09ac-4a55-b1d0-739c9bc76007",
+            "originAddress": "TB1 test origin",
+            "originLatitude": -12.04,
+            "originLongitude": -77.03,
+            "destinationAddress": "TB1 test destination",
+            "destinationLatitude": -12.12,
+            "destinationLongitude": -77.02,
+            "status": "COMPLETED",
+            "scheduledAt": "2026-10-06T12:00:00Z",
+            "startedAt": "2026-10-06T12:00:00Z",
+            "completedAt": "2026-10-06T13:00:00Z",
+            "cancelledAt": null,
+            "distanceKm": 15.0,
+            "durationMinutes": 45,
+            "routeReference": "tb1-test-2656a810514743168d4aca896a2a3f5b",
+            "calculatedAt": "2026-10-05T12:00:00Z"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/trips/e4ceea2b-72dd-4d55-83c7-52378a4bac70/cancel",
+          "request": {
+            "cancelledAt": "2026-10-06T14:00:00Z"
+          },
+          "status": 400,
+          "response": {
+            "code": "VALIDATION_ERROR",
+            "message": "Validation failed: Trip",
+            "details": "Completed trip cannot be cancelled"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "A missing trip returns a client error",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/api/v1/trips/15926bf9-b3af-4439-934f-e6caf8cb4841",
+          "request": null,
+          "status": 404,
+          "response": {
+            "code": "TRIP_NOT_FOUND",
+            "message": "Trip not found: Trip not found"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "Profile updates persist",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/profiles",
+          "request": {
+            "userReferenceId": "e61fe539-fc0c-4f35-8e0f-41e759b59ef5",
+            "givenNames": "TB1 Technical Test",
+            "paternalSurname": "Evidence",
+            "maternalSurname": "Only"
+          },
+          "status": 201,
+          "response": {
+            "profileId": "1d070bbd-3dc0-4936-919f-80dcd69f256a"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/profiles/1d070bbd-3dc0-4936-919f-80dcd69f256a/full-name",
+          "request": {
+            "givenNames": "Updated TB1 Test",
+            "paternalSurname": "Evidence",
+            "maternalSurname": "Only"
+          },
+          "status": 204,
+          "response": null
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/profiles/1d070bbd-3dc0-4936-919f-80dcd69f256a",
+          "request": null,
+          "status": 200,
+          "response": {
+            "profileId": "1d070bbd-3dc0-4936-919f-80dcd69f256a",
+            "userReferenceId": "e61fe539-fc0c-4f35-8e0f-41e759b59ef5",
+            "givenNames": "Updated TB1 Test",
+            "paternalSurname": "Evidence",
+            "maternalSurname": "Only"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "Driver state changes persist",
+      "status": "PASS",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/v1/profiles",
+          "request": {
+            "userReferenceId": "b8a649af-5bb8-4494-b76b-b9aa083a6096",
+            "givenNames": "TB1 Technical Test",
+            "paternalSurname": "Evidence",
+            "maternalSurname": "Only"
+          },
+          "status": 201,
+          "response": {
+            "profileId": "13ad9003-38c2-4c12-b2d5-6858c6c3250c"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/drivers",
+          "request": {
+            "profileId": "13ad9003-38c2-4c12-b2d5-6858c6c3250c",
+            "licenseNumber": "A29810545"
+          },
+          "status": 201,
+          "response": {
+            "driverId": "bea9ec39-6430-4658-ba70-092e321dda29",
+            "profileId": "13ad9003-38c2-4c12-b2d5-6858c6c3250c",
+            "licenseNumber": "A29810545",
+            "status": "ACTIVE"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/drivers/bea9ec39-6430-4658-ba70-092e321dda29/deactivate",
+          "request": null,
+          "status": 200,
+          "response": {
+            "driverId": "bea9ec39-6430-4658-ba70-092e321dda29",
+            "profileId": "13ad9003-38c2-4c12-b2d5-6858c6c3250c",
+            "licenseNumber": "A29810545",
+            "status": "INACTIVE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/drivers/bea9ec39-6430-4658-ba70-092e321dda29",
+          "request": null,
+          "status": 200,
+          "response": {
+            "driverId": "bea9ec39-6430-4658-ba70-092e321dda29",
+            "profileId": "13ad9003-38c2-4c12-b2d5-6858c6c3250c",
+            "licenseNumber": "A29810545",
+            "status": "INACTIVE"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/drivers/bea9ec39-6430-4658-ba70-092e321dda29/activate",
+          "request": null,
+          "status": 200,
+          "response": {
+            "driverId": "bea9ec39-6430-4658-ba70-092e321dda29",
+            "profileId": "13ad9003-38c2-4c12-b2d5-6858c6c3250c",
+            "licenseNumber": "A29810545",
+            "status": "ACTIVE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/drivers/bea9ec39-6430-4658-ba70-092e321dda29",
+          "request": null,
+          "status": 200,
+          "response": {
+            "driverId": "bea9ec39-6430-4658-ba70-092e321dda29",
+            "profileId": "13ad9003-38c2-4c12-b2d5-6858c6c3250c",
+            "licenseNumber": "A29810545",
+            "status": "ACTIVE"
+          }
+        }
+      ]
+    }
+  ]
+}
