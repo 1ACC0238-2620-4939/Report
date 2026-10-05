@@ -19,7 +19,7 @@ Fecha de corte: 05/10/2026. Revisión final contra el enunciado TB1, páginas 3-
 - [x] **13. Completar gestión del Sprint.** Se consolidaron fecha, hora, lugar, Team Leader, duración, Story Points, estimaciones, responsables y Sprint Board, manteniendo integración y aceptación como trabajo abierto.
 - [ ] **14. Demostrar integración end-to-end.** `NOT_VERIFIED`: mobile-app usa `DemoTraktoRepository`; falta el adaptador REST. La API pública y su persistencia MySQL ya están verificadas.
 - [ ] **15. Publicar video de exposición.** `BLOCKED`: requiere grabación y carga con una cuenta del equipo; duración máxima indicada por el enunciado.
-- [ ] **16. Preparar los documentos de entrega.** Informe PDF y participación DOCX/PDF generados. La presentación oficial es [el Canva proporcionado por Jean](https://canva.link/kblei7h4yf7tva3); falta exportar sus entregables PPTX/PDF. La presentación generada anteriormente queda como apoyo técnico. Las calificaciones son una propuesta que Alexander debe validar y firmar.
+- [ ] **16. Preparar los documentos de entrega.** Informe PDF y participación DOCX/PDF generados. Se incorporaron las exportaciones oficiales de [Canva](https://canva.link/kblei7h4yf7tva3), PDF/PPTX de 14 diapositivas, conservando su contenido y normalizando los nombres. Falta la diapositiva introductoria del equipo y revisar cobertura del Sprint 1. Las calificaciones son una propuesta que Alexander debe validar y firmar.
 - [x] **17. Desplegar frontend y backend en Railway.** Servicios RUNNING; landing HTTP 200 y `/health`; OpenAPI HTTP 200; POST/GET de vehículo con MySQL verificados. Ver `railway-deployment.md`.
 - [ ] **18. Completar fotografías.** Cesar y Jose deben proporcionar fotografías reales para la diapositiva del equipo.
 - [ ] **19. Validar participación.** Alexander debe revisar responsabilidades, calificaciones y firma del informe de participación.
@@ -28,6 +28,14 @@ Fecha de corte: 05/10/2026. Revisión final contra el enunciado TB1, páginas 3-
 - [ ] **22. Entregar en la plataforma del curso.** Pendiente por instrucción del usuario: todavía no entregar.
 
 ## Evidencia verificada
+
+**Auditoría general del 05/10/2026:** [requisitos y brechas TB1](tb1-audit.md). Los checks técnicos anteriores no equivalen a cumplimiento íntegro del enunciado. También siguen abiertos:
+
+- [ ] **23. Completar evidencia visual del capítulo III.** SG-01/02/03, IA-01/02 y NAV-01/02/03 aparecen `NOT_VERIFIED`; verificar archivos fuente y herramientas requeridas.
+- [ ] **24. Actualizar afirmaciones obsoletas del informe y regenerar el PDF.** Tags SemVer y persistencia Railway ya verificados; quedan frases que aún los declaran no comprobados.
+- [ ] **25. Ajustar formato y bibliografía.** Alineación izquierda, interlineado 1.5, sangría de primera línea 0.5 pulgadas y referencias/citas según APA; categorías bibliográficas ausentes.
+- [ ] **26. Completar pruebas automatizadas del Sprint.** Falta suite de integración/aceptación ligada a historias, `.feature` y Steps; el único test de contexto no cubre reglas de negocio.
+- [ ] **27. Verificar tablero y deployment diagram.** La captura consolidada local no acredita el Sprint Board en la herramienta requerida; contrastar URL pública con Trello. Incluir el C4 Deployment Diagram en 4.1.4.
 
 | Producto | Estado | Evidencia |
 |---|---|---|
